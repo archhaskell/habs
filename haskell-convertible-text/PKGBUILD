@@ -7,7 +7,7 @@
 #
 pkgname=haskell-convertible-text
 pkgrel=1
-pkgver=0.3.0.3
+pkgver=0.3.0.5
 pkgdesc="Typeclasses and instances for converting between types"
 url="http://hackage.haskell.org/package/convertible-text"
 license=('custom:BSD3')
@@ -15,11 +15,11 @@ arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc' 'haskell-cabal' 'haskell-attempt' 'haskell-bytestring' 'haskell-containers' 'haskell-old-time' 'haskell-template-haskell' 'haskell-text' 'haskell-time')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/convertible-text/0.3.0.3/convertible-text-0.3.0.3.tar.gz)
+source=(http://hackage.haskell.org/packages/archive/convertible-text/0.3.0.5/convertible-text-0.3.0.5.tar.gz)
 install=haskell-convertible-text.install
-md5sums=('2061fda28f6a8ba7d39ce30cd726bb4a')
+md5sums=('ba4ecf18cb7113df56862c001e9e9051')
 build() {
-    cd ${srcdir}/convertible-text-0.3.0.3
+    cd ${srcdir}/convertible-text-0.3.0.5
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1
