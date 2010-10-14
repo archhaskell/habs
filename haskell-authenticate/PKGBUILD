@@ -7,19 +7,19 @@
 #
 pkgname=haskell-authenticate
 pkgrel=1
-pkgver=0.6.3.1
+pkgver=0.7.0
 pkgdesc="Authentication methods for Haskell web applications."
 url="http://hackage.haskell.org/package/authenticate"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-bytestring' 'haskell-data-object' 'haskell-data-object-json' 'haskell-failure' 'haskell-http-wget' 'haskell-tagsoup' 'haskell-transformers')
+depends=('ghc' 'haskell-cabal' 'haskell-bytestring' 'haskell-data-object' 'haskell-data-object-json' 'haskell-failure' 'haskell-http-enumerator' 'haskell-network' 'haskell-tagsoup' 'haskell-transformers' 'haskell-utf8-string' 'haskell-xml')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/authenticate/0.6.3.1/authenticate-0.6.3.1.tar.gz)
+source=(http://hackage.haskell.org/packages/archive/authenticate/0.7.0/authenticate-0.7.0.tar.gz)
 install=haskell-authenticate.install
-md5sums=('d9da0823afea1981f548ee3224c55be2')
+md5sums=('d47b58e3381f3c57568c1b6fd79660f4')
 build() {
-    cd ${srcdir}/authenticate-0.6.3.1
+    cd ${srcdir}/authenticate-0.7.0
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1
