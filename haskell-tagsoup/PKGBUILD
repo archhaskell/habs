@@ -7,7 +7,7 @@
 #
 pkgname=haskell-tagsoup
 pkgrel=1
-pkgver=0.10.1
+pkgver=0.11.1
 pkgdesc="Parsing and extracting information from (possibly malformed) HTML/XML documents"
 url="http://hackage.haskell.org/package/tagsoup"
 license=('custom:BSD3')
@@ -15,11 +15,11 @@ arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc' 'haskell-cabal' 'haskell-bytestring' 'haskell-containers' 'haskell-mtl' 'haskell-network')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/tagsoup/0.10.1/tagsoup-0.10.1.tar.gz)
+source=(http://hackage.haskell.org/packages/archive/tagsoup/0.11.1/tagsoup-0.11.1.tar.gz)
 install=haskell-tagsoup.install
-md5sums=('a0a15e88465282de5263ea3d19b68290')
+md5sums=('5469453026dff80cd515ba163c41ecfa')
 build() {
-    cd ${srcdir}/tagsoup-0.10.1
+    cd ${srcdir}/tagsoup-0.11.1
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1
