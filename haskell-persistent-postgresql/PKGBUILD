@@ -7,7 +7,7 @@
 #
 pkgname=haskell-persistent-postgresql
 pkgrel=1
-pkgver=0.2.1.1
+pkgver=0.2.2
 pkgdesc="Backend for the persistent library using postgresql."
 url="http://hackage.haskell.org/package/persistent-postgresql"
 license=('custom:BSD3')
@@ -15,11 +15,11 @@ arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc' 'haskell-cabal' 'haskell-hdbc' 'haskell-hdbc-postgresql' 'haskell-monadcatchio-transformers' 'haskell-bytestring' 'haskell-containers' 'haskell-persistent' 'haskell-template-haskell' 'haskell-transformers' 'haskell-utf8-string')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/persistent-postgresql/0.2.1.1/persistent-postgresql-0.2.1.1.tar.gz)
+source=(http://hackage.haskell.org/packages/archive/persistent-postgresql/0.2.2/persistent-postgresql-0.2.2.tar.gz)
 install=haskell-persistent-postgresql.install
-md5sums=('7e1c9b9b25f99e5516dee9a260bd1b12')
+md5sums=('08412fa0e5cc65f860156005806e251f')
 build() {
-    cd ${srcdir}/persistent-postgresql-0.2.1.1
+    cd ${srcdir}/persistent-postgresql-0.2.2
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1

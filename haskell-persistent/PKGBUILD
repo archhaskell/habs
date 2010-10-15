@@ -7,7 +7,7 @@
 #
 pkgname=haskell-persistent
 pkgrel=1
-pkgver=0.2.2.2
+pkgver=0.2.4
 pkgdesc="Type-safe, non-relational, multi-backend persistence."
 url="http://hackage.haskell.org/package/persistent"
 license=('custom:BSD3')
@@ -15,11 +15,11 @@ arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc' 'haskell-cabal' 'haskell-monadcatchio-transformers' 'haskell-bytestring' 'haskell-containers' 'haskell-enumerator' 'haskell-hamlet' 'haskell-parsec' 'haskell-stm' 'haskell-template-haskell' 'haskell-text' 'haskell-time' 'haskell-transformers' 'haskell-utf8-string' 'haskell-web-routes-quasi')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/persistent/0.2.2.2/persistent-0.2.2.2.tar.gz)
+source=(http://hackage.haskell.org/packages/archive/persistent/0.2.4/persistent-0.2.4.tar.gz)
 install=haskell-persistent.install
-md5sums=('2b71e0e269f1ca7d92215f067c60f092')
+md5sums=('53c4eee78240eeb8839a0d8aa3c7e701')
 build() {
-    cd ${srcdir}/persistent-0.2.2.2
+    cd ${srcdir}/persistent-0.2.4
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1

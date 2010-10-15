@@ -5,21 +5,21 @@
 #
 # Keep up to date on http://archhaskell.wordpress.com/
 #
-pkgname=haskell-mtlx
+pkgname=haskell-shortcircuit
 pkgrel=1
-pkgver=0.1.5
-pkgdesc="Monad transformer library with type indexes,\nproviding 'free' copies."
-url="http://hackage.haskell.org/package/mtlx"
+pkgver=0.1
+pkgdesc="Short-circuit values and expressions."
+url="http://hackage.haskell.org/package/shortcircuit"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-mtl')
+depends=('ghc' 'haskell-cabal')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/mtlx/0.1.5/mtlx-0.1.5.tar.gz)
-install=haskell-mtlx.install
-md5sums=('dc3616e978542d2d6acffb3092e836bd')
+source=(http://hackage.haskell.org/packages/archive/shortcircuit/0.1/shortcircuit-0.1.tar.gz)
+install=haskell-shortcircuit.install
+md5sums=('834d9ea2959df3fc425858b55b2e6b48')
 build() {
-    cd ${srcdir}/mtlx-0.1.5
+    cd ${srcdir}/shortcircuit-0.1
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1
@@ -28,7 +28,7 @@ build() {
     install -D -m744 register.sh   ${pkgdir}/usr/share/haskell/$pkgname/register.sh
     install    -m744 unregister.sh ${pkgdir}/usr/share/haskell/$pkgname/unregister.sh
     install -d -m755 $pkgdir/usr/share/doc/ghc/html/libraries
-    ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/mtlx
+    ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/shortcircuit
     runhaskell Setup copy --destdir=${pkgdir} || return 1
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/$pkgname/LICENSE || return 1
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
