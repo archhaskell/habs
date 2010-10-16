@@ -7,19 +7,19 @@
 #
 pkgname=haskell-chxhtml
 pkgrel=1
-pkgver=0.1.1
+pkgver=0.1.3
 pkgdesc="A W3C compliant (X)HTML generating library"
 url="http://hackage.haskell.org/package/CHXHtml"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-bytestring>=0.9' 'haskell-utf8-string>=0.3.1')
+depends=('ghc' 'haskell-cabal' 'haskell-bytestring>=0.9' 'haskell-regex-posix>=0.94.1' 'haskell-utf8-string>=0.3.1')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/CHXHtml/0.1.1/CHXHtml-0.1.1.tar.gz)
+source=(http://hackage.haskell.org/packages/archive/CHXHtml/0.1.3/CHXHtml-0.1.3.tar.gz)
 install=haskell-chxhtml.install
-md5sums=('496d322ff9b05c4430d27aac310979ce')
+md5sums=('976ba01577a664119126cf2490cc2e08')
 build() {
-    cd ${srcdir}/CHXHtml-0.1.1
+    cd ${srcdir}/CHXHtml-0.1.3
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} || return 1
     runhaskell Setup build                   || return 1
     runhaskell Setup haddock || return 1
