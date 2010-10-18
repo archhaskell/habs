@@ -5,21 +5,21 @@
 #
 # Keep up to date on http://archhaskell.wordpress.com/
 #
-pkgname=haskell-archlinux
+pkgname=haskell-archlinux-web
 pkgrel=1
-pkgver=0.3.4
-pkgdesc="Support for working with Arch Linux packages."
-url="http://hackage.haskell.org/package/archlinux"
+pkgver=0.1
+pkgdesc="Website maintenance for Arch Linux packages"
+url="http://hackage.haskell.org/package/archlinux-web"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-cabal>=1.6' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-pretty' 'haskell-tar')
+depends=('ghc' 'haskell-cabal>=1.6' 'haskell-http' 'haskell-archlinux' 'haskell-containers' 'haskell-csv' 'haskell-deepseq' 'haskell-directory' 'haskell-filepath' 'haskell-json' 'haskell-old-time' 'haskell-parallel' 'haskell-pretty' 'haskell-prettyclass' 'haskell-process' 'haskell-strict-concurrency' 'haskell-xhtml')
 options=('strip')
-source=(http://hackage.haskell.org/packages/archive/archlinux/0.3.4/archlinux-0.3.4.tar.gz)
-install=haskell-archlinux.install
-md5sums=(0c72c97d260c7688af6d7a071bc13f23)
+source=(http://hackage.haskell.org/packages/archive/archlinux-web/0.1/archlinux-web-0.1.tar.gz)
+install=haskell-archlinux-web.install
+md5sums=(b1588402179a7d063b685d2f484d79fa)
 build() {
-    cd ${srcdir}/archlinux-0.3.4
+    cd ${srcdir}/archlinux-web-0.1
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname}
     runhaskell Setup build
     runhaskell Setup haddock
@@ -27,11 +27,11 @@ build() {
     runhaskell Setup unregister --gen-script
 }
 package() {
-    cd ${srcdir}/archlinux-0.3.4
+    cd ${srcdir}/archlinux-web-0.1
     install -D -m744 register.sh   ${pkgdir}/usr/share/haskell/${pkgname}/register.sh
     install    -m744 unregister.sh ${pkgdir}/usr/share/haskell/${pkgname}/unregister.sh
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
-    ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/archlinux
+    ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/archlinux-web
     runhaskell Setup copy --destdir=${pkgdir}
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
