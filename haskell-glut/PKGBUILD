@@ -6,14 +6,14 @@
 # Keep up to date on http://archhaskell.wordpress.com/
 #
 pkgname=haskell-glut
-pkgrel=1
+pkgrel=2
 pkgver=2.1.2.1
 pkgdesc="A binding for the OpenGL Utility Toolkit"
 url="http://hackage.haskell.org/package/GLUT"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-opengl>=2.2' 'haskell-array' 'haskell-containers')
+depends=('ghc' 'haskell-cabal' 'haskell-opengl>=2.2' 'haskell-array' 'haskell-containers' 'freeglut')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/GLUT/2.1.2.1/GLUT-2.1.2.1.tar.gz)
 install=haskell-glut.install

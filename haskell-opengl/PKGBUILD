@@ -6,14 +6,14 @@
 # Keep up to date on http://archhaskell.wordpress.com/
 #
 pkgname=haskell-opengl
-pkgrel=1
+pkgrel=2
 pkgver=2.2.3.0
 pkgdesc="A binding for the OpenGL graphics system"
 url="http://hackage.haskell.org/package/OpenGL"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal')
+depends=('ghc' 'haskell-cabal' 'mesa')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/OpenGL/2.2.3.0/OpenGL-2.2.3.0.tar.gz)
 install=haskell-opengl.install
