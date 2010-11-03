@@ -8,11 +8,10 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-parsec>=2' 'haskell-xml')
+depends=('ghc' 'haskell-containers' 'haskell-parsec>=2' 'haskell-syb' 'haskell-xml')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('df56a9500db917b7e0648f24202e6493')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs
@@ -30,3 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
+md5sums=('df56a9500db917b7e0648f24202e6493')

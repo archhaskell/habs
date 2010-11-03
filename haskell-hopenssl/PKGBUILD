@@ -8,11 +8,10 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-mtl' 'openssl')
+depends=('ghc' 'haskell-bytestring' 'haskell-mtl' 'openssl')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('376592abb196af9f71e12e22d2daab30')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs
@@ -32,3 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
+md5sums=('376592abb196af9f71e12e22d2daab30')
