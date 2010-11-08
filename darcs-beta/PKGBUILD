@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=darcs-beta
 pkgname=darcs-beta
-pkgver=2.4.98.5
+pkgver=2.4.99.1
 pkgrel=1
 pkgdesc="a distributed, interactive, smart revision control system"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('ae29cf2674df8ebb9d71c22371f9ab1b')
+md5sums=('3f749e3379827a7bb6697e8a72de21fa')

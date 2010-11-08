@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=attoparsec
 pkgname=haskell-attoparsec
-pkgver=0.8.1.0
+pkgver=0.8.2.0
 pkgrel=1
 pkgdesc="Fast combinator parsing for bytestrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f57fffdc803a056f7534f8181a3a2e86')
+md5sums=('a988f7be8db2a256deb54061cdb5d72a')

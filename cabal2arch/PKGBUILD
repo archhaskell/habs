@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cabal2arch
 pkgname=cabal2arch
-pkgver=0.7.5
+pkgver=0.7.6
 pkgrel=1
 pkgdesc="Create Arch Linux packages from Cabal packages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal>1.8' 'haskell-archlinux>=0.3.3' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-pretty' 'haskell-process')
+makedepends=('ghc' 'haskell-cabal>1.8' 'haskell-archlinux>=0.3.5' 'haskell-bytestring' 'haskell-cmdargs' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-pretty' 'haskell-process')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('215f412b3edf70cd683c9a5f6c394183')
+md5sums=('a8df35f7be587e865cba6fe055e9976b')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cmdlib
 pkgname=haskell-cmdlib
-pkgver=0.2
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="a library for command line parsing & online help"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3027322dc5571f7cbcb2dca75836fda4')
+md5sums=('280a7a9ca2f50db87557592441f741d3')
