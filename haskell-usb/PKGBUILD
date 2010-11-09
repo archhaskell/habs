@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=usb
 pkgname=haskell-usb
-pkgver=0.6.0.1
+pkgver=0.6.0.4
 pkgrel=1
 pkgdesc="Communicate with USB devices"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-bindings-libusb<1.5' 'haskell-bytestring<0.10' 'haskell-text<0.9')
+depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-bindings-libusb<1.5' 'haskell-bytestring<0.10' 'haskell-text<0.11')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('38bb6d89773df582cf1f16fbc76aa56e')
+md5sums=('649c53cd1e472acc0a1979dca53a55b4')

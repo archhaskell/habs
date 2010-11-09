@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=rmonad
 pkgname=haskell-rmonad
-pkgver=0.5
+pkgver=0.6
 pkgrel=1
 pkgdesc="Restricted monad library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers' 'haskell-transformers' 'ghc>=6.8')
+depends=('ghc' 'haskell-containers' 'haskell-suitable<0.2' 'haskell-transformers' 'ghc>=6.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('5bbd3dd6ab528887a9d82917a717cd04')
+md5sums=('d2b65a39d180f4d3e9775f035cd112e1')

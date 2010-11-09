@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=debian
 pkgname=haskell-debian
-pkgver=3.40
-pkgrel=2
+pkgver=3.47
+pkgrel=1
 pkgdesc="Modules for working with the Debian package system"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal>=1.6.0.1' 'haskell-haxml' 'haskell-unixutils' 'haskell-bytestring' 'haskell-bzlib' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-mtl' 'haskell-network' 'haskell-old-locale' 'haskell-parsec>=3' 'haskell-pretty' 'haskell-process' 'haskell-regex-compat' 'haskell-regex-posix' 'haskell-syb' 'haskell-time' 'haskell-unix' 'haskell-zlib')
+depends=('ghc' 'haskell-cabal>=1.9' 'haskell-hunit' 'haskell-haxml<1.14' 'haskell-unixutils' 'haskell-bytestring' 'haskell-bzlib' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-mtl' 'haskell-network' 'haskell-old-locale' 'haskell-parsec<4' 'haskell-pretty' 'haskell-process' 'haskell-regex-compat' 'haskell-regex-tdfa' 'haskell-time' 'haskell-unix' 'haskell-zlib')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 debian/copyright ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('16ab4a6fff3314e6db45d3ecd5491242')
+md5sums=('b096adf4b4946bc10b17ea7cd16091e9')

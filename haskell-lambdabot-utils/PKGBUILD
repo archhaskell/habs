@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=lambdabot-utils
 pkgname=haskell-lambdabot-utils
-pkgver=4.2
-pkgrel=2
+pkgver=4.2.1
+pkgrel=1
 pkgdesc="Utility libraries for the advanced IRC bot, Lambdabot"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-haskell-src' 'haskell-mtl' 'haskell-network' 'haskell-old-time' 'haskell-process' 'haskell-random' 'haskell-regex-compat' 'haskell-regex-posix' 'haskell-tagsoup' 'haskell-unix' 'haskell-utf8-string' 'haskell-zlib')
+depends=('ghc' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-haskell-src' 'haskell-mtl' 'haskell-network' 'haskell-old-time' 'haskell-process' 'haskell-random' 'haskell-regex-compat' 'haskell-regex-posix' 'haskell-syb' 'haskell-tagsoup>0.6' 'haskell-unix' 'haskell-utf8-string' 'haskell-zlib')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('8a2c6d10ad86e148696774db1584038b')
+md5sums=('dc60dc985174696140574082db988907')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=GoogleTranslate
 pkgname=haskell-googletranslate
-pkgver=0.0.4
+pkgver=0.0.5
 pkgrel=1
 pkgdesc="Interface to Google Translate API"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-attojson>=0.5.3' 'haskell-bytestring' 'haskell-containers>=0.3.0.0' 'haskell-dataenc' 'haskell-download-curl>=0.1.2')
+depends=('ghc' 'haskell-attojson>=0.5.3' 'haskell-bytestring' 'haskell-dataenc' 'haskell-download-curl>=0.1.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('8858056586001774e7bba68840dbb006')
+md5sums=('c581f7de07fc0cb0a373007986417865')

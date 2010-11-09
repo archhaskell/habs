@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=feldspar-language
 pkgname=haskell-feldspar-language
-pkgver=0.3.1
+pkgver=0.3.3
 pkgrel=1
 pkgdesc="A functional embedded language for DSP and parallelism"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('4dc9ae8be2f0d20c8ba4d1b765250349')
+md5sums=('d63a0cbe7ff8a514dbde6eac11938b34')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=graphics-drawingcombinators
 pkgname=haskell-graphics-drawingcombinators
-pkgver=1.0.3
+pkgver=1.4.1
 pkgrel=1
 pkgdesc="A functional interface to 2D drawing in OpenGL"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-opengl' 'haskell-sdl' 'haskell-sdl-image' 'haskell-sdl-ttf' 'haskell-containers' 'haskell-mtl')
+depends=('ghc' 'haskell-ftgl' 'haskell-opengl<2.5' 'haskell-bitmap-opengl<0.1' 'haskell-containers' 'haskell-stb-image<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('a7051fa88bd9d79cac813d6a05fa6c96')
+md5sums=('7e0250f9e1bb8c2d86d9ea5a8b29b859')

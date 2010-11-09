@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ipprint
 pkgname=haskell-ipprint
-pkgver=0.3
-pkgrel=2
+pkgver=0.4
+pkgrel=1
 pkgdesc="Tiny helper for pretty-printing values in ghci console"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell-src')
+depends=('ghc' 'haskell-extra<1.34' 'haskell-haskell-src')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('0c545978f0fa4addd25a7608019e2d7d')
+md5sums=('e1a062020918c9aaf94bbc4a0bc13a34')

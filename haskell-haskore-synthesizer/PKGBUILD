@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskore-synthesizer
 pkgname=haskell-haskore-synthesizer
-pkgver=0.0.3
-pkgrel=2
+pkgver=0.0.3.1
+pkgrel=1
 pkgdesc="Music rendering coded in Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-data-accessor<0.3' 'haskell-event-list<0.1' 'haskell-haskore<0.2' 'haskell-non-negative<0.1' 'haskell-numeric-prelude<0.2' 'haskell-random<1.1' 'haskell-synthesizer<0.3' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-data-accessor<0.3' 'haskell-event-list<0.1' 'haskell-haskore<0.2' 'haskell-non-negative<0.1' 'haskell-numeric-prelude<0.2' 'haskell-random<1.1' 'haskell-synthesizer-core<0.4' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('1b1ca05c4c320801bcd92b2fe489f135')
+md5sums=('10f33a920f874833e163594ae13e5e6e')

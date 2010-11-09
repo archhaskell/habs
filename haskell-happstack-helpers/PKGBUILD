@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=happstack-helpers
 pkgname=haskell-happstack-helpers
-pkgver=0.50
-pkgrel=2
+pkgver=0.52
+pkgrel=1
 pkgdesc="Convenience functions for Happstack."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-debugtracehelpers' 'haskell-hstringtemplate<0.7.0' 'haskell-hstringtemplatehelpers>=0.0.14' 'haskell-http>=4000' 'haskell-missingh>=1.0.3' 'haskell-pbkdf2<0.4' 'haskell-bytestring<0.10.0.0' 'haskell-containers<0.3.0.0' 'haskell-directory<1.1.0.0' 'haskell-filepath<1.2.0.0' 'haskell-happstack-data<0.5' 'haskell-happstack-ixset<0.5' 'haskell-happstack-server<0.5' 'haskell-happstack-state<0.5' 'haskell-haskell98<2.0.0.0' 'hscolour<1.14' 'haskell-mtl<2.0.0.0' 'haskell-network>=2.2' 'haskell-old-time<1.1.0.0' 'haskell-parsec<2.2.0.0' 'haskell-puremd5<1.1.0.0' 'haskell-random<2' 'haskell-safe<0.3' 'haskell-syb<0.2.0.0' 'haskell-utf8-string>=0.3.6')
+depends=('ghc' 'haskell-debugtracehelpers' 'haskell-hstringtemplate<0.7.0' 'haskell-hstringtemplatehelpers>=0.0.14' 'haskell-http>=4000' 'haskell-missingh>=1.0.3' 'haskell-pbkdf2<0.4' 'haskell-bytestring<0.10.0.0' 'haskell-containers<0.4.0.0' 'haskell-directory<1.1.0.0' 'haskell-filepath<1.2.0.0' 'haskell-happstack-data<0.6' 'haskell-happstack-ixset<0.6' 'haskell-happstack-server<0.6' 'haskell-happstack-state<0.6' 'haskell-haskell98<2.0.0.0' 'hscolour<1.14' 'haskell-mtl<2.0.0.0' 'haskell-network>=2.2' 'haskell-old-time<1.1.0.0' 'haskell-parsec<2.2.0.0' 'haskell-puremd5<1.1.0.0' 'haskell-random<2' 'haskell-safe<0.3' 'haskell-syb<0.2.0.0' 'haskell-text<0.11' 'haskell-utf8-string<0.4.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 bsd3.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('aaed56d37f245750705f03143726e3a3')
+md5sums=('892c69f011c8e04ad206035c287f3b28')

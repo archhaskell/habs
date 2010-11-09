@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=happstack-util
 pkgname=haskell-happstack-util
-pkgver=0.5.0.2
+pkgver=0.5.0.3
 pkgrel=1
 pkgdesc="Web framework"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-smtpclient<1.1' 'haskell-array' 'haskell-bytestring' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-hslogger>=1.0.2' 'haskell-mtl' 'haskell-network<3' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec<4' 'haskell-process' 'haskell-random' 'haskell-strict-concurrency' 'haskell-template-haskell' 'haskell-time' 'haskell-unix' 'haskell-unix-compat')
+depends=('ghc' 'haskell-smtpclient<1.1' 'haskell-array' 'haskell-bytestring' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-hslogger>=1.0.2' 'haskell-mtl<2.1' 'haskell-network<3' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec<4' 'haskell-process' 'haskell-random' 'haskell-strict-concurrency' 'haskell-template-haskell' 'haskell-time' 'haskell-unix' 'haskell-unix-compat')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('0527b15ae54cfdb30a6105154cd2cc30')
+md5sums=('4b3dbdf6e907d14b5ef92d53496f6aa5')

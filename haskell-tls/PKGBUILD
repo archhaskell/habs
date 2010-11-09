@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=tls
 pkgname=haskell-tls
-pkgver=0.2
+pkgver=0.3.1
 pkgrel=1
 pkgdesc="TLS/SSL protocol native implementation (Server and Client)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-aes' 'haskell-rsa' 'haskell-binary>=0.5' 'haskell-bytestring' 'haskell-certificate>=0.3' 'haskell-cryptocipher' 'haskell-cryptohash' 'haskell-mtl' 'haskell-random' 'haskell-spoon' 'haskell-vector')
+depends=('ghc' 'haskell-aes' 'haskell-binary>=0.5' 'haskell-bytestring' 'haskell-cereal>=0.3' 'haskell-certificate>=0.3.2' 'haskell-crypto-api>=0.2' 'haskell-cryptocipher>=0.2' 'haskell-cryptohash>=0.6' 'haskell-mtl' 'haskell-vector')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8f7d616d0e026d005dc0dd8d5518ebac')
+md5sums=('ea1815475c45a26690c93103430d9596')

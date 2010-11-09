@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=safer-file-handles-text
 pkgname=haskell-safer-file-handles-text
-pkgver=0.1.0.2
+pkgver=0.1.0.4
 pkgrel=1
 pkgdesc="Extends safer-file-handles with Text operations"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-explicit-iomodes-text<0.2' 'haskell-regions<0.8' 'haskell-safer-file-handles<0.9' 'haskell-text<0.9' 'haskell-transformers<0.3')
+depends=('ghc' 'haskell-explicit-iomodes-text<0.2' 'haskell-regions<0.9' 'haskell-safer-file-handles<0.10' 'haskell-text<0.11' 'haskell-transformers<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('69452718707c4443483aced0cb102607')
+md5sums=('2db88d7e6bb336bf6b19c9dcd2b966ed')

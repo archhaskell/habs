@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=applicative-numbers
 pkgname=haskell-applicative-numbers
-pkgver=0.0.8
-pkgrel=2
+pkgver=0.0.9
+pkgrel=1
 pkgdesc="Applicative-based numeric instances"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('a60ebf4227f306cce4653bc01f58e914')
+md5sums=('a9fbc6f9971db52072a590351c0d3bac')

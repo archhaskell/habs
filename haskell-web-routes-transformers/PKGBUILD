@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=web-routes-transformers
 pkgname=haskell-web-routes-transformers
-pkgver=0.19
+pkgver=0.19.1
 pkgrel=1
 pkgdesc="Extends web-routes with some transformers instances for RouteT"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d3f5458a2cbf6c7f8745d988758d65d4')
+md5sums=('b44b5780d0022e41f58a4c1f2bfec0f1')

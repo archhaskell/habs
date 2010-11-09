@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=criterion
 pkgname=haskell-criterion
-pkgver=0.4.1.0
-pkgrel=2
+pkgver=0.5.0.5
+pkgrel=1
 pkgdesc="Robust, reliable performance measurement and analysis"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-chart>=0.12' 'haskell-bytestring<1.0' 'haskell-containers' 'haskell-data-accessor' 'haskell-deepseq>=1.1.0.0' 'haskell-filepath' 'haskell-mtl' 'haskell-parallel' 'haskell-parsec' 'haskell-statistics>=0.3.5' 'haskell-time' 'haskell-uvector>=0.1.0.5' 'haskell-uvector-algorithms>=0.2')
+depends=('ghc' 'haskell-bytestring<1.0' 'haskell-containers' 'haskell-deepseq>=1.1.0.0' 'haskell-filepath' 'haskell-mtl' 'haskell-mwc-random>=0.7.0.0' 'haskell-parallel' 'haskell-parsec>=3.1.0' 'haskell-statistics>=0.6.0.0' 'haskell-time' 'haskell-vector>=0.6.0.2' 'haskell-vector-algorithms>=0.3.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('55f90d0fff67dff305fde7fa684fab54')
+md5sums=('dddc5f8dc9dbabbd36b82a8a531b178c')

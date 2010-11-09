@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=statistics
 pkgname=haskell-statistics
-pkgver=0.8.0.1
+pkgver=0.8.0.3
 pkgrel=1
 pkgdesc="A library of statistical types, data, and functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('5f700796ef121c2ba32ad8a3dca3663a')
+md5sums=('6dfdc4b4f3128c12e1143b444adabc02')

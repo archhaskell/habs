@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=mount
 pkgname=haskell-mount
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Mounts and umounts filesystems"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc')
+depends=('ghc' 'haskell-bytestring')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('98a32006d4708cd3fd3d66e5bca0bcb8')
+md5sums=('33c18ac1a3f6647b07c6af0d90d70af3')

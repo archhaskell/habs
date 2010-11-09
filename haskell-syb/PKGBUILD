@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=syb
 pkgname=haskell-syb
-pkgver=0.2.1
+pkgver=0.2.2
 pkgrel=1
 pkgdesc="Scrap Your Boilerplate"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f3c0ada9efc0cbb5e1ff219497a0628b')
+md5sums=('34cb1911dd3efc05eb23b68ac82b6621')

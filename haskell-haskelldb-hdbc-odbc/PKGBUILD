@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskelldb-hdbc-odbc
 pkgname=haskell-haskelldb-hdbc-odbc
-pkgver=0.13
+pkgver=2.0
 pkgrel=1
 pkgdesc="HaskellDB support for the HDBC ODBC driver."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hdbc<3' 'haskell-hdbc-odbc<3' 'haskell-haskelldb<1' 'haskell-haskelldb-hdbc<1' 'haskell-mtl<2')
+depends=('ghc' 'haskell-hdbc<3' 'haskell-hdbc-odbc<3' 'haskell-haskelldb<3' 'haskell-haskelldb-hdbc<3' 'haskell-mtl<2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('387a58a85cbd1502d9cb4607c3e898a2')
+md5sums=('0a5dd1897672b81dac3a7f2bb426f9cc')

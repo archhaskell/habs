@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=kit
 pkgname=kit
-pkgver=0.4.3
+pkgver=0.4.4
 pkgrel=1
 pkgdesc="A dependency manager for XCode (Objective-C) projects"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('bc6f09e81c0b83d568be9c01524f3d2b')
+md5sums=('a3d1a8e156a5a34b2a64209bb0702f6b')

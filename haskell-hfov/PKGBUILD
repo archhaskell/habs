@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hfov
 pkgname=haskell-hfov
-pkgver=0.5
-pkgrel=2
+pkgver=1.0.1
+pkgrel=1
 pkgdesc="Field-of-view calculation for low-resolution 2D raster grids."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell98>=1.0')
+depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('1ff64e992ea41cdbf7e183877818cc9c')
+md5sums=('26913e5fda2b729132874bae701cd575')

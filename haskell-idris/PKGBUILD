@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=idris
 pkgname=haskell-idris
-pkgver=0.1.4
+pkgver=0.1.5
 pkgrel=1
 pkgdesc="Dependently Typed Functional Programming Language"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-binary' 'haskell-containers' 'haskell-directory' 'haskell-epic>=0.1.4' 'haskell-haskell98' 'haskell-ivor>=0.1.11' 'haskell-mtl' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec' 'haskell-readline')
+depends=('ghc' 'haskell-cabal' 'haskell-array' 'haskell-binary' 'haskell-containers' 'haskell-directory' 'haskell-epic>=0.1.5' 'haskell-haskell98' 'haskell-ivor>=0.1.12' 'haskell-mtl' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec' 'haskell-readline')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8c0825c6d577be53e67b39e055b3f3c7')
+md5sums=('22531901fbf14d20cee0ca24a71b5c87')

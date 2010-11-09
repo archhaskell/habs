@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=LibZip
 pkgname=haskell-libzip
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="Bindings to libzip, a library for manipulating zip archives."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bindings-dsl<1.1' 'haskell-bytestring' 'haskell-filepath' 'haskell-mtl' 'haskell-time' 'libzip')
+depends=('ghc' 'haskell-bindings-libzip<0.2' 'haskell-bytestring' 'haskell-filepath' 'haskell-mtl' 'haskell-time')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('cdade112f3bbb074ac7b98f8dfbd4ff1')
+md5sums=('0ad07fcef7a7fd14da2b3f41c94a337c')

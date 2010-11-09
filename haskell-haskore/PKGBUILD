@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskore
 pkgname=haskell-haskore
-pkgver=0.1
-pkgrel=2
+pkgver=0.1.0.4
+pkgrel=1
 pkgdesc="The Haskore Computer Music System"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hunit<1.3' 'haskell-quickcheck<2' 'haskell-array<1.0' 'haskell-bytestring<0.10' 'haskell-containers<1.0' 'haskell-data-accessor<0.3' 'haskell-event-list<0.1' 'haskell-haskell-src<1.1' 'haskell-markov-chain<0.1' 'haskell-midi<0.2' 'haskell-non-negative<0.1' 'haskell-parsec<2.2' 'haskell-process<1.1' 'haskell-random<2.0' 'haskell-transformers<0.2' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-hunit<1.3' 'haskell-quickcheck<2' 'haskell-array<1.0' 'haskell-bytestring<0.10' 'haskell-containers<1.0' 'haskell-data-accessor<0.3' 'haskell-event-list<0.1' 'haskell-haskell-src<1.1' 'haskell-markov-chain<0.1' 'haskell-midi<0.2' 'haskell-non-negative<0.1' 'haskell-parsec<2.2' 'haskell-process<1.1' 'haskell-random<2.0' 'haskell-transformers<0.3' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('7ef4ae952d6e02bf9053e5772f4df58d')
+md5sums=('10f055f1311870510f38b3ce2990385b')

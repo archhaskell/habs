@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=amqp
 pkgname=haskell-amqp
-pkgver=0.2
+pkgver=0.2.5
 pkgrel=1
 pkgdesc="Client library for AMQP servers (currently only RabbitMQ)"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('468cabb9181a1b9f3af5414467ce4813')
+md5sums=('f4198cd2ba201041d54b92dd15145239')

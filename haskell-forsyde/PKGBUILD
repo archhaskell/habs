@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ForSyDe
 pkgname=haskell-forsyde
-pkgver=3.1
-pkgrel=2
+pkgver=3.1.1
+pkgrel=1
 pkgdesc="ForSyDe's Haskell-embedded Domain Specific Language."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-mtl' 'haskell-old-time' 'haskell-packedstring' 'haskell-parameterized-data' 'haskell-pretty' 'haskell-process' 'haskell-random' 'haskell-regex-posix' 'haskell-syb' 'haskell-template-haskell>2.0' 'haskell-type-level')
+depends=('ghc' 'haskell-array' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-mtl' 'haskell-old-time' 'haskell-parameterized-data>=0.1.5' 'haskell-pretty' 'haskell-process' 'haskell-random' 'haskell-regex-posix' 'haskell-template-haskell>2.0' 'haskell-type-level')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('96c7ae7641c333974732977ff74c17ae')
+md5sums=('d215f444893538842cc30c68601036cb')

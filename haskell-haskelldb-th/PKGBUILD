@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskelldb-th
 pkgname=haskell-haskelldb-th
-pkgver=1.2
-pkgrel=2
+pkgver=2.0
+pkgrel=1
 pkgdesc="Template Haskell utilities for HaskellDB."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskelldb>=0.11' 'haskell-mtl' 'haskell-template-haskell>=2.2.0.0')
+depends=('ghc' 'haskell-haskelldb<3' 'haskell-mtl' 'haskell-template-haskell<3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('b4e010dcd11aeaddf2f07f0e5a9d33b3')
+md5sums=('db9e5a4842e2c76cba2e37476b0d1639')

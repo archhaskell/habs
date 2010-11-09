@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=generator
 pkgname=haskell-generator
-pkgver=0.5.3
-pkgrel=2
+pkgver=0.5.4
+pkgrel=1
 pkgdesc="Python-generators notation for creation of monadic lists"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-list>=0.2' 'haskell-maybet' 'haskell-mtl')
+depends=('ghc' 'haskell-list>=0.4' 'haskell-transformers')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3434f335f6d34de1548473ba6415e085')
+md5sums=('4e6c48af9ce5e7f15d9992c3f30cbfcd')

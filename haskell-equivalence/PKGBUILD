@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=equivalence
 pkgname=haskell-equivalence
-pkgver=0.1.1
+pkgver=0.2.2
 pkgrel=1
 pkgdesc="Maintaining an equivalence relation implemented as union-find using STT."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-stmonadtrans' 'haskell-containers' 'haskell-mtl')
+depends=('ghc' 'haskell-quickcheck>=2' 'haskell-stmonadtrans' 'haskell-containers' 'haskell-mtl' 'haskell-template-haskell' 'haskell-test-framework' 'haskell-test-framework-quickcheck2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c583e4f74b2ea507cb6544b90933c23b')
+md5sums=('2eccf8eb8e6367931959309bd6fdff6d')

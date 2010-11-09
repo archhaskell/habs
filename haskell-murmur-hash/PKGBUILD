@@ -1,9 +1,9 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=murmur-hash
 pkgname=haskell-murmur-hash
-pkgver=0.1
+pkgver=0.1.0.2
 pkgrel=1
-pkgdesc="MurmurHash2 implementation for"
+pkgdesc="MurmurHash2 implementation for Haskell."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('9bab434a87a7d611bc21e484977ce88f')
+md5sums=('1abbecb4736aa412734832d929775ec0')

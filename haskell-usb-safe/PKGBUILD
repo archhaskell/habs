@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=usb-safe
 pkgname=haskell-usb-safe
-pkgver=0.10
+pkgver=0.11
 pkgrel=1
 pkgdesc="Type-safe communication with USB devices."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-base-unicode-symbols<0.3' 'haskell-bytestring<0.10' 'haskell-iteratee<0.5' 'haskell-regions<0.8' 'haskell-transformers<0.3' 'haskell-usb<0.7' 'haskell-usb-enumerator<0.2')
+depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-bytestring<0.10' 'haskell-iteratee<0.6' 'haskell-monad-peel<0.2' 'haskell-regions<0.9' 'haskell-transformers<0.3' 'haskell-usb<0.7' 'haskell-usb-enumerator<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('66ae33a41c425c5d57519607f5b71179')
+md5sums=('30933d65d6c1cf653468da26eeeb1bfa')

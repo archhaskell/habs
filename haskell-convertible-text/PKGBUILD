@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=convertible-text
 pkgname=haskell-convertible-text
-pkgver=0.3.0.5
+pkgver=0.3.0.6
 pkgrel=1
 pkgdesc="Typeclasses and instances for converting between types"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-attempt<0.4' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-old-time<1.1' 'haskell-template-haskell' 'haskell-text<0.10' 'haskell-time<=1.3')
+depends=('ghc' 'haskell-attempt<0.4' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-old-time<1.1' 'haskell-template-haskell' 'haskell-text<0.11' 'haskell-time<=1.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ba4ecf18cb7113df56862c001e9e9051')
+md5sums=('8335ddd1155bcdb63be82e53c97b342d')

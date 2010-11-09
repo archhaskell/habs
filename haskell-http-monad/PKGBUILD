@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=http-monad
 pkgname=haskell-http-monad
-pkgver=0.0.1
-pkgrel=2
-pkgdesc="Monad abstraction for HTTP communication allowing lazy transfer and non-I/O simulation"
+pkgver=0.1
+pkgrel=1
+pkgdesc="Monad abstraction for HTTP allowing lazy transfer and non-I/O simulation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-http<4001' 'haskell-bytestring<0.10' 'haskell-containers<0.3' 'haskell-explicit-exception<0.2' 'haskell-lazyio<0.1' 'haskell-network<3' 'haskell-parsec<3' 'haskell-transformers<0.2' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-http<4001' 'haskell-bytestring<0.10' 'haskell-containers<0.3' 'haskell-explicit-exception<0.2' 'haskell-lazyio<0.1' 'haskell-network<3' 'haskell-parsec<3' 'haskell-transformers<0.3' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('0885b38ff32bf05af55918aa4d7e49ed')
+md5sums=('2a19326e044a15780d930f0c9691488e')

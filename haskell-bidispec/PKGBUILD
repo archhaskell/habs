@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bidispec
 pkgname=haskell-bidispec
-pkgver=0.1
+pkgver=0.1.3
 pkgrel=1
 pkgdesc="Specification of generators and parsers"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('b225ad43b7908ba1e96563b1284d51d4')
+md5sums=('dc560d6c4a305f6712cfbab57d6fe6be')

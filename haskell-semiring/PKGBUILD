@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=semiring
 pkgname=haskell-semiring
-pkgver=0.2
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc="Semirings, ring-like structures used for dynamic programming applications"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c0cf34f5a149ea908e56a2c131afe58a')
+md5sums=('65ff4c700f7326337c825ee0308337e8')

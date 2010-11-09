@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hlint
 pkgname=haskell-hlint
-pkgver=1.8
+pkgver=1.8.2
 pkgrel=1
 pkgdesc="Source code suggestions"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('330a336ff2458b41bda74d3996c5f973')
+md5sums=('9f59f009e06fa57e77b539d8869b1141')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=operational
 pkgname=haskell-operational
-pkgver=0.2.0.0
+pkgver=0.2.0.1
 pkgrel=1
 pkgdesc="Implement monads by specifying operational semantics."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-mtl<1.2')
+depends=('ghc' 'haskell-mtl<2.0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('18f7273c80f402476a3c0ccdf968d2e4')
+md5sums=('40b3fe5f20a9c49df1da55d86872064a')

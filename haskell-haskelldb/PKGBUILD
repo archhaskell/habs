@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskelldb
 pkgname=haskell-haskelldb
-pkgver=0.13
+pkgver=2.0.1
 pkgrel=1
-pkgdesc="SQL unwrapper for Haskell."
+pkgdesc="A library of combinators for generating and executing SQL statements."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-directory<2' 'haskell-mtl<2' 'haskell-old-locale<2' 'haskell-old-time<2' 'haskell-pretty<2')
+depends=('ghc' 'haskell-containers<1' 'haskell-directory<2' 'haskell-mtl<2' 'haskell-old-locale<2' 'haskell-old-time<2' 'haskell-pretty<2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('b0658c8c967836a41eba5c74ff6f89ce')
+md5sums=('d90a9d7306c4747eed28f57c3b2c2d4a')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Vec-Boolean
 pkgname=haskell-vec-boolean
-pkgver=1.0.1
-pkgrel=2
+pkgver=1.0.3
+pkgrel=1
 pkgdesc="Provides Boolean instances for the Vec package"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-boolean<=0.0.1' 'haskell-vec<=0.9.6')
+depends=('ghc' 'haskell-boolean<=0.0.1' 'haskell-vec<=0.9.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('9c0228332a8ba3518a0b274efa57d501')
+md5sums=('71ecca7c3f37d38273ce79c0882cb329')

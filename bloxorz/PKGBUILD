@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bloxorz
 pkgname=bloxorz
-pkgver=0.1
-pkgrel=2
+pkgver=0.1.1
+pkgrel=1
 pkgdesc="OpenGL Logic Game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glfw' 'haskell-opengl')
+makedepends=('ghc' 'haskell-glfw' 'haskell-opengl>=2.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('1c328d21725a66934dbd6c5a39faec7b')
+md5sums=('4002c7bbe40a34094d172562604fe84c')

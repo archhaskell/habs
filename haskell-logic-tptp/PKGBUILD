@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=logic-TPTP
 pkgname=haskell-logic-tptp
-pkgver=0.2.0.3
+pkgver=0.2.0.4
 pkgrel=1
 pkgdesc="Import, export etc. for TPTP, a syntax for first-order logic"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('d76a993080444a5bcdcc9275cd03b3c6')
+md5sums=('80c5d2f0b88760229ddac430191aa93d')

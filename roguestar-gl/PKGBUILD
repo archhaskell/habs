@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=roguestar-gl
 pkgname=roguestar-gl
-pkgver=0.2.2
-pkgrel=2
+pkgver=0.4.0.2
+pkgrel=1
 pkgdesc="Sci-fi roguelike (turn-based, chessboard-tiled, role playing) game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut' 'haskell-monadrandom' 'haskell-arrows' 'haskell-containers' 'haskell-filepath>1.1' 'haskell-mtl' 'haskell-process' 'haskell-rsagl<0.3')
+makedepends=('ghc' 'haskell-glut<2.2' 'haskell-monadrandom<1.2' 'haskell-arrows<0.5' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-filepath<1.2' 'haskell-mtl<1.2' 'haskell-old-time' 'haskell-priority-sync<0.2.2' 'haskell-process' 'haskell-random<1.1' 'haskell-rsagl<=0.4.0.2' 'haskell-statistics<0.6' 'haskell-stm<2.2' 'haskell-vector<0.7')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('87886ac1eac4e8d97489eee27c5d98de')
+md5sums=('c99325d20a01574dcad0cae344764081')

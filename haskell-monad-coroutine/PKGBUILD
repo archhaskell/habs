@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=monad-coroutine
 pkgname=haskell-monad-coroutine
-pkgver=0.5.1
+pkgver=0.6
 pkgrel=1
 pkgdesc="Coroutine monad transformer for suspending and resuming monadic computations"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('4cbe554231c860bb8976d7a1970dc8db')
+md5sums=('dfe185096cd0f533ce34f4b21ed4c5b9')

@@ -1,11 +1,11 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=csv
 pkgname=haskell-csv
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="CSV loader and dumper"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('LGPL')
+license=('custom:MIT')
 arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc' 'haskell-filepath' 'haskell-parsec')
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('312cdb7d59528a161034b3397af10266')
+md5sums=('f8e58a83393542c404e649f0b612af3d')

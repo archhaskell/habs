@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pisigma
 pkgname=haskell-pisigma
-pkgver=0.1.0.3
-pkgrel=2
-pkgdesc="dependently typed core language"
+pkgver=0.2
+pkgrel=1
+pkgdesc="A dependently typed core language"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array<0.3' 'haskell-bytestring<1.0' 'haskell-haskeline<0.7' 'haskell-haskeline-class<0.7' 'haskell-mpppc<0.2' 'haskell-mtl<1.2' 'haskell-parsec<4.0' 'haskell-text<0.6' 'haskell-utf8-string<0.4')
+depends=('ghc' 'haskell-array<0.4' 'haskell-bytestring<1.0' 'haskell-containers<0.4' 'haskell-haskeline<0.7' 'haskell-haskeline-class<0.7' 'haskell-mpppc<0.2' 'haskell-mtl<1.2' 'haskell-parsec<4.0' 'haskell-text<0.6' 'haskell-utf8-string<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e28097c0617f8610ed63c4be10153c53')
+md5sums=('6de575ea8f789b9b1eaf3579a1569ddd')

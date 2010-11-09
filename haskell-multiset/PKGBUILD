@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=multiset
 pkgname=haskell-multiset
-pkgver=0.2
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="The Data.MultiSet container type"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('4a3ecaa0dd480ea1b7f8bdae1ae8047c')
+md5sums=('def80826b048bb2324dff399d8ad3343')

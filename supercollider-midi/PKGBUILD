@@ -2,7 +2,7 @@
 _hkgname=supercollider-midi
 pkgname=supercollider-midi
 pkgver=0.1.1
-pkgrel=2
+pkgrel=1
 pkgdesc="Demonstrate how to control SuperCollider via ALSA-MIDI"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

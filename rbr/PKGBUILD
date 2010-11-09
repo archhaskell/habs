@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=rbr
 pkgname=rbr
-pkgver=0.8.5
-pkgrel=2
+pkgver=0.8.6
+pkgrel=1
 pkgdesc="Mask nucleotide (EST) sequences in Fasta format"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-bio>=0.4' 'haskell-bytestring' 'haskell-containers')
+makedepends=('ghc' 'haskell-bio>=0.3.1' 'haskell-bytestring' 'haskell-containers')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('fba4c6cd48bafef60464d4938d383389')
+md5sums=('94eb6041f78bedada9fd779edbe12263')

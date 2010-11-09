@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=lhc
 pkgname=lhc
-pkgver=0.8
-pkgrel=2
+pkgver=0.10
+pkgrel=1
 pkgdesc="LHC Haskell Compiler"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal' 'haskell-ansi-wl-pprint' 'haskell-binary' 'haskell-bytestring' 'haskell-bytestring-trie' 'haskell-containers' 'haskell-core>=0.5' 'derive' 'haskell-digest' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-haskell98' 'haskell-libffi' 'haskell-mtl' 'haskell-pretty' 'haskell-process' 'haskell-unix' 'haskell-xhtml')
+makedepends=('ghc' 'haskell-cabal' 'haskell-hunit' 'haskell-quickcheck' 'haskell-ansi-wl-pprint' 'haskell-binary' 'haskell-bytestring' 'haskell-bytestring-trie' 'haskell-containers' 'haskell-core>=0.5' 'derive' 'haskell-digest' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-haskell98' 'haskell-mtl' 'haskell-parallel' 'haskell-pretty' 'haskell-process' 'haskell-test-framework' 'haskell-test-framework-hunit' 'haskell-test-framework-quickcheck' 'haskell-time' 'haskell-unix' 'haskell-xhtml')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('00291854dc06fdd607fdc01aacb8694b')
+md5sums=('a3018a9c38a7a61cf39859cf5cb05833')

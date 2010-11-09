@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HsHyperEstraier
 pkgname=haskell-hshyperestraier
-pkgver=0.3.1
-pkgrel=2
+pkgver=0.3.2.1
+pkgrel=1
 pkgdesc="HyperEstraier binding for Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-network' 'haskell-utf8-string' 'hyperestraier' 'qdbm')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-network<2.3' 'haskell-utf8-string<0.4' 'hyperestraier' 'qdbm')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('80e9043a251a60f998af00dc8a05c889')
+md5sums=('42f961796b3e1eb1ab1730bd59b4ab7c')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HAppSHelpers
 pkgname=haskell-happshelpers
-pkgver=0.10
-pkgrel=2
-pkgdesc="Convenience functions for HAppS."
+pkgver=0.11
+pkgrel=1
+pkgdesc="OBSOLETE. Please use happstack-helpers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-happs-data' 'haskell-happs-ixset' 'haskell-happs-server' 'haskell-happs-state' 'haskell-hstringtemplate' 'haskell-hstringtemplatehelpers' 'haskell-missingh' 'haskell-pbkdf2' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-haskell98' 'hscolour' 'haskell-mtl' 'haskell-old-time' 'haskell-parsec' 'haskell-puremd5' 'haskell-random' 'haskell-safe')
+depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -28,7 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
-    install -D -m644 bsd3.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d4d119ad4668c0466ddf6acae8df3083')
+md5sums=('f2376dd410370f6cb2afcde64b47ccc9')

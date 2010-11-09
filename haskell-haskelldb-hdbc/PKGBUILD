@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskelldb-hdbc
 pkgname=haskell-haskelldb-hdbc
-pkgver=0.13
+pkgver=2.0
 pkgrel=1
-pkgdesc="HaskellDB support for HDBC. You will also need one\nor more back-end specific packages."
+pkgdesc="HaskellDB support for HDBC."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hdbc<3' 'haskell-containers<1' 'haskell-convertible>=1.0.1' 'haskell-haskelldb<1' 'haskell-mtl<2' 'haskell-old-time<2')
+depends=('ghc' 'haskell-hdbc<3' 'haskell-containers<1' 'haskell-convertible<2' 'haskell-haskelldb<3' 'haskell-mtl<2' 'haskell-old-time<2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('59a266b87baf51eae58533accbe468fe')
+md5sums=('f1f8b4cdabee0e2e97383f0eee6b605a')

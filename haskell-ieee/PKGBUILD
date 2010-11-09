@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ieee
 pkgname=haskell-ieee
-pkgver=0.6.1
+pkgver=0.7
 pkgrel=1
-pkgdesc="Approximate comparisons for IEEE floating point numbers"
+pkgdesc="Utilities for dealing with IEEE floating point numbers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc')
+depends=('ghc' 'glibc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e8a1ae313afdec510dd7e36655a8baa5')
+md5sums=('e05e8f957280288f82e7610d399be732')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hemkay-core
 pkgname=haskell-hemkay-core
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="A device independent module music mixer"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d90a8c0ab5987e7b8db3e3d95e3167bc')
+md5sums=('64f88b8cc46cc145434930914b83b77c')

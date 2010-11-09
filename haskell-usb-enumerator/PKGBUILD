@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=usb-enumerator
 pkgname=haskell-usb-enumerator
-pkgver=0.1.0.2
+pkgver=0.2
 pkgrel=1
 pkgdesc="Iteratee enumerators for the usb package"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-monadcatchio-transformers-foreign<0.2' 'haskell-base-unicode-symbols<0.3' 'haskell-bindings-libusb<1.5' 'haskell-iteratee<0.5' 'haskell-transformers<0.3' 'haskell-usb<0.7')
+depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-bindings-libusb<1.5' 'haskell-iteratee<0.6' 'haskell-monad-peel<0.2' 'haskell-transformers<0.3' 'haskell-usb<0.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('766780f0c4d9366c109ab19506e3d4ed')
+md5sums=('4aac4d487b2341d698606fa04d7f4a8a')

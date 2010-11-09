@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hack-contrib
 pkgname=haskell-hack-contrib
-pkgver=2010.2.25
+pkgver=2010.9.28
 pkgrel=1
 pkgdesc="Hack contrib"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-ansi-wl-pprint' 'haskell-bytestring' 'haskell-cgi' 'haskell-containers' 'haskell-data-default>=0.2' 'haskell-directory' 'haskell-filepath' 'haskell-hack>=2009.10.30' 'haskell-haskell98' 'haskell-mps>=2010.1.26' 'haskell-network' 'haskell-old-locale' 'haskell-old-time' 'haskell-puremd5' 'haskell-time' 'haskell-utf8-string')
+depends=('ghc' 'haskell-ansi-wl-pprint' 'haskell-bytestring' 'haskell-cgi' 'haskell-containers' 'haskell-data-default>=0.2' 'haskell-directory' 'haskell-filepath' 'haskell-hack>=2009.10.30' 'haskell-haskell98' 'haskell-mps>=2010.1.26' 'haskell-network' 'haskell-old-locale' 'haskell-old-time' 'haskell-time' 'haskell-utf8-string')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('da18e11fc03e5780a8d8a561c6f4aed4')
+md5sums=('2d3d4bc18ec637539b8e2823c496987f')

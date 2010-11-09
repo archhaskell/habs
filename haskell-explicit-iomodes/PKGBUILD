@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=explicit-iomodes
 pkgname=haskell-explicit-iomodes
-pkgver=0.5
+pkgver=0.6
 pkgrel=1
 pkgdesc="File handles with explicit IOModes"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3b18ddb46558ee4497dae96c73673e66')
+md5sums=('eed4980f870a88a42f6930f0f6ca7c73')

@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=explore
 pkgname=explore
-pkgver=0.0.6.2
+pkgver=0.0.7.2
 pkgrel=1
 pkgdesc="Experimental Plot data Reconstructor"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array' 'haskell-pngload')
+makedepends=('ghc' 'haskell-array' 'haskell-directory' 'haskell-pngload')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('59ec0d3df8b13a1dd3a528df2749f3a5')
+md5sums=('9beec0a680e5353e77049629ede86222')

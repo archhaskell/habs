@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xsd
 pkgname=haskell-xsd
-pkgver=0.3.2
+pkgver=0.3.3
 pkgrel=1
 pkgdesc="XML Schema data structures"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e58405cbbb82f82cb8f7f689ae882f32')
+md5sums=('0c100024b8b645a1cae340604c0dba22')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=gnuidn
 pkgname=haskell-gnuidn
-pkgver=0.1.1.1
+pkgver=0.1.1.2
 pkgrel=1
 pkgdesc="Bindings for GNU IDN"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-text<0.9' 'libidn')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-text<0.11' 'libidn')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('46b25bb2733a968d6f8a693f51bee639')
+md5sums=('f39702c65d22c012cc625bca06a0271f')

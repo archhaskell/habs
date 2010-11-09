@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hexpat
 pkgname=haskell-hexpat
-pkgver=0.19.1
+pkgver=0.19.4
 pkgrel=1
 pkgdesc="XML parser/formatter based on expat"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-list<0.5' 'haskell-bytestring' 'haskell-containers' 'haskell-deepseq<1.2' 'haskell-extensible-exceptions<0.2' 'haskell-text<0.9' 'haskell-transformers' 'haskell-utf8-string<0.4' 'expat')
+depends=('ghc' 'haskell-list<0.5' 'haskell-bytestring' 'haskell-containers' 'haskell-deepseq<1.2' 'haskell-extensible-exceptions<0.2' 'haskell-text<0.11' 'haskell-transformers' 'haskell-utf8-string<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e347f8b1b0ca13ce5cf58137cf00be81')
+md5sums=('2c434cd66573499d437a8a00ace06a0b')

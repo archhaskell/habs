@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=explicit-iomodes-text
 pkgname=haskell-explicit-iomodes-text
-pkgver=0.1.0.1
+pkgver=0.1.0.4
 pkgrel=1
 pkgdesc="Extends explicit-iomodes with Text operations"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-explicit-iomodes<0.6' 'haskell-text<0.9')
+depends=('ghc' 'haskell-explicit-iomodes<0.7' 'haskell-text<0.11')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ba72fd04f4ce31f1e1f597cb87857d32')
+md5sums=('31b74059f609f30a564a3cb0e42a3c8d')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=type-level-natural-number
 pkgname=haskell-type-level-natural-number
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="Simple, Haskell 2010-compatible type level natural numbers"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c8fa9956c4f776fa462190d04f9e00c7')
+md5sums=('3ad75c2191e2250af4c0ae8a451d5690')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=svgcairo
 pkgname=haskell-svgcairo
-pkgver=0.11.0
+pkgver=0.12.0
 pkgrel=1
-pkgdesc="Binding to the GTK+ OpenGL Extension"
+pkgdesc="Binding to the libsvg-cairo library."
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('GPL')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-cairo<0.12' 'haskell-containers' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haskell-haskell98' 'haskell-mtl' 'haskell-pango<0.12' 'librsvg' 'cairo' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array' 'haskell-cairo<0.13' 'haskell-containers' 'haskell-glib<0.13' 'haskell-haskell98' 'haskell-mtl' 'librsvg' 'cairo' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('11b393443a9bf5a561e65ab01e3ade47')
+md5sums=('82cb17b23761794122d3f543810b3e6a')

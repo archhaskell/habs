@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hmk
 pkgname=haskell-hmk
-pkgver=0.9.5
-pkgrel=2
+pkgver=0.9.7.1
+pkgrel=1
 pkgdesc="A make alternative based on Plan9's mk."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-filepath>=1.1' 'haskell-mtl' 'haskell-parsec>=3.0.0' 'haskell-pcre-light>=0.3' 'haskell-process' 'haskell-unix')
+depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-filepath>=1.1' 'haskell-mtl<=2.0' 'haskell-parsec>=3.0.0' 'haskell-pcre-light>=0.3' 'haskell-process' 'haskell-unix')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('89ccc6c55993e455a249ee3f74ca3628')
+md5sums=('2142aaac2bc02c4b4e82dba8c442a5aa')

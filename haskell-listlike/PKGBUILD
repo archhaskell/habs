@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ListLike
 pkgname=haskell-listlike
-pkgver=1.0.2
+pkgver=1.1.0
 pkgrel=1
 pkgdesc="Generic support for list-like structures"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array<0.4' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-mtl<1.2')
+depends=('ghc' 'haskell-array<0.4' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-mtl<1.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('9b8c898edc5a4af2ac0feb515e3037c4')
+md5sums=('f1fbc827d0f0019c600660bf80bee620')

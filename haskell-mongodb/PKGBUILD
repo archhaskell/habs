@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=mongoDB
 pkgname=haskell-mongodb
-pkgver=0.7.1
+pkgver=0.8.1
 pkgrel=1
 pkgdesc="A driver for MongoDB"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary' 'haskell-bson' 'haskell-bytestring' 'haskell-containers' 'haskell-mtl' 'haskell-nano-md5' 'haskell-network' 'haskell-parsec')
+depends=('ghc' 'haskell-array' 'haskell-binary' 'haskell-bson' 'haskell-bytestring' 'haskell-containers' 'haskell-mtl>=2' 'haskell-nano-md5' 'haskell-network' 'haskell-parsec' 'haskell-random')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d5a3205236258afd2de2c83895906dbe')
+md5sums=('6801ec9fca2f66561a8b6fcd946864df')

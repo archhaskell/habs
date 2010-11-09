@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cryptohash
 pkgname=haskell-cryptohash
-pkgver=0.5.1
+pkgver=0.6.1
 pkgrel=1
 pkgdesc="collection of crypto hashes, fast, pure and practical"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring')
+depends=('ghc' 'haskell-bytestring' 'haskell-cereal>=0.2' 'haskell-crypto-api>=0.1' 'haskell-tagged>=0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('db3ab762bf6d58111953aee740fdfb84')
+md5sums=('40139c278620007fe7c7840050050fa3')

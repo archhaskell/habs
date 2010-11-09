@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=augeas
 pkgname=haskell-augeas
-pkgver=0.2.0
+pkgver=0.3.3
 pkgrel=1
 pkgdesc="A Haskell FFI wrapper for the Augeas API"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('c238e626f4d8ca270dfd87e567beb54e')
+md5sums=('7aba9fee3334c5bb3145715bf9f6beed')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cpsa
 pkgname=cpsa
-pkgver=2.1.1
+pkgver=2.1.2
 pkgrel=1
 pkgdesc="Symbolic cryptographic protocol analyzer"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -22,4 +22,4 @@ package() {
     install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('a3c380ac3b1e7afea48c01ace83339ca')
+md5sums=('8d2d269ad78ad2ceedcef9c0612bb540')

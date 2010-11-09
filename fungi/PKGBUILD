@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Fungi
 pkgname=fungi
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="An interpreter for Funge-98 programming languages, including Befunge."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('95ca3e767fca5d46d18a5d0ffce9b0a7')
+md5sums=('363585c5aa19800b5f40168d263d418f')

@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=MissingPy
 pkgname=haskell-missingpy
-pkgver=0.10.3
-pkgrel=2
+pkgver=0.10.5
+pkgrel=1
 pkgdesc="Haskell interface to Python"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYRIGHT ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c143bac3cb2a0c3ad28cdd476a0daf25')
+md5sums=('df51ee117dfb87c612ec3d6e63e411f1')

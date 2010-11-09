@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=improve
 pkgname=haskell-improve
-pkgver=0.1.0
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="An imperative, verifiable programming language for high assurance applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('51eb19b2308959dab5c037bbedf83b77')
+md5sums=('3672354492be968344167e50b2e4e69a')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=loli
 pkgname=haskell-loli
-pkgver=2009.10.13
-pkgrel=2
+pkgver=2010.10.9
+pkgrel=1
 pkgdesc="A minimum web dev DSL in Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-data-default' 'haskell-hack>=2009.7.15' 'haskell-hack-contrib>=2009.8.18' 'haskell-mps>=2009.9.18' 'haskell-mtl' 'haskell-template' 'haskell-utf8-string')
+depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-data-default' 'haskell-hack>=2009.7.15' 'haskell-hack-contrib>=2009.8.18' 'haskell-mps>=2009.9.18' 'haskell-mtl' 'haskell-template<0.2' 'haskell-utf8-string')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8bb8808ff946515088c2efdf49b26a31')
+md5sums=('bd6789d0ae3ca29676cf5f5159b65969')

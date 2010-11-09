@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=histogram-fill
 pkgname=haskell-histogram-fill
-pkgver=0.2.0
+pkgver=0.3.0.1
 pkgrel=1
 pkgdesc="Library for histograms creation."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-vector')
+depends=('ghc' 'haskell-primitive' 'haskell-vector')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('87dbf8c063a8222079606bc676af92cc')
+md5sums=('453c8dbb522fa1d8a4ed3d8d3ce069f4')

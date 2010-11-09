@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=iteratee
 pkgname=haskell-iteratee
-pkgver=0.4.0.2
+pkgver=0.5.0.0
 pkgrel=1
 pkgdesc="Iteratee-based I/O"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-listlike<2' 'haskell-monadcatchio-transformers<0.3' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-transformers<0.3' 'haskell-unix<3')
+depends=('ghc' 'haskell-listlike<2' 'haskell-monadcatchio-transformers<0.3' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-transformers<0.3' 'haskell-unix<3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('72828a001e01771d40386c1510d89b65')
+md5sums=('18b6a4e61da40420fe054e32cf6735e9')

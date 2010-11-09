@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskore-realtime
 pkgname=haskell-haskore-realtime
-pkgver=0.1
-pkgrel=2
+pkgver=0.1.1
+pkgrel=1
 pkgdesc="Routines for realtime playback of Haskore songs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<1.0' 'haskell-data-accessor<0.3' 'haskell-directory>=1.0' 'haskell-event-list<0.1' 'haskell-haskore<0.2' 'haskell-midi<0.2' 'haskell-non-negative<0.1' 'haskell-old-time>=1.0' 'haskell-process<1.1' 'haskell-transformers<0.2' 'haskell-unix<3')
+depends=('ghc' 'haskell-bytestring<1.0' 'haskell-data-accessor<0.3' 'haskell-directory<1.1' 'haskell-event-list<0.2' 'haskell-haskore<0.3' 'haskell-midi<0.2' 'haskell-non-negative<0.2' 'haskell-old-time<1.1' 'haskell-process<1.1' 'haskell-transformers<0.3' 'haskell-unix<3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('b9a07aa5156e86dd4d99c579c1c36a5c')
+md5sums=('a91fe1d57c71dfa7356261b8cca4e806')

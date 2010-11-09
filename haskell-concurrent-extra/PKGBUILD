@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=concurrent-extra
 pkgname=haskell-concurrent-extra
-pkgver=0.5.1
+pkgver=0.6
 pkgrel=1
 pkgdesc="Extra concurrency primitives"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-stm<2.2')
+depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-stm<2.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('34e70190937d5897f4f6fbfde7afaf90')
+md5sums=('5415e82ec3d0df90bf7cf15c4ac4607c')

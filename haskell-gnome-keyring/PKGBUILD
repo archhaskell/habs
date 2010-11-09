@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=gnome-keyring
 pkgname=haskell-gnome-keyring
-pkgver=0.2.1
-pkgrel=2
+pkgver=0.2.2.3
+pkgrel=1
 pkgdesc="Bindings for libgnome-keyring"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('GPL')
+license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-text' 'haskell-time' 'gnome-keyring' 'c2hs>=0.16')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-text<0.11' 'haskell-time<1.3' 'gnome-keyring' 'c2hs>=0.16')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('b1d5701aceaef8d60ab366e8a194f299')
+md5sums=('21f371800fcce0634e491afa4f824fac')

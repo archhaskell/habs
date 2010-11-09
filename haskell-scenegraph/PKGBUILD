@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=scenegraph
 pkgname=haskell-scenegraph
-pkgver=0.1.0.1
-pkgrel=2
+pkgver=0.1.0.2
+pkgrel=1
 pkgdesc="Scene Graph"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-glut>=2.1' 'haskell-opengl>=2.2' 'haskell-array' 'haskell-containers' 'haskell-fgl' 'haskell-haskell98' 'haskell-hmatrix' 'haskell-mtl' 'haskell-old-time' 'haskell-process')
+depends=('ghc' 'haskell-glut>=2.1' 'haskell-opengl>=2.2' 'haskell-array' 'haskell-containers' 'haskell-fgl<=5.4.2.2' 'haskell-haskell98' 'haskell-hmatrix' 'haskell-mtl' 'haskell-old-time' 'haskell-process')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('2df3f2bd095375ddc78636262c71425f')
+md5sums=('8a75a955caa3fb7bcfd49cf2f735eb65')

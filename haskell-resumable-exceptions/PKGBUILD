@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=resumable-exceptions
 pkgname=haskell-resumable-exceptions
-pkgver=0.0.0.20100313
+pkgver=0.0.0.20100920
 pkgrel=1
 pkgdesc="A monad transformer for resumable exceptions"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('5bf337f1097463a1969bb54a384c4011')
+md5sums=('9f54eecf56ff9bbf1a02b509f96d897e')

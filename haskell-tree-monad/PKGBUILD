@@ -1,11 +1,11 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=tree-monad
 pkgname=haskell-tree-monad
-pkgver=0.2.1
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc="Non-Determinism Monad for Tree Search"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:PublicDomain')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8a21432f6a0c17702a0cbdcfeb55a645')
+md5sums=('5bba3bc800d746b83df41ac9c7db6689')

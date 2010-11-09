@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HaskellNet
 pkgname=haskell-haskellnet
-pkgver=0.2.1
-pkgrel=2
+pkgver=0.2.3
+pkgrel=1
 pkgdesc="network related libraries such as POP3, SMTP, IMAP"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-crypto' 'haskell-haxml' 'haskell-array' 'haskell-base64-string' 'haskell-bytestring' 'haskell-containers' 'haskell-haskell98' 'haskell-mtl' 'haskell-network' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec' 'haskell-pretty' 'haskell-time')
+depends=('ghc' 'haskell-crypto' 'haskell-haxml<1.19' 'haskell-array' 'haskell-base64-string' 'haskell-bytestring' 'haskell-containers' 'haskell-haskell98' 'haskell-mtl' 'haskell-network' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec' 'haskell-pretty' 'haskell-time')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('79857b2703d8521eb7ff63cb25c37b23')
+md5sums=('599db2ef97b38c97569602c355c76b21')

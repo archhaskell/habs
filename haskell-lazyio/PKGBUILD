@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=lazyio
 pkgname=haskell-lazyio
-pkgver=0.0.2
-pkgrel=2
+pkgver=0.0.3
+pkgrel=1
 pkgdesc="Run IO actions lazily while respecting their order"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-transformers<0.2')
+depends=('ghc' 'haskell-transformers<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8d84bad22b5f387797d7a23a483b5e53')
+md5sums=('bb62187e47579d930ed0a833c9b3fcc4')

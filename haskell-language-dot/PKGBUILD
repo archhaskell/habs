@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=language-dot
 pkgname=haskell-language-dot
-pkgver=0.0.4
-pkgrel=2
+pkgver=0.0.5
+pkgrel=1
 pkgdesc="A library for the analysis and creation of Graphviz DOT files"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('6a69ae967b6bf6cf0513915bc8709861')
+md5sums=('461d6dafedbe43a4822729e7aad96661')

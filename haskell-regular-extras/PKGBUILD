@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=regular-extras
 pkgname=haskell-regular-extras
-pkgver=0.1.2
-pkgrel=2
+pkgver=0.2.1
+pkgrel=1
 pkgdesc="Additional functions for regular: arbitrary,\ncoarbitrary, and binary get/put."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck<=1.2.0.0' 'haskell-binary>=0.2' 'haskell-regular<0.3')
+depends=('ghc' 'haskell-quickcheck<1.3' 'haskell-binary>=0.2' 'haskell-deepseq<2' 'haskell-regular<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('58ea9420639f8145dc544f2f0d980363')
+md5sums=('baf6177d4cdb6efde9309b4244e99f1a')

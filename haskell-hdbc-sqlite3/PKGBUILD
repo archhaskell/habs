@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HDBC-sqlite3
 pkgname=haskell-hdbc-sqlite3
-pkgver=2.3.0.0
+pkgver=2.3.1.0
 pkgrel=1
 pkgdesc="Sqlite v3 driver for HDBC"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hdbc>=2.2.0' 'haskell-bytestring' 'haskell-mtl' 'haskell-utf8-string' 'sqlite3')
+depends=('ghc' 'haskell-hdbc>=2.2.6' 'haskell-bytestring' 'haskell-mtl' 'haskell-utf8-string' 'sqlite3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('861f7e4da4b97239703d6260afdb7f98')
+md5sums=('00baf433e06ae2d09bf1a3dc965c62b4')

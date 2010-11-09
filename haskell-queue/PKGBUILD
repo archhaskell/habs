@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=queue
 pkgname=haskell-queue
-pkgver=0.1.1.3
-pkgrel=2
+pkgver=0.1.2
+pkgrel=1
 pkgdesc="Abstraction typeclasses for queue-like things."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ed86664abc60952131a89508c32c0e56')
+md5sums=('ab126c9a9786e84620e309fb4672fe22')

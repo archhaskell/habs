@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bytestring-show
 pkgname=haskell-bytestring-show
-pkgver=0.3.3
+pkgver=0.3.4
 pkgrel=1
 pkgdesc="Efficient conversion of values into readable byte strings."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array<0.4' 'haskell-binary<0.6' 'haskell-bytestring<=1' 'haskell-containers<0.4')
+depends=('ghc' 'haskell-array<0.4' 'haskell-binary<0.6' 'haskell-bytestring<=1' 'haskell-containers<0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('07c97766c1ab5b2f3ef70a4f5b8811b7')
+md5sums=('99f608df6ec55207ee43a8db3dda1918')

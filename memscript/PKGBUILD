@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=memscript
 pkgname=memscript
-pkgver=0.0.0.2
-pkgrel=2
+pkgver=0.0.1.0
+pkgrel=1
 pkgdesc="Command line utility for memorizing scriptures or any other text"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('32f5bb37b3ba1a69c716bb02353d1d6a')
+md5sums=('38ee2ec266f4c70543891dc72ee3d0fb')

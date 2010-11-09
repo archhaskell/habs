@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ivor
 pkgname=haskell-ivor
-pkgver=0.1.11
+pkgver=0.1.12
 pkgrel=1
 pkgdesc="Theorem proving library based on dependent type theory"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('bd767dce505f4c77a1ae7507c0bf8785')
+md5sums=('45dfad5ad45b5e599e1c4d32e4ca821b')

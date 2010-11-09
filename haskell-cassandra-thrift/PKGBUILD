@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cassandra-thrift
 pkgname=haskell-cassandra-thrift
-pkgver=0.0.5
+pkgver=0.6.6
 pkgrel=1
 pkgdesc="thrift bindings to the cassandra database"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-thrift' 'haskell-containers')
+depends=('ghc' 'haskell-thrift<=0.4.0' 'haskell-containers')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('6d35092ea0048da6a3ec4ebe9ca2f89f')
+md5sums=('f0ce36660bbe0b5775b3f226c185d8c6')

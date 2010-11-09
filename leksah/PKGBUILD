@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=leksah
 pkgname=leksah
-pkgver=0.6.1
-pkgrel=2
+pkgver=0.8.0.8
+pkgrel=1
 pkgdesc="Haskell IDE written in Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal>=1.6.0.1' 'haskell-array>=0.2.0.0' 'haskell-binary>=0.4.4' 'haskell-bytestring>=0.9.0.1' 'haskell-containers>=0.2.0.0' 'haskell-directory>=1.0.0.2' 'haskell-filepath>=1.1.0.1' 'haskell-glib>=0.10' 'haskell-gtk>=0.10' 'haskell-gtksourceview2>=0.10.0' 'haskell-mtl>=1.1.0.2' 'haskell-old-time>=1.0.0.1' 'haskell-parsec>=2.1.0.1' 'haskell-pretty>=1.0.1.0' 'haskell-process>=1.0.1.0' 'haskell-regex-base<=0.72.0.2' 'haskell-regex-compat>=0.71.0.1' 'haskell-regex-posix>=0.72.0.3' 'haskell-unix>=2.3.1.0' 'haskell-utf8-string>=0.3.1.1')
+makedepends=('ghc' 'haskell-cabal<1.9' 'haskell-array<0.4' 'haskell-binary<0.6' 'haskell-binary-shared<=0.9' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-deepseq<1.2' 'haskell-directory<3.1' 'haskell-filepath<1.2' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haskell-gtksourceview2<0.12' 'haskell-hslogger<1.1' 'haskell-leksah-server<0.9' 'haskell-ltk<0.9' 'haskell-mtl<1.2' 'haskell-network<3.0' 'haskell-old-time<1.1' 'haskell-parsec<2.2' 'haskell-pretty<1.1' 'haskell-process-leksah<1.1' 'haskell-regex-base<0.94' 'haskell-regex-tdfa<1.2' 'haskell-time<1.2' 'haskell-unix<2.5' 'haskell-utf8-string<0.4')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('df7b497758b032883edad52b3e8ebb9d')
+md5sums=('bc3d6cc3f45e85f2b317f4c804c87c70')

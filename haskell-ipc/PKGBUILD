@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ipc
 pkgname=haskell-ipc
-pkgver=0.0.4
-pkgrel=2
+pkgver=0.0.5
+pkgrel=1
 pkgdesc="High level inter-process communication library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f1c2f8aca1fa88a7cf3c185816f3d35b')
+md5sums=('2cb8c14e0f68b3dbe879bc9ee5a20f9c')

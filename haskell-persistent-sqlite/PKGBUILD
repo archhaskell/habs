@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=persistent-sqlite
 pkgname=haskell-persistent-sqlite
-pkgver=0.2.1
+pkgver=0.3.0
 pkgrel=1
 pkgdesc="Backend for the persistent library using sqlite3."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-persistent<0.3' 'haskell-template-haskell<2.5' 'haskell-transformers<0.3' 'haskell-utf8-string<0.4')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-neither<0.2' 'haskell-persistent<0.4' 'haskell-template-haskell<2.6' 'haskell-transformers<0.3' 'haskell-utf8-string<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('b460ae9864ce59baa6104e66a802c5eb')
+md5sums=('7a26c1c5260db00029a04d536e18474d')

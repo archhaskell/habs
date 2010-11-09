@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=happstack-data
 pkgname=haskell-happstack-data
-pkgver=0.4.1
-pkgrel=2
+pkgver=0.5.0.3
+pkgrel=1
 pkgdesc="Happstack data manipulation libraries"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hunit' 'haskell-haxml<1.14' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-happstack-util<0.5' 'haskell-mtl' 'haskell-pretty' 'haskell-syb' 'haskell-syb-with-class>=0.6.1' 'haskell-template-haskell')
+depends=('ghc' 'haskell-haxml<1.14' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-happstack-util<0.6' 'haskell-mtl<2.1' 'haskell-pretty' 'haskell-syb' 'haskell-syb-with-class>=0.6.1' 'haskell-syb-with-class-instances-text' 'haskell-template-haskell' 'haskell-text>=0.7.1' 'haskell-time>=1.1.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('38a54bfc57e2542728a221c21f62c58d')
+md5sums=('8c4c29e8a16739dcc159c1e24330e580')

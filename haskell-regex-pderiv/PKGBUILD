@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=regex-pderiv
 pkgname=haskell-regex-pderiv
-pkgver=0.0.8.1
+pkgver=0.0.8.2
 pkgrel=1
 pkgdesc="Replaces/Enhances Text.Regex"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('401a8708ec7b559e3ea2c1334d815893')
+md5sums=('a352db575cc6edf1686a1c2740b0f7d3')

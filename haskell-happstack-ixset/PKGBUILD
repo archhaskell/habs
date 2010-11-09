@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=happstack-ixset
 pkgname=haskell-happstack-ixset
-pkgver=0.4.1
-pkgrel=2
+pkgver=0.5.0.3
+pkgrel=1
 pkgdesc="Efficient relational queries on Haskell sets."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hunit' 'haskell-containers' 'haskell-happstack-data<0.5' 'haskell-happstack-util<0.5' 'haskell-mtl' 'haskell-syb' 'haskell-syb-with-class>=0.6.1' 'haskell-template-haskell')
+depends=('ghc' 'haskell-containers' 'haskell-happstack-data<0.6' 'haskell-happstack-util<0.6' 'haskell-mtl<2.1' 'haskell-syb' 'haskell-syb-with-class>=0.6.1' 'haskell-template-haskell')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('4f56bcab1f3a9283e99ee3d123ebe7ad')
+md5sums=('f804e750fcbd29777e37bc650e2a5302')

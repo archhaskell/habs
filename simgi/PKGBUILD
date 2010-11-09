@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=simgi
 pkgname=simgi
-pkgver=0.2
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc="stochastic simulation engine"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('ec17a58962e5297f9e657c5d8ea6d514')
+md5sums=('f9b0d4056373a621c21a2f21d6638c05')

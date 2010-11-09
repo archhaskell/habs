@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=jmacro
 pkgname=haskell-jmacro
-pkgver=0.1.2
-pkgrel=2
+pkgver=0.3.2
+pkgrel=1
 pkgdesc="QuasiQuotation library for programmatic generation of Javascript code."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring>=0.9' 'haskell-containers' 'haskell-haskell-src-meta' 'haskell-mtl' 'haskell-parsec>=2.1' 'haskell-pcre-light' 'haskell-pretty' 'haskell-safe>=0.2' 'haskell-syb' 'haskell-template-haskell>=2.3')
+depends=('ghc' 'haskell-bytestring>=0.9' 'haskell-containers' 'haskell-haskell-src-exts' 'haskell-haskell-src-exts-qq' 'haskell-json' 'haskell-mtl' 'haskell-parseargs' 'haskell-parsec>=2.1' 'haskell-pcre-light' 'haskell-pretty' 'haskell-safe>=0.2' 'haskell-syb' 'haskell-template-haskell>=2.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c69d97bb0aeb98969fc91cbd86578920')
+md5sums=('d708f590afb8be6bc48597dc6675eef5')

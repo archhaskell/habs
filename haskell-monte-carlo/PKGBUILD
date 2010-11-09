@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=monte-carlo
 pkgname=haskell-monte-carlo
-pkgver=0.3
+pkgver=0.3.1
 pkgrel=1
 pkgdesc="A monad and transformer for Monte Carlo calculations."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-gsl-random>=0.3.1' 'haskell-mtl<1.2' 'haskell-vector<0.7')
+depends=('ghc' 'haskell-gsl-random>=0.3.1' 'haskell-mtl<1.2' 'haskell-vector<0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e7b7bc86ff2c2f92c5255363c347cc27')
+md5sums=('d8e8e226294cc56c2883b3dc7169739e')

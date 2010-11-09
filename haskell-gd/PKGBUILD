@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=gd
 pkgname=haskell-gd
-pkgver=3000.4.0
+pkgver=3000.5.0
 pkgrel=1
 pkgdesc="A Haskell binding to a subset of the GD graphics library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'gd' 'libpng' 'zlib' 'libjpeg' 'glibc' 'fontconfig' 'freetype2' 'expat')
+depends=('ghc' 'haskell-bytestring>=0.9.1.6' 'gd' 'libpng' 'zlib' 'libjpeg' 'glibc' 'fontconfig' 'freetype2' 'expat')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('7bc5bb68638b807d592aba433beb3fa5')
+md5sums=('abae30b3728bd3c1672993d117c4f2b6')

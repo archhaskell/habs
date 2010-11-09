@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=darcswatch
 pkgname=darcswatch
-pkgver=0.4
-pkgrel=2
+pkgver=0.4.3
+pkgrel=1
 pkgdesc="Track application of Darcs patches"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('00315bda80259d496125f96fef4d3852')
+md5sums=('caeec00bacbdf93ae3be65ad06c6ae63')

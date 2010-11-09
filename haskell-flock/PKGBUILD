@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=flock
 pkgname=haskell-flock
-pkgver=0.1
-pkgrel=2
+pkgver=0.2
+pkgrel=1
 pkgdesc="Wrapper for flock(2)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-mtl' 'haskell-unix')
+depends=('ghc' 'haskell-mtl<1.2' 'haskell-unix<2.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('a45498af3ad7352c7cbf26f53f7e5848')
+md5sums=('cc462acfd4d4086489893366e050c100')

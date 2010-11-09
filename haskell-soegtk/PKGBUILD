@@ -1,11 +1,11 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=soegtk
 pkgname=haskell-soegtk
-pkgver=0.11.0
+pkgver=0.11.1
 pkgrel=1
 pkgdesc="GUI functions as used in the book \"The Haskell School of Expression\"."
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('GPL')
+license=('LGPL-2.1')
 arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc' 'haskell-array' 'haskell-cairo<0.12' 'haskell-containers' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haskell-haskell98' 'haskell-mtl' 'haskell-old-time>=1.0.0.2' 'gtk2')
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('0cca72263a728a73cf14950e6ae8aa9a')
+md5sums=('eac9e047928df779f9910b658e4c344f')

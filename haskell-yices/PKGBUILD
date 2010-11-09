@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yices
 pkgname=haskell-yices
-pkgver=0.0.0.7
+pkgver=0.0.0.8
 pkgrel=1
 pkgdesc="Haskell programming interface to Yices SMT solver"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('b9ce2b119f9cb902079024c15e7c78d0')
+md5sums=('4e76ec6ffc8ba1c8a376231c0ed9d8d2')

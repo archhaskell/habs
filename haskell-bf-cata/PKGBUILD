@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bf-cata
 pkgname=haskell-bf-cata
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="Evaluation combinators for breadth-first evaluated catamorphisms"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('5e5f521bbf4c35fc7e309a6ac322f053')
+md5sums=('4896f1677e754a9c2ed64fb704102351')

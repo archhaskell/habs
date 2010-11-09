@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=network-protocol-xmpp
 pkgname=haskell-network-protocol-xmpp
-pkgver=0.3.2.2
+pkgver=0.3.2.3
 pkgrel=1
-pkgdesc="Client <-> Server communication over XMPP"
+pkgdesc="Client->Server XMPP"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-gnuidn<0.2' 'haskell-gnutls<0.3' 'haskell-gsasl<0.4' 'haskell-libxml-sax<0.7' 'haskell-monads-tf<0.2' 'haskell-network<2.3' 'haskell-text<0.9' 'haskell-transformers<0.3' 'haskell-xml-types<0.2')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-gnuidn<0.2' 'haskell-gnutls<0.3' 'haskell-gsasl<0.4' 'haskell-libxml-sax<0.7' 'haskell-monads-tf<0.2' 'haskell-network<2.3' 'haskell-text<0.11' 'haskell-transformers<0.3' 'haskell-xml-types<0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('9f0a15341f00ac7819fd83c7a8e0c2a2')
+md5sums=('6b627e137082d27b4b7d85a4ef0b4f6f')

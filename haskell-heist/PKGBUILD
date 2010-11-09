@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=heist
 pkgname=haskell-heist
-pkgver=0.2.3
+pkgver=0.2.4
 pkgrel=1
 pkgdesc="An xhtml templating system"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-attoparsec<0.9' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-directory-tree' 'haskell-filepath' 'haskell-hexpat<0.19' 'haskell-monads-fd' 'haskell-process' 'haskell-random' 'haskell-transformers')
+depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-attoparsec<0.9' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-directory-tree' 'haskell-filepath' 'haskell-hexpat<0.20' 'haskell-monads-fd' 'haskell-process' 'haskell-random' 'haskell-transformers')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('0e4945ec02ccc80b357d74ecb1eb366b')
+md5sums=('4dd325e01205c858322074367ec15d20')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=rsagl
 pkgname=haskell-rsagl
-pkgver=0.2.2
-pkgrel=2
+pkgver=0.4.0.2
+pkgrel=1
 pkgdesc="The RogueStar Animation and Graphics Library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-glut' 'haskell-opengl' 'haskell-quickcheck<2' 'haskell-array' 'haskell-arrows' 'haskell-containers' 'haskell-mtl' 'haskell-old-time' 'haskell-parallel' 'haskell-random')
+depends=('ghc' 'haskell-glut<2.2' 'haskell-opengl<2.3' 'haskell-vec<0.10' 'haskell-array<0.4' 'haskell-arrows<0.5' 'haskell-containers<0.4' 'haskell-data-memocombinators<0.5' 'haskell-mtl<1.2' 'haskell-old-time<1.1' 'haskell-parallel<2.3' 'haskell-parsec<3.2' 'haskell-random<1.1' 'haskell-stm<2.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('51736141f9af6ca27cf19736929d7e41')
+md5sums=('6e57103a0d1d2d7542a9bf7e50771039')

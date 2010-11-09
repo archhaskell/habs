@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=accelerate
 pkgname=haskell-accelerate
-pkgver=0.8.0.0
+pkgver=0.8.1.0
 pkgrel=1
 pkgdesc="An embedded language for accelerated array processing"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('300b6087ab1ee6cdbb6e2fa4288138a5')
+md5sums=('37c68427c9c8345f6c5a8dc305f5e57f')

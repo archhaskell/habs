@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HCodecs
 pkgname=haskell-hcodecs
-pkgver=0.1
-pkgrel=2
+pkgver=0.2
+pkgrel=1
 pkgdesc="A library to read, write and manipulate MIDI, WAVE, and SoundFont2 files."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e1b20fd34c06d0c84b5e9d46a2605df5')
+md5sums=('8b6b40e28507c207563e5e256ddb02f5')

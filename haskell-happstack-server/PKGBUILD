@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=happstack-server
 pkgname=haskell-happstack-server
-pkgver=0.4.1
-pkgrel=2
+pkgver=0.5.0.3
+pkgrel=1
 pkgdesc="Web related tools and services."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hunit' 'haskell-haxml<1.14' 'haskell-maybet' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-happstack-data<0.5' 'haskell-happstack-util<0.5' 'haskell-hslogger>=1.0.2' 'haskell-html' 'haskell-mtl' 'haskell-network' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec<3' 'haskell-process' 'haskell-sendfile<0.7' 'haskell-syb' 'haskell-template-haskell' 'haskell-time' 'haskell-unix' 'haskell-utf8-string<0.4' 'haskell-xhtml' 'haskell-zlib')
+depends=('ghc' 'haskell-haxml<1.14' 'haskell-maybet' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-happstack-data<0.6' 'haskell-happstack-util<0.6' 'haskell-hslogger>=1.0.2' 'haskell-html' 'haskell-mtl<2.1' 'haskell-network' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec<4' 'haskell-process' 'haskell-sendfile<0.8' 'haskell-syb' 'haskell-template-haskell' 'haskell-time' 'haskell-unix' 'haskell-utf8-string<0.4' 'haskell-xhtml' 'haskell-zlib')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('08a8a8e53eee5c2c2f2fee5aa1a9b277')
+md5sums=('eaf1c7e7b467b32b1191e6e02b3f8da4')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=buildbox
 pkgname=haskell-buildbox
-pkgver=1.0.2.0
+pkgver=1.2.1.0
 pkgrel=1
 pkgdesc="Rehackable components for writing buildbots and test harnesses."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-directory<1.1' 'haskell-mtl<1.2' 'haskell-old-locale<1.1' 'haskell-pretty<1.1' 'haskell-process<1.1' 'haskell-time<1.2' 'haskell-unix<2.5')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-directory<=1.2' 'haskell-mtl<1.2' 'haskell-old-locale<1.1' 'haskell-pretty<1.1' 'haskell-process<1.1' 'haskell-random<1.1' 'haskell-time<=1.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d93f53321cf9114ad79cc2f3eb79e8d0')
+md5sums=('2f29f07337bf58149da5394921b0f2d0')

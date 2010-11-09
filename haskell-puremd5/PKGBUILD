@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pureMD5
 pkgname=haskell-puremd5
-pkgver=2.1.0.1
+pkgver=2.1.0.3
 pkgrel=1
 pkgdesc="A Haskell-only implementation of the MD5 digest (hash) algorithm."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck' 'haskell-binary<0.6.0' 'haskell-bytestring<0.10' 'haskell-cereal<0.4' 'haskell-crypto-api<0.2' 'haskell-tagged')
+depends=('ghc' 'haskell-binary<0.6.0' 'haskell-bytestring<0.10' 'haskell-cereal<0.4' 'haskell-crypto-api' 'haskell-tagged')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e7f122d2b659e5675768126fa77f6889')
+md5sums=('8e36a9b255e4be3ee102e6ca0e0752bb')

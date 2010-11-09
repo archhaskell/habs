@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=gitit
 pkgname=gitit
-pkgver=0.7.2
-pkgrel=2
+pkgver=0.7.3.8
+pkgrel=1
 pkgdesc="Wiki using happstack, git or darcs, and pandoc."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('gmp' 'ghc' 'haskell-configfile>=1' 'haskell-hstringtemplate' 'haskell-http' 'haskell-sha>1' 'haskell-bytestring' 'haskell-cautious-file<0.2' 'haskell-cgi' 'haskell-containers' 'haskell-datetime' 'haskell-directory' 'haskell-feed>=0.3.6' 'haskell-filepath' 'haskell-filestore>=0.3.4' 'haskell-ghc-paths' 'haskell-happstack-server<0.5' 'haskell-happstack-util<0.5' 'haskell-highlighting-kate' 'haskell-hslogger<1.1' 'haskell-mtl' 'haskell-network>=2.1.0.0' 'haskell-old-time' 'haskell-pandoc>=1.4' 'haskell-parsec<3' 'haskell-pretty' 'haskell-process' 'haskell-random' 'haskell-recaptcha>=0.1' 'haskell-safe' 'haskell-syb' 'haskell-texmath' 'haskell-url' 'haskell-utf8-string' 'haskell-xhtml' 'haskell-xml>=1.3.5' 'haskell-zlib')
+depends=('gmp' 'ghc' 'haskell-configfile<1.1' 'haskell-hstringtemplate<0.7' 'haskell-http<4000.1' 'haskell-sha<1.5' 'haskell-bytestring' 'haskell-cautious-file<0.2' 'haskell-cgi' 'haskell-containers' 'haskell-datetime<0.3' 'haskell-directory' 'haskell-feed<0.4' 'haskell-filepath' 'haskell-filestore>=0.3.4' 'haskell-ghc-paths' 'haskell-happstack-server<0.6' 'haskell-happstack-util<0.6' 'haskell-highlighting-kate>=0.2.7.1' 'haskell-hslogger<1.1' 'haskell-mtl' 'haskell-network<2.3' 'haskell-old-time' 'haskell-pandoc>=1.6' 'haskell-parsec' 'haskell-pretty' 'haskell-process' 'haskell-random' 'haskell-recaptcha>=0.1' 'haskell-safe' 'haskell-syb' 'haskell-url<2.2' 'haskell-utf8-string<0.4' 'haskell-xhtml' 'haskell-xml>=1.3.5' 'haskell-zlib<0.6')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('6df132059f45c38a9d7529ef6720d5b0')
+md5sums=('10155056a1d9bf0009a87710ce3097b6')

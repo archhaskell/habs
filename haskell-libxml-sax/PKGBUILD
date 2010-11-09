@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=libxml-sax
 pkgname=haskell-libxml-sax
-pkgver=0.6.0.1
+pkgver=0.6.0.2
 pkgrel=1
 pkgdesc="Bindings for the libXML2 SAX interface"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-text<0.9' 'haskell-xml-types<0.2' 'libxml2' 'libxml' 'c2hs>=0.15')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-text<0.11' 'haskell-xml-types<0.2' 'libxml2' 'libxml' 'c2hs>=0.15')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('20f6da44da59e832d271b0a1e9c22ee9')
+md5sums=('26bd96f80e6926e0d28241cf09d72680')

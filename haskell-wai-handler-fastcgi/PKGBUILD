@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=wai-handler-fastcgi
 pkgname=haskell-wai-handler-fastcgi
-pkgver=0.2.0.1
+pkgver=0.2.2
 pkgrel=1
 pkgdesc="Wai handler to fastcgi"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('952a3e443fb8b7b2007d1892763e1ddc')
+md5sums=('e71e9a67b9466feee48e20a0a6b73ef8')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskell-updater
 pkgname=haskell-updater
-pkgver=1.0.0.0
+pkgver=1.1.3.0
 pkgrel=1
 pkgdesc="Rebuild Haskell dependencies in Gentoo"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('75091cf580e20b5d1b2703767f9086c9')
+md5sums=('fa44811524d8917240b4da4d5efa1066')

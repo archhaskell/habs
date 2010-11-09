@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=strptime
 pkgname=haskell-strptime
-pkgver=0.1.5
+pkgver=0.1.6
 pkgrel=1
 pkgdesc="Efficient parsing of LocalTime using a binding to C's strptime"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('cc902c9a7b6f34a519c9599df2240d5f')
+md5sums=('370f4cc7f9730c3370f43de6fa313437')

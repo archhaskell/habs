@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=poppler
 pkgname=haskell-poppler
-pkgver=0.11.1
+pkgver=0.12.1
 pkgrel=1
 pkgdesc="Binding to the Poppler."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-2')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-bytestring' 'haskell-cairo<0.12' 'haskell-containers' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haskell-haskell98' 'haskell-mtl' 'poppler' 'glib2' 'cairo' 'gtk' 'gdk-pixbuf' 'pango' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array' 'haskell-bytestring' 'haskell-cairo<0.13' 'haskell-containers' 'haskell-glib<0.13' 'haskell-gtk<0.13' 'haskell-haskell98' 'haskell-mtl' 'poppler' 'glib2' 'cairo' 'gtk' 'gdk-pixbuf' 'pango' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('2fbfd3f4eb64d3c61c3f5890a447af81')
+md5sums=('a3250fecb322c999a229aff29001243b')

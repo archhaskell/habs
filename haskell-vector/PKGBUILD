@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=vector
 pkgname=haskell-vector
-pkgver=0.7
+pkgver=0.7.0.1
 pkgrel=1
 pkgdesc="Efficient Arrays"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('6c95eeebe4e4c42ac27ce8589e554397')
+md5sums=('b0cfeab898384d960f0ad7393e5f955c')

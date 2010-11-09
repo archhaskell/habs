@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=flower
 pkgname=flower
-pkgver=0.2
-pkgrel=2
+pkgver=0.6.3
+pkgrel=1
 pkgdesc="Analyze 454 flowgrams  (.SFF files)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array>=0.1' 'haskell-binary' 'haskell-bio>=0.4' 'haskell-bytestring>=0.9.1')
+makedepends=('ghc' 'haskell-array>=0.1' 'haskell-binary<0.5' 'haskell-bio>=0.4.8' 'haskell-bytestring>=0.9.1' 'haskell-cmdargs>=0.5' 'haskell-containers' 'haskell-mtl' 'haskell-random')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('5e6c410d6757bd4706a40bc47caef8ed')
+md5sums=('84641751f74ff534911d2ab70170323b')

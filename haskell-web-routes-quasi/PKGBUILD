@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=web-routes-quasi
 pkgname=haskell-web-routes-quasi
-pkgver=0.6.0.1
+pkgver=0.6.1
 pkgrel=1
 pkgdesc="Define data types and parse/build functions for web-routes via a quasi-quoted DSL"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-template-haskell<2.6')
+depends=('ghc' 'haskell-template-haskell<2.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('abcec86bc822273ab1c1ec7bd4c1863b')
+md5sums=('d4cd66cfab5ee2abcd9def774f1061a3')

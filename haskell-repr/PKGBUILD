@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=repr
 pkgname=haskell-repr
-pkgver=0.3.2.1
+pkgver=0.4
 pkgrel=1
 pkgdesc="Render overloaded expressions to their textual representation."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-dstring<0.4' 'haskell-random<1.1' 'haskell-string-combinators<0.6' 'haskell-to-string-class<0.2')
+depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-dstring<0.5' 'haskell-random<1.1' 'haskell-string-combinators<0.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('4e7b959f094506a575481702b03af1a6')
+md5sums=('cbb6d3031e443a0ff952f2b1bbb240cb')

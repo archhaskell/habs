@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Pugs
 pkgname=pugs
-pkgver=6.2.13.15
-pkgrel=2
+pkgver=6.2.13.16
+pkgrel=1
 pkgdesc="A Perl 6 Implementation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-findbin' 'haskell-hsparrot>=0.0.2' 'haskell-hssyck>=0.44' 'haskell-metaobject>=0.0.4' 'haskell-array' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-control-timeout>=0.1.2' 'haskell-directory' 'haskell-filepath' 'haskell-haskeline>=0.2.1' 'haskell-haskell98' 'haskell-mtl' 'haskell-network' 'haskell-parsec<3.0.0' 'haskell-pretty' 'haskell-process' 'haskell-pugs-drift>=2.2.3.0' 'haskell-pugs-compat>=0.0.5' 'haskell-random' 'haskell-stm' 'haskell-stringtable-atom>=0.0.4' 'haskell-time' 'haskell-utf8-string')
+makedepends=('ghc' 'haskell-findbin' 'haskell-hsparrot>=0.0.2' 'haskell-hssyck>=0.44' 'haskell-metaobject>=0.0.4' 'haskell-array' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-control-timeout>=0.1.2' 'haskell-directory' 'haskell-filepath' 'haskell-haskeline>=0.2.1' 'haskell-haskell98' 'haskell-mtl' 'haskell-network' 'haskell-parsec<3.0.0' 'haskell-pretty' 'haskell-process' 'haskell-pugs-drift>=2.2.3.0' 'haskell-pugs-compat>=0.0.5' 'haskell-random' 'haskell-stm>=2.1.2.1' 'haskell-stringtable-atom>=0.0.4' 'haskell-time' 'haskell-utf8-string')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('786ef87a1b36b66d89efca3214ad57e8')
+md5sums=('a90de9afdb2bf17ace8d82c2c3561665')

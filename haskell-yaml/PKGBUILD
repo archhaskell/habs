@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yaml
 pkgname=haskell-yaml
-pkgver=0.4.0
+pkgver=0.4.1
 pkgrel=1
 pkgdesc="Low-level binding to the libyaml C library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-bytestring<0.10' 'haskell-enumerator<0.5' 'haskell-transformers<0.3')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-enumerator<0.5' 'haskell-transformers<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('49a01cc3ab73c5fee45775c333618887')
+md5sums=('f0b7fe1aa92626e54271d650b7fbe61e')

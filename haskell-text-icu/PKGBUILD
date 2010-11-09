@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=text-icu
 pkgname=haskell-text-icu
-pkgver=0.6.0.1
+pkgver=0.6.3.0
 pkgrel=1
 pkgdesc="Bindings to the ICU library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-text<0.10' 'icu')
+depends=('ghc' 'haskell-bytestring' 'haskell-text<=0.11.0.0' 'icu')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('02468d92493329b9764c9103daf95678')
+md5sums=('c0bbb9b4a8577b0d0df1d7ae483d4f42')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bio
 pkgname=haskell-bio
-pkgver=0.4
-pkgrel=2
+pkgver=0.4.8
+pkgrel=1
 pkgdesc="A bioinformatics library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck<2' 'haskell-array' 'haskell-binary' 'haskell-bytestring>=0.9.1' 'haskell-containers' 'haskell-mtl' 'haskell-old-time' 'haskell-parallel' 'haskell-parsec' 'haskell-random' 'haskell-tagsoup>=0.4')
+depends=('ghc' 'haskell-quickcheck>=2' 'haskell-array' 'haskell-binary<0.5' 'haskell-bytestring>=0.9.1' 'haskell-containers' 'haskell-directory' 'haskell-mtl' 'haskell-old-time' 'haskell-parallel' 'haskell-parsec' 'haskell-random' 'haskell-tagsoup>=0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('339b6d5a14a04a4049c99e08892d8d25')
+md5sums=('9484b8860717a5a89bf01666659709fa')

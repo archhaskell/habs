@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=network-data
 pkgname=haskell-network-data
-pkgver=0.1.0
-pkgrel=2
+pkgver=0.2.0
+pkgrel=1
 pkgdesc="Library for network data structures (ex: ip/udp/tcp headers and helper functions)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary<0.6.0' 'haskell-bytestring<1.0' 'haskell-parsec<4' 'haskell-pretty<1.1.0' 'haskell-prettyclass<1.1')
+depends=('ghc' 'haskell-bytestring<1.0' 'haskell-cereal<0.4' 'haskell-parsec<4' 'haskell-pretty<1.1.0' 'haskell-prettyclass<1.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('64f838288faf89cdc45d667e98ccd93d')
+md5sums=('5372688803d005eaed9c4d60b965a340')

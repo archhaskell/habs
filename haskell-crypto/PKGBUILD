@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Crypto
 pkgname=haskell-crypto
-pkgver=4.2.1
+pkgver=4.2.2
 pkgrel=1
 pkgdesc="Collects together existing Haskell cryptographic functions into a package"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 ReadMe.tex ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ac62cbabb51710c42643a3a3fee83c4c')
+md5sums=('bb1ce216ff65c131c5efa7ba11f1c3ea')

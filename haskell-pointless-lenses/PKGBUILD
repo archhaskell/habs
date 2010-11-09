@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pointless-lenses
 pkgname=haskell-pointless-lenses
-pkgver=0.0.5
+pkgver=0.0.7
 pkgrel=1
 pkgdesc="Pointless Lenses library"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('7b6d7ce8ac6eeb6c3563cb11e3ffdb7c')
+md5sums=('f7e1f5b9850e3e46c8702d65e2a44381')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HaskellForMaths
 pkgname=haskell-haskellformaths
-pkgver=0.2.2
+pkgver=0.3.1
 pkgrel=1
 pkgdesc="Combinatorics, group theory, commutative algebra, non-commutative algebra"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d640a9098a3aab09921244ea7c838d0b')
+md5sums=('d8cfdf88d14d4b8bd0caa607fcab886a')

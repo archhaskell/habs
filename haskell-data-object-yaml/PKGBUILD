@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-object-yaml
 pkgname=haskell-data-object-yaml
-pkgver=0.3.1.1
+pkgver=0.3.3.1
 pkgrel=1
 pkgdesc="Serialize data to and from Yaml files"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-convertible-text<0.4' 'haskell-data-object<0.4' 'haskell-failure<0.2' 'haskell-iteratee<0.4' 'haskell-text<0.9' 'haskell-transformers<0.3' 'haskell-yaml<0.4')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-convertible-text<0.4' 'haskell-data-object<0.4' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-text<0.11' 'haskell-transformers<0.3' 'haskell-yaml<0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('198741199cf88a736a740df33d66c1dc')
+md5sums=('26ebd044121e011e2cac791a0af163aa')

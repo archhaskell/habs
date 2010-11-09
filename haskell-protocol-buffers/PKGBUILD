@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=protocol-buffers
 pkgname=haskell-protocol-buffers
-pkgver=1.7.9
+pkgver=1.8.0
 pkgrel=1
 pkgdesc="Parse Google Protocol Buffer specifications"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('1c55cc1e5b60d6b544a817138fcaa024')
+md5sums=('60258bea28645b6a618800e133e575ba')

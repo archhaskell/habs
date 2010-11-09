@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=rosezipper
 pkgname=haskell-rosezipper
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Generic zipper implementation for Data.Tree"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('7ff406e946146181be851c31217b40cd')
+md5sums=('a3cdd1906f95f004454d230b1a847e8c')

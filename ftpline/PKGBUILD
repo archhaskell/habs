@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=FTPLine
 pkgname=ftpline
-pkgver=1.0.0
+pkgver=1.2.0
 pkgrel=1
 pkgdesc="A command-line FTP client."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-missingh' 'haskell-ansi-terminal' 'haskell-directory' 'haskell-ftphs' 'haskell-haskeline' 'haskell-mtl' 'haskell-network')
+makedepends=('ghc' 'haskell-ansi-terminal' 'haskell-bytestring' 'haskell-directory' 'haskell-ftphs' 'haskell-haskeline<0.7' 'haskell-mtl' 'haskell-network' 'haskell-strict')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 license ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('7e75e29a010d7725aed72f4ff19711f9')
+md5sums=('12d21595c3c4ae4dc3c774d4adf4a8aa')

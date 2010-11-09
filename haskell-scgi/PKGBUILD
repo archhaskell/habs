@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=scgi
 pkgname=haskell-scgi
-pkgver=0.3.2
+pkgver=0.3.3
 pkgrel=1
 pkgdesc="A Haskell library for writing SCGI programs."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-cgi' 'haskell-extensible-exceptions<0.2' 'haskell-network' 'haskell-network-bytestring')
+depends=('ghc' 'haskell-bytestring' 'haskell-cgi' 'haskell-extensible-exceptions<0.2' 'haskell-network>=2.2.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f71d24f6607077ed7a5c836ffc683a82')
+md5sums=('62c3c8142d1728f5e7575ee268e52c3a')

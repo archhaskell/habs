@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=AC-EasyRaster-GTK
 pkgname=haskell-ac-easyraster-gtk
-pkgver=1.1.2
-pkgrel=2
+pkgver=1.1.3
+pkgrel=1
 pkgdesc="GTK+ pixel plotting."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array<0.4' 'haskell-gtk<0.11')
+depends=('ghc' 'haskell-array>=0.2' 'haskell-gtk>=0.10')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 License.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('67d317c8eb552f87691b6d3cc34e8608')
+md5sums=('b212828c7c5f15d4600499f14c2eec93')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=type
 pkgname=haskell-type
-pkgver=0.1.0
-pkgrel=2
+pkgver=0.2.0
+pkgrel=1
 pkgdesc="Dynamic casting library with support for arbitrary rank type kinds."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers<0.3' 'haskell-template-haskell<2.4')
+depends=('ghc' 'haskell-containers<0.4' 'haskell-template-haskell<2.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 license/BSD3 ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('38b70089de269afb0dbe9b88ca32b422')
+md5sums=('92f8fd3a47c0f0cfe526ff8973dffbed')

@@ -1,9 +1,9 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=asn1-data
 pkgname=haskell-asn1-data
-pkgver=0.2
+pkgver=0.2.2
 pkgrel=1
-pkgdesc="ASN1 data reader/writer in RAW/BER/DER/CER forms"
+pkgdesc="ASN1 data reader and writer in RAW, BER, DER and CER forms"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('0147bfef3be053b6bb83b57192c550b5')
+md5sums=('dfc412f4b1cff907e924dd65ce70c399')

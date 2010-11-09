@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hxt-filter
 pkgname=haskell-hxt-filter
-pkgver=8.4.0
+pkgver=8.4.2
 pkgrel=1
 pkgdesc="A collection of tools for processing XML with Haskell (Filter variant)."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENCE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8ba2982fb84d7153078af736e2906993')
+md5sums=('26e568dd4404b072e07fa971461c89ed')

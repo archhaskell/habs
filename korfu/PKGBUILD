@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=korfu
 pkgname=korfu
-pkgver=0.1.1
-pkgrel=2
+pkgver=0.2
+pkgrel=1
 pkgdesc="The Korfu ORF Utility"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-bio<0.4' 'haskell-bytestring' 'haskell-haskell98' 'haskell-simpleargs')
+makedepends=('ghc' 'haskell-bio>=0.4' 'haskell-bytestring' 'haskell-haskell98' 'haskell-simpleargs')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('75734ad3aa0ac1c7dfa0e9f2242c1c25')
+md5sums=('ad85dd0a53ca95c6b92101e06b413ab4')

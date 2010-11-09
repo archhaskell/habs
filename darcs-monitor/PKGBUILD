@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=darcs-monitor
 pkgname=darcs-monitor
-pkgver=0.3.6
-pkgrel=2
+pkgver=0.4.0
+pkgrel=1
 pkgdesc="Darcs repository monitor (sends email)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('8e86252c88756c61937b31a9aab7fb30')
+md5sums=('898412ceb85ab409d6edd15e9fe967c9')

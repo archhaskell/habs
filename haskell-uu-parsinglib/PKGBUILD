@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=uu-parsinglib
 pkgname=haskell-uu-parsinglib
-pkgver=2.5.5
+pkgver=2.5.5.1
 pkgrel=1
 pkgdesc="Online, error-correcting parser combinators; monadic and applicative interfaces"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('37a49c0d10684c2cd1d8e28579c82294')
+md5sums=('7375cee902fd342866174c3de3dbf749')

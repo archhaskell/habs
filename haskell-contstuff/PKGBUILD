@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=contstuff
 pkgname=haskell-contstuff
-pkgver=0.3.1
+pkgver=0.5.0
 pkgrel=1
 pkgdesc="Easy to use CPS-based monads"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('cda6f2e7d62cffc7bd10133eb976173b')
+md5sums=('2e66de654076cca3711afae76ea5051d')

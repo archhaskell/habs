@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=wai
 pkgname=haskell-wai
-pkgver=0.2.1
+pkgver=0.2.2
 pkgrel=1
 pkgdesc="Web Application Interface."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-directory<1.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('16b01bcd42021741b9bb6a5464947ab7')
+md5sums=('5628ce650df237d8267f8a4504a00dc9')

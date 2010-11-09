@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hs-gchart
 pkgname=haskell-hs-gchart
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="Haskell wrapper for the Google Chart API"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('477810be8e8ad284c948e8e4aa71344a')
+md5sums=('b2519d4642da9ededcdbe51e870d278e')

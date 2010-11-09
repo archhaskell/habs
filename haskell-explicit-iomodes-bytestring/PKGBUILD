@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=explicit-iomodes-bytestring
 pkgname=haskell-explicit-iomodes-bytestring
-pkgver=0.1.0.1
+pkgver=0.1.0.2
 pkgrel=1
 pkgdesc="Extends explicit-iomodes with ByteString operations"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-explicit-iomodes<0.6')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-explicit-iomodes<0.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3481ef50029c78e9b5d1aea9a9d57644')
+md5sums=('f53eb98fb2751cc49144aa2d74d770f1')

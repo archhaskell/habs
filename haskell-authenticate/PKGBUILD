@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=authenticate
 pkgname=haskell-authenticate
-pkgver=0.7.0
+pkgver=0.7.2.1
 pkgrel=1
 pkgdesc="Authentication methods for Haskell web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d47b58e3381f3c57568c1b6fd79660f4')
+md5sums=('bca5e4d2fdcf1a20df32ebb25a1d5ec3')

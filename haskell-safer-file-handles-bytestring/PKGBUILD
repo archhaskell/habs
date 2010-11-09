@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=safer-file-handles-bytestring
 pkgname=haskell-safer-file-handles-bytestring
-pkgver=0.1.0.2
+pkgver=0.1.0.3
 pkgrel=1
 pkgdesc="Extends safer-file-handles with ByteString operations"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-explicit-iomodes-bytestring<0.2' 'haskell-regions<0.8' 'haskell-safer-file-handles<0.9' 'haskell-transformers<0.3')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-explicit-iomodes-bytestring<0.2' 'haskell-regions<0.9' 'haskell-safer-file-handles<0.10' 'haskell-transformers<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('6d6ba9a99642185c743d8d09e007f67e')
+md5sums=('b740350007f244db1b7f38f8ee18603f')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-binary-ieee754
 pkgname=haskell-data-binary-ieee754
-pkgver=0.4.1
+pkgver=0.4.2.1
 pkgrel=1
 pkgdesc="Parser/Serialiser for IEEE-754 floating-point values"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('GPL-3')
+license=('custom:MIT')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary<0.6' 'haskell-bytestring<0.10')
+depends=('ghc' 'haskell-binary<0.6')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 License.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c710c81827c5031453c01411ac3c431a')
+md5sums=('004c82980eb95f3313c6ce4e3ee20f8c')

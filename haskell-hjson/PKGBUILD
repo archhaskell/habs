@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hjson
 pkgname=haskell-hjson
-pkgver=1.1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="JSON parsing library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers' 'haskell-parsec>=2.1' 'haskell-safe')
+depends=('ghc' 'haskell-containers' 'haskell-parsec>=3.0.0' 'haskell-safe')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 COPYING ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d05c41702c7f5f5b7fcfb4027affe003')
+md5sums=('8e01991413ad3005f783475b7ff23891')

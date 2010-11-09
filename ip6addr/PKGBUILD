@@ -1,9 +1,9 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ip6addr
 pkgname=ip6addr
-pkgver=0.2
+pkgver=0.3.2
 pkgrel=1
-pkgdesc="Command-line tools to filter parsed IPv6 Addresses against RFC 4291 and generate random IPv6 adresses"
+pkgdesc="Command-line tools to deal with IPv6 Addresses text representation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('59a96d346e93197f9bd06eca25c36104')
+md5sums=('d538835508cb213f6db52558c0c5fe49')

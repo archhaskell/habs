@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=BerkeleyDBXML
 pkgname=haskell-berkeleydbxml
-pkgver=0.6.2
-pkgrel=2
+pkgver=0.7.1
+pkgrel=1
 pkgdesc="Berkeley DB XML binding"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-berkeleydb>=0.7.1' 'haskell-bytestring>=0.9' 'db' 'dbxml' 'xqilla' 'xerces-c' 'libxml2')
+depends=('ghc' 'haskell-berkeleydb>=0.8.1' 'haskell-bytestring>=0.9' 'db' 'dbxml' 'xqilla' 'xerces-c' 'libxml2' 'gcc-libs')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d02644e68b48b8978c5c8dba81a03db0')
+md5sums=('2a743dd0d3ca7c291337c08f89d44b85')

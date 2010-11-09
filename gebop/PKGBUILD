@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=GeBoP
 pkgname=gebop
-pkgver=1.7.1
-pkgrel=2
+pkgver=1.7.2
+pkgrel=1
 pkgdesc="Several games"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('dcc827d02704c18dc007995bd1204866')
+md5sums=('0a8dc9f5758bfc49f82c2290478b21a1')

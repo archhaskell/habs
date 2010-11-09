@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yajl-enumerator
 pkgname=haskell-yajl-enumerator
-pkgver=0.2
+pkgver=0.2.0.3
 pkgrel=1
 pkgdesc="Enumerator-based interface to YAJL, an event-based JSON implementation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring<0.10' 'haskell-enumerator<0.5' 'haskell-text<0.8' 'haskell-transformers<0.3' 'haskell-yajl<0.4')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-enumerator<0.5' 'haskell-text<0.11' 'haskell-transformers<0.3' 'haskell-yajl<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('8c462d0bb268c2bfcae8a8ddd73f4e84')
+md5sums=('31ea5409286ea899b91f2d94a825b8dd')

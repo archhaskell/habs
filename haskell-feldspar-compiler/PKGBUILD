@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=feldspar-compiler
 pkgname=haskell-feldspar-compiler
-pkgver=0.3.1
+pkgver=0.3.2
 pkgrel=1
 pkgdesc="Compiler for the Feldspar language"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-mtl' 'haskell-ansi-terminal' 'haskell-containers' 'haskell-directory' 'haskell-feldspar-language<=0.3.1' 'haskell-filepath' 'haskell-haskell-src-exts' 'haskell-hint' 'haskell-mtl' 'haskell-process')
+depends=('ghc' 'haskell-monadcatchio-mtl' 'haskell-ansi-terminal' 'haskell-containers' 'haskell-directory' 'haskell-feldspar-language<0.4' 'haskell-filepath' 'haskell-haskell-src-exts' 'haskell-hint' 'haskell-mtl' 'haskell-process')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f2e34bb72a92b4ae3fa1fefc07af01af')
+md5sums=('fad94977e8c474ba1b3866e0680c03a5')

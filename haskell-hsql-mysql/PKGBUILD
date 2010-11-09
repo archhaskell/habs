@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hsql-mysql
 pkgname=haskell-hsql-mysql
-pkgver=1.7.1
-pkgrel=2
+pkgver=1.8.1
+pkgrel=1
 pkgdesc="MySQL driver for HSQL."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-hsql' 'haskell-old-time' 'mysqlclient')
+depends=('ghc' 'haskell-cabal' 'haskell-hsql>=1.8' 'mysqlclient')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f2436857c1e95e33463ba089c511fc22')
+md5sums=('8b7a73c3227137b567d57243e9ce3a0d')

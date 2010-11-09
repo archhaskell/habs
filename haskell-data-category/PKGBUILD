@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-category
 pkgname=haskell-data-category
-pkgver=0.2.0
+pkgver=0.3.0.1
 pkgrel=1
 pkgdesc="Restricted categories"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('9f1ec8d84c91d04349098981575e7572')
+md5sums=('9373e478a818b61c31a2b8b5082546e3')

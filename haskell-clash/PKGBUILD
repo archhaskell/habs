@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=clash
 pkgname=haskell-clash
-pkgver=0.1.1.1
+pkgver=0.1.2.1
 pkgrel=1
 pkgdesc="CAES Language for Synchronous Hardware (CLaSH)"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('2f280dd6e7de8b84c2e919a2fce1f8b1')
+md5sums=('86fdd8dceb6e14e747eada2f215da19d')

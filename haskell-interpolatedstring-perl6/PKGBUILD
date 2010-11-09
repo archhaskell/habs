@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=interpolatedstring-perl6
 pkgname=haskell-interpolatedstring-perl6
-pkgver=0.4
-pkgrel=2
-pkgdesc="QuasiQuoter for Perl6-style multi-line interpolated strings with \"q\", \"qq\" and \"qc\" support."
+pkgver=0.5
+pkgrel=1
+pkgdesc="QuasiQuoter for Perl6-style multi-line interpolated strings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell-src-meta' 'haskell-template-haskell')
+depends=('ghc' 'haskell-haskell-src-meta-mwotton' 'haskell-template-haskell')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('bde926ccba4928946b6b8a6d758e6bee')
+md5sums=('c730d8a9cbd863edbb97da45b7ee5d68')

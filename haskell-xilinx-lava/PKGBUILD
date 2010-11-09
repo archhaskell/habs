@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xilinx-lava
 pkgname=haskell-xilinx-lava
-pkgver=5.0.1.4
+pkgver=5.0.1.5
 pkgrel=1
 pkgdesc="The Lava system for Xilinx FPGA design with layout combinators."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('007da2402cecc9c1ab75ce5b56bcacfe')
+md5sums=('e11de80f3c2760074b72099bc854c2a6')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod
 pkgname=haskell-yesod
-pkgver=0.5.4.1
+pkgver=0.6.1
 pkgrel=1
 pkgdesc="Creation of type-safe, RESTful web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-transformers<0.3' 'haskell-authenticate<0.8' 'haskell-blaze-builder<0.2' 'haskell-bytestring<0.10' 'haskell-cereal<0.4' 'haskell-clientsession<0.5' 'haskell-control-monad-attempt<0.4' 'haskell-data-object<0.4' 'haskell-dataenc<0.14' 'haskell-directory<1.2' 'haskell-email-validate<0.3' 'haskell-hamlet<0.6' 'haskell-neither<0.1' 'haskell-network<2.3' 'haskell-old-locale<1.1' 'haskell-parsec<4' 'haskell-persistent<0.3' 'haskell-process<1.1' 'haskell-puremd5<2.2' 'haskell-random<1.1' 'haskell-template-haskell<2.6' 'haskell-text<0.10' 'haskell-time<1.3' 'haskell-transformers<0.3' 'haskell-utf8-string<0.4' 'haskell-wai<0.3' 'haskell-wai-extra<0.3' 'haskell-web-routes<0.24' 'haskell-web-routes-quasi<0.7' 'haskell-xss-sanitize<0.3')
+depends=('ghc' 'haskell-base64-bytestring<0.2' 'haskell-blaze-builder<0.2' 'haskell-bytestring<0.10' 'haskell-cereal<0.4' 'haskell-clientsession<0.5' 'haskell-containers<0.5' 'haskell-data-default<0.3' 'haskell-directory<1.2' 'haskell-email-validate<0.3' 'haskell-failure<0.2' 'haskell-hamlet<0.7' 'haskell-neither<0.2' 'haskell-network<2.3' 'haskell-old-locale<1.1' 'haskell-parsec<4' 'haskell-persistent<0.4' 'haskell-puremd5<2.2' 'haskell-random<1.1' 'haskell-template-haskell<2.6' 'haskell-text<0.11' 'haskell-time<1.3' 'haskell-transformers<0.3' 'haskell-wai<0.3' 'haskell-wai-extra<0.3' 'haskell-web-routes<0.24' 'haskell-web-routes-quasi<0.7' 'haskell-xss-sanitize<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('77d60082715b5670f6fccb49473b5c4c')
+md5sums=('7138f637b0c4e4fc73c1e7083e920627')

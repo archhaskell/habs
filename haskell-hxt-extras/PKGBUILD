@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hxt-extras
 pkgname=haskell-hxt-extras
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="Extra functions for HXT"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hxt')
+depends=('ghc' 'haskell-hxt<=8.5.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('9b84fda6d299ba378932fc144aff8636')
+md5sums=('0fd926412f46189df0e616c7ac0b1f70')

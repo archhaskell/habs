@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=SourceGraph
 pkgname=sourcegraph
-pkgver=0.6.0.2
-pkgrel=2
+pkgver=0.6.1.1
+pkgrel=1
 pkgdesc="Static code analysis using graph-theoretic techniques."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal<1.9' 'haskell-graphalyze<0.10.0.0' 'haskell-containers' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-fgl' 'haskell-filepath' 'haskell-graphviz<2999.9.0.0' 'haskell-haskell-src-exts<1.7.0' 'haskell-mtl' 'haskell-multiset' 'haskell-random')
+makedepends=('ghc' 'haskell-cabal<1.9' 'haskell-graphalyze<0.11.0.0' 'haskell-containers' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-fgl<5.5' 'haskell-filepath' 'haskell-graphviz<2999.11.0.0' 'haskell-haskell-src-exts<1.10.0' 'haskell-mtl' 'haskell-multiset' 'haskell-random')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('e7924a7df308dbf27b1e6b475491944a')
+md5sums=('1f0281fb80da2092532d2661ecedb604')

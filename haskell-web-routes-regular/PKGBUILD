@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=web-routes-regular
 pkgname=haskell-web-routes-regular
-pkgver=0.18
+pkgver=0.18.1
 pkgrel=1
 pkgdesc="Library for maintaining correctness of URLs within an application."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('62601e49eced4085a18e11185465a80b')
+md5sums=('cb01060c8784274f8688253b0b698391')

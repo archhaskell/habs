@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=maid
 pkgname=maid
-pkgver=2009.12.20
-pkgrel=2
+pkgver=2010.9.29
+pkgrel=1
 pkgdesc="A simple static web server"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-data-default' 'haskell-hack' 'haskell-hack-contrib>=2009.12.20' 'haskell-hack-handler-happstack>=2009.12.20' 'haskell-haskell98' 'haskell-loli>=2009.8.18' 'haskell-mps>=2009.11.7')
+makedepends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-data-default' 'haskell-directory' 'haskell-hack' 'haskell-hack-contrib>=2010.9.28' 'haskell-hack-handler-happstack' 'haskell-haskell98' 'haskell-moe>=2010.9.29.2' 'haskell-mps>=2010.1.26' 'haskell-process' 'haskell-unix')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('dea78ee21948f2c34fba8a7651adcbda')
+md5sums=('b9673516c9fd3fceae1790085f355ec9')

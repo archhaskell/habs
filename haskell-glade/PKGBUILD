@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=glade
 pkgname=haskell-glade
-pkgver=0.11.1
+pkgver=0.12.0
 pkgrel=1
 pkgdesc="Binding to the glade library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-2.1')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-cairo<0.12' 'haskell-containers' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haskell-haskell98' 'haskell-mtl' 'haskell-pango<0.12' 'libglade' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array' 'haskell-cairo<0.13' 'haskell-containers' 'haskell-glib<0.13' 'haskell-gtk<0.13' 'haskell-haskell98' 'haskell-mtl' 'haskell-pango<0.13' 'libglade' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('afbd145e4c857e6a34242a00443a84fe')
+md5sums=('a1c13ffac55f8feb56ad6aa520850192')

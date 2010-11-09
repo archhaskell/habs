@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=web-routes-th
 pkgname=haskell-web-routes-th
-pkgver=0.20
+pkgver=0.20.1
 pkgrel=1
 pkgdesc="Support for deriving PathInfo using Template Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -28,5 +28,7 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e44fb78cee30a1767dd21e9cfb3df3f1')
+md5sums=('9141b3a99d33497148d131528ee03e5b')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=websockets
 pkgname=haskell-websockets
-pkgver=0.1.1.3
+pkgver=0.1.2.3
 pkgrel=1
 pkgdesc="Implements the WebSocket protocol."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary>=0.5' 'haskell-bytestring>=0.9' 'haskell-containers>=0.3' 'haskell-network>=2.2' 'haskell-puremd5>=2.1')
+depends=('ghc' 'haskell-binary>=0.5' 'haskell-bytestring>=0.9' 'haskell-containers>=0.3' 'haskell-network>=2.2.1.7' 'haskell-puremd5>=2.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENCE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('5c81121a8dc22d68e0c5d1565acb5309')
+md5sums=('318ba7f2b90da1929a4b15e1a6a55e48')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskore-supercollider
 pkgname=haskell-haskore-supercollider
-pkgver=0.1.1
-pkgrel=2
+pkgver=0.1.2.2
+pkgrel=1
 pkgdesc="Haskore back-end for SuperCollider"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array<0.3' 'haskell-bytestring<1.0' 'haskell-containers<0.3' 'haskell-data-accessor<0.3' 'haskell-event-list<0.1' 'haskell-haskore<0.2' 'haskell-haskore-realtime<0.2' 'haskell-hosc<0.7' 'haskell-hsc3<0.7' 'haskell-non-negative<0.1' 'haskell-opensoundcontrol-ht<0.2' 'haskell-process<1.1' 'haskell-random<1.1' 'haskell-supercollider-ht<0.2' 'haskell-transformers<0.2' 'haskell-unix<3' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-array<0.4' 'haskell-bytestring<1.0' 'haskell-containers<0.4' 'haskell-data-accessor<0.3' 'haskell-event-list<0.2' 'haskell-haskore<0.3' 'haskell-haskore-realtime<0.2' 'haskell-hosc<0.9' 'haskell-hsc3<0.9' 'haskell-non-negative<0.2' 'haskell-opensoundcontrol-ht<0.2' 'haskell-process<1.1' 'haskell-random<1.1' 'haskell-supercollider-ht<0.2' 'haskell-transformers<0.3' 'haskell-unix<3' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('f6a36647f946f1681be26805f5e23300')
+md5sums=('a344bc647271fc09505f658c0f670463')

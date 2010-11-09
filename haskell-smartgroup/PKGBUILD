@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=smartGroup
 pkgname=haskell-smartgroup
-pkgver=0.0.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="group strings by words in common"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers<1' 'haskell-heap<1.1')
+depends=('ghc' 'haskell-bytestring<1' 'haskell-containers<1' 'haskell-heap<=1.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('0fe014f16e762aaacf52be9c7efa09c2')
+md5sums=('d58e07c56aafc5a023be8170141fe8a7')

@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=twidge
 pkgname=twidge
-pkgver=0.99.3
-pkgrel=2
+pkgver=1.0.6.1
+pkgrel=1
 pkgdesc="Unix Command-Line Twitter and Identica Client"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-configfile' 'haskell-hsh' 'haskell-haxml<1.19' 'haskell-missingh>=1.0.0' 'haskell-directory' 'haskell-hslogger' 'haskell-mtl' 'haskell-network' 'haskell-parsec' 'haskell-regex-posix' 'haskell-unix' 'haskell-utf8-string')
+makedepends=('ghc' 'haskell-configfile' 'haskell-hsh' 'haskell-haxml<1.19' 'haskell-missingh>=1.0.0' 'haskell-binary' 'haskell-bytestring' 'haskell-curl' 'haskell-directory' 'haskell-hoauth<0.2.4' 'haskell-hslogger' 'haskell-mtl' 'haskell-network' 'haskell-parsec' 'haskell-regex-posix' 'haskell-unix' 'haskell-utf8-string')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('95db7f5094f901a49c83ec33f570e6e7')
+md5sums=('96cc4e52cf787f6de77cff66ae40ca41')

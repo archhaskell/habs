@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Chart
 pkgname=haskell-chart
-pkgver=0.13.1
+pkgver=0.14
 pkgrel=1
 pkgdesc="A library for generating 2D Charts and Plots"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('2af9f1a2e72b828b6ffd5f4e40e02d3d')
+md5sums=('a7189cd1483d50e2de7f2b20bb3f97d8')

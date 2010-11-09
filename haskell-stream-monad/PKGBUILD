@@ -1,11 +1,11 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=stream-monad
 pkgname=haskell-stream-monad
-pkgver=0.2
-pkgrel=2
+pkgver=0.3
+pkgrel=1
 pkgdesc="Simple, Fair and Terminating Backtracking Monad"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:PublicDomain')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('8c2df61530136998833dc09a0f39317e')
+md5sums=('99f243052a5b680734f2214c99d19711')

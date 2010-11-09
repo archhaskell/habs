@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cryptocipher
 pkgname=haskell-cryptocipher
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Symmetrical Block and Stream Ciphers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-haskell98' 'haskell-vector')
+depends=('ghc' 'haskell-bytestring' 'haskell-crypto-api>=0.2' 'haskell-vector')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d366cce0a6f6b2c4519b8670bac1292e')
+md5sums=('1b2353ae52c16463d841c8c76fea2b47')

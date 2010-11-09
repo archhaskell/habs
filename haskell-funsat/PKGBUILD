@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=funsat
 pkgname=haskell-funsat
-pkgver=0.6.0
-pkgrel=2
+pkgver=0.6.1
+pkgrel=1
 pkgdesc="A modern DPLL-style SAT solver"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck<2' 'haskell-array' 'haskell-bimap<0.3' 'haskell-bitset<1' 'haskell-containers' 'haskell-fgl' 'haskell-mtl' 'haskell-parse-dimacs<2' 'haskell-pretty' 'haskell-random' 'haskell-time')
+depends=('ghc' 'haskell-quickcheck<2' 'haskell-array<0.3' 'haskell-bimap<0.3' 'haskell-bitset<1' 'haskell-containers<0.3' 'haskell-fgl<=5.4.2.2' 'haskell-mtl<2' 'haskell-parse-dimacs<2' 'haskell-pretty<2' 'haskell-random<2' 'haskell-time<1.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('7632183ef9c9e736a350584ba8ea9bdd')
+md5sums=('6ec67ada1b478c85cbcd8e47f11b5643')

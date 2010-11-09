@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bloomfilter
 pkgname=haskell-bloomfilter
-pkgver=1.2.6.5
+pkgver=1.2.6.7
 pkgrel=1
 pkgdesc="Pure and impure Bloom Filter implementations."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-containers' 'haskell-parallel')
+depends=('ghc' 'haskell-array' 'haskell-bytestring<0.10' 'haskell-deepseq')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('2a5dd0ffc9ae930463cf63e7836fb40c')
+md5sums=('97ce543f074e6acca938514555a34c9a')

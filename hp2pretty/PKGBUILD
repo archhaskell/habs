@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hp2pretty
 pkgname=hp2pretty
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc="generate pretty graphs from heap profiles"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('b98604ce89c77521c204ea95e3e17c47')
+md5sums=('dfab61ae022d8444e1c1137af4dc6bc3')

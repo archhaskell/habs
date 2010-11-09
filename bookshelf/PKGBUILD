@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Bookshelf
 pkgname=bookshelf
-pkgver=0.1.3
-pkgrel=2
+pkgver=0.1.5
+pkgrel=1
 pkgdesc="A simple document organizer with some wiki functionality"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-directory' 'haskell-filepath' 'haskell-pandoc' 'haskell-parseargs' 'haskell-utf8-string')
+makedepends=('ghc' 'haskell-directory' 'haskell-filepath' 'haskell-pandoc<=1.3' 'haskell-parseargs' 'haskell-utf8-string')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('2cc5c6492ec677457fc1dfdd32db73c8')
+md5sums=('24f2d2e101cad215e6c5de93df249842')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=Thrift
 pkgname=haskell-thrift
-pkgver=0.1.1.1
+pkgver=0.4.0
 pkgrel=1
 pkgdesc="Thrift library package"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('754e6a5331a93d19fadd427f1147b001')
+md5sums=('28c356f0d0fc08b6f0ce9599d74eef39')

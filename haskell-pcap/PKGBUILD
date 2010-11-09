@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pcap
 pkgname=haskell-pcap
-pkgver=0.4.5
-pkgrel=2
+pkgver=0.4.5.1
+pkgrel=1
 pkgdesc="A system-independent interface for user-level packet capture"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell98' 'haskell-network' 'haskell-time')
+depends=('ghc' 'haskell-bytestring<0.10' 'haskell-network' 'haskell-time')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('20ad727de904656106a979ddf32257bc')
+md5sums=('5d356170fe0cdae21127c863a5e7cbbd')

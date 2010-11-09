@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=zipper
 pkgname=haskell-zipper
-pkgver=0.3
-pkgrel=2
+pkgver=0.3.1
+pkgrel=1
 pkgdesc="Generic zipper for families of recursive datatypes"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-multirec<0.5')
+depends=('ghc' 'haskell-multirec<0.6')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('c1708823b8a5719d58dabf7a64052672')
+md5sums=('b5043927212f2f355f9f7f503a732f56')

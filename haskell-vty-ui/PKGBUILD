@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=vty-ui
 pkgname=haskell-vty-ui
-pkgver=0.2
-pkgrel=2
+pkgver=0.4
+pkgrel=1
 pkgdesc="A user interface composition library for Vty"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-mtl<1.2' 'haskell-vty<4.1')
+depends=('ghc' 'haskell-quickcheck<2.2' 'haskell-containers<0.4' 'haskell-mtl<1.2' 'haskell-pcre-light<0.4' 'haskell-vty<4.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('69767a44d70a666e1d9c0f6ab4d04a61')
+md5sums=('c52d13564d7820650b8e7e14995aa24e')

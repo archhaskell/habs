@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=certificate
 pkgname=haskell-certificate
-pkgver=0.3
+pkgver=0.3.2
 pkgrel=1
 pkgdesc="Certificates and Key Reader/Writer"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('dcfa2a548ee5e9897c5ff2ea93bb8def')
+md5sums=('17a2c881188033b1f1e57a852e250daf')

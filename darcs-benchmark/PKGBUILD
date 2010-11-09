@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=darcs-benchmark
 pkgname=darcs-benchmark
-pkgver=0.1.6
+pkgver=0.1.9
 pkgrel=1
 pkgdesc="Comparative benchmark suite for darcs."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-http<4000.1' 'haskell-bytestring' 'haskell-cmdargs<0.2' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-html' 'haskell-json<0.5' 'haskell-mtl' 'haskell-network' 'haskell-process' 'haskell-regex-posix' 'haskell-statistics<0.5' 'haskell-tabular>=0.2.2.1' 'haskell-tar' 'haskell-time' 'haskell-utf8-string<0.4' 'haskell-uvector<0.2' 'haskell-zlib')
+makedepends=('ghc' 'haskell-http<4000.1' 'haskell-sha' 'haskell-bytestring' 'haskell-cmdargs' 'haskell-containers' 'haskell-datetime' 'haskell-directory' 'haskell-filepath' 'haskell-hs-gchart' 'haskell-html' 'haskell-json<0.5' 'haskell-mtl' 'haskell-network<2.3' 'haskell-old-locale' 'haskell-process' 'haskell-regex-posix' 'haskell-split<0.2' 'haskell-statistics<0.5' 'haskell-strict' 'haskell-tabular>=0.2.2.1' 'haskell-tar' 'haskell-time' 'haskell-utf8-string<0.4' 'haskell-uvector<0.2' 'haskell-zlib')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -22,4 +22,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f25358709527bbc8f4bbcfc88082765f')
+md5sums=('cf365a119aef8cd96a3b7f81fbea131d')

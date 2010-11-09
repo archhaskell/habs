@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskelldb-hdbc-postgresql
 pkgname=haskell-haskelldb-hdbc-postgresql
-pkgver=0.13
+pkgver=2.0
 pkgrel=1
 pkgdesc="HaskellDB support for the HDBC PostgreSQL driver."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hdbc<3' 'haskell-hdbc-postgresql<3' 'haskell-haskelldb<1' 'haskell-haskelldb-hdbc<1' 'haskell-mtl<2')
+depends=('ghc' 'haskell-hdbc<3' 'haskell-hdbc-postgresql<3' 'haskell-haskelldb<3' 'haskell-haskelldb-hdbc<3' 'haskell-mtl<2' 'postgresql')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('9a966f7ae1c895fc729198b8fdb30654')
+md5sums=('08f6af5dd6e253e8a77c543a95797804')

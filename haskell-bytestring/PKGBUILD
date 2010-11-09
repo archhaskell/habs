@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bytestring
 pkgname=haskell-bytestring
-pkgver=0.9.1.5
-pkgrel=2
+pkgver=0.9.1.7
+pkgrel=1
 pkgdesc="Fast, packed, strict and lazy byte arrays with a list interface"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('49ddd9e5221101691390c39f728ee677')
+md5sums=('d178dfc4e4a644f5fa6c96c7fbb077ff')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=test-framework-quickcheck
 pkgname=haskell-test-framework-quickcheck
-pkgver=0.2.4
-pkgrel=2
+pkgver=0.2.7
+pkgrel=1
 pkgdesc="QuickCheck support for the test-framework package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck<2' 'haskell-extensible-exceptions>=0.1.1' 'haskell-parallel>=1' 'haskell-random>=1' 'haskell-test-framework>=0.2.0')
+depends=('ghc' 'haskell-quickcheck<2' 'haskell-deepseq<1.2' 'haskell-extensible-exceptions<0.2.0' 'haskell-random>=1' 'haskell-test-framework>=0.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ccb29c6a464cc807eac42394433617c8')
+md5sums=('278d06b64171ba36bf658ada61bcec44')

@@ -1,13 +1,13 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=gt-tools
 pkgname=gt-tools
-pkgver=0.1.1
+pkgver=0.1.4.1
 pkgrel=1
 pkgdesc="Console and GUI interface for Google Translate service"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-http' 'haskell-containers' 'haskell-json' 'haskell-url' 'haskell-utf8-string')
+makedepends=('ghc' 'haskell-http' 'haskell-containers' 'haskell-haskeline' 'haskell-json' 'haskell-mtl' 'haskell-unix' 'haskell-url' 'haskell-utf8-string>=0.3.6')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
@@ -20,4 +20,4 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('29dc42d8f660f626ac1a25dce6624967')
+md5sums=('c22c7a11b5ae1786448029e295085a26')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=mueval
 pkgname=haskell-mueval
-pkgver=0.7.1
-pkgrel=2
+pkgver=0.8
+pkgrel=1
 pkgdesc="Safely evaluate Haskell expressions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-hint>=0.3.1' 'haskell-mtl' 'haskell-process' 'haskell-show>=0.3' 'haskell-unix' 'haskell-utf8-string')
+depends=('ghc' 'haskell-cabal' 'haskell-containers' 'haskell-directory' 'haskell-extensible-exceptions' 'haskell-filepath' 'haskell-hint>=0.3.1' 'haskell-mtl<1.2' 'haskell-process' 'haskell-show>=0.3' 'haskell-unix' 'haskell-utf8-string')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3e655a1d63468b961532c164a9b31227')
+md5sums=('26528dd9ceb8e37779b311ae1614295b')

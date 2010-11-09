@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=liboleg
 pkgname=haskell-liboleg
-pkgver=2010.1.9.0
+pkgver=2010.1.10.0
 pkgrel=1
 pkgdesc="An evolving collection of Oleg Kiselyov's Haskell modules"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d2b0c4cacbd005ecf3ab8eb4854bf09f')
+md5sums=('aa40614e727b2bbac1e8eb27968a325c')

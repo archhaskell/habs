@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ansi-terminal
 pkgname=haskell-ansi-terminal
-pkgver=0.5.4
+pkgver=0.5.5
 pkgrel=1
 pkgdesc="Simple ANSI terminal support, with Windows compatibility"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('179ed1bf7260e721976263dd2dcd409a')
+md5sums=('5ad9e6561f0de1a2e98b6c72d119ea75')

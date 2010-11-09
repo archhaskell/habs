@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=snap-core
 pkgname=haskell-snap-core
-pkgver=0.2.11
+pkgver=0.2.15.1
 pkgrel=1
 pkgdesc="Snap: A Haskell Web Framework (Core)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-listlike<2' 'haskell-monadcatchio-transformers<0.3' 'haskell-attoparsec<0.9' 'haskell-bytestring' 'haskell-bytestring-mmap<0.3' 'haskell-bytestring-nums' 'haskell-cereal<0.4' 'haskell-containers' 'haskell-directory' 'haskell-directory-tree' 'haskell-dlist<0.6' 'haskell-filepath' 'haskell-haskell98' 'haskell-iteratee<0.4' 'haskell-monads-fd' 'haskell-old-locale' 'haskell-old-time' 'haskell-template-haskell' 'haskell-text<0.8' 'haskell-time' 'haskell-transformers' 'haskell-unix-compat' 'haskell-zlib')
+depends=('ghc' 'haskell-listlike<2' 'haskell-monadcatchio-transformers<0.3' 'haskell-attoparsec<0.9' 'haskell-bytestring' 'haskell-bytestring-mmap<0.3' 'haskell-bytestring-nums' 'haskell-bytestring-show<0.4' 'haskell-cereal<0.4' 'haskell-containers' 'haskell-deepseq<1.2' 'haskell-directory' 'haskell-directory-tree' 'haskell-dlist<0.6' 'haskell-filepath' 'haskell-haskell98' 'haskell-iteratee<0.4' 'haskell-monads-fd<0.1.0.3' 'haskell-old-locale' 'haskell-old-time' 'haskell-template-haskell' 'haskell-text<0.11' 'haskell-time' 'haskell-transformers' 'haskell-unix-compat' 'haskell-zlib')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ec9450d9ed435b892fa0291b7d5020a4')
+md5sums=('337d9b45654ead09601f5a450aca78ea')

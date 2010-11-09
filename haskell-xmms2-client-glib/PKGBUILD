@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xmms2-client-glib
 pkgname=haskell-xmms2-client-glib
-pkgver=0.0.5.0
+pkgver=0.0.6.0
 pkgrel=1
 pkgdesc="An XMMS2 client library \8212 GLib integration."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell98' 'haskell-xmms2-client<=0.0.5.0' 'c2hs')
+depends=('ghc' 'haskell-haskell98' 'haskell-xmms2-client<=0.0.6.0' 'c2hs')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('438238b6a866458ae65af07b4e064451')
+md5sums=('cd01709fee66a2c485bf0e7c79631b58')

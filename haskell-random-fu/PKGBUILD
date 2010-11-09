@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=random-fu
 pkgname=haskell-random-fu
-pkgver=0.1.0.0
+pkgver=0.1.3
 pkgrel=1
 pkgdesc="Random number generation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadprompt' 'haskell-array' 'haskell-containers' 'haskell-erf' 'haskell-mersenne-random-pure64' 'haskell-monad-loops>=0.3.0.1' 'haskell-mtl' 'haskell-mwc-random' 'haskell-random' 'haskell-random-shuffle' 'haskell-stateref<0.4' 'haskell-syb' 'haskell-tagged' 'haskell-template-haskell' 'haskell-vector')
+depends=('ghc' 'haskell-monadprompt' 'haskell-array' 'haskell-containers' 'haskell-erf' 'haskell-mersenne-random-pure64' 'haskell-monad-loops>=0.3.0.1' 'haskell-mtl<3' 'haskell-mwc-random' 'haskell-random' 'haskell-random-shuffle' 'haskell-stateref<0.4' 'haskell-syb' 'haskell-tagged' 'haskell-template-haskell' 'haskell-vector')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('a472e209f0bafe8e0107b42f89b840a2')
+md5sums=('3496ba1d5fc90cbeeeaaea2586099cdf')

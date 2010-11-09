@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=explicit-sharing
 pkgname=haskell-explicit-sharing
-pkgver=0.5.1.2
-pkgrel=2
+pkgver=0.7
+pkgrel=1
 pkgdesc="Explicit Sharing of Monadic Effects"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers' 'haskell-mtl')
+depends=('ghc' 'haskell-containers' 'derive<2.4' 'haskell-mtl' 'haskell-template-haskell<2.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('5406a28bc778e56506e68f873391e947')
+md5sums=('e7c0cd9b406360159d75dbfe778938c8')

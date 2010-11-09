@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hxt-binary
 pkgname=haskell-hxt-binary
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc="Serialisation and deserialisation of HXT XmlTrees."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary<1' 'haskell-bytestring<1' 'haskell-bzlib<1' 'haskell-haskell98<2' 'haskell-hxt<9')
+depends=('ghc' 'haskell-binary<1' 'haskell-bytestring<1' 'haskell-bzlib<1' 'haskell-deepseq<2' 'haskell-haskell98<2' 'haskell-hxt<9')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENCE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('292fae3fe7ce33478ce012097531fe1a')
+md5sums=('633689da301debeae6c01742e1b04f90')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=protocol-buffers-descriptor
 pkgname=haskell-protocol-buffers-descriptor
-pkgver=1.7.9
+pkgver=1.8.1
 pkgrel=1
 pkgdesc="Text.DescriptorProto.Options and Google Protocol Buffer specifications"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-protocol-buffers<=1.7.9')
+depends=('ghc' 'haskell-bytestring' 'haskell-containers' 'haskell-protocol-buffers<=1.8.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('121da76919f9c77192b957f7b9c3493f')
+md5sums=('3a18b2ec53b4ad1b35681297d3962b38')

@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=copilot
 pkgname=haskell-copilot
-pkgver=0.22
+pkgver=0.25
 pkgrel=1
-pkgdesc="A stream DSL for writing embedded C."
+pkgdesc="A stream DSL for writing embedded C monitors."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-atom>=1.0.5' 'haskell-containers>=0.2.0.1' 'haskell-directory' 'haskell-filepath>=1.0.0.0' 'haskell-mtl>=1.0.0.0' 'haskell-process>=1.0.0.0' 'haskell-random>=1.0.0.0')
+depends=('ghc' 'haskell-atom>=1.0.7' 'haskell-containers>=0.2.0.1' 'haskell-directory>=1.0.0.0' 'haskell-filepath>=1.0.0.0' 'haskell-mtl>=1.0.0.0' 'haskell-process>=1.0.0.0' 'haskell-random>=1.0.0.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('2d1ece3d90262cfa7ed7dd834378d3ef')
+md5sums=('2735e5efd1ff6a162354a7061fb498ed')

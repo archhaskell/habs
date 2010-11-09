@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=monadLib
 pkgname=haskell-monadlib
-pkgver=3.6.1
+pkgver=3.6.2
 pkgrel=1
 pkgdesc="A collection of monad transformers."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('09ed56db9cd49af9f40789a0c7102759')
+md5sums=('1f089d332294a8b1f6ec2d5d6616c510')

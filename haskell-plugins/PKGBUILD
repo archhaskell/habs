@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=plugins
 pkgname=haskell-plugins
-pkgver=1.5.1.3
+pkgver=1.5.1.4
 pkgrel=1
 pkgdesc="Dynamic linking for Haskell and C objects"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('d8d0f0184aaf768d29441239b0a19866')
+md5sums=('c1bed0f3553541f4088c6d8047ce3905')

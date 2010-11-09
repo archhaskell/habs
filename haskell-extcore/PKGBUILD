@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=extcore
 pkgname=haskell-extcore
-pkgver=0.9.1
+pkgver=0.9.2
 pkgrel=1
 pkgdesc="Libraries for processing GHC Core"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('18ba3ca83e7efc7d65e91fd8d48327ff')
+md5sums=('0ea1d5f038a66bacab61e4b37ed9dd88')
