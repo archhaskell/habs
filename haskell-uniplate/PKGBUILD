@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=uniplate
 pkgname=haskell-uniplate
-pkgver=1.5.1
+pkgver=1.6
 pkgrel=1
 pkgdesc="Help writing simple, concise and fast generic operations."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers' 'haskell-mtl' 'haskell-syb')
+depends=('ghc' 'haskell-containers' 'haskell-syb')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('78c7bdc6021b78f5cb650ccd5ab00973')
+md5sums=('84527579892c1ea8a66fc3eba3827ef0')

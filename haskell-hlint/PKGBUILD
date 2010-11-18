@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hlint
 pkgname=haskell-hlint
-pkgver=1.8.2
+pkgver=1.8.3
 pkgrel=1
 pkgdesc="Source code suggestions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers' 'cpphs<1.12' 'haskell-directory' 'haskell-filepath' 'haskell-haskell-src-exts<1.10' 'hscolour<1.18' 'haskell-mtl' 'haskell-process' 'haskell-uniplate<1.6')
+depends=('ghc' 'haskell-containers' 'cpphs<1.12' 'haskell-directory' 'haskell-filepath' 'haskell-haskell-src-exts<1.10' 'hscolour<1.18' 'haskell-process' 'haskell-transformers<0.3' 'haskell-uniplate<1.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('9f59f009e06fa57e77b539d8869b1141')
+md5sums=('af5a287804f0ed1ba41728febf74296f')
