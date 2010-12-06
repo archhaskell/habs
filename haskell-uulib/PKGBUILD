@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=uulib
 pkgname=haskell-uulib
-pkgver=0.9.12
+pkgver=0.9.13
 pkgrel=1
 pkgdesc="Haskell Utrecht Tools Library"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('47c00bc23351c17b747005c7502074c6')
+md5sums=('c438eb6142bc1f1174bcf0f74dffd0d3')
