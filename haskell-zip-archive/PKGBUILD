@@ -2,7 +2,7 @@
 _hkgname=zip-archive
 pkgname=haskell-zip-archive
 pkgver=0.1.1.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Library for creating and modifying zip archives."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -14,7 +14,7 @@ source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkg
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script
