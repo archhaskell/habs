@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hledger-lib
 pkgname=haskell-hledger-lib
-pkgver=0.13
-pkgrel=1
+pkgver=0.12.1
+pkgrel=5
 pkgdesc="Core types and utilities for working with hledger (or c++ ledger) data."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('1b8b343089cb58a9610e71e562227947')
+md5sums=('b0774eaa3c0e377385484b6d3cb69834')
