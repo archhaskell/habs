@@ -2,7 +2,7 @@
 _hkgname=hxt-filter
 pkgname=haskell-hxt-filter
 pkgver=8.4.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A collection of tools for processing XML with Haskell (Filter variant)."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
@@ -14,7 +14,7 @@ source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkg
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

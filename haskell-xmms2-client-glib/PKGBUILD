@@ -2,7 +2,7 @@
 _hkgname=xmms2-client-glib
 pkgname=haskell-xmms2-client-glib
 pkgver=0.0.6.0
-pkgrel=1
+pkgrel=2
 pkgdesc="An XMMS2 client library \8212 GLib integration."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-3')
@@ -14,7 +14,7 @@ source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkg
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script
