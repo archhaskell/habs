@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xml-types
 pkgname=haskell-xml-types
-pkgver=0.1.1
-pkgrel=2
+pkgver=0.1.2
+pkgrel=1
 pkgdesc="Basic types for representing XML"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('cf4e9615120e5dcf5aea7c57f122132e')
+md5sums=('ac8b3919980788f0d6b61ab5fef2ea70')

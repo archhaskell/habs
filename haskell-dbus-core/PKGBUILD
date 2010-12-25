@@ -1,14 +1,14 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=dbus-core
 pkgname=haskell-dbus-core
-pkgver=0.8.5.2
-pkgrel=2
+pkgver=0.8.5.3
+pkgrel=1
 pkgdesc="Low-level D-Bus protocol implementation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary<0.6' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-data-binary-ieee754<0.5' 'haskell-libxml-sax<0.7' 'haskell-network<2.3' 'haskell-parsec<3.2' 'haskell-text<0.11' 'haskell-unix<2.5' 'haskell-xml-types<0.2')
+depends=('ghc' 'haskell-binary<0.6' 'haskell-bytestring<0.10' 'haskell-containers<0.5' 'haskell-data-binary-ieee754<0.5' 'haskell-libxml-sax<0.7' 'haskell-network<2.4' 'haskell-parsec<3.2' 'haskell-text<0.11' 'haskell-unix<2.5' 'haskell-xml-types<0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('4b5c88dc4fc031a7f5ddcb25a3dc2217')
+md5sums=('4fe199d0a4e42e622f5774e9ce39f453')
