@@ -1,11 +1,11 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=failure
 pkgname=haskell-failure
-pkgver=0.1.0
-pkgrel=2
+pkgver=0.1.0.1
+pkgrel=1
 pkgdesc="A simple type class for success/failure computations."
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:PublicDomain')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
 depends=('ghc')
@@ -29,4 +29,4 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('7c14ad9271ec9f8f87b4fdbf63291c44')
+md5sums=('9c9c1ab5422de9ef11bc3ef0de7b5b12')

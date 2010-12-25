@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=digest
 pkgname=haskell-digest
-pkgver=0.0.0.8
-pkgrel=2
+pkgver=0.0.0.9
+pkgrel=1
 pkgdesc="Various cryptographic hashes for bytestrings; CRC32 and Adler32 for now."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3a730a6439b14fb7a30bcd03c9e3f4ff')
+md5sums=('0f35175426d9e443516ac3fa2bf91311')
