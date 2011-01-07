@@ -2,13 +2,13 @@
 _hkgname=cabal2arch
 pkgname=cabal2arch
 pkgver=0.7.6
-pkgrel=4
+pkgrel=5
 pkgdesc="Create Arch Linux packages from Cabal packages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal>1.8' 'haskell-archlinux>=0.3.5' 'haskell-bytestring' 'haskell-cmdargs' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-pretty' 'haskell-process')
-depends=('gmp')
+makedepends=('haskell-cabal>1.8' 'haskell-bytestring' 'haskell-cmdargs' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-pretty' 'haskell-process')
+depends=('ghc' 'haskell-archlinux>=0.3.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 build() {
