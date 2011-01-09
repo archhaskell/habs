@@ -1,9 +1,9 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cryptocipher
 pkgname=haskell-cryptocipher
-pkgver=0.2
-pkgrel=2
-pkgdesc="Symmetrical Block and Stream Ciphers"
+pkgver=0.2.2
+pkgrel=1
+pkgdesc="Symmetrical Block, Stream and PubKey Ciphers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
@@ -14,7 +14,7 @@ source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkg
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script
@@ -31,4 +31,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('1b2353ae52c16463d841c8c76fea2b47')
+sha256sums=('b1f72853e36ec4605034d86c49a323bb5e11e6c9ba8eb3279b42eaec6ba19f89')
