@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=archlinux
 pkgname=haskell-archlinux
-pkgver=0.3.5
-pkgrel=3
+pkgver=0.3.6
+pkgrel=1
 pkgdesc="Support for working with Arch Linux packages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,6 +12,7 @@ depends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-bytestring=0.9.1.7' 'haskell-con
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('28fb29c1c46d93079d3219ed06d53fdd')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('3e819805c67d6bfd4cc939b39866b3c9')
