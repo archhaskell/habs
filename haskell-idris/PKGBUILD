@@ -2,19 +2,20 @@
 _hkgname=idris
 pkgname=haskell-idris
 pkgver=0.1.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Dependently Typed Functional Programming Language"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal' 'haskell-array' 'haskell-binary' 'haskell-containers' 'haskell-directory' 'haskell-epic>=0.1.5' 'haskell-haskell98' 'haskell-ivor>=0.1.12' 'haskell-mtl' 'haskell-old-locale' 'haskell-old-time' 'haskell-parsec' 'haskell-readline')
+depends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-array=0.3.0.1' 'haskell-binary' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-epic>=0.1.5' 'haskell-haskell98=1.0.1.1' 'haskell-ivor>=0.1.12' 'haskell-mtl' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.5' 'haskell-parsec=2.1.0.1' 'haskell-readline')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

@@ -2,12 +2,12 @@
 _hkgname=deunicode
 pkgname=deunicode
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Get rid of unicode (utf-8) symbols in Haskell sources"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-bytestring<0.10' 'haskell-utf8-string<0.4')
+makedepends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-utf8-string<0.4')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

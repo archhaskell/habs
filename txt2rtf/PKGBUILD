@@ -2,7 +2,7 @@
 _hkgname=txt2rtf
 pkgname=txt2rtf
 pkgver=1.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Filter to convert plain text files to RTF"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

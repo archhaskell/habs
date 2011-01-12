@@ -2,12 +2,12 @@
 _hkgname=cuboid
 pkgname=cuboid
 pkgver=0.14.1
-pkgrel=1
+pkgrel=2
 pkgdesc="3D Yampa/GLUT Puzzle Game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut' 'haskell-yampa')
+makedepends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-yampa')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

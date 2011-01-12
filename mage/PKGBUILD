@@ -2,12 +2,12 @@
 _hkgname=mage
 pkgname=mage
 pkgver=1.1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Rogue-like"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array' 'haskell-containers' 'haskell-mtl' 'haskell-random' 'ncurses')
+makedepends=('ghc' 'haskell-array=0.3.0.1' 'haskell-containers=0.3.0.0' 'haskell-mtl' 'haskell-random=1.0.0.2' 'ncurses')
 depends=('gmp' 'ncurses')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

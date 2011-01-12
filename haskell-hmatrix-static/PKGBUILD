@@ -2,19 +2,20 @@
 _hkgname=hmatrix-static
 pkgname=haskell-hmatrix-static
 pkgver=0.3.0.2
-pkgrel=2
+pkgrel=3
 pkgdesc="hmatrix with vector and matrix sizes encoded in types"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array<0.4' 'haskell-haskell-src-meta<0.2' 'haskell-hmatrix<0.9' 'haskell-parsec<3' 'haskell-template-haskell' 'haskell-tfp<0.3')
+depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-haskell-src-meta<0.2' 'haskell-hmatrix<0.9' 'haskell-parsec=2.1.0.1' 'haskell-template-haskell=2.4.0.1' 'haskell-tfp<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

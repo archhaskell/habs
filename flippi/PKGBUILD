@@ -2,12 +2,12 @@
 _hkgname=Flippi
 pkgname=flippi
 pkgver=0.0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Wiki"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cgi>=3001.1.5.2' 'haskell-containers' 'haskell-directory' 'haskell-haskell98' 'haskell-old-time' 'haskell-parsec' 'haskell-xhtml')
+makedepends=('ghc' 'haskell-cgi=3001.1.7.3' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-haskell98=1.0.1.1' 'haskell-old-time=1.0.0.5' 'haskell-parsec=2.1.0.1' 'haskell-xhtml=3000.2.0.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

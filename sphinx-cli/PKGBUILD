@@ -2,7 +2,7 @@
 _hkgname=sphinx-cli
 pkgname=sphinx-cli
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Sphinx CLI and demo of Haskell Sphinx library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

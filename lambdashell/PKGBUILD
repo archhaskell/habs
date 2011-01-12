@@ -2,12 +2,12 @@
 _hkgname=LambdaShell
 pkgname=lambdashell
 pkgver=0.9.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Simple shell for evaluating lambda expressions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-shellac>=0.9' 'haskell-shellac-readline>=0.9' 'haskell-containers' 'haskell-haskell98' 'haskell-mtl' 'haskell-parsec' 'haskell-readline' 'readline')
+makedepends=('ghc' 'haskell-shellac>=0.9' 'haskell-shellac-readline>=0.9' 'haskell-containers=0.3.0.0' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-parsec=2.1.0.1' 'haskell-readline' 'readline')
 depends=('gmp' 'readline')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

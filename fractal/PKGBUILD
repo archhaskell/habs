@@ -2,7 +2,7 @@
 _hkgname=fractal
 pkgname=fractal
 pkgver=0.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Draw Newton, Julia and Mandelbrot fractals"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

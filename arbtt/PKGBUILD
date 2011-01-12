@@ -2,12 +2,12 @@
 _hkgname=arbtt
 pkgname=arbtt
 pkgver=0.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Automatic Rule-Based Time Tracker"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-x11>1.4.4' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-mtl' 'haskell-old-locale' 'haskell-parsec<3' 'haskell-pcre-light' 'haskell-time' 'haskell-unix' 'haskell-utf8-string' 'libxss')
+makedepends=('ghc' 'haskell-x11>1.4.4' 'haskell-binary' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-mtl' 'haskell-old-locale=1.0.0.2' 'haskell-parsec=2.1.0.1' 'haskell-pcre-light' 'haskell-time=1.1.4' 'haskell-unix=2.4.0.2' 'haskell-utf8-string' 'libxss')
 depends=('gmp' 'libxss')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

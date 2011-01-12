@@ -2,7 +2,7 @@
 _hkgname=hranker
 pkgname=hranker
 pkgver=0.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Basic utility for ranking a list of items"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

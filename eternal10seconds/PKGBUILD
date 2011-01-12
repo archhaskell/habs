@@ -2,12 +2,12 @@
 _hkgname=Eternal10Seconds
 pkgname=eternal10seconds
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A 2-D shooting game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-sdl' 'haskell-sdl-mixer' 'haskell-haskell98')
+makedepends=('ghc' 'haskell-sdl' 'haskell-sdl-mixer' 'haskell-haskell98=1.0.1.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

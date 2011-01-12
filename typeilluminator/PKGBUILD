@@ -2,12 +2,12 @@
 _hkgname=TypeIlluminator
 pkgname=typeilluminator
 pkgver=0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="TypeIlluminator is a prototype tool exploring debugging of type errors/"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-haskell98')
+makedepends=('ghc' 'haskell-haskell98=1.0.1.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

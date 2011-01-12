@@ -2,8 +2,8 @@
 _hkgname=hstidy
 pkgname=hstidy
 pkgver=0.2
-pkgrel=2
-pkgdesc="Takes haskell source on stdin, parses it, then\nprettyprints it to stdout."
+pkgrel=3
+pkgdesc="Takes haskell source on stdin, parses it, then prettyprints it to stdout."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')

@@ -2,12 +2,12 @@
 _hkgname=Shu-thing
 pkgname=shu-thing
 pkgver=1.1.2
-pkgrel=2
+pkgrel=3
 pkgdesc="A vector shooter game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut')
+makedepends=('ghc' 'haskell-glut=2.1.2.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

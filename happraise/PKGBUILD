@@ -2,12 +2,12 @@
 _hkgname=happraise
 pkgname=happraise
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A small program for counting the comments in haskell source"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-directory' 'haskell-filepath')
+makedepends=('ghc' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

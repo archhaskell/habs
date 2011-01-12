@@ -2,19 +2,20 @@
 _hkgname=system-posix-redirect
 pkgname=haskell-system-posix-redirect
 pkgver=1.0
-pkgrel=2
-pkgdesc="A toy module that allows you to temporarily redirect\na program's stdout."
+pkgrel=3
+pkgdesc="A toy module that allows you to temporarily redirect a program's stdout."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-unix<2.5')
+depends=('ghc' 'haskell-unix=2.4.0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

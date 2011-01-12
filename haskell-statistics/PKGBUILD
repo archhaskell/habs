@@ -2,19 +2,20 @@
 _hkgname=statistics
 pkgname=haskell-statistics
 pkgver=0.8.0.3
-pkgrel=2
+pkgrel=3
 pkgdesc="A library of statistical types, data, and functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-erf' 'haskell-mwc-random>=0.7.0.0' 'haskell-primitive>=0.3' 'haskell-time' 'haskell-vector>=0.6.0.2' 'haskell-vector-algorithms>=0.3.2')
+depends=('ghc' 'haskell-erf' 'haskell-mwc-random>=0.7.0.0' 'haskell-primitive>=0.3' 'haskell-time=1.1.4' 'haskell-vector>=0.6.0.2' 'haskell-vector-algorithms>=0.3.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

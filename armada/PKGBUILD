@@ -2,12 +2,12 @@
 _hkgname=armada
 pkgname=armada
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Space-based real time strategy game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut' 'haskell-opengl' 'haskell-mtl' 'haskell-stm')
+makedepends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-opengl=2.2.3.0' 'haskell-mtl' 'haskell-stm=2.1.2.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

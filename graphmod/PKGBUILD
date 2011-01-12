@@ -2,12 +2,12 @@
 _hkgname=graphmod
 pkgname=graphmod
 pkgver=1.2.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Present the module dependencies of a program as a \"dot\" graph."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-containers' 'haskell-directory' 'haskell-dotgen<0.5' 'haskell-filepath' 'haskell-haskell-lexer')
+makedepends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-dotgen<0.5' 'haskell-filepath=1.1.0.4' 'haskell-haskell-lexer')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

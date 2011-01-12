@@ -2,12 +2,12 @@
 _hkgname=json2yaml
 pkgname=json2yaml
 pkgver=0.2.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Utility to convert a file from JSON to YAML format."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-attempt<0.3' 'haskell-bytestring<0.10' 'haskell-data-object-json<0.1' 'haskell-data-object-yaml<0.1')
+makedepends=('ghc' 'haskell-attempt<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-data-object-json<0.1' 'haskell-data-object-yaml<0.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

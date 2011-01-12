@@ -2,12 +2,12 @@
 _hkgname=SGdemo
 pkgname=sgdemo
 pkgver=1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="An example of using the SG and OpenGL libraries"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut<2.3' 'haskell-opengl<2.5' 'haskell-sg')
+makedepends=('ghc' 'haskell-glut' 'haskell-opengl' 'haskell-sg')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

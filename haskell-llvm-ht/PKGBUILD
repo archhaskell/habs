@@ -2,19 +2,20 @@
 _hkgname=llvm-ht
 pkgname=haskell-llvm-ht
 pkgver=0.7.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Bindings to the LLVM compiler toolkit with some custom extensions."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring>=0.9' 'haskell-directory' 'haskell-mtl' 'haskell-process' 'haskell-type-level')
+depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-directory=1.0.1.1' 'haskell-mtl' 'haskell-process=1.0.1.3' 'haskell-type-level')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

@@ -2,12 +2,12 @@
 _hkgname=Advgame
 pkgname=advgame
 pkgver=0.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Lisperati's adventure game in Lisp translated to Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-haskell98' 'haskell-mtl')
+makedepends=('ghc' 'haskell-haskell98=1.0.1.1' 'haskell-mtl')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

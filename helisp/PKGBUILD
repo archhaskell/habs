@@ -2,12 +2,12 @@
 _hkgname=helisp
 pkgname=helisp
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="An incomplete Elisp compiler"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-containers' 'haskell-mtl' 'haskell-parsec' 'haskell-process')
+makedepends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-mtl' 'haskell-parsec=2.1.0.1' 'haskell-process=1.0.1.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

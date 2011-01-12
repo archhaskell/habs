@@ -2,19 +2,20 @@
 _hkgname=monadloc
 pkgname=haskell-monadloc
 pkgver=0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="A class for monads which can keep a monadic call trace"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell-src-exts>=1.3.0' 'haskell-mtl' 'haskell-pretty' 'haskell-syb' 'haskell-template-haskell' 'haskell-transformers')
+depends=('ghc' 'haskell-haskell-src-exts>=1.3.0' 'haskell-mtl' 'haskell-pretty=1.0.1.1' 'haskell-syb=0.1.0.2' 'haskell-template-haskell=2.4.0.1' 'haskell-transformers')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

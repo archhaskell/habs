@@ -2,12 +2,12 @@
 _hkgname=ircbouncer
 pkgname=ircbouncer
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="IRC bouncer"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-haskell98' 'haskell-mtl' 'haskell-network' 'haskell-regex-compat' 'haskell-unix')
+makedepends=('ghc' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-network=2.2.1.7' 'haskell-regex-compat=0.93.1' 'haskell-unix=2.4.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

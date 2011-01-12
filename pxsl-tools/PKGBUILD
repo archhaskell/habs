@@ -2,12 +2,12 @@
 _hkgname=pxsl-tools
 pkgname=pxsl-tools
 pkgver=1.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Parsimonious XML Shorthand Language--to-XML compiler"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-containers' 'haskell-mtl>=1.0' 'haskell-parsec>=2.0')
+makedepends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-mtl>=1.0' 'haskell-parsec=2.1.0.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

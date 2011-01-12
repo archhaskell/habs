@@ -2,12 +2,12 @@
 _hkgname=threadPool
 pkgname=threadpool
 pkgver=0.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Runs other programs in the manner of a thread pool"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-process')
+makedepends=('ghc' 'haskell-process=1.0.1.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

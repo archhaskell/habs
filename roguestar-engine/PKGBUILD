@@ -2,12 +2,12 @@
 _hkgname=roguestar-engine
 pkgname=roguestar-engine
 pkgver=0.4.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Sci-fi roguelike (turn-based, chessboard-tiled, role playing) game"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-maybet<0.2' 'haskell-monadrandom<0.2' 'haskell-psqueue<1.2' 'haskell-array<0.3.1' 'haskell-bytestring<0.10' 'haskell-containers<0.3.1' 'haskell-data-memocombinators<0.5' 'haskell-mtl<1.2' 'haskell-old-time<1.1' 'haskell-parallel<2.3' 'haskell-priority-sync<0.3' 'haskell-random<1.1' 'haskell-stm<2.2')
+makedepends=('ghc' 'haskell-maybet<0.2' 'haskell-monadrandom<0.2' 'haskell-psqueue<1.2' 'haskell-array=0.3.0.1' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-data-memocombinators<0.5' 'haskell-mtl<1.2' 'haskell-old-time=1.0.0.5' 'haskell-parallel=2.2.0.1' 'haskell-priority-sync<0.3' 'haskell-random=1.0.0.2' 'haskell-stm=2.1.2.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

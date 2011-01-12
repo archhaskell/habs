@@ -2,12 +2,12 @@
 _hkgname=capri
 pkgname=capri
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple wrapper over cabal-install to operate in project-private mode."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal>=1.8' 'haskell-directory>=1.0' 'haskell-filepath>=1.1' 'haskell-process>=1.0')
+makedepends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-process=1.0.1.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

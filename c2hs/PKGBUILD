@@ -2,12 +2,12 @@
 _hkgname=c2hs
 pkgname=c2hs
 pkgver=0.16.2
-pkgrel=1
+pkgrel=2
 pkgdesc="C->Haskell FFI tool that gives some cross-language type safety"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-2')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-language-c<0.4.0' 'haskell-pretty' 'haskell-process')
+makedepends=('ghc' 'haskell-array=0.3.0.1' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-language-c<0.4.0' 'haskell-pretty=1.0.1.1' 'haskell-process=1.0.1.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

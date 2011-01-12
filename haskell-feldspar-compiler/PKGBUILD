@@ -2,19 +2,20 @@
 _hkgname=feldspar-compiler
 pkgname=haskell-feldspar-compiler
 pkgver=0.3.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Compiler for the Feldspar language"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monadcatchio-mtl' 'haskell-ansi-terminal' 'haskell-containers' 'haskell-directory' 'haskell-feldspar-language<0.4' 'haskell-filepath' 'haskell-haskell-src-exts' 'haskell-hint' 'haskell-mtl' 'haskell-process')
+depends=('ghc' 'haskell-monadcatchio-mtl' 'haskell-ansi-terminal' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-feldspar-language<0.4' 'haskell-filepath=1.1.0.4' 'haskell-haskell-src-exts' 'haskell-hint' 'haskell-mtl' 'haskell-process=1.0.1.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

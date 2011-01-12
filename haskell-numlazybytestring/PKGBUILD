@@ -2,19 +2,20 @@
 _hkgname=NumLazyByteString
 pkgname=haskell-numlazybytestring
 pkgver=0.0.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Num, Enum, Eq, Integral, Ord, Real, and Show instances for Lazy ByteStrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary' 'haskell-bytestring')
+depends=('ghc' 'haskell-binary' 'haskell-bytestring=0.9.1.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

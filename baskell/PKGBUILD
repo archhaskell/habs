@@ -2,12 +2,12 @@
 _hkgname=baskell
 pkgname=baskell
 pkgver=0.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="An interpreter for a small functional language"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-containers' 'haskell-mtl' 'haskell-parsec' 'haskell-pretty' 'haskell-unix')
+makedepends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-mtl' 'haskell-parsec=2.1.0.1' 'haskell-pretty=1.0.1.1' 'haskell-unix=2.4.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

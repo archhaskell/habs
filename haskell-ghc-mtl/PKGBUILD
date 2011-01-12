@@ -2,8 +2,8 @@
 _hkgname=ghc-mtl
 pkgname=haskell-ghc-mtl
 pkgver=1.0.1.0
-pkgrel=3
-pkgdesc="An mtl compatible version of the Ghc-Api monads\nand monad-transformers."
+pkgrel=4
+pkgdesc="An mtl compatible version of the Ghc-Api monads and monad-transformers."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
@@ -14,7 +14,8 @@ source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkg
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

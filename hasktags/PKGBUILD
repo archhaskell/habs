@@ -2,12 +2,12 @@
 _hkgname=hasktags
 pkgname=hasktags
 pkgver=0.68.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Produces ctags \"tags\" and etags \"TAGS\" files for Haskell programs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-bytestring' 'haskell-haskell98')
+makedepends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-haskell98=1.0.1.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

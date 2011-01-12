@@ -2,12 +2,12 @@
 _hkgname=hsclock
 pkgname=hsclock
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="An elegant analog clock using Haskell, GTK and Cairo"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cairo' 'haskell-glib' 'haskell-gtk' 'haskell-old-time')
+makedepends=('ghc' 'haskell-cairo' 'haskell-glib' 'haskell-gtk' 'haskell-old-time=1.0.0.5')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

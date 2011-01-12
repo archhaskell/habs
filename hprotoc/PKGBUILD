@@ -2,12 +2,12 @@
 _hkgname=hprotoc
 pkgname=hprotoc
 pkgver=1.8.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Parse Google Protocol Buffer specifications"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-quickcheck' 'haskell-array' 'haskell-binary' 'haskell-bytestring' 'haskell-containers' 'haskell-directory>=1.0.0.1' 'haskell-filepath>=1.1.0.0' 'haskell-haskell-src-exts>=1.7.0' 'haskell-mtl' 'haskell-parsec<3' 'haskell-protocol-buffers<=1.8.0' 'haskell-protocol-buffers-descriptor<=1.8.1' 'haskell-utf8-string' 'alex')
+makedepends=('ghc' 'haskell-quickcheck=2.1.1.1' 'haskell-array=0.3.0.1' 'haskell-binary' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-haskell-src-exts>=1.7.0' 'haskell-mtl' 'haskell-parsec=2.1.0.1' 'haskell-protocol-buffers=1.8.0' 'haskell-protocol-buffers-descriptor=1.8.1' 'haskell-utf8-string' 'alex')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

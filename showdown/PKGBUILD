@@ -2,12 +2,12 @@
 _hkgname=showdown
 pkgname=showdown
 pkgver=0.5.3
-pkgrel=2
+pkgrel=3
 pkgdesc="A simple gtk based Russian Roulette game."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glade' 'haskell-gtk' 'haskell-random')
+makedepends=('ghc' 'haskell-glade' 'haskell-gtk' 'haskell-random=1.0.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

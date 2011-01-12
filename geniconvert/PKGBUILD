@@ -2,12 +2,12 @@
 _hkgname=geniconvert
 pkgname=geniconvert
 pkgver=0.20
-pkgrel=2
+pkgrel=3
 pkgdesc="Conversion utility for the GenI generator"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-geni<0.21' 'haskell-hunit' 'haskell-haxml>=1.16' 'haskell-quickcheck' 'haskell-binary' 'haskell-containers' 'haskell-haskell98' 'haskell-mtl' 'haskell-parsec<3' 'haskell-utf8-string<0.4')
+makedepends=('ghc' 'haskell-geni<0.21' 'haskell-hunit=1.2.2.1' 'haskell-haxml>=1.16' 'haskell-quickcheck=2.1.1.1' 'haskell-binary' 'haskell-containers=0.3.0.0' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-parsec=2.1.0.1' 'haskell-utf8-string<0.4')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

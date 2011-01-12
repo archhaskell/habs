@@ -2,12 +2,12 @@
 _hkgname=hstzaar
 pkgname=hstzaar
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="A two player abstract strategy game."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-quickcheck>=2.1' 'haskell-cairo>=0.11' 'haskell-containers' 'haskell-glade>=0.11' 'haskell-gtk>=0.11' 'haskell-haskell98' 'haskell-random<1.1')
+makedepends=('ghc' 'haskell-quickcheck=2.1.1.1' 'haskell-cairo>=0.11' 'haskell-containers=0.3.0.0' 'haskell-glade>=0.11' 'haskell-gtk>=0.11' 'haskell-haskell98=1.0.1.1' 'haskell-random=1.0.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

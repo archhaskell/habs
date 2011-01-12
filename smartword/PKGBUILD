@@ -2,12 +2,12 @@
 _hkgname=smartword
 pkgname=smartword
 pkgver=0.0.0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Web based flash card for Word Smart I and II vocabularies"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-haskell98' 'haskell-pretty' 'haskell-unix' 'haskell-utf8-string')
+makedepends=('ghc' 'haskell-haskell98=1.0.1.1' 'haskell-pretty=1.0.1.1' 'haskell-unix=2.4.0.2' 'haskell-utf8-string')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

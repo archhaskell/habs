@@ -2,12 +2,12 @@
 _hkgname=twitter
 pkgname=twitter
 pkgver=0.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A Haskell-based CLI Twitter client"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-curl' 'haskell-directory' 'haskell-filepath' 'haskell-json' 'haskell-mtl' 'haskell-old-locale' 'haskell-readline' 'haskell-time' 'haskell-xml')
+makedepends=('ghc' 'haskell-curl' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-json' 'haskell-mtl' 'haskell-old-locale=1.0.0.2' 'haskell-readline' 'haskell-time=1.1.4' 'haskell-xml')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

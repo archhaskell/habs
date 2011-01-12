@@ -2,7 +2,7 @@
 _hkgname=thimk
 pkgname=thimk
 pkgver=0.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Command-line spelling word suggestion tool"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

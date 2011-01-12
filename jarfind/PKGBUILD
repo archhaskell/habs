@@ -2,12 +2,12 @@
 _hkgname=jarfind
 pkgname=jarfind
 pkgver=0.1.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Tool for searching java classes, members and fields in classfiles and JAR archives"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array' 'haskell-binary' 'haskell-bytestring>=0.9.0' 'haskell-regex-pcre>=0.94.1' 'haskell-zip-archive>=0.1.1.2')
+makedepends=('ghc' 'haskell-array=0.3.0.1' 'haskell-binary' 'haskell-bytestring=0.9.1.7' 'haskell-regex-pcre>=0.94.1' 'haskell-zip-archive>=0.1.1.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

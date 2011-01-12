@@ -2,12 +2,12 @@
 _hkgname=threadscope
 pkgname=threadscope
 pkgver=0.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A graphical thread profiler."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array' 'haskell-binary' 'haskell-cairo' 'haskell-containers<0.4' 'haskell-filepath' 'haskell-ghc-events<0.3' 'haskell-glade' 'haskell-gtk' 'haskell-mtl' 'haskell-unix<2.5')
+makedepends=('ghc' 'haskell-array=0.3.0.1' 'haskell-binary' 'haskell-cairo' 'haskell-containers=0.3.0.0' 'haskell-filepath=1.1.0.4' 'haskell-ghc-events<0.3' 'haskell-glade' 'haskell-gtk' 'haskell-mtl' 'haskell-unix=2.4.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

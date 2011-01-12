@@ -2,19 +2,20 @@
 _hkgname=RSA
 pkgname=haskell-rsa
 pkgver=1.0.6
-pkgrel=2
+pkgrel=3
 pkgdesc="Implementation of RSA, using the padding schemes of PKCS#1 v2.1."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-sha' 'haskell-binary' 'haskell-bytestring' 'haskell-puremd5' 'haskell-random')
+depends=('ghc' 'haskell-sha' 'haskell-binary' 'haskell-bytestring=0.9.1.7' 'haskell-puremd5' 'haskell-random=1.0.0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

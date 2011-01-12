@@ -2,12 +2,12 @@
 _hkgname=HipmunkPlayground
 pkgname=hipmunkplayground
 pkgver=5.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A playground for testing Hipmunk."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glfw<0.5' 'haskell-hipmunk<5.3' 'haskell-opengl<2.5' 'haskell-statevar<1.1' 'haskell-containers<0.4')
+makedepends=('ghc' 'haskell-glfw<0.5' 'haskell-hipmunk<5.3' 'haskell-opengl' 'haskell-statevar<1.1' 'haskell-containers=0.3.0.0')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

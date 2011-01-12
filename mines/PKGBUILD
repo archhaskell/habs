@@ -2,12 +2,12 @@
 _hkgname=mines
 pkgname=mines
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Minesweeper simulation using neural networks"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-directory>=1.0.0.0' 'haskell-mtl>=1.1.0.0' 'haskell-random>=1.0.0.0')
+makedepends=('ghc' 'haskell-directory=1.0.1.1' 'haskell-mtl>=1.1.0.0' 'haskell-random=1.0.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

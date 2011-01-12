@@ -2,19 +2,20 @@
 _hkgname=bio
 pkgname=haskell-bio
 pkgver=0.4.8
-pkgrel=2
+pkgrel=3
 pkgdesc="A bioinformatics library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck>=2' 'haskell-array' 'haskell-binary<0.5' 'haskell-bytestring>=0.9.1' 'haskell-containers' 'haskell-directory' 'haskell-mtl' 'haskell-old-time' 'haskell-parallel' 'haskell-parsec' 'haskell-random' 'haskell-tagsoup>=0.8')
+depends=('ghc' 'haskell-quickcheck=2.1.1.1' 'haskell-array=0.3.0.1' 'haskell-binary<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-mtl' 'haskell-old-time=1.0.0.5' 'haskell-parallel=2.2.0.1' 'haskell-parsec=2.1.0.1' 'haskell-random=1.0.0.2' 'haskell-tagsoup>=0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

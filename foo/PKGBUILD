@@ -2,12 +2,12 @@
 _hkgname=foo
 pkgname=foo
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Paper soccer, an OpenGL game."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut' 'haskell-opengl' 'haskell-containers' 'haskell-haskell98')
+makedepends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-opengl=2.2.3.0' 'haskell-containers=0.3.0.0' 'haskell-haskell98=1.0.1.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

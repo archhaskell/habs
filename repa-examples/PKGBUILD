@@ -2,12 +2,12 @@
 _hkgname=repa-examples
 pkgname=repa-examples
 pkgver=1.1.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Examples using the Repa array library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-random<1.1' 'haskell-repa<1.2' 'haskell-repa-algorithms<1.2' 'haskell-repa-io<1.2')
+makedepends=('ghc' 'haskell-random=1.0.0.2' 'haskell-repa<1.2' 'haskell-repa-algorithms<1.2' 'haskell-repa-io<1.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

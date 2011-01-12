@@ -2,12 +2,12 @@
 _hkgname=pkggraph
 pkgname=pkggraph
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Package dependency graph for installed packages"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cabal' 'haskell-split')
+makedepends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-split')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

@@ -2,7 +2,7 @@
 _hkgname=statechart
 pkgname=statechart
 pkgver=0.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Compiles Rhapsody statecharts to C."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

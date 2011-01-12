@@ -2,12 +2,12 @@
 _hkgname=lambdacube
 pkgname=lambdacube
 pkgver=2008.12.25
-pkgrel=2
+pkgrel=3
 pkgdesc="A simple lambda cube type checker."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-editline' 'haskell-mtl' 'haskell-pretty')
+makedepends=('ghc' 'haskell-editline' 'haskell-mtl' 'haskell-pretty=1.0.1.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

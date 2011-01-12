@@ -2,12 +2,12 @@
 _hkgname=PTQ
 pkgname=ptq
 pkgver=0.0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="An implementation of Montague's PTQ."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-containers' 'haskell-haskell98' 'haskell-mtl' 'haskell-network' 'haskell-utf8-string' 'haskell-xml')
+makedepends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-network=2.2.1.7' 'haskell-utf8-string' 'haskell-xml')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

@@ -2,19 +2,20 @@
 _hkgname=chp-plus
 pkgname=haskell-chp-plus
 pkgver=1.3.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A set of high-level concurrency utilities built on Communicating Haskell Processes"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hunit' 'haskell-quickcheck>=2' 'haskell-chp<2.3' 'haskell-containers' 'haskell-deepseq<1.2' 'haskell-extensible-exceptions>=0.1.1.0' 'haskell-pretty' 'haskell-stm')
+depends=('ghc' 'haskell-hunit=1.2.2.1' 'haskell-quickcheck=2.1.1.1' 'haskell-chp<2.3' 'haskell-containers=0.3.0.0' 'haskell-deepseq=1.1.0.0' 'haskell-extensible-exceptions=0.1.1.1' 'haskell-pretty=1.0.1.1' 'haskell-stm=2.1.2.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

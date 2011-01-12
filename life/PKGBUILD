@@ -2,12 +2,12 @@
 _hkgname=life
 pkgname=life
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Conway's Life cellular automaton"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut' 'haskell-opengl' 'haskell-array' 'haskell-random')
+makedepends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-opengl=2.2.3.0' 'haskell-array=0.3.0.1' 'haskell-random=1.0.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

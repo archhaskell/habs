@@ -2,12 +2,12 @@
 _hkgname=CSPM-cspm
 pkgname=cspm-cspm
 pkgver=0.4.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="cspm command line tool for analyzing CSPM specifications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-cspm-corelanguage<0.2' 'haskell-cspm-firingrules<0.2' 'haskell-cspm-frontend<0.5' 'haskell-cspm-interpreter<0.5' 'haskell-cmdargs<0.4' 'haskell-containers<0.4' 'haskell-parallel<2.3')
+makedepends=('ghc' 'haskell-cspm-corelanguage<0.2' 'haskell-cspm-firingrules<0.2' 'haskell-cspm-frontend<0.5' 'haskell-cspm-interpreter<0.5' 'haskell-cmdargs<0.4' 'haskell-containers=0.3.0.0' 'haskell-parallel=2.2.0.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

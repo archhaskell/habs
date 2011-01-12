@@ -2,7 +2,7 @@
 _hkgname=bacteria
 pkgname=bacteria
 pkgver=1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="braindead utility to compose Xinerama backgrounds"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')

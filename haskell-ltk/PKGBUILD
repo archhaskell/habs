@@ -2,19 +2,20 @@
 _hkgname=ltk
 pkgname=haskell-ltk
 pkgver=0.8.0.8
-pkgrel=2
+pkgrel=3
 pkgdesc="Leksah tool kit"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal<1.9' 'haskell-containers<0.4' 'haskell-filepath<1.2' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haddock<2.8' 'haskell-mtl<1.2' 'haskell-parsec<2.2' 'haskell-pretty<1.1')
+depends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-containers=0.3.0.0' 'haskell-filepath=1.1.0.4' 'haskell-glib<0.12' 'haskell-gtk<0.12' 'haddock=2.7.2' 'haskell-mtl<1.2' 'haskell-parsec=2.1.0.1' 'haskell-pretty=1.0.1.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

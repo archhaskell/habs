@@ -2,19 +2,20 @@
 _hkgname=gitit
 pkgname=gitit
 pkgver=0.7.3.8
-pkgrel=2
+pkgrel=3
 pkgdesc="Wiki using happstack, git or darcs, and pandoc."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('gmp' 'ghc' 'haskell-configfile<1.1' 'haskell-hstringtemplate<0.7' 'haskell-http<4000.1' 'haskell-sha<1.5' 'haskell-bytestring' 'haskell-cautious-file<0.2' 'haskell-cgi' 'haskell-containers' 'haskell-datetime<0.3' 'haskell-directory' 'haskell-feed<0.4' 'haskell-filepath' 'haskell-filestore>=0.3.4' 'haskell-ghc-paths' 'haskell-happstack-server<0.6' 'haskell-happstack-util<0.6' 'haskell-highlighting-kate>=0.2.7.1' 'haskell-hslogger<1.1' 'haskell-mtl' 'haskell-network<2.3' 'haskell-old-time' 'haskell-pandoc>=1.6' 'haskell-parsec' 'haskell-pretty' 'haskell-process' 'haskell-random' 'haskell-recaptcha>=0.1' 'haskell-safe' 'haskell-syb' 'haskell-url<2.2' 'haskell-utf8-string<0.4' 'haskell-xhtml' 'haskell-xml>=1.3.5' 'haskell-zlib<0.6')
+depends=('gmp' 'ghc' 'haskell-configfile<1.1' 'haskell-hstringtemplate<0.7' 'haskell-http=4000.0.9' 'haskell-sha<1.5' 'haskell-bytestring=0.9.1.7' 'haskell-cautious-file<0.2' 'haskell-cgi=3001.1.7.3' 'haskell-containers=0.3.0.0' 'haskell-datetime<0.3' 'haskell-directory=1.0.1.1' 'haskell-feed<0.4' 'haskell-filepath=1.1.0.4' 'haskell-filestore>=0.3.4' 'haskell-ghc-paths' 'haskell-happstack-server<0.6' 'haskell-happstack-util<0.6' 'haskell-highlighting-kate>=0.2.7.1' 'haskell-hslogger<1.1' 'haskell-mtl' 'haskell-network=2.2.1.7' 'haskell-old-time=1.0.0.5' 'haskell-pandoc>=1.6' 'haskell-parsec=2.1.0.1' 'haskell-pretty=1.0.1.1' 'haskell-process=1.0.1.3' 'haskell-random=1.0.0.2' 'haskell-recaptcha>=0.1' 'haskell-safe' 'haskell-syb=0.1.0.2' 'haskell-url<2.2' 'haskell-utf8-string<0.4' 'haskell-xhtml=3000.2.0.1' 'haskell-xml>=1.3.5' 'haskell-zlib=0.5.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

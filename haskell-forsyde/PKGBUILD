@@ -2,19 +2,20 @@
 _hkgname=ForSyDe
 pkgname=haskell-forsyde
 pkgver=3.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="ForSyDe's Haskell-embedded Domain Specific Language."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-mtl' 'haskell-old-time' 'haskell-parameterized-data>=0.1.5' 'haskell-pretty' 'haskell-process' 'haskell-random' 'haskell-regex-posix' 'haskell-template-haskell>2.0' 'haskell-type-level')
+depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-mtl' 'haskell-old-time=1.0.0.5' 'haskell-parameterized-data>=0.1.5' 'haskell-pretty=1.0.1.1' 'haskell-process=1.0.1.3' 'haskell-random=1.0.0.2' 'haskell-regex-posix=0.94.2' 'haskell-template-haskell=2.4.0.1' 'haskell-type-level')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

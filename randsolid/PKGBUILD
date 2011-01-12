@@ -2,12 +2,12 @@
 _hkgname=randsolid
 pkgname=randsolid
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Set the background of your root window to a random colour."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-x11' 'haskell-random')
+makedepends=('ghc' 'haskell-x11' 'haskell-random=1.0.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

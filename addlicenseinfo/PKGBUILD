@@ -2,12 +2,12 @@
 _hkgname=addLicenseInfo
 pkgname=addlicenseinfo
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Adds license info to the top of a file."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-process>=1.0.1.0')
+makedepends=('ghc' 'haskell-process=1.0.1.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

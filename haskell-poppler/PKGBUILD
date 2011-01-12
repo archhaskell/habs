@@ -2,19 +2,20 @@
 _hkgname=poppler
 pkgname=haskell-poppler
 pkgver=0.12.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Binding to the Poppler."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-2')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-bytestring' 'haskell-cairo<0.13' 'haskell-containers' 'haskell-glib<0.13' 'haskell-gtk<0.13' 'haskell-haskell98' 'haskell-mtl' 'poppler' 'glib2' 'cairo' 'gtk' 'gdk-pixbuf' 'pango' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-bytestring=0.9.1.7' 'haskell-cairo<0.13' 'haskell-containers=0.3.0.0' 'haskell-glib<0.13' 'haskell-gtk<0.13' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'poppler' 'glib2' 'cairo' 'gtk' 'gdk-pixbuf' 'pango' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

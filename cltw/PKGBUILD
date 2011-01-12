@@ -2,12 +2,12 @@
 _hkgname=cltw
 pkgname=cltw
 pkgver=1.1.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Command line Twitter utility"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-curl' 'haskell-mtl' 'haskell-random' 'haskell-tagsoup')
+makedepends=('ghc' 'haskell-curl' 'haskell-mtl' 'haskell-random=1.0.0.2' 'haskell-tagsoup')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

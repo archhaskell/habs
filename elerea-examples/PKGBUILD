@@ -2,12 +2,12 @@
 _hkgname=elerea-examples
 pkgname=elerea-examples
 pkgver=2.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Example applications for Elerea"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glfw>=0.4' 'haskell-opengl' 'haskell-elerea>=2.0.0')
+makedepends=('ghc' 'haskell-glfw>=0.4' 'haskell-opengl=2.2.3.0' 'haskell-elerea>=2.0.0')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

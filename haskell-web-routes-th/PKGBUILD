@@ -2,19 +2,20 @@
 _hkgname=web-routes-th
 pkgname=haskell-web-routes-th
 pkgver=0.20.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Support for deriving PathInfo using Template Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-parsec<3' 'haskell-template-haskell' 'haskell-web-routes>=0.19')
+depends=('ghc' 'haskell-parsec=2.1.0.1' 'haskell-template-haskell=2.4.0.1' 'haskell-web-routes>=0.19')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

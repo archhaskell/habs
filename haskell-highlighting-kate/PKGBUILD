@@ -2,19 +2,20 @@
 _hkgname=highlighting-kate
 pkgname=haskell-highlighting-kate
 pkgver=0.2.7.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Syntax highlighting"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers' 'haskell-filepath' 'haskell-parsec' 'haskell-regex-pcre-builtin' 'haskell-xhtml')
+depends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-filepath=1.1.0.4' 'haskell-parsec=2.1.0.1' 'haskell-regex-pcre-builtin' 'haskell-xhtml=3000.2.0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

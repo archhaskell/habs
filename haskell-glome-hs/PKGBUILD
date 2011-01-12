@@ -2,19 +2,20 @@
 _hkgname=glome-hs
 pkgname=haskell-glome-hs
 pkgver=0.61
-pkgrel=2
+pkgrel=3
 pkgdesc="ray tracer"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-glut' 'haskell-glometrace' 'haskell-glomevec' 'haskell-opengl' 'haskell-array' 'haskell-haskell98' 'haskell-parallel>=2.2' 'haskell-random' 'haskell-time')
+depends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-glometrace' 'haskell-glomevec' 'haskell-opengl=2.2.3.0' 'haskell-array=0.3.0.1' 'haskell-haskell98=1.0.1.1' 'haskell-parallel=2.2.0.1' 'haskell-random=1.0.0.2' 'haskell-time=1.1.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

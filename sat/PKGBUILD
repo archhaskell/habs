@@ -2,7 +2,7 @@
 _hkgname=sat
 pkgname=sat
 pkgver=1.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="CNF SATisfier"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

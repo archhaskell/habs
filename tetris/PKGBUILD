@@ -2,12 +2,12 @@
 _hkgname=tetris
 pkgname=tetris
 pkgver=0.27178
-pkgrel=2
+pkgrel=3
 pkgdesc="A 2-D clone of Tetris"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut' 'haskell-random')
+makedepends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-random=1.0.0.2')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

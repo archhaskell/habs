@@ -2,19 +2,20 @@
 _hkgname=pango
 pkgname=haskell-pango
 pkgver=0.12.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Binding to the Pango text rendering engine."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-2.1')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array' 'haskell-cairo<0.13' 'haskell-containers' 'haskell-directory' 'haskell-glib<0.13' 'haskell-haskell98' 'haskell-mtl' 'haskell-pretty' 'haskell-process' 'pango' 'cairo' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-cairo<0.13' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-glib<0.13' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-pretty=1.0.1.1' 'haskell-process=1.0.1.3' 'pango' 'cairo' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

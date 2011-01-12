@@ -2,8 +2,8 @@
 _hkgname=gtk2hs-rpn
 pkgname=haskell-gtk2hs-rpn
 pkgver=0.2
-pkgrel=2
-pkgdesc="Adds a module to gtk2hs allowing layouts to be defined using\nreverse polish notation."
+pkgrel=3
+pkgdesc="Adds a module to gtk2hs allowing layouts to be defined using reverse polish notation."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
@@ -14,7 +14,8 @@ source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkg
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

@@ -2,12 +2,12 @@
 _hkgname=LambdaINet
 pkgname=lambdainet
 pkgver=0.1.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Graphical Interaction Net Evaluator for Optimal Evaluation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glfw' 'haskell-opengl' 'haskell-containers' 'haskell-mtl')
+makedepends=('ghc' 'haskell-glfw' 'haskell-opengl=2.2.3.0' 'haskell-containers=0.3.0.0' 'haskell-mtl')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

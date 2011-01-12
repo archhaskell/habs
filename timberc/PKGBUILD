@@ -2,12 +2,12 @@
 _hkgname=timberc
 pkgname=timberc
 pkgver=1.0.3
-pkgrel=2
+pkgrel=3
 pkgdesc="The Timber Compiler."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-array>=0.1' 'haskell-binary>=0.4.2' 'haskell-bytestring>=0.9' 'haskell-bzlib>=0.4.0.0' 'haskell-filepath>=1.1' 'haskell-haskell98' 'haskell-mtl>=1.1' 'haskell-pretty>=1.0.0.0' 'happy>=1.18')
+makedepends=('ghc' 'haskell-array=0.3.0.1' 'haskell-binary>=0.4.2' 'haskell-bytestring=0.9.1.7' 'haskell-bzlib>=0.4.0.0' 'haskell-filepath=1.1.0.4' 'haskell-haskell98=1.0.1.1' 'haskell-mtl>=1.1' 'haskell-pretty=1.0.1.1' 'happy>=1.18')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

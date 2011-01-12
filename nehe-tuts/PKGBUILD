@@ -2,12 +2,12 @@
 _hkgname=nehe-tuts
 pkgname=nehe-tuts
 pkgver=0.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Port of the NeHe OpenGL tutorials to Haskell."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-glut>=2.1.1.2' 'haskell-opengl>=2.2.1.1' 'haskell-array>=0.2.0.0' 'haskell-haskell98')
+makedepends=('ghc' 'haskell-glut=2.1.2.1' 'haskell-opengl=2.2.3.0' 'haskell-array=0.3.0.1' 'haskell-haskell98=1.0.1.1')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

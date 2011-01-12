@@ -2,19 +2,20 @@
 _hkgname=leksah-server
 pkgname=haskell-leksah-server
 pkgver=0.8.0.8
-pkgrel=2
+pkgrel=3
 pkgdesc="Metadata collection for leksah"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal<1.9' 'haskell-binary<0.6' 'haskell-binary-shared<0.9' 'haskell-bytestring<0.10' 'haskell-containers<0.4' 'haskell-deepseq<1.2' 'haskell-directory<1.1' 'haskell-filepath<1.2' 'haddock<2.8' 'haskell-hslogger<1.1' 'haskell-ltk<0.9' 'haskell-mtl<1.2' 'haskell-network<3.0' 'haskell-parsec<2.2' 'haskell-pretty<1.1' 'haskell-process-leksah<1.1' 'haskell-time<1.2' 'haskell-unix<2.5')
+depends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-binary<0.6' 'haskell-binary-shared<0.9' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-deepseq=1.1.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haddock=2.7.2' 'haskell-hslogger<1.1' 'haskell-ltk<0.9' 'haskell-mtl<1.2' 'haskell-network=2.2.1.7' 'haskell-parsec=2.1.0.1' 'haskell-pretty=1.0.1.1' 'haskell-process-leksah<1.1' 'haskell-time=1.1.4' 'haskell-unix=2.4.0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

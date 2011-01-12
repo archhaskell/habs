@@ -2,19 +2,20 @@
 _hkgname=AERN-RnToRm
 pkgname=haskell-aern-rntorm
 pkgver=0.5.0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="polynomial function enclosures (PFEs) approximating exact real functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-aern-real<0.10.1' 'haskell-quickcheck<2' 'haskell-binary>=0.4' 'haskell-containers' 'haskell-directory' 'haskell-filepath' 'haskell-html>=1.0' 'haskell-time')
+depends=('ghc' 'haskell-aern-real<0.10.1' 'haskell-quickcheck' 'haskell-binary>=0.4' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-html=1.0.1.2' 'haskell-time=1.1.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script

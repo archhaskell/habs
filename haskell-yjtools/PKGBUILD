@@ -2,19 +2,20 @@
 _hkgname=yjtools
 pkgname=haskell-yjtools
 pkgver=0.9.7
-pkgrel=3
+pkgrel=4
 pkgdesc="some tools for Monad, List, Tuple and so on."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-directory' 'haskell-old-time' 'haskell-process' 'haskell-regexpr')
+depends=('ghc' 'haskell-directory=1.0.1.1' 'haskell-old-time=1.0.0.5' 'haskell-process=1.0.1.3' 'haskell-regexpr')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O --enable-split-objs --enable-shared
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script
