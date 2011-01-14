@@ -1,0 +1,98 @@
+#!/bin/bash
+#
+# This script compiles the Haskell ABS tree into a binary repository.
+#
+
+die()				# error reporting helper
+{
+  echo >&2 "*** makeworld error: $@"
+  exit 1
+}
+
+# Set global defaults.
+set -eu
+shopt -s nullglob
+export LC_ALL="C"
+chroot_basedir="/var/tmp"
+host_arch=$(uname -m) || die "cannot determine host architecture"
+declare -r chroot_basedir host_arch
+
+# If a command line argument was given, interpret it as the path to the
+# habs directory, and change into it. The default argument is "habs".
+cd "${1:-habs}" || die "habs tree doesn't exist at expected location"
+
+# If the chroot sandbox doesn't exist, create it.
+if [ ! -d "${chroot_basedir}/chroot-${host_arch}" ]; then
+  pacman_conf=$(mktemp "/tmp/pacman-haskell-XXX.conf") || die "failed to create temporary file"
+  chroot_dir="${chroot_basedir}/chroot-${host_arch}"
+  trap 'rm -f "${pacman_conf}"' 0
+
+  for n in $(seq 1 9 | tac); do
+    echo -ne "\rGenerating chroot environment at ${chroot_dir} in ${n} seconds ... "
+    sleep 1
+  done
+  echo ""
+
+  cat >"${pacman_conf}" <<EOF
+[options]
+HoldPkg     = pacman glibc
+SyncFirst   = pacman
+Architecture = auto
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+[community]
+Include = /etc/pacman.d/mirrorlist
+
+[repo]
+Server = file:///repo
+EOF
+
+  sudo mkdir -p "${chroot_dir}"
+  sudo setarch "${host_arch}" mkarchroot -f \
+    -M "/usr/share/devtools/makepkg-${host_arch}.conf" \
+    -C "${pacman_conf}" \
+    "${chroot_dir}/root" base base-devel sudo ghc
+
+  echo "Build environment has been set up."
+fi
+
+# Compute the list of all available packages in topological order.
+pkglist=$(
+  for name in *; do
+    source "${name}/PKGBUILD"
+    echo "${pkgname} non-existent-dummy-package"
+    for dep in ${depends[@]} ${makedepends[@]:-}; do
+      if [[ "${dep}" =~ ([^=\<\>]+) ]]; then
+	dep="${BASH_REMATCH[1]}"
+	if [ -d "${dep}" ]; then
+	  echo "${pkgname} ${dep}"
+	fi
+      else
+	die "can't parse dependencies of ${name}/PKGBUILD"
+      fi
+    done
+  done | tsort | tac | sed -e "/^non-existent-dummy-package/d"
+  )
+
+# Build all packages that don't exist in the repository yet.
+for name in ${pkglist}; do
+  source "${name}/PKGBUILD"
+  pkgspec="${pkgname}-${pkgver}-${pkgrel}"
+  outname="${pkgspec}-${host_arch}.pkg.tar.xz"
+
+  if [ -f "${chroot_basedir}/chroot-${host_arch}/copy/repo/${outname}" \
+    -o -f "${chroot_basedir}/chroot-${host_arch}/root/repo/${outname}" ]; then
+    echo "Not building ${outname} (already built)."
+  else
+    echo "Building ${outname} ..."
+    pushd >/dev/null "${pkgname}"
+    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_basedir}/chroot-${host_arch}"
+    popd >/dev/null
+  fi
+done
+
