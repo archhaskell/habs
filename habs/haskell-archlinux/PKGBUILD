@@ -12,7 +12,6 @@ depends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-bytestring=0.9.1.7' 'haskell-con
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('28fb29c1c46d93079d3219ed06d53fdd')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -33,3 +32,4 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
+md5sums=('28fb29c1c46d93079d3219ed06d53fdd')
