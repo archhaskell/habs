@@ -60,8 +60,8 @@ added package adds to the burden of the team, so there is a real risk that
 your request is denied.  That risk is reduced if you show an interest in
 contributing to the project.
 
-[1] http://hackage.haskell.org/packages/hackage.html
-[2] https://github.com/archhaskell/cabal2arch
-[3] https://github.com/archhaskell/archlinux
-[4] https://github.com/archhaskell/archlinux-web
-[5] http://www.haskell.org/mailman/listinfo/arch-haskell
+[1]: http://hackage.haskell.org/packages/hackage.html
+[2]: https://github.com/archhaskell/cabal2arch
+[3]: https://github.com/archhaskell/archlinux
+[4]: https://github.com/archhaskell/archlinux-web
+[5]: http://www.haskell.org/mailman/listinfo/arch-haskell
