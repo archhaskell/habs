@@ -13,7 +13,7 @@ die()				# error reporting helper
 set -eu
 shopt -s nullglob
 export LC_ALL="C"
-chroot_basedir="/var/tmp"
+chroot_basedir="${HABSCHROOTDIR:-/var/tmp}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
 declare -r chroot_basedir host_arch
 
