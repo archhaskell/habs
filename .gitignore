@@ -1,3 +1,4 @@
 # ignore generated files
 
 /habs/*/*.pkg.tar.xz
+/habs/*/*.tar.gz
