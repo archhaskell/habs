@@ -2,7 +2,7 @@
 _hkgname=hledger
 pkgname=hledger
 pkgver=0.12.1
-pkgrel=7
+pkgrel=8
 pkgdesc="A command-line (or curses or web-based) double-entry accounting tool."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -12,6 +12,7 @@ depends=('gmp' 'ghc' 'haskell-hunit=1.2.2.1' 'haskell-containers=0.3.0.0' 'haske
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('a39eab928361f17343875e96f032c439')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -30,4 +31,3 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('a39eab928361f17343875e96f032c439')

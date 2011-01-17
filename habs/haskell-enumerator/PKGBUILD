@@ -1,9 +1,9 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=enumerator
 pkgname=haskell-enumerator
-pkgver=0.4.4
-pkgrel=2
-pkgdesc="Implementation of Oleg Kiselyov's left-fold enumerators"
+pkgver=0.4.5
+pkgrel=1
+pkgdesc="Reliable, high-performance processing with left-fold enumerators"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
 arch=('i686' 'x86_64')
@@ -12,6 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-text<0.12' 'haskell-transfo
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('f0c8ade1b4a620ae70d79aba282520d9')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('647401ccce43c8e82caf84abec9bde58')

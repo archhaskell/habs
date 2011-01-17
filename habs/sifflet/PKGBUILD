@@ -2,7 +2,7 @@
 _hkgname=sifflet
 pkgname=sifflet
 pkgver=1.2.2
-pkgrel=5
+pkgrel=6
 pkgdesc="A simple, visual, functional programming language."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

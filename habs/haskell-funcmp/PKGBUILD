@@ -2,7 +2,7 @@
 _hkgname=funcmp
 pkgname=haskell-funcmp
 pkgver=1.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Functional MetaPost"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

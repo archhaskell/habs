@@ -2,7 +2,7 @@
 _hkgname=sifflet-lib
 pkgname=haskell-sifflet-lib
 pkgver=1.2.2
-pkgrel=5
+pkgrel=6
 pkgdesc="Library of modules shared by sifflet and its tests and its exporters."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

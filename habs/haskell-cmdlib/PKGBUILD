@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cmdlib
 pkgname=haskell-cmdlib
-pkgver=0.2.1
-pkgrel=4
+pkgver=0.3
+pkgrel=1
 pkgdesc="a library for command line parsing & online help"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,6 +12,7 @@ depends=('ghc' 'haskell-mtl' 'haskell-split' 'haskell-syb=0.1.0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('29e2905c3c9b7b775d7fffe19e657bdb')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('280a7a9ca2f50db87557592441f741d3')
