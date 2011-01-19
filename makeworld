@@ -62,7 +62,7 @@ EOF
   # copy all packages current packages into chroot
   if [ "${do_rsync}" == "y" ]; then
       sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-          rsync://andromeda.kiwilight.com/haskell/x86_64/ ${chroot_dir}/root/repo
+          rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
       (cd ${chroot_dir}/root/repo; sudo repo-add repo.db.tar.gz *.pkg.tar.xz)
   fi
 
