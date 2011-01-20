@@ -2,3 +2,4 @@
 
 /habs/*/*.pkg.tar.xz
 /habs/*/*.tar.gz
+/habs/*/src
