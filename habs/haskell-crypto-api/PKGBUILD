@@ -1,17 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=crypto-api
 pkgname=haskell-crypto-api
-pkgver=0.3.1
+pkgver=0.4.1
 pkgrel=1
 pkgdesc="A generic interface for cryptographic operations"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-cereal<0.4' 'haskell-tagged<0.2')
+depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-cereal<0.4' 'haskell-tagged<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('0137ee044a540e1033a0730917b3a1cd')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f05eb520ebd21542e2ae5e5604cca63f')
