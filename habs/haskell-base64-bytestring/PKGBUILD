@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=base64-bytestring
 pkgname=haskell-base64-bytestring
-pkgver=0.1.0.1
-pkgrel=3
+pkgver=0.1.0.2
+pkgrel=1
 pkgdesc="Fast base64 encoding and deconding for ByteStrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,6 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('0719c17d505e13c55dad9d279f95bd80')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('f0f9cb5a29a718bcca49e2c284378d62')
