@@ -11,6 +11,7 @@ makedepends=('ghc' 'haskell-cabal=1.8.0.6' 'haskell-archlinux>=0.3.6' 'haskell-b
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
+md5sums=('950ca7392dc09e98dcd8edd66773860a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
@@ -22,4 +23,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('950ca7392dc09e98dcd8edd66773860a')

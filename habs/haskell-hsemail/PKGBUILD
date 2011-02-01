@@ -12,6 +12,7 @@ depends=('ghc' 'haskell-mtl' 'haskell-old-time=1.0.0.5' 'haskell-parsec=2.1.0.1'
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('6ab93c04dc77a32887dd618d181c7fb3')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('6ab93c04dc77a32887dd618d181c7fb3')

@@ -11,6 +11,7 @@ makedepends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-mtl>=1.0' 'haskell-pars
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
+md5sums=('7081065a40094174c85411d6a44eb829')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
@@ -20,4 +21,3 @@ package() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('7081065a40094174c85411d6a44eb829')
