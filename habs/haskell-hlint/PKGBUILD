@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hlint
 pkgname=haskell-hlint
-pkgver=1.8.6
+pkgver=1.8.7
 pkgrel=1
 pkgdesc="Source code suggestions"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-containers=0.3.0.0' 'cpphs<1.12' 'haskell-directory=1.0.
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('ae59b40779c9d90aff3784d6901d7da2')
+md5sums=('9f31ffa1b6f5054370635dad6810a43f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
