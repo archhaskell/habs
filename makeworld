@@ -17,15 +17,16 @@ chroot_basedir="${HABSCHROOTDIR:-/var/tmp}"
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
 declare -r chroot_basedir host_arch
+chroot_dir="${chroot_basedir}/chroot-${host_arch}"
 
 # If a command line argument was given, interpret it as the path to the
 # habs directory, and change into it. The default argument is "habs".
 cd "${1:-habs}" || die "habs tree doesn't exist at expected location"
 
-# If the chroot sandbox doesn't exist, create it.
-if [ ! -d "${chroot_basedir}/chroot-${host_arch}" ]; then
+# Check for an existing chroot
+if [ ! -d "${chroot_dir}" ]; then
+  # it doesn't exist, create it
   pacman_conf=$(mktemp "/tmp/pacman-haskell-XXX.conf") || die "failed to create temporary file"
-  chroot_dir="${chroot_basedir}/chroot-${host_arch}"
   trap 'rm -f "${pacman_conf}"' 0
 
   for n in $(seq 9 -1 1); do
@@ -67,6 +68,18 @@ EOF
   fi
 
   echo "Build environment has been set up."
+else
+    # it exists update it
+    sudo setarch ${host_arch} mkarchroot -u ${chroot_dir}/root
+
+    # copy all packages current packages into chroot
+    if [ "${do_rsync}" == "y" ]; then
+        sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
+            rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
+        (cd ${chroot_dir}/root/repo; sudo repo-add repo.db.tar.gz *.pkg.tar.xz)
+    fi
+
+    echo "Build environment has been updated."
 fi
 
 # Compute the list of all available packages in topological order.
@@ -93,13 +106,13 @@ for name in ${pkglist}; do
   pkgspec="${pkgname}-${pkgver}-${pkgrel}"
   outname="${pkgspec}-${host_arch}.pkg.tar.xz"
 
-  if [ -f "${chroot_basedir}/chroot-${host_arch}/copy/repo/${outname}" \
-    -o -f "${chroot_basedir}/chroot-${host_arch}/root/repo/${outname}" ]; then
+  if [ -f "${chroot_dir}/copy/repo/${outname}" \
+    -o -f "${chroot_dir}/root/repo/${outname}" ]; then
     echo "Not building ${outname} (already built)."
   else
     echo "Building ${outname} ..."
     pushd >/dev/null "${pkgname}"
-    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_basedir}/chroot-${host_arch}"
+    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_dir}"
     popd >/dev/null
   fi
 done
