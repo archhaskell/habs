@@ -18,6 +18,8 @@ do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
 declare -r chroot_basedir host_arch
 chroot_dir="${chroot_basedir}/chroot-${host_arch}"
+chroot_rootdir="${chroot_basedir}/chroot-${host_arch}/root"
+chroot_copydir="${chroot_basedir}/chroot-${host_arch}/copy"
 
 # If a command line argument was given, interpret it as the path to the
 # habs directory, and change into it. The default argument is "habs".
@@ -78,6 +80,9 @@ else
             rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
         (cd ${chroot_dir}/root/repo; sudo repo-add repo.db.tar.gz *.pkg.tar.xz)
     fi
+
+    # sync the copy with the pristine root (command taken from makechrootpkg)
+    sudo rsync -a --delete -q -W -x "${chroot_rootdir}/" "${chroot_copydir}"
 
     echo "Build environment has been updated."
 fi
