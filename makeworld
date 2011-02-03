@@ -70,9 +70,6 @@ EOF
 
   echo "Build environment has been set up."
 else
-    # it exists update it
-    sudo setarch ${host_arch} mkarchroot -u ${chroot_dir}/root
-
     # copy all packages current packages into chroot
     if [ "${do_rsync}" == "y" ]; then
         sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
