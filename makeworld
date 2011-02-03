@@ -17,8 +17,8 @@ chroot_basedir="${HABSCHROOTDIR:-/var/tmp}"
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
 chroot_dir="${chroot_basedir}/chroot-${host_arch}"
-chroot_rootdir="${chroot_basedir}/chroot-${host_arch}/root"
-chroot_copydir="${chroot_basedir}/chroot-${host_arch}/copy"
+chroot_rootdir="${chroot_dir}/root"
+chroot_copydir="${chroot_dir}/copy"
 declare -r chroot_basedir do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
 
 # If a command line argument was given, interpret it as the path to the
