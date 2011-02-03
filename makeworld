@@ -60,7 +60,7 @@ EOF
   sudo setarch "${host_arch}" mkarchroot -f \
     -M "/usr/share/devtools/makepkg-${host_arch}.conf" \
     -C "${pacman_conf}" \
-    "${chroot_dir}/root" util-linux-ng pacman file wget base-devel sudo ghc
+    "${chroot_rootdir}" util-linux-ng pacman file wget base-devel sudo ghc
 
   echo "Build environment has been set up."
 fi
@@ -68,7 +68,7 @@ fi
 # Synchronize the master repository into the sandbox environment.
 if [ "${do_rsync}" == "y" ]; then
   sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo/
+    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_rootdir}/repo/
 fi
 
 # Compute the list of all available packages in topological order.
@@ -95,8 +95,8 @@ for name in ${pkglist}; do
   pkgspec="${pkgname}-${pkgver}-${pkgrel}"
   outname="${pkgspec}-${host_arch}.pkg.tar.xz"
 
-  if [ -f "${chroot_dir}/copy/repo/${outname}" \
-    -o -f "${chroot_dir}/root/repo/${outname}" ]; then
+  if [ -f "${chroot_copydir}/repo/${outname}" \
+    -o -f "${chroot_rootdir}/repo/${outname}" ]; then
     echo "Not building ${outname} (already built)."
   else
     echo "Building ${outname} ..."
