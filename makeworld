@@ -66,6 +66,8 @@ EOF
   if [ "${do_rsync}" == "y" ]; then
       sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
           rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
+      # link up the existing DB so that mkarchroot is happy
+      (cd ${chroot_rootdir}/repo; sudo ln -sf haskell.db.tar.gz repo.db.tar.gz; sudo ln -sf repo.db.tar.gz repo.db)
   fi
 
   echo "Build environment has been set up."
@@ -77,6 +79,8 @@ else
     if [ "${do_rsync}" == "y" ]; then
         sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
             rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
+        # link up the existing DB so that mkarchroot is happy
+        (cd ${chroot_rootdir}/repo; sudo ln -sf haskell.db.tar.gz repo.db.tar.gz; sudo ln -sf repo.db.tar.gz repo.db)
     fi
 
     # sync the copy with the pristine root (command taken from makechrootpkg)
