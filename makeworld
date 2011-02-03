@@ -68,7 +68,7 @@ fi
 # Synchronize the master repository into the sandbox environment.
 if [ "${do_rsync}" == "y" ]; then
   sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
+    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo/
 fi
 
 # Compute the list of all available packages in topological order.
