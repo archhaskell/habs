@@ -13,13 +13,12 @@ die()				# error reporting helper
 set -eu
 shopt -s nullglob
 export LC_ALL="C"
-chroot_basedir="${HABSCHROOTDIR:-/var/tmp}"
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
-chroot_dir="${chroot_basedir}/chroot-${host_arch}"
+chroot_dir="${HABSCHROOTDIR:-/var/tmp}/chroot-${host_arch}"
 chroot_rootdir="${chroot_dir}/root"
 chroot_copydir="${chroot_dir}/copy"
-declare -r chroot_basedir do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
+declare -r do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
 
 # If a command line argument was given, interpret it as the path to the
 # habs directory, and change into it. The default argument is "habs".
