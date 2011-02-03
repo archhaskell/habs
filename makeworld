@@ -16,10 +16,10 @@ export LC_ALL="C"
 chroot_basedir="${HABSCHROOTDIR:-/var/tmp}"
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
-declare -r chroot_basedir host_arch
 chroot_dir="${chroot_basedir}/chroot-${host_arch}"
 chroot_rootdir="${chroot_basedir}/chroot-${host_arch}/root"
 chroot_copydir="${chroot_basedir}/chroot-${host_arch}/copy"
+declare -r chroot_basedir do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
 
 # If a command line argument was given, interpret it as the path to the
 # habs directory, and change into it. The default argument is "habs".
