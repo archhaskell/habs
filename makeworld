@@ -76,9 +76,6 @@ else
             rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
     fi
 
-    # sync the copy with the pristine root (command taken from makechrootpkg)
-    sudo rsync -a --delete -q -W -x "${chroot_rootdir}/" "${chroot_copydir}"
-
     echo "Build environment has been updated."
 fi
 
