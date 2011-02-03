@@ -25,7 +25,7 @@ chroot_copydir="${chroot_basedir}/chroot-${host_arch}/copy"
 # habs directory, and change into it. The default argument is "habs".
 cd "${1:-habs}" || die "habs tree doesn't exist at expected location"
 
-# Check for an existing chroot
+# If the chroot sandbox doesn't exist, create it.
 if [ ! -d "${chroot_dir}" ]; then
   # it doesn't exist, create it
   pacman_conf=$(mktemp "/tmp/pacman-haskell-XXX.conf") || die "failed to create temporary file"
@@ -62,21 +62,13 @@ EOF
     -C "${pacman_conf}" \
     "${chroot_dir}/root" util-linux-ng pacman file wget base-devel sudo ghc
 
-  # copy all packages current packages into chroot
-  if [ "${do_rsync}" == "y" ]; then
-      sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-          rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
-  fi
-
   echo "Build environment has been set up."
-else
-    # copy all packages current packages into chroot
-    if [ "${do_rsync}" == "y" ]; then
-        sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-            rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
-    fi
+fi
 
-    echo "Build environment has been updated."
+# Synchronize the master repository into the sandbox environment.
+if [ "${do_rsync}" == "y" ]; then
+  sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
+    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
 fi
 
 # Compute the list of all available packages in topological order.
