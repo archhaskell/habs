@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=wai
-pkgname=haskell-wai
-pkgver=0.3.1
+_hkgname=yesod-static
+pkgname=haskell-yesod-static
+pkgver=0.0.0
 pkgrel=1
-pkgdesc="Web Application Interface."
+pkgdesc="Static file serving subsite for Yesod Web Framework."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5' 'haskell-network=2.2.1.7')
+depends=('ghc' 'haskell-base64-bytestring<0.2' 'haskell-bytestring=0.9.1.7' 'haskell-cereal<0.4' 'haskell-directory=1.0.1.1' 'haskell-puremd5<2.2' 'haskell-template-haskell=2.4.0.1' 'haskell-transformers<0.3' 'haskell-wai-app-static<0.1' 'haskell-web-routes<0.24' 'haskell-yesod-core<0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5a777cf08713a55818955ec4d0748622')
+md5sums=('a0c4df351dc0d9e8113c8eee03397c6d')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

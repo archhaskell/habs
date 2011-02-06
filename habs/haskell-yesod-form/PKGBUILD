@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=wai
-pkgname=haskell-wai
-pkgver=0.3.1
+_hkgname=yesod-form
+pkgname=haskell-yesod-form
+pkgver=0.0.0
 pkgrel=1
-pkgdesc="Web Application Interface."
+pkgdesc="Form handling support for Yesod Web Framework"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5' 'haskell-network=2.2.1.7')
+depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-data-default<0.3' 'haskell-email-validate<0.3' 'haskell-hamlet<0.8' 'haskell-network=2.2.1.7' 'haskell-persistent<0.5' 'haskell-template-haskell=2.4.0.1' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-xss-sanitize<0.3' 'haskell-yesod-core<0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5a777cf08713a55818955ec4d0748622')
+md5sums=('a0e14934d994588734801bc43b35ec69')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

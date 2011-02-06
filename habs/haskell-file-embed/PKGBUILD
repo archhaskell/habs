@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=wai
-pkgname=haskell-wai
-pkgver=0.3.1
+_hkgname=file-embed
+pkgname=haskell-file-embed
+pkgver=0.0.3.1
 pkgrel=1
-pkgdesc="Web Application Interface."
+pkgdesc="Use Template Haskell to embed file contents directly."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5' 'haskell-network=2.2.1.7')
+depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-directory=1.0.1.1' 'haskell-template-haskell=2.4.0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5a777cf08713a55818955ec4d0748622')
+md5sums=('c27e9fbb14a14589a99aafae2ed75839')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

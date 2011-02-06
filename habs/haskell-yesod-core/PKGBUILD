@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=wai
-pkgname=haskell-wai
-pkgver=0.3.1
+_hkgname=yesod-core
+pkgname=haskell-yesod-core
+pkgver=0.7.0
 pkgrel=1
-pkgdesc="Web Application Interface."
+pkgdesc="Creation of type-safe, RESTful web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5' 'haskell-network=2.2.1.7')
+depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-cereal<0.4' 'haskell-clientsession<0.5' 'haskell-containers=0.3.0.0' 'haskell-cookie<0.1' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-hamlet<0.8' 'haskell-monad-peel<0.2' 'haskell-old-locale=1.0.0.2' 'haskell-random=1.0.0.2' 'haskell-template-haskell=2.4.0.1' 'haskell-text<0.12' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-wai<0.4' 'haskell-wai-extra<0.4' 'haskell-web-routes<0.24' 'haskell-web-routes-quasi<0.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5a777cf08713a55818955ec4d0748622')
+md5sums=('bc55221ebda09779216796a7f8034c5a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

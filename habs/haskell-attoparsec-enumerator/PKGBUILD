@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=wai
-pkgname=haskell-wai
-pkgver=0.3.1
+_hkgname=attoparsec-enumerator
+pkgname=haskell-attoparsec-enumerator
+pkgver=0.2.0.3
 pkgrel=1
-pkgdesc="Web Application Interface."
+pkgdesc="Convert an Attoparsec parser into an iteratee"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:BSD3')
+license=('custom:MIT')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5' 'haskell-network=2.2.1.7')
+depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5a777cf08713a55818955ec4d0748622')
+md5sums=('39395677f83ab6e540d89bb285b42313')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -30,6 +30,6 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
-    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
