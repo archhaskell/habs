@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=dbus-core
 pkgname=haskell-dbus-core
-pkgver=0.8.5.3
-pkgrel=2
+pkgver=0.8.5.4
+pkgrel=1
 pkgdesc="Low-level D-Bus protocol implementation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary<0.6' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-data-binary-ieee754<0.5' 'haskell-libxml-sax<0.7' 'haskell-network=2.2.1.7' 'haskell-parsec=2.1.0.1' 'haskell-text<0.11' 'haskell-unix=2.4.0.2' 'haskell-xml-types<0.2')
+depends=('ghc' 'haskell-binary<0.6' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-data-binary-ieee754<0.5' 'haskell-libxml-sax<0.7' 'haskell-network=2.2.1.7' 'haskell-parsec=2.1.0.1' 'haskell-text<0.12' 'haskell-unix=2.4.0.2' 'haskell-xml-types<0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('4fe199d0a4e42e622f5774e9ce39f453')
+md5sums=('a6ba08b42b2cf021f2d2f8cf9c86cb18')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
