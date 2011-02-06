@@ -2,7 +2,7 @@
 _hkgname=enumerator
 pkgname=haskell-enumerator
 pkgver=0.4.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Reliable, high-performance processing with left-fold enumerators"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

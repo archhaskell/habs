@@ -2,7 +2,7 @@
 _hkgname=hamlet
 pkgname=haskell-hamlet
 pkgver=0.6.1.2
-pkgrel=3
+pkgrel=4
 pkgdesc="Haml-like template files that are compile-time checked"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
