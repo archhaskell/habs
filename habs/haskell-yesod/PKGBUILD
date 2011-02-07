@@ -8,7 +8,7 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-attoparsec-text<0.9' 'haskell-bytestring=0.9.1.7' 'haskell-directory=1.0.1.1' 'haskell-hamlet<0.8' 'haskell-hjsmin<0.1' 'haskell-mime-mail<0.2' 'haskell-monad-peel<0.2' 'haskell-parsec=2.1.0.1' 'haskell-template-haskell=2.4.0.1' 'haskell-text<0.12' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-wai<0.4' 'haskell-wai-extra<0.4' 'haskell-warp<0.4' 'haskell-yesod-auth<0.4' 'haskell-yesod-core<0.8' 'haskell-yesod-form<0.1' 'haskell-yesod-json<0.1' 'haskell-yesod-persistent<0.1' 'haskell-yesod-static<0.1')
+depends=('ghc' 'haskell-attoparsec-text<0.9' 'haskell-bytestring=0.9.1.7' 'haskell-directory=1.0.1.1' 'haskell-hamlet<0.8' 'haskell-hjsmin<0.1' 'haskell-mime-mail<0.2' 'haskell-monad-peel<0.2' 'haskell-parsec=2.1.0.1' 'haskell-template-haskell=2.4.0.1' 'haskell-text<0.12' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-wai<0.4' 'haskell-wai-extra<0.4' 'haskell-wai-handler-devel<0.3' 'haskell-warp<0.4' 'haskell-yesod-auth<0.4' 'haskell-yesod-core<0.8' 'haskell-yesod-form<0.1' 'haskell-yesod-json<0.1' 'haskell-yesod-persistent<0.1' 'haskell-yesod-static<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -16,7 +16,8 @@ md5sums=('b5be0ea58bf50af9eae342376ef6a9e8')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
-       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid \
+       -f -ghc7
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script
