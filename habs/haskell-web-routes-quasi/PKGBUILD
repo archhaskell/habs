@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=web-routes-quasi
 pkgname=haskell-web-routes-quasi
-pkgver=0.6.3
-pkgrel=2
+pkgver=0.6.3.1
+pkgrel=1
 pkgdesc="Define data types and parse/build functions for web-routes via a quasi-quoted DSL"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-template-haskell=2.4.0.1' 'haskell-text<0.12')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9a11c13a79f09028a6fa5d94c890f159')
+md5sums=('308dbcb8e7d75e4a9cb97c29adbdef6a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

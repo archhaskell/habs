@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=citeproc-hs
 pkgname=haskell-citeproc-hs
-pkgver=0.3.1
-pkgrel=5
+pkgver=0.3.2
+pkgrel=1
 pkgdesc="A Citation Style Language implementation in Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-http=4000.0.9' 'haskell-bytestring=0.9.1.7' 'haskell-con
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('a43f7db8110a1d0fa168f9e38c1345e1')
+md5sums=('9d0c3861e858aeed2147ed2deb1deeb8')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
