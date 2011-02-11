@@ -2,7 +2,7 @@
 _hkgname=yesod-persistent
 pkgname=haskell-yesod-persistent
 pkgver=0.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Some helpers for using Persistent from Yesod."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

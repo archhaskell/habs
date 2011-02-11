@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod-form
 pkgname=haskell-yesod-form
-pkgver=0.0.0
-pkgrel=2
+pkgver=0.0.0.1
+pkgrel=1
 pkgdesc="Form handling support for Yesod Web Framework"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-byt
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('a0e14934d994588734801bc43b35ec69')
+md5sums=('e877a06340a8584aac10a050bc4dde88')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

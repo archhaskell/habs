@@ -2,7 +2,7 @@
 _hkgname=wai-handler-devel
 pkgname=haskell-wai-handler-devel
 pkgver=0.2.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="WAI server that automatically reloads code after modification."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=warp
 pkgname=haskell-warp
-pkgver=0.3.2
+pkgver=0.3.2.1
 pkgrel=1
 pkgdesc="A fast, light-weight web server for WAI applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-builder-enumerator<0.3
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('821afa99b9d6ab6c559d199b12aa54d9')
+md5sums=('91fa531d242c6917372bed6f75355bbe')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

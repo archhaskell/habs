@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=authenticate
 pkgname=haskell-authenticate
-pkgver=0.8.0
+pkgver=0.8.0.1
 pkgrel=1
 pkgdesc="Authentication methods for Haskell web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-data-object<0.4' 'haskell-d
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('42d0ae309ee3acb86bb4b05d4c34854e')
+md5sums=('c2ba956f9c5747dce0753dd8196c8cf1')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

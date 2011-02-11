@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=persistent
 pkgname=haskell-persistent
-pkgver=0.4.0
-pkgrel=2
+pkgver=0.4.0.1
+pkgrel=1
 pkgdesc="Type-safe, non-relational, multi-backend persistence."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-co
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('c3320f7be48b047abb3f4e36dbab84b1')
+md5sums=('f009fb29dd98bef4b6ff7b3cf3c9f397')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

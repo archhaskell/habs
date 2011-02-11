@@ -2,7 +2,7 @@
 _hkgname=yesod-json
 pkgname=haskell-yesod-json
 pkgver=0.0.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Generate content for Yesod using the json-types package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
