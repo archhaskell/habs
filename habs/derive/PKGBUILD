@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=derive
 pkgname=derive
-pkgver=2.4.1
+pkgver=2.4.2
 pkgrel=1
 pkgdesc="A program and library to derive instances for data types"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,10 +12,9 @@ depends=('gmp' 'ghc' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' '
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('b16bb1d254254377fa6c82bfe572574d')
+md5sums=('b51c1f79a25d20173520e283e10c7937')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
-    sed -i -e "s/1\.9/1.10/" derive.cabal
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
        --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
