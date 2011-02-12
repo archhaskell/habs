@@ -2,7 +2,7 @@
 _hkgname=yesod-static
 pkgname=haskell-yesod-static
 pkgver=0.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Static file serving subsite for Yesod Web Framework."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

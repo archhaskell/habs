@@ -1,0 +1,25 @@
+# Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
+_hkgname=splot
+pkgname=splot
+pkgver=0.1.11
+pkgrel=1
+pkgdesc="A tool for visualizing the lifecycle of many concurrent multi-staged processes."
+url="http://hackage.haskell.org/package/${_hkgname}"
+license=('custom:BSD3')
+arch=('i686' 'x86_64')
+makedepends=('ghc' 'haskell-chart' 'haskell-bytestring=0.9.1.7' 'haskell-bytestring-lexing' 'haskell-cairo' 'haskell-colour' 'haskell-containers=0.3.0.0' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-strptime>=0.1.7' 'haskell-time=1.1.4')
+depends=('gmp')
+options=('strip')
+source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
+md5sums=('5c10b6fcf342a4dbb664777259b7fa20')
+build() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
+    runhaskell Setup build
+}
+package() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
+}
