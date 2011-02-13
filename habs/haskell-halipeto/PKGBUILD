@@ -2,7 +2,7 @@
 _hkgname=halipeto
 pkgname=haskell-halipeto
 pkgver=2.3
-pkgrel=10
+pkgrel=11
 pkgdesc="Haskell Static Web Page Generator"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

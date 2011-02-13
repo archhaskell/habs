@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=bytestring-trie
 pkgname=haskell-bytestring-trie
-pkgver=0.2.2
+pkgver=0.2.3
 pkgrel=1
 pkgdesc="An efficient finite map from (byte)strings to values."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-binary' 'haskell-bytestring=0.9.1.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('87055596ec7c40270e3366f4ab5a0e55')
+md5sums=('3077b794e0e7601e7a339adc0b4967de')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

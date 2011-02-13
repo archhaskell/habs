@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hint
 pkgname=haskell-hint
-pkgver=0.3.3.1
-pkgrel=5
+pkgver=0.3.3.2
+pkgrel=1
 pkgdesc="Runtime Haskell interpreter (GHC API wrapper)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-monadcatchio-mtl>=0.2' 'haskell-directory=1.0.1.1' 'hask
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('97ed646e76df4e4b0c9994ea1b8d425a')
+md5sums=('73df2ce4e63c6d146457d9bd96b6e3c6')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
