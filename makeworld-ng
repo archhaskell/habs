@@ -28,7 +28,15 @@ die() {
 
 usage() {
     cat << EOF
-Usage.
+Usage: $0 [options]
+
+Options:
+-h          This help
+-a <arch>   Architecture to build for i686 or x86_64 (defaults to your architecture)
+-b <dir>    Location of your HABS dir (default ./habs)
+-c          Clean the build chroot before building
+-l <dir>    Location of the chroots (default .)
+-x          Update the pristine chroot first (implies -c)
 EOF
 }
 
