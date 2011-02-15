@@ -1,42 +1,72 @@
 #!/bin/bash
 #
-# This script compiles the Haskell ABS tree into a binary repository.
+# This script compiles the Haskell ABS tree.
 #
 
-die()				# error reporting helper
-{
-  echo >&2 "*** makeworld error: $@"
-  exit 1
+ALL_OFF="$(tput sgr0)"
+BOLD="$(tput bold)"
+BLUE="${BOLD}$(tput setaf 4)"
+GREEN="${BOLD}$(tput setaf 2)"
+RED="${BOLD}$(tput setaf 1)"
+YELLOW="${BOLD}$(tput setaf 3)"
+
+msg() {
+    local msg=$1; shift
+    printf "${GREEN}==>${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
 }
 
-# Set global defaults.
+error() {
+    local msg=$1; shift
+    printf "${RED}==> ERROR:${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+}
+
+die() {
+    local msg=$1; shift
+    [ -n "${msg}" ] && error "${msg}" $@
+    exit 1
+}
+
+usage() {
+    cat << EOF
+Usage.
+EOF
+}
+
 set -eu
 shopt -s nullglob
 export LC_ALL="C"
-do_rsync="${HABSCHROOTRSYNC:-y}"
-host_arch=$(uname -m) || die "cannot determine host architecture"
-chroot_dir="${HABSCHROOTDIR:-/var/tmp}/chroot-${host_arch}"
-chroot_rootdir="${chroot_dir}/root"
-chroot_copydir="${chroot_dir}/copy"
-declare -r do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
 
-# If a command line argument was given, interpret it as the path to the
-# habs directory, and change into it. The default argument is "habs".
-cd "${1:-habs}" || die "habs tree doesn't exist at expected location"
+# default values for argument
+build_arch=$(uname -m) || die "cannot determine host architecture"
+update_pristine_chroot=n
+clean_build_chroot=n
+chroot_dir=.
+habs_dir=./habs
+
+while getopts hxca:l:b: opt; do
+    case "${opt}" in
+        h) usage; exit 0;;
+        x) update_pristine_chroot=y;;
+        c) clean_build_chroot=y;;
+        a) build_arch=${OPTARG};;
+        l) chroot_dir="${OPTARG}";;
+        b) habs_dir="${OPTARG}";;
+    esac
+done
+shift $((OPTIND - 1))
+
+CHROOT_DIR="$(readlink -f ${chroot_dir}/chroot-${build_arch})"
+CHROOT_ROOTDIR="${CHROOT_DIR}/root"
+CHROOT_COPYDIR="${CHROOT_DIR}/copy"
 
 # If the chroot sandbox doesn't exist, create it.
-if [ ! -d "${chroot_dir}" ]; then
-  # it doesn't exist, create it
-  pacman_conf=$(mktemp "/tmp/pacman-haskell-XXX.conf") || die "failed to create temporary file"
-  trap 'rm -f "${pacman_conf}"' 0
+if [ ! -d "${CHROOT_DIR}" ]; then
+    msg "Creating the pristine chroot: ${CHROOT_DIR} ..."
+    sudo mkdir -p "${CHROOT_DIR}"
 
-  for n in $(seq 9 -1 1); do
-    echo -ne "\rGenerating chroot environment at ${chroot_dir} in ${n} seconds ... "
-    sleep 1
-  done
-  echo ""
-
-  cat >"${pacman_conf}" <<EOF
+    pacman_conf=$(mktemp "/tmp/pacman-habs-XXX.conf") || die "failed to create temporary file"
+    trap 'rm -f "${pacman_conf}"' 0
+    cat >"${pacman_conf}" <<EOF
 [options]
 HoldPkg     = pacman glibc
 SyncFirst   = pacman
@@ -53,56 +83,76 @@ Include = /etc/pacman.d/mirrorlist
 
 [repo]
 Server = file:///repo
+
+[haskell]
+Server = http://andromeda.kiwilight.com/\$repo/\$build_arch
 EOF
 
-  sudo mkdir -p "${chroot_dir}"
-  sudo setarch "${host_arch}" mkarchroot -f \
-    -M "/usr/share/devtools/makepkg-${host_arch}.conf" \
-    -C "${pacman_conf}" \
-    "${chroot_rootdir}" util-linux-ng pacman file wget base-devel sudo ghc
+    sudo setarch "${build_arch}" mkarchroot -f -C ${pacman_conf} \
+        -M "/usr/share/devtools/makepkg-${build_arch}.conf" "${CHROOT_ROOTDIR}" \
+        util-linux-ng pacman file wget base-devel sudo ghc
 
-  echo "Build environment has been set up."
-fi
-
-# Synchronize the master repository into the sandbox environment.
-if [ "${do_rsync}" == "y" ]; then
-  sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_rootdir}/repo/
-fi
-
-# Compute the list of all available packages in topological order.
-pkglist=$(
-  for name in *; do
-    source "${name}/PKGBUILD"
-    echo "${pkgname} non-existent-dummy-package"
-    for dep in ${depends[@]} ${makedepends[@]:-}; do
-      if [[ "${dep}" =~ ([^=\<\>]+) ]]; then
-	dep="${BASH_REMATCH[1]}"
-	if [ -d "${dep}" ]; then
-	  echo "${pkgname} ${dep}"
-	fi
-      else
-	die "can't parse dependencies of ${name}/PKGBUILD"
-      fi
+    # Create mock package files
+    sudo mkdir "${CHROOT_ROOTDIR}/repo"
+    for f in $(rsync -rtlvH --delay-updates --safe-links \
+            rsync://andromeda.kiwilight.com/haskell/${build_arch}/ . | grep pkg.tar.xz); do
+        sudo touch "${CHROOT_COPYDIR}/repo/${f}"
     done
-  done | tsort | tac | sed -e "/^non-existent-dummy-package/d"
-  )
+
+    update_pristine_chroot=n
+    msg "Done!"
+fi
+
+if [[ "x${update_pristine_chroot}" == "xy" ]]; then
+    msg "Updating the pristine chroot ..."
+    sudo setarch ${build_arch} mkarchroot -u ${CHROOT_ROOTDIR}
+    sudo rm -rf "${CHROOT_ROOTDIR}/repo"
+    sudo mkdir "${CHROOT_ROOTDIR}/repo"
+    for f in $(rsync -n -rtlvH --delay-updates --safe-links \
+            rsync://andromeda.kiwilight.com/haskell/${build_arch}/ . | grep pkg.tar.xz); do
+        sudo touch "${CHROOT_ROOTDIR}/repo/${f}"
+    done
+
+    clean_build_chroot=y
+    msg "Done!"
+fi
+
+if [[ "x${clean_build_chroot}" == "xy" ]]; then
+    msg "Cleaning the build chroot ..."
+    sudo rsync -a --delete -q -W -x "${CHROOT_ROOTDIR}/" "${CHROOT_COPYDIR}"
+    msg "Done!"
+fi
+
+# Compute the list of all available packages in a buildable order.
+pkglist=$(
+    for name in ${habs_dir}/*; do
+        source "${name}/PKGBUILD"
+        echo "${pkgname} non-existent-dummy-package"
+        for dep in ${depends[@]} ${makedepends[@]:-}; do
+            if [[ "${dep}" =~ ([^=\<\>]+) ]]; then
+                dep="${BASH_REMATCH[1]}"
+                if [ -d "${habs_dir}/${dep}" ]; then
+                    echo "${pkgname} ${dep}"
+                fi
+            else
+                die "can't parse dependencies of ${name}/PKGBUILD"
+            fi
+        done
+    done | tsort | tac | sed -e "/^non-existent-dummy-package/d"
+    )
 
 # Build all packages that don't exist in the repository yet.
 for name in ${pkglist}; do
-  source "${name}/PKGBUILD"
-  pkgspec="${pkgname}-${pkgver}-${pkgrel}"
-  outname="${pkgspec}-${host_arch}.pkg.tar.xz"
+    source "${habs_dir}/${name}/PKGBUILD"
+    pkgspec="${pkgname}-${pkgver}-${pkgrel}"
+    outname="${pkgspec}-${build_arch}.pkg.tar.xz"
 
-  if [ -f "${chroot_copydir}/repo/${outname}" \
-    -o -f "${chroot_rootdir}/repo/${outname}" ]; then
-    echo "Not building ${outname} (already built)."
-  else
-    echo "Building ${outname} ..."
-    pushd >/dev/null "${pkgname}"
-    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_dir}"
-    popd >/dev/null
-  fi
+    if [ -f "${CHROOT_COPYDIR}/repo/${outname}" -o -f "${CHROOT_ROOTDIR}/repo/${outname}" ]; then
+        msg "Not building ${outname} (already built)."
+    else
+        msg "Building ${outname} ..."
+        (cd ${habs_dir}/${pkgname}; sudo setarch "${build_arch}" makechrootpkg -u -d -r "${CHROOT_DIR}")
+    fi
 done
 
 # vim: set tw=0 :
