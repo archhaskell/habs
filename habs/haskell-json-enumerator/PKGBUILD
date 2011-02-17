@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=json-enumerator
 pkgname=haskell-json-enumerator
-pkgver=0.0.0
+pkgver=0.0.1
 pkgrel=1
 pkgdesc="Pure-Haskell utilities for dealing with JSON with the enumerator package."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-builder-enumerator<0.3
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('f6356e714c46fdb176bbb407fca28de2')
+md5sums=('b246e373824b3d85fc204c059181b029')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

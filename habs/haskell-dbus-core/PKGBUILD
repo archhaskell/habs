@@ -2,7 +2,7 @@
 _hkgname=dbus-core
 pkgname=haskell-dbus-core
 pkgver=0.8.5.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Low-level D-Bus protocol implementation"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-3')

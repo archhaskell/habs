@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod-persistent
 pkgname=haskell-yesod-persistent
-pkgver=0.0.0
-pkgrel=3
+pkgver=0.0.0.1
+pkgrel=1
 pkgdesc="Some helpers for using Persistent from Yesod."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-failure<0.2' 'haskell-persistent<0.5' 'haskell-transform
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('718707e60c70f2313767b0452d5958ca')
+md5sums=('ef34d0c096f6d332811885a7476e518b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

@@ -2,7 +2,7 @@
 _hkgname=wai-app-static
 pkgname=haskell-wai-app-static
 pkgver=0.0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="WAI application for static serving"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=network-enumerator
 pkgname=haskell-network-enumerator
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Enumerators for network sockets"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

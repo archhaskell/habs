@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod-static
 pkgname=haskell-yesod-static
-pkgver=0.0.0
-pkgrel=3
+pkgver=0.0.0.1
+pkgrel=1
 pkgdesc="Static file serving subsite for Yesod Web Framework."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-base64-bytestring<0.2' 'haskell-bytestring=0.9.1.7' 'has
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('a0c4df351dc0d9e8113c8eee03397c6d')
+md5sums=('77d2016c44ee4d9c25312ec590877021')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

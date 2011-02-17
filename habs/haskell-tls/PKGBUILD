@@ -2,7 +2,7 @@
 _hkgname=tls
 pkgname=haskell-tls
 pkgver=0.3.2
-pkgrel=2
+pkgrel=3
 pkgdesc="TLS/SSL protocol native implementation (Server and Client)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=yesod-core
 pkgname=haskell-yesod-core
 pkgver=0.7.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Creation of type-safe, RESTful web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

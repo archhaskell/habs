@@ -2,7 +2,7 @@
 _hkgname=data-object-yaml
 pkgname=haskell-data-object-yaml
 pkgver=0.3.3.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Serialize data to and from Yaml files"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

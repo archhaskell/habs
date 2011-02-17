@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=web-routes
 pkgname=haskell-web-routes
-pkgver=0.23.2
-pkgrel=2
+pkgver=0.23.4
+pkgrel=1
 pkgdesc="Library for maintaining correctness and composability of URLs within an application."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-network=2.2.1.7' 'haskell-p
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('b922f821c476070fccd21998c655702c')
+md5sums=('9bacfac146036bfae807d3e4c02b6847')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
