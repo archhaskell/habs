@@ -2,7 +2,7 @@
 _hkgname=hsx
 pkgname=haskell-hsx
 pkgver=0.9.0
-pkgrel=1
+pkgrel=2
 pkgdesc="HSX (Haskell Source with XML) allows literal XML syntax to be used in Haskell source code."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

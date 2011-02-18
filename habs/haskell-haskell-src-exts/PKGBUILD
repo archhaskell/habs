@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=haskell-src-exts
 pkgname=haskell-haskell-src-exts
-pkgver=1.10.1
+pkgver=1.10.2
 pkgrel=1
 pkgdesc="Manipulating Haskell source: abstract syntax, lexer, parser, and pretty-printer"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-array=0.3.0.1' 'cpphs>=1.3' 'haskell-pretty=1.0.1.1' 'ha
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('43a472377fcd19bfd7a06d87df0ceebd')
+md5sums=('f810d859a7afe2cdc7f7174d0abe84fe')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

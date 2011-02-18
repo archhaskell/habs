@@ -2,7 +2,7 @@
 _hkgname=hlint
 pkgname=haskell-hlint
 pkgver=1.8.7
-pkgrel=1
+pkgrel=2
 pkgdesc="Source code suggestions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
