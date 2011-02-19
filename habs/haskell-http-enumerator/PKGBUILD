@@ -2,7 +2,7 @@
 _hkgname=http-enumerator
 pkgname=haskell-http-enumerator
 pkgver=0.3.1
-pkgrel=3
+pkgrel=4
 pkgdesc="HTTP client package with enumerator interface and HTTPS support."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

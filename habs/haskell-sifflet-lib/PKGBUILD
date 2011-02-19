@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=sifflet-lib
 pkgname=haskell-sifflet-lib
-pkgver=1.2.2
-pkgrel=6
+pkgver=1.2.3
+pkgrel=1
 pkgdesc="Library of modules shared by sifflet and its tests and its exporters."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cairo<0.13' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-fgl=5.4.2.3' 'haskell-filepath=1.1.0.4' 'haskell-glib<0.13' 'haskell-gtk<0.13' 'haskell-haskell98=1.0.1.1' 'haskell-hxt<9.1' 'haskell-mtl<1.2' 'haskell-parsec=2.1.0.1' 'haskell-process=1.0.1.3' 'haskell-unix=2.4.0.2')
+depends=('ghc' 'haskell-cairo<0.13' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-fgl=5.4.2.3' 'haskell-filepath=1.1.0.4' 'haskell-glib<0.13' 'haskell-gtk<0.13' 'haskell-haskell98=1.0.1.1' 'haskell-hxt<9.1' 'haskell-mtl<2.1' 'haskell-parsec=2.1.0.1' 'haskell-process=1.0.1.3' 'haskell-unix=2.4.0.2' 'gtk2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('dc8bd5218c5766dfd7c3268be3a066ae')
+md5sums=('08315900b141d2d59231f256f4a6a0f0')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
