@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod-form
 pkgname=haskell-yesod-form
-pkgver=0.0.0.1
-pkgrel=2
+pkgver=0.0.0.2
+pkgrel=1
 pkgdesc="Form handling support for Yesod Web Framework"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-data-default<0.3' 'haskell-email-validate<0.3' 'haskell-hamlet<0.8' 'haskell-network=2.2.1.7' 'haskell-persistent<0.5' 'haskell-template-haskell=2.4.0.1' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-xss-sanitize<0.3' 'haskell-yesod-core<0.8')
+depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-data-default<0.3' 'haskell-email-validate<0.3' 'haskell-hamlet<0.8' 'haskell-network=2.2.1.7' 'haskell-persistent<0.5' 'haskell-template-haskell=2.4.0.1' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-xss-sanitize<0.3' 'haskell-yesod-core<0.8' 'haskell-yesod-persistent<0.0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('e877a06340a8584aac10a050bc4dde88')
+md5sums=('bb95e67fcd005f6f4f190ec412ee9c48')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

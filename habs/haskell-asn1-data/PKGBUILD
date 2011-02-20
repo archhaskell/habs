@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=asn1-data
 pkgname=haskell-asn1-data
-pkgver=0.3.0
+pkgver=0.4.6
 pkgrel=1
 pkgdesc="ASN1 data reader and writer in RAW, BER, DER and CER forms"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary>=0.5' 'haskell-bytestring=0.9.1.7' 'haskell-mtl' 'haskell-text>=0.11')
+depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-attoparsec-enumerator<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-enumerator<0.5' 'haskell-mtl' 'haskell-text>=0.11')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('53fb072769f631bbfc0f8d0e352158d6')
+md5sums=('79266fefd843ded4abfc6b2238fba0ce')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

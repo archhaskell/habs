@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=tls
 pkgname=haskell-tls
-pkgver=0.3.2
-pkgrel=4
+pkgver=0.3.3
+pkgrel=1
 pkgdesc="TLS/SSL protocol native implementation (Server and Client)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-aes' 'haskell-binary>=0.5' 'haskell-bytestring=0.9.1.7' 'haskell-cereal>=0.3' 'haskell-certificate<0.5' 'haskell-crypto-api>=0.2' 'haskell-cryptocipher>=0.2' 'haskell-cryptohash>=0.6' 'haskell-mtl' 'haskell-vector')
+depends=('ghc' 'haskell-binary>=0.5' 'haskell-bytestring=0.9.1.7' 'haskell-cereal>=0.3' 'haskell-certificate<0.8' 'haskell-crypto-api>=0.5' 'haskell-cryptocipher>=0.2.5' 'haskell-cryptohash>=0.6' 'haskell-mtl' 'haskell-vector')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('d39ff8acf436889b8e44f2cf13fc5b8f')
+md5sums=('128aa703fb089306ca97a129325f7608')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
