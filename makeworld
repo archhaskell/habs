@@ -59,7 +59,7 @@ EOF
   sudo setarch "${host_arch}" mkarchroot -f \
     -M "/usr/share/devtools/makepkg-${host_arch}.conf" \
     -C "${pacman_conf}" \
-    "${chroot_rootdir}" util-linux-ng pacman file wget base-devel sudo ghc
+    "${chroot_rootdir}" util-linux pacman file wget base-devel sudo ghc
 
   echo "Build environment has been set up."
 fi
