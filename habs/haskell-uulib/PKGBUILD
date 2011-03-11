@@ -2,7 +2,7 @@
 _hkgname=uulib
 pkgname=haskell-uulib
 pkgver=0.9.13
-pkgrel=3
+pkgrel=4
 pkgdesc="Haskell Utrecht Tools Library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')

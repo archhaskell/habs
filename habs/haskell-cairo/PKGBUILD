@@ -2,7 +2,7 @@
 _hkgname=cairo
 pkgname=haskell-cairo
 pkgver=0.12.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Binding to the Cairo library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

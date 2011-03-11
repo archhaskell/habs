@@ -2,7 +2,7 @@
 _hkgname=smallcheck
 pkgname=haskell-smallcheck
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Another lightweight testing library in Haskell."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=non-negative
 pkgname=haskell-non-negative
 pkgver=0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Non-negative numbers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

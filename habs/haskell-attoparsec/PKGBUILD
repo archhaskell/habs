@@ -2,7 +2,7 @@
 _hkgname=attoparsec
 pkgname=haskell-attoparsec
 pkgver=0.8.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast combinator parsing for bytestrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

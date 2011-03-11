@@ -2,7 +2,7 @@
 _hkgname=zlib-bindings
 pkgname=haskell-zlib-bindings
 pkgver=0.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Low-level bindings to the zlib package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

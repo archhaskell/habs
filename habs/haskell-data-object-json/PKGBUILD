@@ -2,7 +2,7 @@
 _hkgname=data-object-json
 pkgname=haskell-data-object-json
 pkgver=0.3.1.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Serialize JSON data to/from Haskell using the data-object library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

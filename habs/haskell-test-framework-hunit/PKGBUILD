@@ -2,7 +2,7 @@
 _hkgname=test-framework-hunit
 pkgname=haskell-test-framework-hunit
 pkgver=0.2.6
-pkgrel=4
+pkgrel=5
 pkgdesc="HUnit support for the test-framework package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

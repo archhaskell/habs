@@ -2,7 +2,7 @@
 _hkgname=AttoJson
 pkgname=haskell-attojson
 pkgver=0.5.10
-pkgrel=1
+pkgrel=2
 pkgdesc="Simple lightweight JSON parser, generator & manipulator based on ByteString"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

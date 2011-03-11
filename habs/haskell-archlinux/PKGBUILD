@@ -2,7 +2,7 @@
 _hkgname=archlinux
 pkgname=haskell-archlinux
 pkgver=0.3.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Support for working with Arch Linux packages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

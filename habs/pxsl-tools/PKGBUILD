@@ -2,7 +2,7 @@
 _hkgname=pxsl-tools
 pkgname=pxsl-tools
 pkgver=1.0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Parsimonious XML Shorthand Language--to-XML compiler"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

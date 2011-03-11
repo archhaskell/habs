@@ -2,7 +2,7 @@
 _hkgname=hledger
 pkgname=hledger
 pkgver=0.12.1
-pkgrel=8
+pkgrel=9
 pkgdesc="A command-line (or curses or web-based) double-entry accounting tool."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

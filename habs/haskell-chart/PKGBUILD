@@ -2,7 +2,7 @@
 _hkgname=Chart
 pkgname=haskell-chart
 pkgver=0.14
-pkgrel=1
+pkgrel=2
 pkgdesc="A library for generating 2D Charts and Plots"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

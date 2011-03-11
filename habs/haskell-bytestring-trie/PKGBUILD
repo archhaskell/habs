@@ -2,7 +2,7 @@
 _hkgname=bytestring-trie
 pkgname=haskell-bytestring-trie
 pkgver=0.2.3
-pkgrel=1
+pkgrel=2
 pkgdesc="An efficient finite map from (byte)strings to values."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

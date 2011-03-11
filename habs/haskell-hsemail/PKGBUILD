@@ -2,7 +2,7 @@
 _hkgname=hsemail
 pkgname=haskell-hsemail
 pkgver=1.7
-pkgrel=3
+pkgrel=4
 pkgdesc="Internet Message Parsers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=hasktags
 pkgname=hasktags
 pkgver=0.68.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Produces ctags \"tags\" and etags \"TAGS\" files for Haskell programs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

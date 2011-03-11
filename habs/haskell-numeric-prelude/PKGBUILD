@@ -2,7 +2,7 @@
 _hkgname=numeric-prelude
 pkgname=haskell-numeric-prelude
 pkgver=0.2
-pkgrel=4
+pkgrel=5
 pkgdesc="An experimental alternative hierarchy of numeric type classes"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

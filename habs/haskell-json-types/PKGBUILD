@@ -2,7 +2,7 @@
 _hkgname=json-types
 pkgname=haskell-json-types
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Basic types for representing JSON"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

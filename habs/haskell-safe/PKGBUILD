@@ -2,7 +2,7 @@
 _hkgname=safe
 pkgname=haskell-safe
 pkgver=0.3
-pkgrel=3
+pkgrel=4
 pkgdesc="Library for safe (pattern match free) functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

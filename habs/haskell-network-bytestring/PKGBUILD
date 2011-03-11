@@ -2,7 +2,7 @@
 _hkgname=network-bytestring
 pkgname=haskell-network-bytestring
 pkgver=0.1.3.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast, memory-efficient, low-level networking"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

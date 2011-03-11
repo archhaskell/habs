@@ -2,7 +2,7 @@
 _hkgname=language-javascript
 pkgname=haskell-language-javascript
 pkgver=0.4.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Parser for JavaScript"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

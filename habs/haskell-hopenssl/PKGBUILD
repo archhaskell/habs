@@ -2,7 +2,7 @@
 _hkgname=hopenssl
 pkgname=haskell-hopenssl
 pkgver=1.4
-pkgrel=3
+pkgrel=4
 pkgdesc="FFI bindings to OpenSSL's EVP digest interface"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

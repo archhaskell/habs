@@ -2,7 +2,7 @@
 _hkgname=hxt-unicode
 pkgname=haskell-hxt-unicode
 pkgver=9.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Unicode en-/decoding functions for utf8, iso-latin-* and other encodings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')

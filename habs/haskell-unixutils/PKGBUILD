@@ -2,7 +2,7 @@
 _hkgname=Unixutils
 pkgname=haskell-unixutils
 pkgver=1.36
-pkgrel=1
+pkgrel=2
 pkgdesc="A crude interface between Haskell and Unix-like operating systems"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

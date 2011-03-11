@@ -2,7 +2,7 @@
 _hkgname=wai-extra
 pkgname=haskell-wai-extra
 pkgver=0.3.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Provides some basic WAI handlers and middleware."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

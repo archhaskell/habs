@@ -2,7 +2,7 @@
 _hkgname=hxt-charproperties
 pkgname=haskell-hxt-charproperties
 pkgver=9.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Character properties and classes for XML and Unicode"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')

@@ -2,7 +2,7 @@
 _hkgname=HSH
 pkgname=haskell-hsh
 pkgver=2.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Library to mix shell scripting with Haskell programs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')

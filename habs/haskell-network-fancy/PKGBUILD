@@ -2,7 +2,7 @@
 _hkgname=network-fancy
 pkgname=haskell-network-fancy
 pkgver=0.1.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Networking support with a cleaner API"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

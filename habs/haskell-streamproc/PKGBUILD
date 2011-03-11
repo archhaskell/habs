@@ -2,7 +2,7 @@
 _hkgname=streamproc
 pkgname=haskell-streamproc
 pkgver=1.3
-pkgrel=3
+pkgrel=4
 pkgdesc="Stream Processer Arrow"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

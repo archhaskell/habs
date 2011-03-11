@@ -2,7 +2,7 @@
 _hkgname=data-accessor-monads-fd
 pkgname=haskell-data-accessor-monads-fd
 pkgver=0.2.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Use Accessor to access state in monads-fd State monad class"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

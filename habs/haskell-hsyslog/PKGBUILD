@@ -2,7 +2,7 @@
 _hkgname=hsyslog
 pkgname=haskell-hsyslog
 pkgver=1.4
-pkgrel=3
+pkgrel=4
 pkgdesc="FFI interface to syslog(3) from POSIX.1-2001."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

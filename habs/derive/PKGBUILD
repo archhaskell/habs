@@ -2,7 +2,7 @@
 _hkgname=derive
 pkgname=derive
 pkgver=2.4.2
-pkgrel=2
+pkgrel=3
 pkgdesc="A program and library to derive instances for data types"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

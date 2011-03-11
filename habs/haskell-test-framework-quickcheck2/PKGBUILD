@@ -2,7 +2,7 @@
 _hkgname=test-framework-quickcheck2
 pkgname=haskell-test-framework-quickcheck2
 pkgver=0.2.7
-pkgrel=1
+pkgrel=2
 pkgdesc="QuickCheck2 support for the test-framework package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=hscolour
 pkgname=hscolour
 pkgver=1.17
-pkgrel=3
+pkgrel=4
 pkgdesc="Colourise Haskell code."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

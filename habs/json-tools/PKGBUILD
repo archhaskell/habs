@@ -2,7 +2,7 @@
 _hkgname=json-tools
 pkgname=json-tools
 pkgver=0.3.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A collection of JSON tools"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

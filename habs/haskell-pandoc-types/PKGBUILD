@@ -2,7 +2,7 @@
 _hkgname=pandoc-types
 pkgname=haskell-pandoc-types
 pkgver=1.8
-pkgrel=1
+pkgrel=2
 pkgdesc="Types for representing a structured document"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

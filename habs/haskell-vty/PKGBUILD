@@ -2,7 +2,7 @@
 _hkgname=vty
 pkgname=haskell-vty
 pkgver=4.4.0.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple terminal access library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

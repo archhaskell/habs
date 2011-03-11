@@ -2,7 +2,7 @@
 _hkgname=hxt-regex-xmlschema
 pkgname=haskell-hxt-regex-xmlschema
 pkgver=9.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="A regular expression library for W3C XML Schema regular expressions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')

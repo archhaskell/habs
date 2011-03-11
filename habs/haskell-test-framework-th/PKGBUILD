@@ -2,7 +2,7 @@
 _hkgname=test-framework-th
 pkgname=haskell-test-framework-th
 pkgver=0.1.3
-pkgrel=5
+pkgrel=6
 pkgdesc="Automagically generate the HUnit- and Quickcheck-bulk-code using Template Haskell."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

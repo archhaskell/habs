@@ -2,7 +2,7 @@
 _hkgname=utf8-light
 pkgname=haskell-utf8-light
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Unicode"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

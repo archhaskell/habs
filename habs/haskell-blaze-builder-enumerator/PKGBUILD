@@ -2,7 +2,7 @@
 _hkgname=blaze-builder-enumerator
 pkgname=haskell-blaze-builder-enumerator
 pkgver=0.2.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Enumeratees for the incremental conversion of builders to bytestrings."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

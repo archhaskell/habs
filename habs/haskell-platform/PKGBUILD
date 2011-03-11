@@ -2,7 +2,7 @@
 _hkgname=haskell-platform
 pkgname=haskell-platform
 pkgver=2010.2.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="The Haskell Platform"
 url="http://hackage.haskell.org/platform/"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=xdg-basedir
 pkgname=haskell-xdg-basedir
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A basic implementation of the XDG Base Directory specification."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

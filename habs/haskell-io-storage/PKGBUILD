@@ -2,7 +2,7 @@
 _hkgname=io-storage
 pkgname=haskell-io-storage
 pkgver=0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="A key-value store in the IO monad."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

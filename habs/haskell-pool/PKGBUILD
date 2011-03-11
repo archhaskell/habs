@@ -2,7 +2,7 @@
 _hkgname=pool
 pkgname=haskell-pool
 pkgver=0.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Thread-safe resource pools."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

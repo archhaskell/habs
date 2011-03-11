@@ -2,7 +2,7 @@
 _hkgname=ghc-mod
 pkgname=ghc-mod
 pkgver=0.5.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Happy Haskell programming on Emacs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

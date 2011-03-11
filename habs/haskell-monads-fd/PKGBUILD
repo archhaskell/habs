@@ -2,7 +2,7 @@
 _hkgname=monads-fd
 pkgname=haskell-monads-fd
 pkgver=0.1.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Monad classes, using functional dependencies"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

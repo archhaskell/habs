@@ -2,7 +2,7 @@
 _hkgname=Agda-executable
 pkgname=agda-executable
 pkgver=2.2.8
-pkgrel=1
+pkgrel=2
 pkgdesc="Command-line program for type-checking and compiling Agda programs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')

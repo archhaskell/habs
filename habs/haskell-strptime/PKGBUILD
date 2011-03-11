@@ -2,7 +2,7 @@
 _hkgname=strptime
 pkgname=haskell-strptime
 pkgver=1.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Efficient parsing of LocalTime using a binding to C's strptime, with some extra features (i.e. fractional seconds)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

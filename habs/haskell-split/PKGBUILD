@@ -2,7 +2,7 @@
 _hkgname=split
 pkgname=haskell-split
 pkgver=0.1.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Combinator library for splitting lists."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

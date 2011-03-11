@@ -2,7 +2,7 @@
 _hkgname=cautious-file
 pkgname=haskell-cautious-file
 pkgver=0.1.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Ways to write a file cautiously, to reduce the chances of problems such as data loss due to crashes or power failures"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

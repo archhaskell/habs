@@ -2,7 +2,7 @@
 _hkgname=byteorder
 pkgname=haskell-byteorder
 pkgver=1.0.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Exposes the native endianness or byte ordering of the system."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

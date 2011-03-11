@@ -2,7 +2,7 @@
 _hkgname=language-c
 pkgname=haskell-language-c
 pkgver=0.3.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Analysis and generation of C code"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

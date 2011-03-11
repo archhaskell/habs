@@ -2,7 +2,7 @@
 _hkgname=glib
 pkgname=haskell-glib
 pkgver=0.12.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Binding to the GLIB library for Gtk2Hs."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-2.1')

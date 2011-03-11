@@ -2,7 +2,7 @@
 _hkgname=authenticate
 pkgname=haskell-authenticate
 pkgver=0.8.0.1
-pkgrel=5
+pkgrel=6
 pkgdesc="Authentication methods for Haskell web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

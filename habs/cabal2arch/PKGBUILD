@@ -2,7 +2,7 @@
 _hkgname=cabal2arch
 pkgname=cabal2arch
 pkgver=0.7.7
-pkgrel=3
+pkgrel=4
 pkgdesc="Create Arch Linux packages from Cabal packages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=stream-fusion
 pkgname=haskell-stream-fusion
 pkgver=0.1.2.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Faster Haskell lists using stream fusion"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

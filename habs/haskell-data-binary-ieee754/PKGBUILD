@@ -2,7 +2,7 @@
 _hkgname=data-binary-ieee754
 pkgname=haskell-data-binary-ieee754
 pkgver=0.4.2.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Parser/Serialiser for IEEE-754 floating-point values"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

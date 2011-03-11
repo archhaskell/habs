@@ -2,7 +2,7 @@
 _hkgname=yi
 pkgname=yi
 pkgver=0.6.2.4
-pkgrel=3
+pkgrel=4
 pkgdesc="The Haskell-Scriptable Editor"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

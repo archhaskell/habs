@@ -2,7 +2,7 @@
 _hkgname=data-object
 pkgname=haskell-data-object
 pkgver=0.3.1.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Represent hierachichal structures, called objects in JSON."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

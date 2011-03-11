@@ -2,7 +2,7 @@
 _hkgname=data-accessor-template
 pkgname=haskell-data-accessor-template
 pkgver=0.2.1.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Utilities for accessing and manipulating fields of records"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

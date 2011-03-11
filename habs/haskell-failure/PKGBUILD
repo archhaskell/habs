@@ -2,7 +2,7 @@
 _hkgname=failure
 pkgname=haskell-failure
 pkgver=0.1.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A simple type class for success/failure computations."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

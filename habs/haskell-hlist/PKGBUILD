@@ -2,7 +2,7 @@
 _hkgname=HList
 pkgname=haskell-hlist
 pkgver=0.2.3
-pkgrel=3
+pkgrel=4
 pkgdesc="Heterogeneous lists"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

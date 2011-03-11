@@ -2,7 +2,7 @@
 _hkgname=BNFC
 pkgname=bnfc
 pkgver=2.4.2.0
-pkgrel=3
+pkgrel=4
 pkgdesc="A compiler front-end generator."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

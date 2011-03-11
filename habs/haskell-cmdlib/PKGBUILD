@@ -2,7 +2,7 @@
 _hkgname=cmdlib
 pkgname=haskell-cmdlib
 pkgver=0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="a library for command line parsing & online help"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

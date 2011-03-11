@@ -2,7 +2,7 @@
 _hkgname=HXQ
 pkgname=haskell-hxq
 pkgver=0.18.2
-pkgrel=4
+pkgrel=5
 pkgdesc="A Compiler from XQuery to Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

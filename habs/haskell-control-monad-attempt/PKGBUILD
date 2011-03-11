@@ -2,7 +2,7 @@
 _hkgname=control-monad-attempt
 pkgname=haskell-control-monad-attempt
 pkgver=0.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Monad transformer for attempt."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

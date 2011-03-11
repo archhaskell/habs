@@ -2,7 +2,7 @@
 _hkgname=HJavaScript
 pkgname=haskell-hjavascript
 pkgver=0.4.7
-pkgrel=1
+pkgrel=2
 pkgdesc="HJavaScript is an abstract syntax for a typed subset of JavaScript."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

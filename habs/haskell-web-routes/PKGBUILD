@@ -2,7 +2,7 @@
 _hkgname=web-routes
 pkgname=haskell-web-routes
 pkgver=0.23.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Library for maintaining correctness and composability of URLs within an application."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

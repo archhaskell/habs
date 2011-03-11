@@ -2,7 +2,7 @@
 _hkgname=cmdargs
 pkgname=haskell-cmdargs
 pkgver=0.6.8
-pkgrel=1
+pkgrel=2
 pkgdesc="Command line argument processing"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

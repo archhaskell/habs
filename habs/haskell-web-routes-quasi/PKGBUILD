@@ -2,7 +2,7 @@
 _hkgname=web-routes-quasi
 pkgname=haskell-web-routes-quasi
 pkgver=0.6.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Define data types and parse/build functions for web-routes via a quasi-quoted DSL"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

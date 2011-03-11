@@ -2,7 +2,7 @@
 _hkgname=HJScript
 pkgname=haskell-hjscript
 pkgver=0.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="HJScript is a Haskell EDSL for writing JavaScript programs."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

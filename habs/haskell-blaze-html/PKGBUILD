@@ -2,7 +2,7 @@
 _hkgname=blaze-html
 pkgname=haskell-blaze-html
 pkgver=0.4.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A blazingly fast HTML combinator library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

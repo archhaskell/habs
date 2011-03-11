@@ -2,7 +2,7 @@
 _hkgname=mtlparse
 pkgname=haskell-mtlparse
 pkgver=0.1.1
-pkgrel=3
+pkgrel=4
 pkgdesc="parse library using mtl package"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')

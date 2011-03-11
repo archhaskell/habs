@@ -2,7 +2,7 @@
 _hkgname=certificate
 pkgname=haskell-certificate
 pkgver=0.7.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Certificates and Key Reader/Writer"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

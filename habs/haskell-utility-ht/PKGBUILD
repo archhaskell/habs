@@ -2,7 +2,7 @@
 _hkgname=utility-ht
 pkgname=haskell-utility-ht
 pkgver=0.0.5.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Various small helper functions for Lists, Maybes, Tuples, Functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

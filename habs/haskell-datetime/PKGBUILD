@@ -2,7 +2,7 @@
 _hkgname=datetime
 pkgname=haskell-datetime
 pkgver=0.2
-pkgrel=3
+pkgrel=4
 pkgdesc="Utilities to make Data.Time.* easier to use."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

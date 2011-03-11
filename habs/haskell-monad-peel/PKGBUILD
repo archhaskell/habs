@@ -2,7 +2,7 @@
 _hkgname=monad-peel
 pkgname=haskell-monad-peel
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Lift control operations like exception catching through monad transformers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

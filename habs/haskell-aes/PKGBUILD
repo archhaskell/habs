@@ -2,7 +2,7 @@
 _hkgname=AES
 pkgname=haskell-aes
 pkgver=0.2.7
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast AES encryption/decryption for bytestrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

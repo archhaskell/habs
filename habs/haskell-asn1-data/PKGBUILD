@@ -2,7 +2,7 @@
 _hkgname=asn1-data
 pkgname=haskell-asn1-data
 pkgver=0.4.6
-pkgrel=1
+pkgrel=2
 pkgdesc="ASN1 data reader and writer in RAW, BER, DER and CER forms"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

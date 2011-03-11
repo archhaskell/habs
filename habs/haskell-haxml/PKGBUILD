@@ -2,7 +2,7 @@
 _hkgname=HaXml
 pkgname=haskell-haxml
 pkgver=1.20.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Utilities for manipulating XML documents"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')

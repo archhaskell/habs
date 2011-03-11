@@ -2,7 +2,7 @@
 _hkgname=executable-path
 pkgname=haskell-executable-path
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Finding out the full path of the executable."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:PublicDomain')

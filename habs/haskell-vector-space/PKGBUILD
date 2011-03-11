@@ -2,7 +2,7 @@
 _hkgname=vector-space
 pkgname=haskell-vector-space
 pkgver=0.7.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Vector & affine spaces, linear maps, and derivatives (requires ghc 6.9 or better)"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

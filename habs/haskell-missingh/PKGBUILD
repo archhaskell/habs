@@ -2,7 +2,7 @@
 _hkgname=MissingH
 pkgname=haskell-missingh
 pkgver=1.1.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Large utility library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

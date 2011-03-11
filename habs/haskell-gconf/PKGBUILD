@@ -2,7 +2,7 @@
 _hkgname=gconf
 pkgname=haskell-gconf
 pkgver=0.12.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Binding to the GNOME configuration database system."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-2.1')

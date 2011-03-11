@@ -2,7 +2,7 @@
 _hkgname=crypto-api
 pkgname=haskell-crypto-api
 pkgver=0.5.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A generic interface for cryptographic operations"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

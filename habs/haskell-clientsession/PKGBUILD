@@ -2,7 +2,7 @@
 _hkgname=clientsession
 pkgname=haskell-clientsession
 pkgver=0.4.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Store session data in a cookie."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

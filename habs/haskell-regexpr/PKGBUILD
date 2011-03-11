@@ -2,7 +2,7 @@
 _hkgname=regexpr
 pkgname=haskell-regexpr
 pkgver=0.5.3
-pkgrel=4
+pkgrel=5
 pkgdesc="regular expression like Perl/Ruby in Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')
