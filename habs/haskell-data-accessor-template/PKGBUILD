@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-accessor-template
 pkgname=haskell-data-accessor-template
-pkgver=0.2.1.6
-pkgrel=2
+pkgver=0.2.1.7
+pkgrel=1
 pkgdesc="Utilities for accessing and manipulating fields of records"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-data-accessor<0.4' 'haskell-template-haskell=2.4.0.1' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-data-accessor<0.4' 'haskell-template-haskell=2.5.0.0' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('f389f3ffee8df9fedd642a34f9fc98be')
+md5sums=('93c4d394848dfd24be78be10ed115ff4')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

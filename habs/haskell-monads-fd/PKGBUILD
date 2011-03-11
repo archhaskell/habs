@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=monads-fd
 pkgname=haskell-monads-fd
-pkgver=0.1.0.4
-pkgrel=2
+pkgver=0.2.0.0
+pkgrel=1
 pkgdesc="Monad classes, using functional dependencies"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-transformers<0.3')
+depends=('ghc' 'haskell-mtl=2.0.1.0' 'haskell-transformers=0.2.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('18dde27992067a5f1e37183f4cc1f9aa')
+md5sums=('03297ec3d11e48cb557828fa233ecd72')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

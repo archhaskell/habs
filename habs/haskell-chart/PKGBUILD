@@ -8,7 +8,7 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-cairo>=0.9.11' 'haskell-colour>=2.2.1' 'haskell-data-accessor<0.3' 'haskell-data-accessor-template<0.3' 'haskell-gtk>=0.9.11' 'haskell-mtl' 'haskell-old-locale=1.0.0.2' 'haskell-time=1.1.4')
+depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-cairo>=0.9.11' 'haskell-colour>=2.2.1' 'haskell-data-accessor<0.3' 'haskell-data-accessor-template<0.3' 'haskell-gtk>=0.9.11' 'haskell-mtl=2.0.1.0' 'haskell-old-locale=1.0.0.2' 'haskell-time=1.2.0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install

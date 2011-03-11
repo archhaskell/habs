@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pointedlist
 pkgname=haskell-pointedlist
-pkgver=0.3.5
-pkgrel=2
+pkgver=0.4.0.2
+pkgrel=1
 pkgdesc="A zipper-like comonad which works as a list, tracking a position."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary' 'haskell-data-accessor')
+depends=('ghc' 'haskell-binary' 'derive' 'haskell-fclabels<0.12')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('6391623147784d855978854c7e0719d7')
+md5sums=('600d0ed744124e29283ac87bcda5810f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

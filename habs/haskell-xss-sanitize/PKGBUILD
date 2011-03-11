@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xss-sanitize
 pkgname=haskell-xss-sanitize
-pkgver=0.2.5
-pkgrel=2
+pkgver=0.2.6
+pkgrel=1
 pkgdesc="sanitize untrusted HTML to prevent XSS attacks"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers=0.3.0.0' 'haskell-network=2.2.1.7' 'haskell-tagsoup>=0.11' 'haskell-utf8-string>=0.3')
+depends=('ghc' 'haskell-containers=0.4.0.0' 'haskell-network=2.3.0.2' 'haskell-tagsoup>=0.11' 'haskell-utf8-string>=0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('406ef7513c5a674056ab5d780d472500')
+md5sums=('ebd120843e10b31c71009b022fab233b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

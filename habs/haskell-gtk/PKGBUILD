@@ -8,7 +8,7 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-2.1')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-bytestring=0.9.1.7' 'haskell-cairo<0.13' 'haskell-containers=0.3.0.0' 'haskell-gio<0.13' 'haskell-glib<0.13' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-pango<0.13' 'glib' 'gtk2' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-bytestring=0.9.1.10' 'haskell-cairo<0.13' 'haskell-containers=0.4.0.0' 'haskell-gio<0.13' 'haskell-glib<0.13' 'haskell-haskell98=1.1.0.1' 'haskell-mtl=2.0.1.0' 'haskell-pango<0.13' 'glib' 'gtk2' 'gtk2hs-buildtools' 'gtk2hs-buildtools' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install

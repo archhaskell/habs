@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hxt-charproperties
 pkgname=haskell-hxt-charproperties
-pkgver=9.0.0
-pkgrel=4
+pkgver=9.1.0
+pkgrel=1
 pkgdesc="Character properties and classes for XML and Unicode"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
@@ -12,7 +12,7 @@ depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('3794495ea63532942987eb1f8536e3ef')
+md5sums=('098159d1e4d42da92cb7aa8f5f88f453')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

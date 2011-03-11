@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=vty
 pkgname=haskell-vty
-pkgver=4.4.0.0.1
-pkgrel=2
+pkgver=4.6.0.4
+pkgrel=1
 pkgdesc="A simple terminal access library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-deepseq=1.1.0.0' 'haskell-mtl<1.2' 'haskell-parallel=2.2.0.1' 'haskell-parsec=2.1.0.1' 'haskell-terminfo<0.4' 'haskell-unix=2.4.0.2' 'haskell-utf8-string<0.4' 'haskell-vector-space<0.8')
+depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-deepseq=1.1.0.2' 'haskell-mtl=2.0.1.0' 'haskell-parallel=3.1.0.1' 'haskell-parsec=3.1.1' 'haskell-terminfo<0.4' 'haskell-unix=2.4.2.0' 'haskell-utf8-string<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('dcdd337bcb67157eba71339427ff7b66')
+md5sums=('0ec72aa76ba69102c3eac43fee97a31b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

@@ -7,7 +7,7 @@ pkgdesc="A tool for visualizing the lifecycle of many concurrent multi-staged pr
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-chart' 'haskell-bytestring=0.9.1.7' 'haskell-bytestring-lexing' 'haskell-cairo' 'haskell-colour' 'haskell-containers=0.3.0.0' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'haskell-strptime>=0.1.7' 'haskell-time=1.1.4')
+makedepends=('ghc' 'haskell-chart' 'haskell-bytestring=0.9.1.10' 'haskell-bytestring-lexing' 'haskell-cairo' 'haskell-colour' 'haskell-containers=0.4.0.0' 'haskell-haskell98=1.1.0.1' 'haskell-mtl=2.0.1.0' 'haskell-strptime>=0.1.7' 'haskell-time=1.2.0.3')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)

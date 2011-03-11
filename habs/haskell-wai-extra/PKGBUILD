@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=wai-extra
 pkgname=haskell-wai-extra
-pkgver=0.3.2
-pkgrel=3
+pkgver=0.3.3
+pkgrel=1
 pkgdesc="Provides some basic WAI handlers and middleware."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-builder-enumerator<0.3' 'haskell-bytestring=0.9.1.7' 'haskell-directory=1.0.1.1' 'haskell-enumerator<0.5' 'haskell-network=2.2.1.7' 'haskell-old-locale=1.0.0.2' 'haskell-time=1.1.4' 'haskell-transformers<0.3' 'haskell-wai<0.4' 'haskell-zlib-bindings<0.1')
+depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-blaze-builder-enumerator<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-directory=1.1.0.0' 'haskell-enumerator<0.5' 'haskell-network=2.3.0.2' 'haskell-old-locale=1.0.0.2' 'haskell-time=1.2.0.3' 'haskell-transformers=0.2.2.0' 'haskell-wai<0.4' 'haskell-web-routes>=0.23' 'haskell-zlib-bindings<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('ffc0827a338bc37397fe7b989a3eb380')
+md5sums=('a2bd28bc587a5948d98a51a601956884')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

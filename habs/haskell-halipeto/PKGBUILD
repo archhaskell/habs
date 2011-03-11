@@ -8,7 +8,7 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haxml>=1.20' 'haskell-directory=1.0.1.1' 'haskell-pandoc')
+depends=('ghc' 'haskell-haxml>=1.20' 'haskell-directory=1.1.0.0' 'haskell-pandoc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install

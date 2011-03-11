@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hamlet
 pkgname=haskell-hamlet
-pkgver=0.7.1
-pkgrel=2
+pkgver=0.7.2
+pkgrel=1
 pkgdesc="Haml-like template files that are compile-time checked"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck=2.1.1.1' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.7' 'haskell-containers=0.3.0.0' 'haskell-failure<0.2' 'haskell-json-enumerator<0.1' 'haskell-json-types<0.2' 'haskell-parsec=2.1.0.1' 'haskell-template-haskell=2.4.0.1' 'haskell-text<0.12')
+depends=('ghc' 'haskell-quickcheck=2.4.0.1' 'haskell-blaze-builder<0.3' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-failure<0.2' 'haskell-json-enumerator<0.1' 'haskell-json-types<0.2' 'haskell-parsec=3.1.1' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('f1526b3aa1a53f0311e7eedfd12368dc')
+md5sums=('fb11e354376dafa3fecb23a1200a2a7b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

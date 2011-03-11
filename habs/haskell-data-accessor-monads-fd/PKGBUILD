@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-accessor-monads-fd
 pkgname=haskell-data-accessor-monads-fd
-pkgver=0.2.0.2
-pkgrel=2
+pkgver=0.2.0.3
+pkgrel=1
 pkgdesc="Use Accessor to access state in monads-fd State monad class"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-data-accessor<0.4' 'haskell-monads-fd<0.2' 'haskell-transformers<0.3')
+depends=('ghc' 'haskell-data-accessor<0.4' 'haskell-monads-fd<0.3' 'haskell-transformers=0.2.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5d7a131a6f22dc7b09b9be5e55f77e46')
+md5sums=('e0f67d1804d93dce58a389b126c92027')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

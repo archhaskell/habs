@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hxt-unicode
 pkgname=haskell-hxt-unicode
-pkgver=9.0.0
-pkgrel=4
+pkgver=9.0.1
+pkgrel=1
 pkgdesc="Unicode en-/decoding functions for utf8, iso-latin-* and other encodings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-hxt-charproperties<10')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('db366aa9e0fbf774b72cb95f55682a3a')
+md5sums=('a257c8f994d99b6e00bd44fdb6bed86c')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

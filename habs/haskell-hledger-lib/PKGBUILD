@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hledger-lib
 pkgname=haskell-hledger-lib
-pkgver=0.12.1
-pkgrel=9
+pkgver=0.13
+pkgrel=1
 pkgdesc="Core types and utilities for working with hledger (or c++ ledger) data."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-hunit=1.2.2.1' 'haskell-containers=0.3.0.0' 'haskell-directory=1.0.1.1' 'haskell-filepath=1.1.0.4' 'haskell-mtl' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.5' 'haskell-parsec=2.1.0.1' 'haskell-regexpr>=0.5.1' 'haskell-safe>=0.2' 'haskell-split<0.2' 'haskell-time=1.1.4' 'haskell-utf8-string<0.4')
+depends=('ghc' 'haskell-hunit=1.2.2.3' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-mtl=2.0.1.0' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.6' 'haskell-parsec=3.1.1' 'haskell-regexpr>=0.5.1' 'haskell-safe>=0.2' 'haskell-split<0.2' 'haskell-time=1.2.0.3' 'haskell-utf8-string<0.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('b0774eaa3c0e377385484b6d3cb69834')
+md5sums=('1b8b343089cb58a9610e71e562227947')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

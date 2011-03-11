@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hopenssl
 pkgname=haskell-hopenssl
-pkgver=1.4
-pkgrel=4
+pkgver=1.6.1
+pkgrel=1
 pkgdesc="FFI bindings to OpenSSL's EVP digest interface"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.7' 'haskell-mtl' 'openssl')
+depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-mtl=2.0.1.0' 'openssl')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('376592abb196af9f71e12e22d2daab30')
+md5sums=('89c907acc08117266c70e7186cacc98f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
