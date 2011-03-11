@@ -10,9 +10,9 @@ arch=('i686' 'x86_64')
 makedepends=()
 depends=('gmp' 'ghc=7.0.2' 'haskell-cabal=1.10.1.0' 'haskell-glut=2.1.2.1' 'haskell-http=4000.1.1' 'haskell-hunit=1.2.2.3' 'haskell-opengl=2.2.3.0' 'haskell-quickcheck=2.4.0.1' 'haskell-array=0.3.0.2' 'haskell-base=4.3.1.0' 'haskell-bytestring=0.9.1.10' 'haskell-cgi=3001.1.7.4' 'haskell-containers=0.4.0.0' 'haskell-deepseq=1.1.0.2' 'haskell-directory=1.1.0.0' 'haskell-extensible-exceptions=0.1.1.2' 'haskell-fgl=5.4.2.3' 'haskell-filepath=1.2.0.0' 'haskell-haskell-src=1.0.1.4' 'haskell-haskell2010=1.0.0.0' 'haskell-haskell98=1.1.0.1' 'haskell-hpc=0.5.0.6' 'haskell-html=1.0.1.2' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.6' 'haskell-parallel=3.1.0.1' 'haskell-parsec=3.1.1' 'haskell-pretty=1.0.1.2' 'haskell-process=1.0.1.5' 'haskell-random=1.0.0.3' 'haskell-regex-base=0.93.2' 'haskell-regex-compat=0.93.1' 'haskell-regex-posix=0.94.4' 'haskell-stm=2.2.0.1' 'haskell-syb=0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-transformers=0.2.2.0' 'haskell-unix=2.4.2.0' 'haskell-xhtml=3000.2.0.1' 'haskell-zlib=0.5.3.1' 'cabal-install=0.10.2' 'alex=2.3.5' 'happy=1.18.6')
 options=('strip')
-source=(http://hackage.haskell.org/platform/${pkgver}/cabal/${_hkgname}-${pkgver}.tar.gz)
+source=(http://lambda.galois.com/hp-tmp/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${_hkgname}.install
-md5sums=(9c9c6422ebfe1a5e78e69ae017f4d54b)
+md5sums=('b259698a93986b8679a0b0a415780e3a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
