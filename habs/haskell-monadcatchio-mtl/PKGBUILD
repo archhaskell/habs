@@ -1,17 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=MonadCatchIO-mtl
 pkgname=haskell-monadcatchio-mtl
-pkgver=0.3.0.1
-pkgrel=4
+pkgver=0.3.0.2
+pkgrel=2
 pkgdesc="Monad-transformer version of the Control.Exception module"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:PublicDomain')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-extensible-exceptions=0.1.1.1' 'haskell-mtl')
+depends=('ghc' 'haskell-extensible-exceptions=0.1.1.2' 'haskell-mtl=2.0.1.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('d84eb5039ed1fe7f758ab73050887a37')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -30,4 +31,3 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('53f56fece758b15eff950f9c9796fbdf')

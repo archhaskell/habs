@@ -13,19 +13,21 @@ die()				# error reporting helper
 set -eu
 shopt -s nullglob
 export LC_ALL="C"
-chroot_basedir="${HABSCHROOTDIR:-/var/tmp}"
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
-declare -r chroot_basedir host_arch
+chroot_dir="${HABSCHROOTDIR:-/var/tmp}/chroot-${host_arch}"
+chroot_rootdir="${chroot_dir}/root"
+chroot_copydir="${chroot_dir}/copy"
+declare -r do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
 
 # If a command line argument was given, interpret it as the path to the
 # habs directory, and change into it. The default argument is "habs".
 cd "${1:-habs}" || die "habs tree doesn't exist at expected location"
 
 # If the chroot sandbox doesn't exist, create it.
-if [ ! -d "${chroot_basedir}/chroot-${host_arch}" ]; then
+if [ ! -d "${chroot_dir}" ]; then
+  # it doesn't exist, create it
   pacman_conf=$(mktemp "/tmp/pacman-haskell-XXX.conf") || die "failed to create temporary file"
-  chroot_dir="${chroot_basedir}/chroot-${host_arch}"
   trap 'rm -f "${pacman_conf}"' 0
 
   for n in $(seq 9 -1 1); do
@@ -57,16 +59,15 @@ EOF
   sudo setarch "${host_arch}" mkarchroot -f \
     -M "/usr/share/devtools/makepkg-${host_arch}.conf" \
     -C "${pacman_conf}" \
-    "${chroot_dir}/root" util-linux-ng pacman file wget base-devel sudo ghc
-
-  # copy all packages current packages into chroot
-  if [ "${do_rsync}" == "y" ]; then
-      sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
-          rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_dir}/root/repo
-      (cd ${chroot_dir}/root/repo; sudo repo-add repo.db.tar.gz *.pkg.tar.xz)
-  fi
+    "${chroot_rootdir}" util-linux pacman file wget base-devel sudo ghc
 
   echo "Build environment has been set up."
+fi
+
+# Synchronize the master repository into the sandbox environment.
+if [ "${do_rsync}" == "y" ]; then
+  sudo rsync -rtlvH --delete-after --delay-updates --safe-links \
+    rsync://andromeda.kiwilight.com/haskell/${host_arch}/ ${chroot_rootdir}/repo/
 fi
 
 # Compute the list of all available packages in topological order.
@@ -93,13 +94,13 @@ for name in ${pkglist}; do
   pkgspec="${pkgname}-${pkgver}-${pkgrel}"
   outname="${pkgspec}-${host_arch}.pkg.tar.xz"
 
-  if [ -f "${chroot_basedir}/chroot-${host_arch}/copy/repo/${outname}" \
-    -o -f "${chroot_basedir}/chroot-${host_arch}/root/repo/${outname}" ]; then
+  if [ -f "${chroot_copydir}/repo/${outname}" \
+    -o -f "${chroot_rootdir}/repo/${outname}" ]; then
     echo "Not building ${outname} (already built)."
   else
     echo "Building ${outname} ..."
     pushd >/dev/null "${pkgname}"
-    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_basedir}/chroot-${host_arch}"
+    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_dir}"
     popd >/dev/null
   fi
 done

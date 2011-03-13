@@ -2,16 +2,17 @@
 _hkgname=numeric-prelude
 pkgname=haskell-numeric-prelude
 pkgver=0.2
-pkgrel=4
+pkgrel=5
 pkgdesc="An experimental alternative hierarchy of numeric type classes"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-quickcheck=2.1.1.1' 'haskell-array=0.3.0.1' 'haskell-containers=0.3.0.0' 'haskell-non-negative<0.2' 'haskell-parsec=2.1.0.1' 'haskell-random=1.0.0.2' 'haskell-storable-record<0.1' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-quickcheck=2.4.0.1' 'haskell-array=0.3.0.2' 'haskell-containers' 'haskell-non-negative<0.2' 'haskell-parsec=3.1.1' 'haskell-random=1.0.0.3' 'haskell-storable-record<0.1' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('9fe1d9b9e1646831ee4df4d1fee4cdbc')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -30,4 +31,3 @@ package() {
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
 }
-md5sums=('9fe1d9b9e1646831ee4df4d1fee4cdbc')

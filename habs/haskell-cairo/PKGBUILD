@@ -2,16 +2,17 @@
 _hkgname=cairo
 pkgname=haskell-cairo
 pkgver=0.12.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Binding to the Cairo library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.1' 'haskell-bytestring=0.9.1.7' 'haskell-haskell98=1.0.1.1' 'haskell-mtl' 'cairo' 'gtk2hs-buildtools')
+depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-bytestring=0.9.1.10' 'haskell-haskell98=1.1.0.1' 'haskell-mtl=2.0.1.0' 'cairo' 'gtk2hs-buildtools')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('e17c7ce086062282dbb405bfdf68191e')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 COPYRIGHT ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('e17c7ce086062282dbb405bfdf68191e')

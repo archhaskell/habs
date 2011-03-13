@@ -2,16 +2,17 @@
 _hkgname=storable-record
 pkgname=haskell-storable-record
 pkgver=0.0.2.3
-pkgrel=3
+pkgrel=4
 pkgdesc="Elegant definition of Storable instances for records"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-transformers<0.3' 'haskell-utility-ht<0.1')
+depends=('ghc' 'haskell-transformers=0.2.2.0' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('377b96303cb5777dfea71b541ec1a561')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('377b96303cb5777dfea71b541ec1a561')

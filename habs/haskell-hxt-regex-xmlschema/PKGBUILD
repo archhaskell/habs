@@ -2,16 +2,17 @@
 _hkgname=hxt-regex-xmlschema
 pkgname=haskell-hxt-regex-xmlschema
 pkgver=9.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="A regular expression library for W3C XML Schema regular expressions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell98=1.0.1.1' 'haskell-hxt-charproperties<10' 'haskell-parsec=2.1.0.1')
+depends=('ghc' 'haskell-haskell98=1.1.0.1' 'haskell-hxt-charproperties<10' 'haskell-parsec=3.1.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('cd9031d82d6e404c8eed202fe7f91496')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('cd9031d82d6e404c8eed202fe7f91496')

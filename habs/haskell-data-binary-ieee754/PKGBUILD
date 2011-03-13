@@ -2,7 +2,7 @@
 _hkgname=data-binary-ieee754
 pkgname=haskell-data-binary-ieee754
 pkgver=0.4.2.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Parser/Serialiser for IEEE-754 floating-point values"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
@@ -12,6 +12,7 @@ depends=('ghc' 'haskell-binary<0.6')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('004c82980eb95f3313c6ce4e3ee20f8c')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 License.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('004c82980eb95f3313c6ce4e3ee20f8c')

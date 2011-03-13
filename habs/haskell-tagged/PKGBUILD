@@ -2,7 +2,7 @@
 _hkgname=tagged
 pkgname=haskell-tagged
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Provides newtype wrappers for phantom types to avoid unsafely passing dummy arguments"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

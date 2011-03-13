@@ -1,17 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xml-types
 pkgname=haskell-xml-types
-pkgver=0.1.2
-pkgrel=2
+pkgver=0.2
+pkgrel=1
 pkgdesc="Basic types for representing XML"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-text')
+depends=('ghc' 'haskell-containers=0.4.0.0' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
+md5sums=('f2366270c8de0e718ab8635e63baa1cb')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -32,4 +33,3 @@ package() {
     install -D -m644 license.txt ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
     rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
-md5sums=('ac8b3919980788f0d6b61ab5fef2ea70')
