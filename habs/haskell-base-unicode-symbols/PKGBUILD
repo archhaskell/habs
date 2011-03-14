@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=hledger
-pkgname=hledger
-pkgver=0.13
-pkgrel=2
-pkgdesc="A command-line double-entry accounting tool."
+_hkgname=base-unicode-symbols
+pkgname=haskell-base-unicode-symbols
+pkgver=0.2.1.1
+pkgrel=1
+pkgdesc="Unicode alternatives for common functions and operators"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('GPL')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('gmp' 'ghc' 'haskell-hunit=1.2.2.3' 'haskell-containers=0.4.0.0' 'haskell-csv' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-haskeline<0.7' 'haskell-hledger-lib=0.13' 'haskell-mtl=2.0.1.0' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.6' 'haskell-parsec=3.1.1' 'haskell-process=1.0.1.5' 'haskell-regexpr>=0.5.1' 'haskell-safe>=0.2' 'haskell-split<0.2' 'haskell-time=1.2.0.3' 'haskell-utf8-string<0.4')
+depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('1653cd6a5fc20a486bb5d01ba99e8390')
+md5sums=('5f9d3c53c11b6d3cbf9b5960ccfa00f4')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
@@ -30,4 +30,6 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }

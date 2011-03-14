@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=utility-ht
 pkgname=haskell-utility-ht
-pkgver=0.0.5.1
-pkgrel=4
+pkgver=0.0.6
+pkgrel=1
 pkgdesc="Various small helper functions for Lists, Maybes, Tuples, Functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('98dcb042f404378d9071fc6344703386')
+md5sums=('e4b40285020a1cd8d9925e25bdb786f9')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

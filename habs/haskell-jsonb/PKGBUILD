@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=JSONb
 pkgname=haskell-jsonb
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="JSON parser that uses byte strings."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-bytestring=0.9.1.10' 'haskell-b
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9888c9976e1013e7569fde2cb4985f21')
+md5sums=('071e186dcab3fe3ab262903895f5f670')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

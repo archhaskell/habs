@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hamlet
 pkgname=haskell-hamlet
-pkgver=0.7.2
+pkgver=0.7.2.1
 pkgrel=1
 pkgdesc="Haml-like template files that are compile-time checked"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-quickcheck=2.4.0.1' 'haskell-blaze-builder<0.3' 'haskell
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('fb11e354376dafa3fecb23a1200a2a7b')
+md5sums=('0608882c1ec5f4f6ea702ae456c515c5')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
