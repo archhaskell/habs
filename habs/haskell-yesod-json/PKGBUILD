@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=cookie
-pkgname=haskell-cookie
-pkgver=0.0.0
-pkgrel=2
-pkgdesc="HTTP cookie parsing and rendering"
+_hkgname=yesod-json
+pkgname=haskell-yesod-json
+pkgver=0.0.0.1
+pkgrel=5
+pkgdesc="Generate content for Yesod using the json-types package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-ascii<0.1' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-old-locale=1.0.0.2' 'haskell-time=1.2.0.3')
+depends=('ghc' 'haskell-containers=0.4.0.0' 'haskell-json-enumerator<0.1' 'haskell-json-types<0.2' 'haskell-text=0.11.0.5' 'haskell-yesod-core<0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('8b8a6251a6ac0b65cd71d5d1ec26c711')
+md5sums=('38f92cfb50c37634bf8eda6321183a3e')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

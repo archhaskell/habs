@@ -2,7 +2,7 @@
 _hkgname=ghc-paths
 pkgname=haskell-ghc-paths
 pkgver=0.1.0.8
-pkgrel=4
+pkgrel=5
 pkgdesc="Knowledge of GHC's installation directories"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
