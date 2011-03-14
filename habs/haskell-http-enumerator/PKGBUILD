@@ -2,13 +2,13 @@
 _hkgname=http-enumerator
 pkgname=haskell-http-enumerator
 pkgver=0.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="HTTP client package with enumerator interface and HTTPS support."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-ascii<0.2' 'haskell-attoparsec<0.9' 'haskell-attoparsec-enumerator<0.3' 'haskell-blaze-builder<0.3' 'haskell-blaze-builder-enumerator<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-certificate<0.8' 'haskell-containers=0.4.0.0' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-http-types<0.6' 'haskell-monad-control<0.3' 'haskell-network' 'haskell-network-bytestring<0.1.4' 'haskell-tls<0.5' 'haskell-transformers=0.2.2.0' 'haskell-utf8-string<0.4' 'haskell-zlib-bindings<0.1' 'haskell-zlib-enum<0.2')
+depends=('ghc' 'haskell-ascii<0.2' 'haskell-attoparsec<0.9' 'haskell-attoparsec-enumerator<0.3' 'haskell-blaze-builder<0.3' 'haskell-blaze-builder-enumerator<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-certificate<0.8' 'haskell-containers=0.4.0.0' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-http-types<0.6' 'haskell-monad-control<0.3' 'haskell-network=2.3.0.2' 'haskell-tls<0.5' 'haskell-transformers=0.2.2.0' 'haskell-utf8-string<0.4' 'haskell-zlib-bindings<0.1' 'haskell-zlib-enum<0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
@@ -16,7 +16,8 @@ md5sums=('683721ee7668d5055e56e87644939fe9')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
-       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid \
+       -f -network-bytestring
     runhaskell Setup build
     runhaskell Setup haddock
     runhaskell Setup register   --gen-script
