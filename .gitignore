@@ -3,4 +3,5 @@
 /habs/*/*.cabal
 /habs/*/*.pkg.tar.xz
 /habs/*/*.tar.gz
+/habs/*/makepkg.log
 /habs/*/src
