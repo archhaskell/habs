@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=xss-sanitize
-pkgname=haskell-xss-sanitize
-pkgver=0.2.6
-pkgrel=2
-pkgdesc="sanitize untrusted HTML to prevent XSS attacks"
+_hkgname=yesod-auth
+pkgname=haskell-yesod-auth
+pkgver=0.3.1
+pkgrel=1
+pkgdesc="Authentication for Yesod."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers=0.4.0.0' 'haskell-network=2.3.0.2' 'haskell-tagsoup>=0.11' 'haskell-utf8-string>=0.3')
+depends=('ghc' 'haskell-sha<1.5' 'haskell-authenticate<0.9' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-control-monad-attempt<0.4' 'haskell-data-object<0.4' 'haskell-hamlet<0.8' 'haskell-http-enumerator<0.4' 'haskell-json-types<0.2' 'haskell-mime-mail<0.2' 'haskell-persistent<0.5' 'haskell-puremd5<2.2' 'haskell-random=1.0.0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-transformers=0.2.2.0' 'haskell-wai<0.4' 'haskell-yesod-core<0.8' 'haskell-yesod-form<0.1' 'haskell-yesod-json<0.1' 'haskell-yesod-persistent<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('ebd120843e10b31c71009b022fab233b')
+md5sums=('c54b3f5f49bd0d2c413753f268b3df2f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
