@@ -1,5 +1,6 @@
 # ignore generated files
 
+/habs/*/*.cabal
 /habs/*/*.pkg.tar.xz
 /habs/*/*.tar.gz
 /habs/*/src
