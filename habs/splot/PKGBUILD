@@ -2,7 +2,7 @@
 _hkgname=splot
 pkgname=splot
 pkgver=0.1.11
-pkgrel=2
+pkgrel=3
 pkgdesc="A tool for visualizing the lifecycle of many concurrent multi-staged processes."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
