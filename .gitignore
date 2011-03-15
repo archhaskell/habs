@@ -1,3 +1,6 @@
+# vim files
+*.swp
+
 # ignore generated files
 
 /habs/*/*.cabal
