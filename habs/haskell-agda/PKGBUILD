@@ -1,0 +1,43 @@
+# Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
+_hkgname=Agda
+pkgname=haskell-agda
+pkgver=2.2.10
+pkgrel=1
+pkgdesc="A dependently typed functional programming language and proof assistant"
+url="http://hackage.haskell.org/package/${_hkgname}"
+license=('custom:OtherLicense')
+arch=('i686' 'x86_64')
+makedepends=()
+#NP haskell-src-exts <1.11
+depends=('ghc' 'haskell-quickcheck=2.4.0.1' 'haskell-array=0.3.0.2' 'haskell-binary<0.6' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-haskeline<0.7' 'haskell-haskell-src-exts<1.11' 'haskell-mtl=2.0.1.0' 'haskell-old-time=1.0.0.6' 'haskell-pretty=1.0.1.2' 'haskell-process=1.0.1.5' 'haskell-syb' 'haskell-xhtml=3000.2.0.1' 'haskell-zlib=0.5.3.1' 'happy<2' 'alex<3')
+options=('strip')
+source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
+install=${pkgname}.install
+md5sums=('eadb729a1755f1c6c8475d1621246fd8')
+build() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    #NP
+    sed -i -e 's/\(syb >= 0\.1 && < 0\)\.3/\1.4/' \
+           -e 's/\(haskell-src-exts >= 1\.9\.6 && < 1\)\.10/\1.11/' \
+              Agda.cabal
+    sed -i -e 's/\(import Data.Generics\)/\1 hiding (everythingBut)/' \
+              src/full/Agda/Utils/Generics.hs \
+              src/full/Agda/Interaction/Highlighting/Generate.hs
+    runhaskell Setup configure -O --enable-split-objs --enable-shared \
+       --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
+    runhaskell Setup build
+    runhaskell Setup haddock
+    runhaskell Setup register   --gen-script
+    runhaskell Setup unregister --gen-script
+    sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
+}
+package() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    install -D -m744 register.sh   ${pkgdir}/usr/share/haskell/${pkgname}/register.sh
+    install    -m744 unregister.sh ${pkgdir}/usr/share/haskell/${pkgname}/unregister.sh
+    install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
+    ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
+    runhaskell Setup copy --destdir=${pkgdir}
+    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
+}
