@@ -1,0 +1,23 @@
+# Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
+_hkgname=UMM
+pkgname=umm
+pkgver=0.3.1
+pkgrel=1
+pkgdesc="A small command-line accounting tool"
+url="http://hackage.haskell.org/package/${_hkgname}"
+license=('GPL')
+arch=('i686' 'x86_64')
+makedepends=('ghc' 'haskell-haskell98=1.1.0.1' 'haskell-old-time=1.0.0.6' 'haskell-parsec=3.1.1' 'haskell-process=1.0.1.5' 'haskell-utf8-string')
+depends=('gmp')
+options=('strip')
+source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
+md5sums=('2cdb7b7a3ffbb34fda458481fd1a723a')
+build() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
+    runhaskell Setup build
+}
+package() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    runhaskell Setup copy --destdir=${pkgdir}
+}
