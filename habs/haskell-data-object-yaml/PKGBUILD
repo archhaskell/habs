@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-object-yaml
 pkgname=haskell-data-object-yaml
-pkgver=0.3.3.4
-pkgrel=3
+pkgver=0.3.3.5
+pkgrel=1
 pkgdesc="Serialize data to and from Yaml files"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haske
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('ae40d1b80a0b70deb0483b75bcf2c99d')
+md5sums=('c462e9e6bbb6fa3310758db1869b5fad')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

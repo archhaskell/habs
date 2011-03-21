@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=clientsession
 pkgname=haskell-clientsession
-pkgver=0.4.1
-pkgrel=3
+pkgver=0.5.0
+pkgrel=1
 pkgdesc="Store session data in a cookie."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-directory=1.1.0.0' 'haskell-random=1.0.0.3' 'haskell-template-haskell=2.5.0.0')
+depends=('ghc' 'haskell-ascii<0.1' 'haskell-bytestring=0.9.1.10' 'haskell-directory=1.1.0.0' 'haskell-random=1.0.0.3' 'haskell-template-haskell=2.5.0.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('14ec0a7519f448405f3119b8ab145ec8')
+md5sums=('6f85f2fc5864605a99198549d55b6c68')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

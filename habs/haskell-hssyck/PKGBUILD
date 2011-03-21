@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=HsSyck
 pkgname=haskell-hssyck
-pkgver=0.45
+pkgver=0.50
 pkgrel=1
 pkgdesc="Fast, lightweight YAML loader and dumper"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-syb=0.3')
+depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-syb=0.3' 'haskell-utf8-string>=0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9fcc0f0b022a8a46d94a57a764a87628')
+md5sums=('578249662071423033edf1c1c89f1ad9')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

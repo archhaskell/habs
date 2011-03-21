@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=monad-control
 pkgname=haskell-monad-control
-pkgver=0.2
+pkgver=0.2.0.1
 pkgrel=1
 pkgdesc="Lift control operations, like exception catching, through monad transformers"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-base-unicode-symbols<0.3' 'haskell-transformers=0.2.2.0'
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('7a270a40d23a361503e3a0d328b85c7a')
+md5sums=('0041b6857d45342c2ecc1c397ea23213')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

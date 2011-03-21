@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=mime-mail
 pkgname=haskell-mime-mail
-pkgver=0.1.0.1
-pkgrel=2
+pkgver=0.2.0
+pkgrel=1
 pkgdesc="Compose MIME email messages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-dataenc<0.14' 'haskell-process=1.0.1.5' 'haskell-random=1.0.0.3' 'haskell-text=0.11.0.5')
+depends=('ghc' 'haskell-ascii<0.1' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-dataenc<0.14' 'haskell-process=1.0.1.5' 'haskell-random=1.0.0.3' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('922e84ea7bf70b0ba27053827b99cbc6')
+md5sums=('6201656dea2271c0f2f86565865f112d')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

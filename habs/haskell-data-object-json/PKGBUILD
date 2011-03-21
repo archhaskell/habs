@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=data-object-json
 pkgname=haskell-data-object-json
-pkgver=0.3.1.5
-pkgrel=3
+pkgver=0.3.1.6
+pkgrel=1
 pkgdesc="Serialize JSON data to/from Haskell using the data-object library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-jsonb<1.1' 'haskell-bytestring=0.9.1.10' 'haskell-bytest
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('4b43b76e3f2bdc8171fada7f59ed84f4')
+md5sums=('ed463df7963eae8775c7e1b51118cfff')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
