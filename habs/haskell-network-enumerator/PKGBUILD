@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=network-enumerator
 pkgname=haskell-network-enumerator
-pkgver=0.1.1
-pkgrel=3
+pkgver=0.1.2
+pkgrel=1
 pkgdesc="Enumerators for network sockets"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-enumerator<0.5' 'haskell-n
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('4a627351d8f804d58d26a7f12a9e4bec')
+md5sums=('ce900e0cc2753a2023aac13f68085043')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=enumerator
 pkgname=haskell-enumerator
-pkgver=0.4.7
-pkgrel=2
+pkgver=0.4.9.1
+pkgrel=1
 pkgdesc="Reliable, high-performance processing with left-fold enumerators"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-text=0.11.0.5' 'haskell-tr
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('eac57e4cc84e799233559f10fc90c6ab')
+md5sums=('29837657340e5c4a408adf42c2188f2c')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=http-types
 pkgname=haskell-http-types
-pkgver=0.6.0
+pkgver=0.6.1
 pkgrel=1
 pkgdesc="Generic HTTP types for Haskell (for both client and server code)."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-blaze-builder<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-text=0.11.0.5')
+depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-blaze-builder<0.4' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('c60cd4fd33f0d78881455221e3e8a3cd')
+md5sums=('2d3e158fc159227c19a647401cd306d7')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=c2hs
 pkgname=c2hs
-pkgver=0.16.2
-pkgrel=4
+pkgver=0.16.3
+pkgrel=1
 pkgdesc="C->Haskell FFI tool that gives some cross-language type safety"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-2')
@@ -11,7 +11,7 @@ makedepends=('ghc' 'haskell-array=0.3.0.2' 'haskell-containers=0.4.0.0' 'haskell
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
-md5sums=('9137f6b5e3592c5c9e0becdba318e65a')
+md5sums=('4dfc0f2927c1814ebb89e00068abe66c')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
