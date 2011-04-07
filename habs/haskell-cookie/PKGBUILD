@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cookie
 pkgname=haskell-cookie
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="HTTP cookie parsing and rendering"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-blaze-builder<0.4' 'haskell-bytestring=0.9.1.10' 'haskell-old-locale=1.0.0.2' 'haskell-time=1.2.0.3')
+depends=('ghc' 'haskell-blaze-builder<0.4' 'haskell-bytestring=0.9.1.10' 'haskell-old-locale=1.0.0.2' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('354f428925974472fc6e7a61e192c061')
+md5sums=('853486d8440868140428eb4f74d24bec')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

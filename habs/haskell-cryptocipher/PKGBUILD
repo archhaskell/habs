@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cryptocipher
 pkgname=haskell-cryptocipher
-pkgver=0.2.7
+pkgver=0.2.8
 pkgrel=1
 pkgdesc="Symmetrical Block, Stream and PubKey Ciphers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cereal' 'haskell-crypto-api>=0.5' 'haskell-primitive' 'haskell-tagged' 'haskell-vector')
+depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cereal' 'haskell-crypto-api>=0.5' 'haskell-primitive' 'haskell-tagged' 'haskell-vector>=0.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('1e4c087a5367a7f1805c955de2b5cae7')
+md5sums=('636012b38fb51139216fd9bc34421d4a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

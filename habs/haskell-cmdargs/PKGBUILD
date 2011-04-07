@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cmdargs
 pkgname=haskell-cmdargs
-pkgver=0.6.8
-pkgrel=2
+pkgver=0.6.9
+pkgrel=1
 pkgdesc="Command line argument processing"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-transformers=0.2.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('ccb6fc292ddf9ef856e82d5e4694e84e')
+md5sums=('88bc13bc2df5592c55330a6b05b03886')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

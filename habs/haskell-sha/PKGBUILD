@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=SHA
 pkgname=haskell-sha
-pkgver=1.4.1.3
-pkgrel=2
+pkgver=1.5.0.0
+pkgrel=1
 pkgdesc="Implementations of the SHA suite of message digest functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-binary' 'haskell-bytestring=0.9.
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('6adbe05bfaf4416c1a7e1ac5e999811e')
+md5sums=('c9f16a6d6d50a7bf01fa67e8dce472d8')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

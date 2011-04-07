@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hjsmin
 pkgname=haskell-hjsmin
-pkgver=0.0.12
+pkgver=0.0.14
 pkgrel=2
 pkgdesc="Haskell implementation of a javascript minifier"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<1' 'haskell-bytestring=0.9.1.10' 'haskell-
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('cb8cf4220102c353b4c8322e8baf3a00')
+md5sums=('fa8897c214f3468b485dcb46d68308dc')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
