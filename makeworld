@@ -100,7 +100,7 @@ for name in ${pkglist}; do
   else
     echo "Building ${outname} ..."
     pushd >/dev/null "${pkgname}"
-    sudo setarch "${host_arch}" makechrootpkg -u -d -r "${chroot_dir}"
+    sudo setarch "${host_arch}" makechrootpkg -l copy -u -d -r "${chroot_dir}"
     popd >/dev/null
   fi
 done
