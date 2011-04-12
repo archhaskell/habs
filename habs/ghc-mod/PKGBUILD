@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=ghc-mod
 pkgname=ghc-mod
-pkgver=0.5.4
-pkgrel=2
+pkgver=0.5.5
+pkgrel=1
 pkgdesc="Happy Haskell programming on Emacs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -11,7 +11,7 @@ makedepends=('ghc' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haske
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
-md5sums=('18958f4ac6f7f16ae22a70072e37780b')
+md5sums=('50cb6b839bdd874b234b1c44659bff2a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
