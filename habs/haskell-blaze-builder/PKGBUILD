@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=blaze-builder
 pkgname=haskell-blaze-builder
-pkgver=0.2.1.4
-pkgrel=3
+pkgver=0.3.0.0
+pkgrel=1
 pkgdesc="Efficient buffered output."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('fefd5b1a72104c835034287ca4591460')
+md5sums=('7780dfa97cdca3b440b8fc0c7fe59328')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
