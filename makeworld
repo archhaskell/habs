@@ -13,6 +13,7 @@ die()				# error reporting helper
 set -eu
 shopt -s nullglob
 export LC_ALL="C"
+export HABSCHROOTDIR=/home
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
 chroot_dir="${HABSCHROOTDIR:-/var/tmp}/chroot-${host_arch}"
@@ -59,7 +60,7 @@ EOF
   sudo setarch "${host_arch}" mkarchroot -f \
     -M "/usr/share/devtools/makepkg-${host_arch}.conf" \
     -C "${pacman_conf}" \
-    "${chroot_rootdir}" util-linux pacman file wget base-devel sudo ghc
+    "${chroot_rootdir}" util-linux pacman file wget base-devel grep sudo ghc
 
   echo "Build environment has been set up."
 fi
