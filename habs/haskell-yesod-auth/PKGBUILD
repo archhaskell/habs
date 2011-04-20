@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=tls-extra
-pkgname=haskell-tls-extra
-pkgver=0.1.9
-pkgrel=3
-pkgdesc="TLS extra default values and helpers"
+_hkgname=yesod-auth
+pkgname=haskell-yesod-auth
+pkgver=0.4.0
+pkgrel=1
+pkgdesc="Authentication for Yesod."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-certificate<0.8' 'haskell-crypto-api>=0.5' 'haskell-cryptocipher>=0.2.5' 'haskell-cryptohash>=0.6' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-text=0.11.0.5' 'haskell-tls<0.6' 'haskell-vector')
+depends=('ghc' 'haskell-sha<1.5' 'haskell-aeson<0.4' 'haskell-authenticate<0.10' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-control-monad-attempt<0.4' 'haskell-hamlet<0.9' 'haskell-http-enumerator<0.7' 'haskell-mime-mail<0.4' 'haskell-persistent<0.6' 'haskell-persistent-template<0.6' 'haskell-puremd5<2.2' 'haskell-random=1.0.0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-transformers=0.2.2.0' 'haskell-wai<0.5' 'haskell-yesod-core<0.9' 'haskell-yesod-form<0.2' 'haskell-yesod-json<0.2' 'haskell-yesod-persistent<0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('65d269493064dab1b18430ac5594f627')
+md5sums=('070367e860ef0ec75f6d274a23d3d29d')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \

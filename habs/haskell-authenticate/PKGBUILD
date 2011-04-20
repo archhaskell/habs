@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=tls-extra
-pkgname=haskell-tls-extra
-pkgver=0.1.9
-pkgrel=3
-pkgdesc="TLS extra default values and helpers"
+_hkgname=authenticate
+pkgname=haskell-authenticate
+pkgver=0.9.0
+pkgrel=1
+pkgdesc="Authentication methods for Haskell web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-certificate<0.8' 'haskell-crypto-api>=0.5' 'haskell-cryptocipher>=0.2.5' 'haskell-cryptohash>=0.6' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-text=0.11.0.5' 'haskell-tls<0.6' 'haskell-vector')
+depends=('ghc' 'haskell-rsa<1.1' 'haskell-sha<1.5' 'haskell-aeson<0.4' 'haskell-attoparsec<0.9' 'haskell-base64-bytestring<0.2' 'haskell-blaze-builder<0.4' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-http-enumerator<0.7' 'haskell-http-types<0.7' 'haskell-network=2.3.0.2' 'haskell-random=1.0.0.3' 'haskell-tagsoup<0.13' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-transformers=0.2.2.0' 'haskell-utf8-string<0.4' 'haskell-xml<1.4')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('65d269493064dab1b18430ac5594f627')
+md5sums=('a3da8466737d0dc3629566e86eebc806')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
