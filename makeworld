@@ -13,7 +13,6 @@ die()				# error reporting helper
 set -eu
 shopt -s nullglob
 export LC_ALL="C"
-export HABSCHROOTDIR=/home
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
 chroot_dir="${HABSCHROOTDIR:-/var/tmp}/chroot-${host_arch}"
