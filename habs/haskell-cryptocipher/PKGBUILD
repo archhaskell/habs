@@ -2,7 +2,7 @@
 _hkgname=cryptocipher
 pkgname=haskell-cryptocipher
 pkgver=0.2.8
-pkgrel=2
+pkgrel=3
 pkgdesc="Symmetrical Block, Stream and PubKey Ciphers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

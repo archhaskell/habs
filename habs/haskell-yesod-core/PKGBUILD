@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=pureMD5
-pkgname=haskell-puremd5
-pkgver=2.1.0.3
-pkgrel=10
-pkgdesc="A Haskell-only implementation of the MD5 digest (hash) algorithm."
+_hkgname=yesod-core
+pkgname=haskell-yesod-core
+pkgver=0.8.0
+pkgrel=1
+pkgdesc="Creation of type-safe, RESTful web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-binary<0.6.0' 'haskell-bytestring=0.9.1.10' 'haskell-cereal<0.4' 'haskell-crypto-api' 'haskell-tagged')
+depends=('ghc' 'haskell-blaze-builder<0.4' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-cereal<0.4' 'haskell-clientsession<0.7' 'haskell-containers=0.4.0.0' 'haskell-cookie<0.3' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-hamlet<0.9' 'haskell-http-types<0.7' 'haskell-monad-control<0.3' 'haskell-old-locale=1.0.0.2' 'haskell-random=1.0.0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-transformers=0.2.2.0' 'haskell-wai<0.5' 'haskell-wai-extra<0.5' 'haskell-web-routes-quasi<0.8')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('8e36a9b255e4be3ee102e6ca0e0752bb')
+md5sums=('a55f1bf759f915c95f96fa49dba12457')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
