@@ -2,7 +2,7 @@
 _hkgname=ascii
 pkgname=haskell-ascii
 pkgver=0.0.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Type-safe, bytestring-based ASCII values."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

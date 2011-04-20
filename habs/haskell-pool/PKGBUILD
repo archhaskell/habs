@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pool
 pkgname=haskell-pool
-pkgver=0.0.1.1
+pkgver=0.1.0.2
 pkgrel=1
 pkgdesc="Thread-safe resource pools."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-monad-peel<0.2' 'haskell-stm=2.2.0.1' 'haskell-transformers=0.2.2.0')
+depends=('ghc' 'haskell-monad-control<0.3' 'haskell-stm=2.2.0.1' 'haskell-transformers=0.2.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('ea99b7e86426e44154894c4aa9bf25e6')
+md5sums=('3d78d6f8a1193e9977671e177991268b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O --enable-split-objs --enable-shared \
