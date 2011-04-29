@@ -6,7 +6,7 @@ binary repository of Haskell packages. If you'd like to use that repository,
 then append the following two lines at the end of your `/etc/pacman.conf` file:
 
     [haskell]
-    Server = http://andromeda.kiwilight.com/$repo/$arch
+    Server = http://www.kiwilight.com/haskell/$arch
 
 If you'd like to build the repository on your own machine, then please make
 sure that the `devtools` package is installed, and then run the `./makeworld`
