@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod-core
 pkgname=haskell-yesod-core
-pkgver=0.8.0
+pkgver=0.8.0.1
 pkgrel=1
 pkgdesc="Creation of type-safe, RESTful web applications."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<0.4' 'haskell-blaze-html<0.5' 'haskell-byt
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('a55f1bf759f915c95f96fa49dba12457')
+md5sums=('97a4b8feda1e70f4e80455d40fe14f1d')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=storable-record
 pkgname=haskell-storable-record
-pkgver=0.0.2.3
-pkgrel=6
+pkgver=0.0.2.4
+pkgrel=1
 pkgdesc="Elegant definition of Storable instances for records"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-transformers=0.2.2.0' 'haskell-utility-ht<0.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('377b96303cb5777dfea71b541ec1a561')
+md5sums=('dc86f2945f6758a12986aea1992797d8')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

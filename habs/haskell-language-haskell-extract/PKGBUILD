@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=language-haskell-extract
 pkgname=haskell-language-haskell-extract
-pkgver=0.1.2
-pkgrel=6
+pkgver=0.2.0
+pkgrel=1
 pkgdesc="Module to automatically extract functions from the local code."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-haskell-src-exts' 'haskell-haskell98=1.1.0.1' 'haskell-r
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('016724a8c78127119c2f467670ab94e6')
+md5sums=('0b9b2bd08b74f853e36c98c00cdf9442')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

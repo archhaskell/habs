@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=base-unicode-symbols
 pkgname=haskell-base-unicode-symbols
-pkgver=0.2.1.4
+pkgver=0.2.1.5
 pkgrel=1
 pkgdesc="Unicode alternatives for common functions and operators"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9fafc8e8d0d4a76e518cc45ca86a4584')
+md5sums=('147f367267374ef06884747a47eaf01e')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

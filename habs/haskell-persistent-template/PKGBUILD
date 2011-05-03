@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=persistent-template
 pkgname=haskell-persistent-template
-pkgver=0.5.0
+pkgver=0.5.0.1
 pkgrel=1
 pkgdesc="Type-safe, non-relational, multi-backend persistence."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-monad-control<0.3' 'haskell-persistent<0.6' 'haskell-tem
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9b58b9dceea065102a85656dd93e8a90')
+md5sums=('56603294dcd985dea08a6df8079f4717')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

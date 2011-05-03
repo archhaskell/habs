@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cereal
 pkgname=haskell-cereal
-pkgver=0.3.1.0
+pkgver=0.3.3.0
 pkgrel=1
 pkgdesc="A binary serialization library"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-bytestring=0.9.1.10' 'haskell-co
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('2891c9749051839667b08906dfc6cb4a')
+md5sums=('70d24b61194880df3ec798ad89a21a7b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

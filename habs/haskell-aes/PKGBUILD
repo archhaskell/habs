@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=AES
 pkgname=haskell-aes
-pkgver=0.2.7
-pkgrel=3
+pkgver=0.2.8
+pkgrel=1
 pkgdesc="Fast AES encryption/decryption for bytestrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cereal>=0.2' 'haskell-mona
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('c40edee8615226c78139dd5ca864ad9e')
+md5sums=('7d23d4d9ac1edd9d974224ef4e1e4194')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

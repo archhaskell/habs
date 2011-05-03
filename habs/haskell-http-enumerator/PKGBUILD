@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=http-enumerator
 pkgname=haskell-http-enumerator
-pkgver=0.6.0.2
-pkgrel=3
+pkgver=0.6.2.1
+pkgrel=1
 pkgdesc="HTTP client package with enumerator interface and HTTPS support."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-attoparsec-enumerator<0.3' 'has
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('a91d18d92f51780728b85dbc7eb3409f')
+md5sums=('e5ae3881908bd295ebad6ecb95f9b097')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

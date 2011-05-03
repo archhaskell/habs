@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=explicit-exception
 pkgname=haskell-explicit-exception
-pkgver=0.1.5
+pkgver=0.1.6
 pkgrel=1
 pkgdesc="Exceptions which are explicit in the type signature."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-transformers=0.2.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('f0cd65e21efac77800734a7fa7a22504')
+md5sums=('94e786e82787ddd06f66818e6b4ea829')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

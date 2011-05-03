@@ -2,7 +2,7 @@
 _hkgname=tls-extra
 pkgname=haskell-tls-extra
 pkgver=0.1.9
-pkgrel=3
+pkgrel=4
 pkgdesc="TLS extra default values and helpers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
