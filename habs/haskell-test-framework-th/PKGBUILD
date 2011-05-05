@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=test-framework-th
 pkgname=haskell-test-framework-th
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="Automagically generate the HUnit- and Quickcheck-bulk-code using Template Haskell."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,13 +12,13 @@ depends=('ghc' 'haskell-haskell-src-exts' 'haskell-haskell98=1.1.0.1' 'haskell-l
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('1ac790e418479e54ff3d53def0f6c643')
+md5sums=('629db16d6bdd82b72fb82496e858e2c4')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
        --prefix=/usr --docdir=/usr/share/doc/${pkgname} --libsubdir=\$compiler/site-local/\$pkgid
     runhaskell Setup build
-    # fails with an error: runhaskell Setup haddock
+    runhaskell Setup haddock
     runhaskell Setup register   --gen-script
     runhaskell Setup unregister --gen-script
     sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh

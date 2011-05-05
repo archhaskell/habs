@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=yesod-static
-pkgname=haskell-yesod-static
-pkgver=0.1.0
-pkgrel=3
-pkgdesc="Static file serving subsite for Yesod Web Framework."
+_hkgname=cprng-aes
+pkgname=haskell-cprng-aes
+pkgver=0.2.1
+pkgrel=1
+pkgdesc="Crypto Pseudo Random Number Generator using AES in counter mode."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-base64-bytestring<0.2' 'haskell-bytestring=0.9.1.10' 'haskell-cereal<0.4' 'haskell-directory=1.1.0.0' 'haskell-puremd5<2.2' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-transformers=0.2.2.0' 'haskell-wai-app-static<0.2' 'haskell-yesod-core<0.9')
+depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cereal<0.4.0' 'haskell-crypto-api>=0.5' 'haskell-cryptocipher<0.3.0' 'haskell-random=1.0.0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('369be2c69e4351a48b3123ee292d8c9c')
+md5sums=('8a2cb4b0ed5f5def8da9f0408fbbb04f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

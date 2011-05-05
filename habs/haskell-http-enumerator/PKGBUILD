@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=http-enumerator
 pkgname=haskell-http-enumerator
-pkgver=0.6.2.1
+pkgver=0.6.4
 pkgrel=1
 pkgdesc="HTTP client package with enumerator interface and HTTPS support."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-attoparsec-enumerator<0.3' 'haskell-blaze-builder<0.4' 'haskell-blaze-builder-enumerator<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-certificate<0.8' 'haskell-containers=0.4.0.0' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-http-types<0.7' 'haskell-monad-control<0.3' 'haskell-network=2.3.0.2' 'haskell-tls<0.6' 'haskell-tls-extra<0.2' 'haskell-transformers=0.2.2.0' 'haskell-utf8-string<0.4' 'haskell-zlib-enum<0.3')
+depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-attoparsec-enumerator<0.3' 'haskell-blaze-builder<0.4' 'haskell-blaze-builder-enumerator<0.3' 'haskell-bytestring=0.9.1.10' 'haskell-case-insensitive<0.3' 'haskell-certificate<0.8' 'haskell-containers=0.4.0.0' 'haskell-cprng-aes<0.3' 'haskell-enumerator<0.5' 'haskell-failure<0.2' 'haskell-http-types<0.7' 'haskell-monad-control<0.3' 'haskell-network=2.3.0.2' 'haskell-tls<0.7' 'haskell-tls-extra<0.3' 'haskell-transformers=0.2.2.0' 'haskell-utf8-string<0.4' 'haskell-zlib-enum<0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('e5ae3881908bd295ebad6ecb95f9b097')
+md5sums=('b3fe311a4d4bf63de3d0bfc57795835f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

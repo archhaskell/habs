@@ -2,7 +2,7 @@
 _hkgname=warp-static
 pkgname=warp-static
 pkgver=0.1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Static file server based on Warp and wai-app-static"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
