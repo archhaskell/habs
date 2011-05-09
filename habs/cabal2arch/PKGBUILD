@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cabal2arch
 pkgname=cabal2arch
-pkgver=1.0
-pkgrel=2
+pkgver=1.1
+pkgrel=1
 pkgdesc="Create Arch Linux packages from Cabal packages."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -11,7 +11,7 @@ makedepends=('ghc' 'haskell-cabal=1.10.1.0' 'haskell-archlinux<2' 'haskell-bytes
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
-md5sums=('6064c8fc17b5fa6ca690f094c8059655')
+md5sums=('07461847f616c3b29217e6129fa8874f')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
