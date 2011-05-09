@@ -1,17 +1,17 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=warp-static
 pkgname=warp-static
-pkgver=0.1.0
-pkgrel=3
+pkgver=0.1.1
+pkgrel=1
 pkgdesc="Static file server based on Warp and wai-app-static"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
-makedepends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cmdargs<0.7' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-wai-app-static<0.2' 'haskell-wai-extra<0.5' 'haskell-warp<0.5')
+makedepends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cmdargs<0.8' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-wai-app-static<0.2' 'haskell-wai-extra<0.5' 'haskell-warp<0.5')
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
-md5sums=('445f036886e236c9aa84b5768b4aab36')
+md5sums=('0593e9f9e4ab6eea9bd862a0c28f6d52')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
