@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cryptocipher
 pkgname=haskell-cryptocipher
-pkgver=0.2.9
+pkgver=0.2.11
 pkgrel=1
 pkgdesc="Symmetrical Block, Stream and PubKey Ciphers"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-cereal' 'haskell-crypto-ap
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('81ea9383f23fa701efeb3e8c34abc49a')
+md5sums=('f2be8f3442361ef82e0a0927122c3695')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=timeplot
 pkgname=timeplot
-pkgver=0.3.2
+pkgver=0.3.3
 pkgrel=1
 pkgdesc="A tool for visualizing time series from log files."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -11,7 +11,7 @@ makedepends=('ghc' 'haskell-chart>=0.14' 'haskell-bytestring=0.9.1.10' 'haskell-
 depends=('gmp')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
-md5sums=('6872d46b12cfa62122992dc899bb7722')
+md5sums=('a49b077f9ff0fdd1c7fbe9b773766e6e')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
