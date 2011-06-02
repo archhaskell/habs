@@ -2,7 +2,7 @@
 _hkgname=language-haskell-extract
 pkgname=haskell-language-haskell-extract
 pkgver=0.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Module to automatically extract functions from the local code."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

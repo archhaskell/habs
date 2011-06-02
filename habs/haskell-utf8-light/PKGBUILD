@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=utf8-light
 pkgname=haskell-utf8-light
-pkgver=0.4
-pkgrel=2
+pkgver=0.4.0.1
+pkgrel=1
 pkgdesc="Unicode"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('8e2df3f7288bf6dc7f75e0dd52058ff7')
+md5sums=('2872960bee7195d064ebb0fe458c3a90')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

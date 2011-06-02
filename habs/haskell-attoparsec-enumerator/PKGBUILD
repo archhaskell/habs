@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=attoparsec-enumerator
 pkgname=haskell-attoparsec-enumerator
-pkgver=0.2.0.3
-pkgrel=8
+pkgver=0.2.0.4
+pkgrel=1
 pkgdesc="Convert an Attoparsec parser into an iteratee"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-attoparsec<0.9' 'haskell-bytestring=0.9.1.10' 'haskell-enumerator<0.5')
+depends=('ghc' 'haskell-attoparsec<0.10' 'haskell-bytestring=0.9.1.10' 'haskell-enumerator<0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('39395677f83ab6e540d89bb285b42313')
+md5sums=('59153f3fa18a87bb4fbe7bcc359d8ac6')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

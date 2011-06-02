@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=blaze-html
 pkgname=haskell-blaze-html
-pkgver=0.4.1.1
+pkgver=0.4.1.2
 pkgrel=1
 pkgdesc="A blazingly fast HTML combinator library."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<0.4' 'haskell-bytestring=0.9.1.10' 'haskel
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('44be61856d0c0abbec71d7a8b629d6e3')
+md5sums=('17ba6924947e879197ce1e797e29d74e')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hsx
 pkgname=haskell-hsx
-pkgver=0.9.0
-pkgrel=3
+pkgver=0.9.1
+pkgrel=1
 pkgdesc="HSX (Haskell Source with XML) allows literal XML syntax to be used in Haskell source code."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-haskell-src-exts>=1.10' 'haskell-mtl=2.0.1.0' 'haskell-utf8-string')
+depends=('ghc' 'haskell-haskell-src-exts>=1.11' 'haskell-mtl=2.0.1.0' 'haskell-utf8-string')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('d82f4ae3fcc08b4acdb001f7b189c13a')
+md5sums=('31106461bc0978d774bed5dc648fba4a')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

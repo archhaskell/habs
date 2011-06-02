@@ -2,7 +2,7 @@
 _hkgname=blaze-textual
 pkgname=haskell-blaze-textual
 pkgver=0.1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast rendering of common datatypes"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

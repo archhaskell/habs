@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=pandoc-types
 pkgname=haskell-pandoc-types
-pkgver=1.8
-pkgrel=2
+pkgver=1.8.0.2
+pkgrel=1
 pkgdesc="Types for representing a structured document"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-containers=0.4.0.0' 'haskell-syb=0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('776a016eb01cfe62ad2849fe1b9f82bc')
+md5sums=('a83e8aebe822417c3ff194a6eb1315f2')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

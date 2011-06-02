@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hlint
 pkgname=haskell-hlint
-pkgver=1.8.8
+pkgver=1.8.9
 pkgrel=1
 pkgdesc="Source code suggestions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-containers=0.4.0.0' 'cpphs<1.12' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-haskell-src-exts<1.11' 'hscolour=1.17' 'haskell-process=1.0.1.5' 'haskell-transformers=0.2.2.0' 'haskell-uniplate<1.7')
+depends=('ghc' 'haskell-containers=0.4.0.0' 'cpphs<1.12' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-haskell-src-exts<1.12' 'hscolour=1.17' 'haskell-process=1.0.1.5' 'haskell-transformers=0.2.2.0' 'haskell-uniplate<1.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('77f2b621773666e6661d5d27f7032e59')
+md5sums=('770106bee8841da82c9393901b5fc56e')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

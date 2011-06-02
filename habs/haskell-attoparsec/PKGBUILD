@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=attoparsec
 pkgname=haskell-attoparsec
-pkgver=0.8.5.3
+pkgver=0.8.6.1
 pkgrel=1
 pkgdesc="Fast combinator parsing for bytestrings"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-deepseq=1.1.0.2')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('2b85908841d69558ef611b7684454b2e')
+md5sums=('f254f4327919492f13a6cb3af38368ac')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

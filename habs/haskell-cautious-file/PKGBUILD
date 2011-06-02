@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=cautious-file
 pkgname=haskell-cautious-file
-pkgver=0.1.5
-pkgrel=2
+pkgver=1.0
+pkgrel=1
 pkgdesc="Ways to write a file cautiously, to reduce the chances of problems such as data loss due to crashes or power failures"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-directory=1.1.0.0' 'haskel
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('30b924034c857cb2f9d6e319ee10e7a4')
+md5sums=('ca18207cccb0ab7c7c2649133943ccc4')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

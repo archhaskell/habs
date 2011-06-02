@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=unix-compat
 pkgname=haskell-unix-compat
-pkgver=0.2.1.1
-pkgrel=3
+pkgver=0.2.1.3
+pkgrel=1
 pkgdesc="Portable POSIX-compatibility layer."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-unix=2.4.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('c07ffdf17524057a1691a36cd7a9d6d9')
+md5sums=('ad8d3777de676681cc5702e178a72a4b')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

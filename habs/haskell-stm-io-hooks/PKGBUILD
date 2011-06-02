@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=stm-io-hooks
 pkgname=haskell-stm-io-hooks
-pkgver=0.7.2
+pkgver=0.7.3
 pkgrel=1
 pkgdesc="An STM monad with IO hooks"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-containers=0.4.0.0' 'haskell-mtl
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('da5816ba374a1c22a513a200dc78df00')
+md5sums=('39fa815c61e46b518a59c3556b48eedb')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

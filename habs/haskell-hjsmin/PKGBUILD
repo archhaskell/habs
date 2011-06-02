@@ -2,7 +2,7 @@
 _hkgname=hjsmin
 pkgname=haskell-hjsmin
 pkgver=0.0.14
-pkgrel=3
+pkgrel=4
 pkgdesc="Haskell implementation of a javascript minifier"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

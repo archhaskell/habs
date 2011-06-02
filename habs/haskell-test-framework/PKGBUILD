@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=test-framework
 pkgname=haskell-test-framework
-pkgver=0.3.3
-pkgrel=6
+pkgver=0.4.0
+pkgrel=1
 pkgdesc="Framework for running and organising tests, with HUnit and QuickCheck support"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-ansi-terminal>=0.4.0' 'haskell-ansi-wl-pprint>=0.5.1' 'h
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('b0a2486739bdc90638828faa5c846d32')
+md5sums=('abda6131d66f2c0e1014607114800a07')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

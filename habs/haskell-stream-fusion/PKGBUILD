@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=stream-fusion
 pkgname=haskell-stream-fusion
-pkgver=0.1.2.2
-pkgrel=5
+pkgver=0.1.2.3
+pkgrel=1
 pkgdesc="Faster Haskell lists using stream fusion"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('8def297764fbb0dd43a09493881d7652')
+md5sums=('80281493eaab745b29d44942d6f423b6')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

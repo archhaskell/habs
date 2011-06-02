@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hashable
 pkgname=haskell-hashable
-pkgver=1.1.1.0
+pkgver=1.1.2.0
 pkgrel=1
 pkgdesc="A class for types that can be converted to a hash value"
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('37e23db85a39781a16fdb52fe6eb17d1')
+md5sums=('87f2d33bba7cbe1541daa4ff87d15c04')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

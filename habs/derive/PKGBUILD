@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=derive
 pkgname=derive
-pkgver=2.5.1
+pkgver=2.5.2
 pkgrel=1
 pkgdesc="A program and library to derive instances for data types"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('gmp' 'ghc' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-haskell-src-exts<1.11' 'haskell-pretty=1.0.1.2' 'haskell-process=1.0.1.5' 'haskell-syb=0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-transformers=0.2.2.0' 'haskell-uniplate<1.7')
+depends=('gmp' 'ghc' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-haskell-src-exts<1.12' 'haskell-pretty=1.0.1.2' 'haskell-process=1.0.1.5' 'haskell-syb=0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-transformers=0.2.2.0' 'haskell-uniplate<1.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9d1d87c12ae2e6cff0ba696dfcc54e6d')
+md5sums=('f99abfce4e09f56a09d048af9f3dc218')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
