@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=hamlet
 pkgname=haskell-hamlet
-pkgver=0.8.2
-pkgrel=1
+pkgver=0.8.1
+pkgrel=2
 pkgdesc="Haml-like template files that are compile-time checked"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-blaze-builder<0.4' 'haskell-blaze-html<0.5' 'haskell-byt
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('bbea9cbbdd0623edf09968b8b2db28a6')
+md5sums=('5d19ff6a071804c506c52af6d3d19c24')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
