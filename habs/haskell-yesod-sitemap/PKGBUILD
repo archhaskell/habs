@@ -2,7 +2,7 @@
 _hkgname=yesod-sitemap
 pkgname=haskell-yesod-sitemap
 pkgver=0.1.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Generate XML sitemaps."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

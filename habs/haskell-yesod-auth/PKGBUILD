@@ -1,8 +1,8 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=yesod-auth
 pkgname=haskell-yesod-auth
-pkgver=0.4.0.1
-pkgrel=8
+pkgver=0.4.0.2
+pkgrel=1
 pkgdesc="Authentication for Yesod."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-sha<1.5' 'haskell-aeson<0.4' 'haskell-authenticate<0.10'
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('348b43b84b63b8865577a4600b10414a')
+md5sums=('ae9835bd1fce46ed1558eaa4c839fd79')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

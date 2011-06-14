@@ -2,7 +2,7 @@
 _hkgname=yesod-newsfeed
 pkgname=haskell-yesod-newsfeed
 pkgver=0.1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Helper functions and data types for producing News feeds."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

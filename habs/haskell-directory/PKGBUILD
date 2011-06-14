@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=yesod
-pkgname=haskell-yesod
-pkgver=0.8.2.1
+_hkgname=directory
+pkgname=haskell-directory
+pkgver=1.1.0.0
 pkgrel=1
-pkgdesc="Creation of type-safe, RESTful web applications."
+pkgdesc="library for directory handling"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-cabal=1.10.1.0' 'haskell-attoparsec-text<0.9' 'haskell-blaze-builder<0.4' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-hamlet<0.9' 'haskell-hjsmin<0.1' 'haskell-http-types<0.7' 'haskell-mime-mail<0.4' 'haskell-monad-control<0.3' 'haskell-parsec=3.1.1' 'haskell-process=1.0.1.5' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-transformers=0.2.2.0' 'haskell-unix-compat<0.3' 'haskell-wai<0.5' 'haskell-wai-extra<0.5' 'haskell-warp<0.5' 'haskell-yesod-auth<0.5' 'haskell-yesod-core<0.9' 'haskell-yesod-form<0.2' 'haskell-yesod-json<0.2' 'haskell-yesod-persistent<0.2' 'haskell-yesod-static<0.2')
+depends=('ghc' 'haskell-filepath=1.2.0.0' 'haskell-old-time=1.0.0.6' 'haskell-unix=2.4.2.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5c1518593ad585e9bc8afe0a5d300895')
+md5sums=('a351c852ff2e028fb03df06010ec6216')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
