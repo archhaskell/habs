@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=tagsoup
 pkgname=haskell-tagsoup
-pkgver=0.12.1
+pkgver=0.12.2
 pkgrel=1
 pkgdesc="Parsing and extracting information from (possibly malformed) HTML/XML documents"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0')
+depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('9547f7105b28ae1acd379f665fd14629')
+md5sums=('dfd1621e89b385599afb905ac4822d56')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
