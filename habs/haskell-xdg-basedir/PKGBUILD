@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xdg-basedir
 pkgname=haskell-xdg-basedir
-pkgver=0.2
-pkgrel=2
+pkgver=0.2.1
+pkgrel=1
 pkgdesc="A basic implementation of the XDG Base Directory specification."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0' 'haskell-regex-compat=0.93.1')
+depends=('ghc' 'haskell-directory=1.1.0.0' 'haskell-filepath=1.2.0.0')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('7a4412943c1c4c57cd88ac3f6f2cfbe8')
+md5sums=('f560e3a29a6cd0d6d346e9f649699208')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

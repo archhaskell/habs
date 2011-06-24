@@ -1,7 +1,7 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=xml-enumerator
 pkgname=haskell-xml-enumerator
-pkgver=0.3.2
+pkgver=0.3.3
 pkgrel=1
 pkgdesc="Pure-Haskell utilities for dealing with XML with the enumerator package."
 url="http://hackage.haskell.org/package/${_hkgname}"
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-attoparsec-text<0.9' 'haskell-attoparsec-text-enumerator
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('4f604c65215b12001d593544a0bd42ae')
+md5sums=('787459f0c2ba7b902b89640266c35eaf')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

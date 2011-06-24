@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=attoparsec-text
 pkgname=haskell-attoparsec-text
-pkgver=0.8.5.0
-pkgrel=4
+pkgver=0.8.5.1
+pkgrel=1
 pkgdesc="Fast combinator parsing for texts"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-attoparsec<0.9' 'haskell-containers=0.4.0.0' 'haskell-text=0.11.0.5')
+depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-attoparsec<0.10' 'haskell-containers=0.4.0.0' 'haskell-text=0.11.0.5')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('2af395700f4aa4a695ae94fa6f9b00a3')
+md5sums=('b300148587f4c33b047dcaef192f8b87')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \

@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=aeson
 pkgname=haskell-aeson
-pkgver=0.3.2.5
-pkgrel=3
-pkgdesc="Fast JSON parsing and generation"
+pkgver=0.3.2.8
+pkgrel=1
+pkgdesc="Fast JSON parsing and encoding"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-attoparsec>=0.8.5.3' 'haskell-blaze-builder>=0.2.1.4' 'haskell-blaze-textual' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-deepseq=1.1.0.2' 'haskell-hashable' 'haskell-mtl=2.0.1.0' 'haskell-old-locale=1.0.0.2' 'haskell-syb=0.3' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-unordered-containers>=0.1.2.0' 'haskell-vector>=0.7')
+depends=('ghc' 'haskell-attoparsec>=0.8.6.1' 'haskell-blaze-builder>=0.2.1.4' 'haskell-blaze-textual' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-deepseq=1.1.0.2' 'haskell-hashable>=1.1.2.0' 'haskell-mtl=2.0.1.0' 'haskell-old-locale=1.0.0.2' 'haskell-syb=0.3' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-unordered-containers>=0.1.2.0' 'haskell-vector>=0.7')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('469c646bf042b2538c3733e00a778d21')
+md5sums=('79328f363eab345ea2c5ef701b8e84cc')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
