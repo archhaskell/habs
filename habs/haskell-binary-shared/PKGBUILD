@@ -2,7 +2,7 @@
 _hkgname=binary-shared
 pkgname=haskell-binary-shared
 pkgver=0.8.1
-pkgrel=4
+pkgrel=5
 pkgdesc="Sharing for the binary package"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

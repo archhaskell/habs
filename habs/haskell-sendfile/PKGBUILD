@@ -2,7 +2,7 @@
 _hkgname=sendfile
 pkgname=haskell-sendfile
 pkgver=0.7.3
-pkgrel=2
+pkgrel=3
 pkgdesc="A portable sendfile library"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=xml-enumerator
 pkgname=haskell-xml-enumerator
 pkgver=0.3.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Pure-Haskell utilities for dealing with XML with the enumerator package."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

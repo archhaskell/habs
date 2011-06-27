@@ -2,7 +2,7 @@
 _hkgname=persistent-sqlite
 pkgname=haskell-persistent-sqlite
 pkgver=0.5.0
-pkgrel=5
+pkgrel=6
 pkgdesc="Backend for the persistent library using sqlite3."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

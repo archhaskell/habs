@@ -2,7 +2,7 @@
 _hkgname=hashable
 pkgname=haskell-hashable
 pkgver=1.1.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A class for types that can be converted to a hash value"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=syb-with-class
 pkgname=haskell-syb-with-class
 pkgver=0.6.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Scrap Your Boilerplate With Class"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

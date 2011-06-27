@@ -2,7 +2,7 @@
 _hkgname=hledger-lib
 pkgname=haskell-hledger-lib
 pkgver=0.14
-pkgrel=1
+pkgrel=2
 pkgdesc="Reusable types and utilities for the hledger accounting tool and financial apps in general."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

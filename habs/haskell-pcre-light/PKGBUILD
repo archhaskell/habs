@@ -2,7 +2,7 @@
 _hkgname=pcre-light
 pkgname=haskell-pcre-light
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="A small, efficient and portable regex library for Perl 5 compatible regular expressions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

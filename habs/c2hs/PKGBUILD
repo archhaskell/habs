@@ -2,7 +2,7 @@
 _hkgname=c2hs
 pkgname=c2hs
 pkgver=0.16.3
-pkgrel=1
+pkgrel=2
 pkgdesc="C->Haskell FFI tool that gives some cross-language type safety"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL-2')

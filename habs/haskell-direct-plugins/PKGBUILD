@@ -2,7 +2,7 @@
 _hkgname=direct-plugins
 pkgname=haskell-direct-plugins
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Lightweight replacement for Plugins, specific to GHC"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

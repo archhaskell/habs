@@ -2,7 +2,7 @@
 _hkgname=testpack
 pkgname=haskell-testpack
 pkgver=2.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Test Utililty Pack for HUnit and QuickCheck"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL')

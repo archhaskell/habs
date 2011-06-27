@@ -2,7 +2,7 @@
 _hkgname=tabular
 pkgname=haskell-tabular
 pkgver=0.2.2.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Two-dimensional data tables with rendering functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

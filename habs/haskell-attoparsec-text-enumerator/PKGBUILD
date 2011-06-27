@@ -2,7 +2,7 @@
 _hkgname=attoparsec-text-enumerator
 pkgname=haskell-attoparsec-text-enumerator
 pkgver=0.2.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Convert an attoparsec-text parser into an iteratee"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

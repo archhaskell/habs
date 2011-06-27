@@ -2,7 +2,7 @@
 _hkgname=largeword
 pkgname=haskell-largeword
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Provides Word128, Word192 and Word256 and a way of producing other large words if required."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

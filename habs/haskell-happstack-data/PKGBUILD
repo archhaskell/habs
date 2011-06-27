@@ -2,7 +2,7 @@
 _hkgname=happstack-data
 pkgname=haskell-happstack-data
 pkgver=6.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Happstack data manipulation libraries"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

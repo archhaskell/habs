@@ -2,7 +2,7 @@
 _hkgname=HsSyck
 pkgname=haskell-hssyck
 pkgver=0.50
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast, lightweight YAML loader and dumper"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

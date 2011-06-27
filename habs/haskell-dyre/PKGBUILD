@@ -2,7 +2,7 @@
 _hkgname=dyre
 pkgname=haskell-dyre
 pkgver=0.8.6
-pkgrel=3
+pkgrel=4
 pkgdesc="Dynamic reconfiguration in Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

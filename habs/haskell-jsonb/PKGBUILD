@@ -2,7 +2,7 @@
 _hkgname=JSONb
 pkgname=haskell-jsonb
 pkgver=1.0.4
-pkgrel=5
+pkgrel=6
 pkgdesc="JSON parser that uses byte strings."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

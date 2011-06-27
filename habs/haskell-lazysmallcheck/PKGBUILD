@@ -2,7 +2,7 @@
 _hkgname=lazysmallcheck
 pkgname=haskell-lazysmallcheck
 pkgver=0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="A library for demand-driven testing of Haskell programs"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

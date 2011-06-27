@@ -2,7 +2,7 @@
 _hkgname=persistent-template
 pkgname=haskell-persistent-template
 pkgver=0.5.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Type-safe, non-relational, multi-backend persistence."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=bytestring-show
 pkgname=haskell-bytestring-show
 pkgver=0.3.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Efficient conversion of values into readable byte strings."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

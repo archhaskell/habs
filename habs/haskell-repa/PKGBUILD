@@ -2,7 +2,7 @@
 _hkgname=repa
 pkgname=haskell-repa
 pkgver=2.0.2.1
-pkgrel=2
+pkgrel=3
 pkgdesc="High performance, regular, shape polymorphic parallel arrays."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

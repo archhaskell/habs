@@ -2,7 +2,7 @@
 _hkgname=UMM
 pkgname=umm
 pkgver=0.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A small command-line accounting tool"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('GPL')

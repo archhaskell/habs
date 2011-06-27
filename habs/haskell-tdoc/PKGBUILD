@@ -2,7 +2,7 @@
 _hkgname=tdoc
 pkgname=haskell-tdoc
 pkgver=0.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="TDoc is a typed document builder with support for (X)HTML"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

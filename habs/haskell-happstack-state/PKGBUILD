@@ -2,7 +2,7 @@
 _hkgname=happstack-state
 pkgname=haskell-happstack-state
 pkgver=6.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Event-based distributed state."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=mongoDB
 pkgname=haskell-mongodb
 pkgver=0.9.5
-pkgrel=1
+pkgrel=2
 pkgdesc="MongoDB driver"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')

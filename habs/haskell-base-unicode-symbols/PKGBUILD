@@ -2,7 +2,7 @@
 _hkgname=base-unicode-symbols
 pkgname=haskell-base-unicode-symbols
 pkgver=0.2.1.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Unicode alternatives for common functions and operators"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

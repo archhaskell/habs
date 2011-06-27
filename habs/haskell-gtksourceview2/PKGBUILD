@@ -2,7 +2,7 @@
 _hkgname=gtksourceview2
 pkgname=haskell-gtksourceview2
 pkgver=0.12.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Binding to the GtkSourceView library."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('LGPL-2.1')

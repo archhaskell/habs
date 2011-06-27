@@ -2,7 +2,7 @@
 _hkgname=explicit-exception
 pkgname=haskell-explicit-exception
 pkgver=0.1.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Exceptions which are explicit in the type signature."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

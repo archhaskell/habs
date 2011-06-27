@@ -2,7 +2,7 @@
 _hkgname=happstack-server
 pkgname=haskell-happstack-server
 pkgver=6.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Web related tools and services."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

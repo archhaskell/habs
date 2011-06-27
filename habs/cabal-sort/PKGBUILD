@@ -2,7 +2,7 @@
 _hkgname=cabal-sort
 pkgname=cabal-sort
 pkgver=0.0.2.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Topologically sort cabal packages"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

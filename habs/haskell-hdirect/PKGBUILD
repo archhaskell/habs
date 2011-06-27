@@ -2,7 +2,7 @@
 _hkgname=hdirect
 pkgname=haskell-hdirect
 pkgver=0.21.0
-pkgrel=4
+pkgrel=5
 pkgdesc="An IDL compiler for Haskell"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

@@ -2,7 +2,7 @@
 _hkgname=happstack-util
 pkgname=haskell-happstack-util
 pkgver=6.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Web framework"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

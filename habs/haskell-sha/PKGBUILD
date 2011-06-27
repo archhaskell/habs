@@ -2,7 +2,7 @@
 _hkgname=SHA
 pkgname=haskell-sha
 pkgver=1.4.1.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Implementations of the SHA suite of message digest functions"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')

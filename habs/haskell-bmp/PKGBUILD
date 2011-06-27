@@ -2,7 +2,7 @@
 _hkgname=bmp
 pkgname=haskell-bmp
 pkgver=1.1.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Read and write uncompressed BMP image files."
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:MIT')

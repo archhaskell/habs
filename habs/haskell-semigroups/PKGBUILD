@@ -2,7 +2,7 @@
 _hkgname=semigroups
 pkgname=haskell-semigroups
 pkgver=0.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Haskell 98 semigroups"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
