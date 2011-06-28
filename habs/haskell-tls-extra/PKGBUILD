@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=tls-extra
 pkgname=haskell-tls-extra
-pkgver=0.3.1
-pkgrel=2
+pkgver=0.2.3
+pkgrel=6
 pkgdesc="TLS extra default values and helpers"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-certificate<1.0' 'haskell-crypto-api>=0.5' 'haskell-cryptocipher>=0.2.5' 'haskell-cryptohash>=0.6' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-tls<0.8' 'haskell-vector')
+depends=('ghc' 'haskell-bytestring=0.9.1.10' 'haskell-certificate<1.0' 'haskell-crypto-api>=0.5' 'haskell-cryptocipher>=0.2.5' 'haskell-cryptohash>=0.6' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-tls<0.7' 'haskell-vector')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('fbfebb34a46f266e192cc855d9316e72')
+md5sums=('8a9df6eb4937aa5526dcc9a0df369773')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
