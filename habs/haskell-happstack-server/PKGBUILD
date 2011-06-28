@@ -8,7 +8,7 @@ url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-maybet' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-extensible-exceptions=0.1.1.2' 'haskell-filepath=1.2.0.0' 'haskell-happstack-data<6.1' 'haskell-happstack-util<6.1' 'haskell-hslogger>=1.0.2' 'haskell-html=1.0.1.2' 'haskell-mtl=2.0.1.0' 'haskell-network' 'haskell-network-bytestring' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.6' 'haskell-parsec=3.1.1' 'haskell-process=1.0.1.5' 'haskell-sendfile<0.8' 'haskell-syb=0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-unix=2.4.2.0' 'haskell-utf8-string<0.4' 'haskell-xhtml=3000.2.0.1' 'haskell-zlib=0.5.3.1')
+depends=('ghc' 'haskell-maybet' 'haskell-blaze-html<0.5' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-extensible-exceptions=0.1.1.2' 'haskell-filepath=1.2.0.0' 'haskell-happstack-data<6.1' 'haskell-happstack-util<6.1' 'haskell-hslogger>=1.0.2' 'haskell-html=1.0.1.2' 'haskell-mtl=2.0.1.0' 'haskell-network' 'haskell-old-locale=1.0.0.2' 'haskell-old-time=1.0.0.6' 'haskell-parsec=3.1.1' 'haskell-process=1.0.1.5' 'haskell-sendfile<0.8' 'haskell-syb=0.3' 'haskell-template-haskell=2.5.0.0' 'haskell-text=0.11.0.5' 'haskell-time=1.2.0.3' 'haskell-unix=2.4.2.0' 'haskell-utf8-string<0.4' 'haskell-xhtml=3000.2.0.1' 'haskell-zlib=0.5.3.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
