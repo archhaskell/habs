@@ -1,4 +1,4 @@
-# Maintainer: Fabio Riga <rifabio@gmail.com>
+# Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
 _hkgname=happstack-data
 pkgname=haskell-happstack-data
 pkgver=6.0.0
