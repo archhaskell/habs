@@ -1,0 +1,23 @@
+# Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
+_hkgname=hsgtd
+pkgname=hsgtd
+pkgver=0.2
+pkgrel=1
+pkgdesc="Console-based gettings-things-done application"
+url="http://hackage.haskell.org/package/${_hkgname}"
+license=('GPL')
+arch=('i686' 'x86_64')
+makedepends=('ghc' 'haskell-ansi-terminal>=0.5' 'haskell-containers=0.4.0.0' 'haskell-directory=1.1.0.0' 'haskell-haskeline>=0.6' 'haskell-mtl=2.0.1.0')
+depends=('gmp')
+options=('strip')
+source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
+md5sums=('6b8eeabcbe47ea4930658db87ffdbd1e')
+build() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    runhaskell Setup configure --prefix=/usr --docdir=/usr/share/doc/${pkgname} -O
+    runhaskell Setup build
+}
+package() {
+    cd ${srcdir}/${_hkgname}-${pkgver}
+    runhaskell Setup copy --destdir=${pkgdir}
+}
