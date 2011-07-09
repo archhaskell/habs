@@ -1,8 +1,8 @@
-# Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
+# Maintainer: Fabio Riga <rifabio@gmail.com>
 _hkgname=mongoDB
 pkgname=haskell-mongodb
-pkgver=0.9.5
-pkgrel=2
+pkgver=0.10.0
+pkgrel=1
 pkgdesc="MongoDB driver"
 url="http://hackage.haskell.org/package/${_hkgname}"
 license=('custom:OtherLicense')
@@ -12,7 +12,7 @@ depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-binary' 'haskell-bson' 'haskell-
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('c41f46252272fb4618e08edc083c22df')
+md5sums=('d8b63648b9d8a670324a426b1d854e96')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
