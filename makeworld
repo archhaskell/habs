@@ -15,7 +15,7 @@ shopt -s nullglob
 export LC_ALL="C"
 do_rsync="${HABSCHROOTRSYNC:-y}"
 host_arch=$(uname -m) || die "cannot determine host architecture"
-chroot_dir="${HABSCHROOTDIR:-/home/tmp}/chroot-${host_arch}"
+chroot_dir="${HABSCHROOTDIR:-/var/tmp}/chroot-${host_arch}"
 chroot_rootdir="${chroot_dir}/root"
 chroot_copydir="${chroot_dir}/copy"
 declare -r do_rsync host_arch chroot_dir chroot_rootdir chroot_copydir
