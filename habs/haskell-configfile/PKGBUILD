@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=mongoDB
-pkgname=haskell-mongodb
-pkgver=0.10.0
-pkgrel=1
-pkgdesc="MongoDB driver"
+_hkgname=ConfigFile
+pkgname=haskell-configfile
+pkgver=1.0.6
+pkgrel=4
+pkgdesc="Configuration file reading & writing"
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:OtherLicense')
+license=('LGPL')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-binary' 'haskell-bson' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-cryptohash' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-parsec=3.1.1' 'haskell-random=1.0.0.3')
+depends=('ghc' 'haskell-missingh>=1.0.0' 'haskell-containers=0.4.0.0' 'haskell-haskell98=1.1.0.1' 'haskell-mtl=2.0.1.0' 'haskell-parsec=3.1.1')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('d8b63648b9d8a670324a426b1d854e96')
+md5sums=('fbdef31a2989723cc25ba92622ff0e42')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
@@ -30,6 +30,4 @@ package() {
     install -d -m755 ${pkgdir}/usr/share/doc/ghc/html/libraries
     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
     runhaskell Setup copy --destdir=${pkgdir}
-    install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
-    rm -f ${pkgdir}/usr/share/doc/${pkgname}/LICENSE
 }
