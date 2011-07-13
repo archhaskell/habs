@@ -51,6 +51,9 @@ Include = /etc/pacman.d/mirrorlist
 [community]
 Include = /etc/pacman.d/mirrorlist
 
+[repo]
+Server = file:///repo
+
 [haskell]
 Server = file:///repo
 EOF
