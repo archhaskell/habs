@@ -1,18 +1,18 @@
 # Maintainer: Arch Haskell Team <arch-haskell@haskell.org>
-_hkgname=mongoDB
-pkgname=haskell-mongodb
-pkgver=1.0.0
+_hkgname=random-shuffle
+pkgname=haskell-random-shuffle
+pkgver=0.0.2
 pkgrel=1
-pkgdesc="Driver (client) for MongoDB, a free, scalable, fast, document DBMS"
+pkgdesc="Random shuffle implementation."
 url="http://hackage.haskell.org/package/${_hkgname}"
-license=('custom:OtherLicense')
+license=('custom:BSD3')
 arch=('i686' 'x86_64')
 makedepends=()
-depends=('ghc' 'haskell-array=0.3.0.2' 'haskell-binary' 'haskell-bson' 'haskell-bytestring=0.9.1.10' 'haskell-containers=0.4.0.0' 'haskell-cryptohash' 'haskell-mtl=2.0.1.0' 'haskell-network=2.3.0.2' 'haskell-parsec=3.1.1' 'haskell-random=1.0.0.3' 'haskell-random-shuffle')
+depends=('ghc' 'haskell-random=1.0.0.3')
 options=('strip')
 source=(http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz)
 install=${pkgname}.install
-md5sums=('5ea074cd9a67ca83f67871d900fe8764')
+md5sums=('5093d5780856f2805ce1089048157a36')
 build() {
     cd ${srcdir}/${_hkgname}-${pkgver}
     runhaskell Setup configure -O ${PKGBUILD_HASKELL_ENABLE_PROFILING:+-p } --enable-split-objs --enable-shared \
