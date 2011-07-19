@@ -1,10 +1,12 @@
 # vim files
 *.swp
 
-# ignore generated files
+# quilt files
+.pc
+patches/series
 
-/habs/*/*.cabal
-/habs/*/*.pkg.tar.xz
-/habs/*/*.tar.gz
-/habs/*/makepkg.log
-/habs/*/src
+# ignore generated files
+/*/*.install
+/*/*.pkg.tar.xz
+/*/*.tar.gz
+/*/PKGBUILD
