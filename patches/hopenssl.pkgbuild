@@ -1,0 +1,14 @@
+Index: archhaskell-repo/haskell-hopenssl/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-hopenssl/PKGBUILD
++++ archhaskell-repo/haskell-hopenssl/PKGBUILD
+@@ -14,8 +14,7 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+          "haskell-bytestring=0.9.1.10"
+-         "haskell-mtl=2.0.1.0"
+-         "crypto")
++         "haskell-mtl=2.0.1.0")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

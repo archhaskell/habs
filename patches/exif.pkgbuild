@@ -1,0 +1,14 @@
+Index: h4a/haskell-exif/PKGBUILD
+===================================================================
+--- h4a.orig/haskell-exif/PKGBUILD
++++ h4a/haskell-exif/PKGBUILD
+@@ -13,8 +13,7 @@ arch=('i686' 'x86_64')
+ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+-         "exif"
+-         "m")
++         "libexif")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

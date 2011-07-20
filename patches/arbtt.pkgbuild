@@ -1,0 +1,14 @@
+Index: archhaskell-repo/arbtt/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/arbtt/PKGBUILD
++++ archhaskell-repo/arbtt/PKGBUILD
+@@ -25,7 +25,8 @@ makedepends=("ghc=7.0.3-2"
+              "haskell-time=1.2.0.3"
+              "haskell-unix=2.4.2.0"
+              "haskell-utf8-string=0.3.6")
+-depends=()
++depends=("gmp"
++         "libxss")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ 

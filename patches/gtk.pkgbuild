@@ -1,0 +1,17 @@
+Index: archhaskell-repo/haskell-gtk/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-gtk/PKGBUILD
++++ archhaskell-repo/haskell-gtk/PKGBUILD
+@@ -21,7 +21,11 @@ depends=("ghc=7.0.3-2"
+          "haskell-glib=0.12.0"
+          "haskell-haskell98=1.1.0.1"
+          "haskell-mtl=2.0.1.0"
+-         "haskell-pango=0.12.0")
++         "haskell-pango=0.12.0"
++         "glib"
++         "gtk2"
++         "gtk2hs-buildtools"
++         )
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

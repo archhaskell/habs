@@ -1,0 +1,14 @@
+Index: archhaskell-repo/haskell-sifflet-lib/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-sifflet-lib/PKGBUILD
++++ archhaskell-repo/haskell-sifflet-lib/PKGBUILD
+@@ -27,8 +27,7 @@ depends=("ghc=7.0.3-2"
+          "haskell-parsec=3.1.1"
+          "haskell-process=1.0.1.5"
+          "haskell-unix=2.4.2.0"
+-         "gdk-x11-2.0"
+-         "gtk-x11-2.0")
++         "gtk2")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

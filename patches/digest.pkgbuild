@@ -1,0 +1,13 @@
+Index: archhaskell-repo/haskell-digest/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-digest/PKGBUILD
++++ archhaskell-repo/haskell-digest/PKGBUILD
+@@ -14,7 +14,7 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+          "haskell-bytestring=0.9.1.10"
+-         "z")
++         "zlib")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

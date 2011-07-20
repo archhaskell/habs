@@ -1,0 +1,146 @@
+#! /bin/zsh
+
+set -eu
+
+##################################################
+# some useful stuff
+
+ALL_OFF="$(tput sgr0)"
+BOLD="$(tput bold)"
+BLUE="${BOLD}$(tput setaf 4)"
+GREEN="${BOLD}$(tput setaf 2)"
+RED="${BOLD}$(tput setaf 1)"
+YELLOW="${BOLD}$(tput setaf 3)"
+
+msg() {
+    local msg=$1; shift
+    printf "${GREEN}***${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+}
+
+error() {
+    local msg=$1; shift
+    printf "${RED}*** ERROR:${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+}
+
+die() {
+    [ -n "${1}" ] && error ${1}
+    exit 1
+}
+##################################################
+
+# default values
+arch=$(uname -m)
+chrootdir=.
+pristine_chrootdir=root
+build_chrootdir=build
+habs_dir=.
+clean_build_first=0
+update_pristine_first=0
+
+usage() {
+    cat << EOF
+Usage $0 [options] -- [packages]
+
+Run this script in your HABS dir to build the named packages inside a
+chroot.
+
+The chroot dir consists of two dirs, a pristine chroot (root), and a build
+chroot (build).  This script handles both of them.
+
+Options:
+-h          This help
+-c          Clean the build chroot before building
+-x          Update the pristine chroot first (implies -c)
+-l <dir>    Location of chroot (default .)
+-a <arch>   Architecture to build for i686 or x86_64 (default is local arch)
+-b <dir>    Location of your HABS dir (default .)
+EOF
+}
+
+buildpkg() {
+    if [[ -z "$(ls|grep .pkg.tar.xz)" ]]; then
+        msg "Building in $PWD"
+        sudo setarch ${arch} makechrootpkg -u -d -l ${build_chrootdir} -r ${CHROOT_DIR} -- -i
+    else
+        msg "Skipping build in $PWD"
+    fi
+}
+
+while getopts hcxa:l:b: opt; do
+    case "${opt}" in
+        h) usage; exit 0;;
+        c) clean_build_first=1;;
+        x) update_pristine_first=1;;
+        a) arch=${OPTARG};;
+        l) chrootdir="${OPTARG}";;
+        b) habs_dir="${OPTARG}";;
+    esac
+done
+shift $((OPTIND - 1))
+
+CHROOT_DIR=$(readlink -f ${chrootdir}/${arch}-chroot)
+CHROOT_ROOTDIR=${CHROOT_DIR}/${pristine_chrootdir}
+CHROOT_BUILDDIR=${CHROOT_DIR}/${build_chrootdir}
+
+if [ ! -d ${CHROOT_ROOTDIR} ]; then
+    msg "Creating the pristine chroot ${CHROOT_DIR} ..."
+    mkdir -p "${CHROOT_DIR}" || die "Couldn't create ${CHROOT_DIR}"
+
+    pacman_conf=$(mktemp "/tmp/pacman-habs.XXXXXXXX.conf")
+    trap 'rm -f "${pacman_conf}"' 0
+    cat > "${pacman_conf}" << EOF
+[options]
+HoldPkg = pacman libc
+SyncFirst = pacman
+Architecture = auto
+
+[repo]
+Server = file:///repo
+
+[haskell]
+Server = http://www.kiwilight.com/\$repo/\$arch
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+[community]
+Include = /etc/pacman.d/mirrorlist
+EOF
+
+    sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
+        -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
+        util-linux-ng pacman sudo wget file grep findutils base-devel ghc
+    # are there more packages that should be installed in the pristine?
+
+    # no point in updating the newly built pristine
+    update_pristine_first=0
+    msg "Done"
+fi
+
+if [[ "${update_pristine_first}" == "1" ]]; then
+    msg "Updating the the pristine chroot..."
+    sudo setarch ${arch} mkarchroot -u ${CHROOT_ROOTDIR}
+    clean_build_first=1
+    msg " Done"
+fi
+
+if [[ "${clean_build_first}" == "1" ]]; ;then
+    msg "Cleaning up the build chroot..."
+    sudo rsync -a --delete -q -W -x "${CHROOT_ROOTDIR}/" "${CHROOT_BUILDDIR}"
+    msg " Done"
+fi
+
+for pkg0 in $@; do
+    pkg1=${(L)pkg0}
+    [ -d ${habs_dir}/${pkg1} ] && pkg=${pkg1}
+    [ -d ${habs_dir}/haskell-${pkg1} ] && pkg=haskell-${pkg1}
+    if [[ "x${pkg}" != "x" ]]; then
+        (cd ${habs_dir}/$pkg; buildpkg )
+    else
+        die "No such package: $pkg0" 
+    fi
+    pkg=
+done

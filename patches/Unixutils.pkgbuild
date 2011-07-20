@@ -1,0 +1,14 @@
+Index: h4a/haskell-unixutils/PKGBUILD
+===================================================================
+--- h4a.orig/haskell-unixutils/PKGBUILD
++++ h4a/haskell-unixutils/PKGBUILD
+@@ -25,8 +25,7 @@ depends=("ghc=7.0.3-2"
+          "haskell-process=1.0.1.5"
+          "haskell-regex-tdfa=1.1.8"
+          "haskell-time=1.2.0.3"
+-         "haskell-unix=2.4.2.0"
+-         "crypt")
++         "haskell-unix=2.4.2.0")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

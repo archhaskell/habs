@@ -1,0 +1,13 @@
+Index: archhaskell-repo/haskell-hscolour/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-hscolour/PKGBUILD
++++ archhaskell-repo/haskell-hscolour/PKGBUILD
+@@ -14,6 +14,8 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+          "haskell-haskell98=1.1.0.1")
++provides=("hscolour")
++replaces=("hscolour")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

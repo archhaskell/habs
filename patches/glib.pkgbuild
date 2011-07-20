@@ -1,0 +1,15 @@
+Index: archhaskell-repo/haskell-glib/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-glib/PKGBUILD
++++ archhaskell-repo/haskell-glib/PKGBUILD
+@@ -14,7 +14,9 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+          "haskell-containers=0.4.0.0"
+-         "haskell-haskell98=1.1.0.1")
++         "haskell-haskell98=1.1.0.1"
++         "glib2"
++         "gtk2hs-buildtools")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

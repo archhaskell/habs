@@ -1,0 +1,13 @@
+Index: archhaskell-repo/haskell-language-javascript/PKGBUILD
+===================================================================
+--- archhaskell-repo.orig/haskell-language-javascript/PKGBUILD
++++ archhaskell-repo/haskell-language-javascript/PKGBUILD
+@@ -13,6 +13,8 @@ arch=('i686' 'x86_64')
+ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
++         "alex"
++         "happy"
+          "haskell-array=0.3.0.2"
+          "haskell-containers=0.4.0.0"
+          "haskell-mtl=2.0.1.0"
