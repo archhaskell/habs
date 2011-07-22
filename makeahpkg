@@ -39,7 +39,7 @@ update_pristine_first=0
 
 usage() {
     cat << EOF
-Usage $0 [options] -- [packages]
+Usage: makeahpkg [options] -- [packages]
 
 Run this script in your HABS dir to build the named packages inside a
 chroot.
@@ -112,8 +112,8 @@ EOF
 
     sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
-        util-linux-ng pacman sudo wget file grep findutils base-devel ghc
-    # are there more packages that should be installed in the pristine?
+        base base-devel \
+        sudo ghc
 
     # no point in updating the newly built pristine
     update_pristine_first=0
