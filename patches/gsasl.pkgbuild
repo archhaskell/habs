@@ -1,11 +1,12 @@
-Index: archhaskell-repo/haskell-gsasl/PKGBUILD
+Index: archhaskell-habs/haskell-gsasl/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-gsasl/PKGBUILD
-+++ archhaskell-repo/haskell-gsasl/PKGBUILD
-@@ -13,6 +13,7 @@ arch=('i686' 'x86_64')
+--- archhaskell-habs.orig/haskell-gsasl/PKGBUILD
++++ archhaskell-habs/haskell-gsasl/PKGBUILD
+@@ -13,6 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
           "sh"
++         "libgcrypt"
 +         "gsasl"
           "haskell-bytestring=0.9.1.10"
           "haskell-transformers=0.2.2.0")

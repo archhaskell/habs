@@ -1,0 +1,14 @@
+Index: archhaskell-habs/haskell-bytestring-lexing/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-bytestring-lexing/PKGBUILD
++++ archhaskell-habs/haskell-bytestring-lexing/PKGBUILD
+@@ -14,7 +14,8 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+          "haskell-array=0.3.0.2"
+-         "haskell-bytestring=0.9.1.10")
++         "haskell-bytestring=0.9.1.10"
++         "alex")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

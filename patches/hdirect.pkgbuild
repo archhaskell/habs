@@ -1,0 +1,12 @@
+Index: archhaskell-habs/haskell-hdirect/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-hdirect/PKGBUILD
++++ archhaskell-habs/haskell-hdirect/PKGBUILD
+@@ -13,6 +13,7 @@ arch=('i686' 'x86_64')
+ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
++         "happy"
+          "haskell-array=0.3.0.2"
+          "haskell-haskell98=1.1.0.1"
+          "haskell-pretty=1.0.1.2")
