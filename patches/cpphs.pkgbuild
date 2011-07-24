@@ -1,11 +1,11 @@
-Index: archhaskell-repo/haskell-cpphs/PKGBUILD
+Index: archhaskell-habs/haskell-cpphs/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-cpphs/PKGBUILD
-+++ archhaskell-repo/haskell-cpphs/PKGBUILD
-@@ -14,6 +14,8 @@ makedepends=()
- depends=("ghc=7.0.3-2"
-          "sh"
-          "haskell-haskell98=1.1.0.1")
+--- archhaskell-habs.orig/haskell-cpphs/PKGBUILD
++++ archhaskell-habs/haskell-cpphs/PKGBUILD
+@@ -16,6 +16,8 @@ depends=("ghc=7.0.3-2"
+          "haskell-directory=1.1.0.0"
+          "haskell-old-locale=1.0.0.2"
+          "haskell-old-time=1.0.0.6")
 +provides=("cpphs")
 +replaces=("cpphs")
  options=('strip')

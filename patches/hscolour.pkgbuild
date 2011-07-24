@@ -1,11 +1,11 @@
-Index: archhaskell-repo/haskell-hscolour/PKGBUILD
+Index: archhaskell-habs/haskell-hscolour/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-hscolour/PKGBUILD
-+++ archhaskell-repo/haskell-hscolour/PKGBUILD
+--- archhaskell-habs.orig/haskell-hscolour/PKGBUILD
++++ archhaskell-habs/haskell-hscolour/PKGBUILD
 @@ -14,6 +14,8 @@ makedepends=()
  depends=("ghc=7.0.3-2"
           "sh"
-          "haskell-haskell98=1.1.0.1")
+          "haskell-containers=0.4.0.0")
 +provides=("hscolour")
 +replaces=("hscolour")
  options=('strip')
