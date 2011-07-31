@@ -10,4 +10,5 @@ patches/series
 /*/*.pkg.tar.xz
 /*/*.tar.gz
 /*/PKGBUILD
+/*/*.orig
 /*/src
