@@ -33,6 +33,13 @@ source_arg="--source"
 usage() {
     cat << EOF
 Usage: makeshsrc [options] -- [packages]
+
+Script for building source packages in your HABS dir.
+
+Options:
+-h          This help
+-a          Build full source packages
+-b <dir>    Location of your HABS dir (default .)
 EOF
 }
 
