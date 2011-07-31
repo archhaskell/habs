@@ -10,3 +10,4 @@ patches/series
 /*/*.pkg.tar.xz
 /*/*.tar.gz
 /*/PKGBUILD
+/*/src

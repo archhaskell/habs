@@ -1,0 +1,63 @@
+#! /bin/zsh
+
+set -eu
+
+##################################################
+# some useful stuff
+ALL_OFF="$(tput sgr0)"
+BOLD="$(tput bold)"
+BLUE="${BOLD}$(tput setaf 4)"
+GREEN="${BOLD}$(tput setaf 2)"
+RED="${BOLD}$(tput setaf 1)"
+YELLOW="${BOLD}$(tput setaf 3)"
+
+msg() {
+    local msg=$1; shift
+    printf "${GREEN}***${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+}
+
+error() {
+    local msg=$1; shift
+    printf "${RED}*** ERROR:${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+}
+
+die() {
+    [ -n "${1}" ] && error ${1}
+    exit 1
+}
+##################################################
+
+habs_dir=.
+source_arg="--source"
+
+usage() {
+    cat << EOF
+Usage: makeshsrc [options] -- [packages]
+EOF
+}
+
+buildsrc() {
+    msg "Building source in $PWD"
+    makepkg ${source_arg}
+}
+
+while getopts hab: opt; do
+    case "${opt}" in
+        h) usage; exit 0;;
+        a) source_arg="--allsource";;
+        b) habs_dir="${OPTARG}";;
+    esac
+done
+shift $((OPTIND - 1))
+
+for pkg0 in $@; do
+    pkg1=${(L)pkg0}
+    [ -d ${habs_dir}/${pkg1} ] && pkg=${pkg1}
+    [ -d ${habs_dir}/haskell-${pkg1} ] && pkg=haskell-${pkg1}
+    if [[ "x${pkg}" != "x" ]]; then
+        (cd ${habs_dir}/$pkg; buildsrc )
+    else
+        die "No such package: $pkg0" 
+    fi
+    pkg=
+done
