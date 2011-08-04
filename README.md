@@ -25,6 +25,10 @@ First clone the database in this repository:
     % git clone git://github.com/archhaskell/habs.git
     % cd habs
 
+Then sync the cabal index:
+
+    % cblrepo idxsync
+
 Then create all the PKGBUILDs for the packages:
 
     % cblrepo pkgbuild $(cblrepo build base|tail -n +2)
