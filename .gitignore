@@ -10,5 +10,6 @@ patches/series
 /*/*.pkg.tar.xz
 /*/*.tar.gz
 /*/PKGBUILD
+/*/cabal.patch
 /*/*.orig
 /*/src

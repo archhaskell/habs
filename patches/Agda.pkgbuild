@@ -1,0 +1,5 @@
+41a42,45
+>     #NP
+>     sed -i -e 's/\(import Data.Generics\)/\1 hiding (everythingBut)/' \
+>               src/full/Agda/Utils/Generics.hs \
+>               src/full/Agda/Interaction/Highlighting/Generate.hs
