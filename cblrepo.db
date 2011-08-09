@@ -1,3 +1,8 @@
+["ghc-core",[{"Version":"0.5.4"},[{"Dependency":"base >=4 && <5"},{"Dependency":"colorize-haskell -any"},{"Dependency":"directory -any"},{"Dependency":"filepath -any"},{"Dependency":"pcre-light -any"},{"Dependency":"process >=1.0.1"}],1]]
+["colorize-haskell",[{"Version":"1.0.1"},[{"Dependency":"ansi-terminal -any && -any"},{"Dependency":"base >=3 && <5 && >=3 && <5"},{"Dependency":"haskell-lexer -any && -any"}],1]]
+["haskell-lexer",[{"Version":"1.0"},[{"Dependency":"base -any"}],1]]
+["epic",[{"Version":"0.1.11"},[{"Dependency":"Cabal -any && -any"},{"Dependency":"array -any && -any"},{"Dependency":"base >=4 && <5 && >=4 && <5"},{"Dependency":"directory -any && -any"},{"Dependency":"haskell98 -any && -any"},{"Dependency":"mtl -any && -any"}],1]]
+["hashtables",[{"Version":"1.0.0.0"},[{"Dependency":"base >=4 && <5"},{"Dependency":"ghc-prim -any"},{"Dependency":"hashable >=1.1 && <2"},{"Dependency":"primitive -any"},{"Dependency":"vector >=0.7"}],1]]
 ["test-framework-quickcheck2",[{"Version":"0.2.10"},[{"Dependency":"QuickCheck >=2.4 && <2.5"},{"Dependency":"base >=4 && <5"},{"Dependency":"extensible-exceptions >=0.1.1 && <0.2.0"},{"Dependency":"random >=1"},{"Dependency":"test-framework >=0.2.0 && <0.5.0"}],21]]
 ["test-framework-hunit",[{"Version":"0.2.6"},[{"Dependency":"HUnit >=1.2 && <2"},{"Dependency":"base >=4 && <5"},{"Dependency":"extensible-exceptions >=0.1.1 && <0.2.0"},{"Dependency":"test-framework >=0.2.0"}],21]]
 ["test-framework-th",[{"Version":"0.2.1"},[{"Dependency":"base >=4 && <5"},{"Dependency":"haskell-src-exts -any"},{"Dependency":"haskell98 -any"},{"Dependency":"language-haskell-extract >=0.2"},{"Dependency":"regex-posix -any"},{"Dependency":"template-haskell -any"},{"Dependency":"test-framework -any"}],23]]

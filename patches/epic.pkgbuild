@@ -1,0 +1,11 @@
+diff -u haskell-epic.orig/PKGBUILD haskell-epic/PKGBUILD
+--- haskell-epic.orig/PKGBUILD	2011-08-09 14:04:41.069676871 +0200
++++ haskell-epic/PKGBUILD	2011-08-09 14:08:20.215713761 +0200
+@@ -13,6 +13,7 @@
+ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
++         "gc"
+          "haskell-cabal=1.10.1.0"
+          "haskell-array=0.3.0.2"
+          "haskell-directory=1.1.0.0"
