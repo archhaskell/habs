@@ -5,7 +5,7 @@ diff -u haskell-epic.orig/PKGBUILD haskell-epic/PKGBUILD
  makedepends=()
  depends=("ghc=7.0.3-2"
           "sh"
-+         "gc"
++         "gc" "happy"
           "haskell-cabal=1.10.1.0"
           "haskell-array=0.3.0.2"
           "haskell-directory=1.1.0.0"
