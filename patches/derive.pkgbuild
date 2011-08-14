@@ -1,11 +1,11 @@
-Index: archhaskell-repo/haskell-derive/PKGBUILD
+Index: archhaskell-habs/haskell-derive/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-derive/PKGBUILD
-+++ archhaskell-repo/haskell-derive/PKGBUILD
+--- archhaskell-habs.orig/haskell-derive/PKGBUILD
++++ archhaskell-habs/haskell-derive/PKGBUILD
 @@ -24,6 +24,8 @@ depends=("ghc=7.0.3-2"
           "haskell-template-haskell=2.5.0.0"
           "haskell-transformers=0.2.2.0"
-          "haskell-uniplate=1.6")
+          "haskell-uniplate=1.6.1")
 +provides=("derive")
 +replaces=("derive")
  options=('strip')
