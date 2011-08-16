@@ -1,3 +1,5 @@
+["nyan",[{"Version":"0.2"},[{"Dependency":"base >=4 && <5"},{"Dependency":"bytestring >=0.9"},{"Dependency":"mtl >=1.1"},{"Dependency":"ncurses >=0.2"},{"Dependency":"text >=0.11"}],1]]
+["ncurses",[{"Version":"0.2"},[{"Dependency":"base >=4 && <5"},{"Dependency":"containers >=0.2 && <0.5"},{"Dependency":"text >=0.7 && <0.12"},{"Dependency":"transformers >=0.2 && <0.3"}],1]]
 ["hinotify",[{"Version":"0.3.2"},[{"Dependency":"base >=3 && <5"},{"Dependency":"containers -any"},{"Dependency":"directory -any"},{"Dependency":"unix -any"}],1]]
 ["pointedlist",[{"Version":"0.4.0.2"},[{"Dependency":"base >=4 && <5"},{"Dependency":"binary -any"},{"Dependency":"derive -any"},{"Dependency":"fclabels >0.11.0 && <0.12"}],22]]
 ["ghc-mod",[{"Version":"0.6.0"},[{"Dependency":"attoparsec -any"},{"Dependency":"attoparsec-enumerator -any"},{"Dependency":"base >=4.0 && <5"},{"Dependency":"directory -any"},{"Dependency":"enumerator -any"},{"Dependency":"filepath -any"},{"Dependency":"ghc -any"},{"Dependency":"ghc-paths -any"},{"Dependency":"hlint >=1.7.1"},{"Dependency":"old-time -any"},{"Dependency":"process -any"},{"Dependency":"transformers -any"}],23]]
