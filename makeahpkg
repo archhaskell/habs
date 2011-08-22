@@ -58,7 +58,8 @@ EOF
 }
 
 buildpkg() {
-    if [[ -z "$(ls ${CHROOT_BUILDDIR}/repo | grep ${pkg}'.*'${arch}.pkg.tar.xz)" ]]; then
+    eval "$(grep '^pkg\(rel\|ver\)=' PKGBUILD)"
+    if [[ -z "$(ls ${CHROOT_BUILDDIR}/repo | grep "^${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz$")" ]]; then
         msg "Building in $PWD"
         sudo setarch ${arch} makechrootpkg -u -d -l ${build_chrootdir} -r ${CHROOT_DIR} -- -i
     else
