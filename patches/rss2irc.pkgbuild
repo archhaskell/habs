@@ -1,0 +1,5 @@
+37a38,41
+>     #NP: Live patching...
+>     sed -i -e 's/Control.Parallel.Strategies/Control.DeepSeq/' rss2irc.hs
+>     #NP: I had to manually add this patching line
+>     patch rss2irc.cabal ${srcdir}/cabal.patch
