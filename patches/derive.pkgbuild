@@ -5,7 +5,7 @@ Index: archhaskell-habs/haskell-derive/PKGBUILD
 @@ -24,6 +24,8 @@ depends=("ghc=7.0.3-2"
           "haskell-template-haskell=2.5.0.0"
           "haskell-transformers=0.2.2.0"
-          "haskell-uniplate=1.6.1")
+          "haskell-uniplate=1.6.2")
 +provides=("derive")
 +replaces=("derive")
  options=('strip')
