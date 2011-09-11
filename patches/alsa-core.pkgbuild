@@ -1,0 +1,11 @@
+--- PKGBUILD.old	2011-09-10 23:25:55.598581946 -0700
++++ PKGBUILD	2011-09-10 23:26:18.201914235 -0700
+@@ -14,7 +14,7 @@
+ depends=("ghc=7.0.3-2"
+          "sh"
+          "haskell-extensible-exceptions=0.1.1.2"
+-         "asound")
++         "alsa-lib")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
