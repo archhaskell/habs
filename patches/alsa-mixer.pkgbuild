@@ -1,11 +1,14 @@
---- PKGBUILD.old	2011-09-10 23:29:34.528571790 -0700
-+++ PKGBUILD	2011-09-10 23:31:38.051899397 -0700
-@@ -13,8 +13,7 @@
+Index: archhaskell-habs/haskell-alsa-mixer/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-alsa-mixer/PKGBUILD
++++ archhaskell-habs/haskell-alsa-mixer/PKGBUILD
+@@ -13,8 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
           "sh"
 -         "haskell-alsa-core=0.5"
 -         "asound")
++         "c2hs"
 +         "haskell-alsa-core=0.5")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
