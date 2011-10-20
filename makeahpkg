@@ -103,12 +103,15 @@ Server = http://www.kiwilight.com/\$repo/\$arch
 
 [core]
 Include = /etc/pacman.d/mirrorlist
+Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 
 [extra]
 Include = /etc/pacman.d/mirrorlist
+Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 
 [community]
 Include = /etc/pacman.d/mirrorlist
+Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 EOF
 
     sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
