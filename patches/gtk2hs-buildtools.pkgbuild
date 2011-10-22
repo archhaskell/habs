@@ -1,0 +1,15 @@
+Index: archhaskell-habs/gtk2hs-buildtools/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/gtk2hs-buildtools/PKGBUILD
++++ archhaskell-habs/gtk2hs-buildtools/PKGBUILD
+@@ -17,7 +17,9 @@ makedepends=("ghc=7.0.3-2"
+              "haskell-filepath=1.2.0.0"
+              "haskell-pretty=1.0.1.2"
+              "haskell-process=1.0.1.5"
+-             "haskell-random=1.0.0.3")
++             "haskell-random=1.0.0.3"
++             "alex"
++             "happy")
+ depends=()
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

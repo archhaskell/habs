@@ -1,13 +1,13 @@
-Index: archhaskell-repo/haskell-gconf/PKGBUILD
+Index: archhaskell-habs/haskell-gconf/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-gconf/PKGBUILD
-+++ archhaskell-repo/haskell-gconf/PKGBUILD
-@@ -17,7 +17,9 @@ depends=("ghc=7.0.3-2"
-          "haskell-containers=0.4.0.0"
-          "haskell-glib=0.12.0"
-          "haskell-haskell98=1.1.0.1"
--         "haskell-mtl=2.0.1.0")
-+         "haskell-mtl=2.0.1.0"
+--- archhaskell-habs.orig/haskell-gconf/PKGBUILD
++++ archhaskell-habs/haskell-gconf/PKGBUILD
+@@ -13,7 +13,9 @@ arch=('i686' 'x86_64')
+ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "sh"
+-         "haskell-glib=0.12.1")
++         "haskell-glib=0.12.1"
 +         "gconf"
 +         "gtk2hs-buildtools")
  options=('strip')
