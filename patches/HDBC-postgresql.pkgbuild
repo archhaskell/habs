@@ -1,0 +1,11 @@
+--- PKGBUILD.orig	2011-10-25 19:08:16.625542282 -0700
++++ PKGBUILD	2011-10-25 19:08:34.655542906 -0700
+@@ -21,7 +21,7 @@
+          "haskell-parsec=3.1.1"
+          "haskell-time=1.2.0.3"
+          "haskell-utf8-string=0.3.6"
+-         "pq")
++         "postgresql-libs")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
