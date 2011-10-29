@@ -1,11 +1,11 @@
-Index: h4a/haskell-exif/PKGBUILD
+Index: archhaskell-habs/haskell-exif/PKGBUILD
 ===================================================================
---- h4a.orig/haskell-exif/PKGBUILD
-+++ h4a/haskell-exif/PKGBUILD
-@@ -13,8 +13,7 @@ arch=('i686' 'x86_64')
+--- archhaskell-habs.orig/haskell-exif/PKGBUILD
++++ archhaskell-habs/haskell-exif/PKGBUILD
+@@ -12,8 +12,7 @@ license=("BSD3")
+ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
-          "sh"
 -         "exif"
 -         "m")
 +         "libexif")

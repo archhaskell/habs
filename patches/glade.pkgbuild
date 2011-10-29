@@ -2,12 +2,12 @@ Index: archhaskell-habs/haskell-glade/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-glade/PKGBUILD
 +++ archhaskell-habs/haskell-glade/PKGBUILD
-@@ -14,7 +14,9 @@ makedepends=()
+@@ -13,7 +13,9 @@ arch=('i686' 'x86_64')
+ makedepends=()
  depends=("ghc=7.0.3-2"
-          "sh"
-          "haskell-glib=0.12.1"
--         "haskell-gtk=0.12.1")
-+         "haskell-gtk=0.12.1"
+          "haskell-glib=0.12.1-1"
+-         "haskell-gtk=0.12.1-1")
++         "haskell-gtk=0.12.1-1"
 +         "libglade"
 +         "gtk2hs-buildtools")
  options=('strip')

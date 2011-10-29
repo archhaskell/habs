@@ -2,12 +2,12 @@ Index: archhaskell-habs/haskell-gtk/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-gtk/PKGBUILD
 +++ archhaskell-habs/haskell-gtk/PKGBUILD
-@@ -20,7 +20,10 @@ depends=("ghc=7.0.3-2"
-          "haskell-gio=0.12.1"
-          "haskell-glib=0.12.1"
-          "haskell-mtl=2.0.1.0"
--         "haskell-pango=0.12.1")
-+         "haskell-pango=0.12.1"
+@@ -16,7 +16,10 @@ depends=("ghc=7.0.3-2"
+          "haskell-gio=0.12.1-1"
+          "haskell-glib=0.12.1-1"
+          "haskell-mtl=2.0.1.0-3.1"
+-         "haskell-pango=0.12.1-1")
++         "haskell-pango=0.12.1-1"
 +         "glib"
 +         "gtk2"
 +         "gtk2hs-buildtools")

@@ -1,5 +1,15 @@
-37a38,41
->     #NP: Live patching...
->     sed -i -e 's/Control.Parallel.Strategies/Control.DeepSeq/' rss2irc.hs
->     #NP: I had to manually add this patching line
->     patch rss2irc.cabal ${srcdir}/cabal.patch
+Index: archhaskell-habs/rss2irc/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/rss2irc/PKGBUILD
++++ archhaskell-habs/rss2irc/PKGBUILD
+@@ -33,6 +33,10 @@ sha256sums=("8cb2f6ac1304895bd49fe14b9a4
+ build() {
+     cd ${srcdir}/${_hkgname}-${pkgver}
+     patch rss2irc.cabal ${srcdir}/cabal.patch 
++
++    # NP
++    sed -i -e 's/Control.Parallel.Strategies/Control.DeepSeq/' rss2irc.hs
++
+     runhaskell Setup configure -O --prefix=/usr --docdir=/usr/share/doc/${pkgname}
+     runhaskell Setup build
+ }

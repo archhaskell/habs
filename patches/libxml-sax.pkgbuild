@@ -1,11 +1,11 @@
-Index: archhaskell-repo/haskell-libxml-sax/PKGBUILD
+Index: archhaskell-habs/haskell-libxml-sax/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-libxml-sax/PKGBUILD
-+++ archhaskell-repo/haskell-libxml-sax/PKGBUILD
-@@ -16,7 +16,7 @@ depends=("ghc=7.0.3-2"
-          "haskell-bytestring=0.9.1.10"
-          "haskell-text=0.11.0.5"
-          "haskell-xml-types=0.3"
+--- archhaskell-habs.orig/haskell-libxml-sax/PKGBUILD
++++ archhaskell-habs/haskell-libxml-sax/PKGBUILD
+@@ -14,7 +14,7 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "haskell-text=0.11.0.5-2.1"
+          "haskell-xml-types=0.3-18"
 -         "xml2")
 +         "libxml2")
  options=('strip')

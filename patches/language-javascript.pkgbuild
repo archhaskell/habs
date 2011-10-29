@@ -1,13 +1,15 @@
-Index: archhaskell-repo/haskell-language-javascript/PKGBUILD
+Index: archhaskell-habs/haskell-language-javascript/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-language-javascript/PKGBUILD
-+++ archhaskell-repo/haskell-language-javascript/PKGBUILD
-@@ -13,6 +13,8 @@ arch=('i686' 'x86_64')
+--- archhaskell-habs.orig/haskell-language-javascript/PKGBUILD
++++ archhaskell-habs/haskell-language-javascript/PKGBUILD
+@@ -13,7 +13,9 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
-          "sh"
+          "haskell-mtl=2.0.1.0-3.1"
+-         "haskell-utf8-light=0.4.0.1-18")
++         "haskell-utf8-light=0.4.0.1-18"
 +         "alex"
-+         "happy"
-          "haskell-array=0.3.0.2"
-          "haskell-containers=0.4.0.0"
-          "haskell-mtl=2.0.1.0"
++         "happy")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

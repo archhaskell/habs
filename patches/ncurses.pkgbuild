@@ -1,23 +1,25 @@
---- PKGBUILD.orig	2011-08-16 09:36:06.650501109 +0200
-+++ PKGBUILD	2011-08-16 09:44:32.096683260 +0200
-@@ -16,8 +16,7 @@
-          "haskell-containers=0.4.0.0"
-          "haskell-text=0.11.0.5"
-          "haskell-transformers=0.2.2.0"
+Index: archhaskell-habs/haskell-ncurses/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-ncurses/PKGBUILD
++++ archhaskell-habs/haskell-ncurses/PKGBUILD
+@@ -14,8 +14,7 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "haskell-text=0.11.0.5-2.1"
+          "haskell-transformers=0.2.2.0-3.1"
 -         "panel"
 -         "ncursesw")
 +         "ncurses")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
-@@ -26,7 +25,9 @@
+@@ -24,7 +23,9 @@ sha256sums=("dd5c59ef7fdea903534a93165cc
  # PKGBUILD functions
  build() {
      cd ${srcdir}/${_hkgname}-${pkgver}
 -    
-+    #NP
++    # NP
 +    find . -name '*.c*' -print0 | xargs -0 \
-+      sed -ie 's,ncursesw/,,g'
++        sed -ie 's,ncursesw/,,g'
      runhaskell Setup configure -O -p --enable-split-objs --enable-shared \
          --prefix=/usr --docdir=/usr/share/doc/${pkgname} \
          --libsubdir=\$compiler/site-local/\$pkgid

@@ -1,11 +1,11 @@
-Index: archhaskell-repo/haskell-gnutls/PKGBUILD
+Index: archhaskell-habs/haskell-gnutls/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-gnutls/PKGBUILD
-+++ archhaskell-repo/haskell-gnutls/PKGBUILD
-@@ -16,8 +16,7 @@ depends=("ghc=7.0.3-2"
-          "haskell-bytestring=0.9.1.10"
-          "haskell-monads-tf=0.1.0.0"
-          "haskell-transformers=0.2.2.0"
+--- archhaskell-habs.orig/haskell-gnutls/PKGBUILD
++++ archhaskell-habs/haskell-gnutls/PKGBUILD
+@@ -14,8 +14,7 @@ makedepends=()
+ depends=("ghc=7.0.3-2"
+          "haskell-monads-tf=0.1.0.0-18"
+          "haskell-transformers=0.2.2.0-3.1"
 -         "gnutls"
 -         "gnutls-extra")
 +         "gnutls")

@@ -1,10 +1,13 @@
---- PKGBUILD.old	2011-09-10 23:25:55.598581946 -0700
-+++ PKGBUILD	2011-09-10 23:26:18.201914235 -0700
-@@ -14,7 +14,7 @@
- depends=("ghc=7.0.3-2"
-          "sh"
-          "haskell-extensible-exceptions=0.1.1.2"
--         "asound")
+Index: archhaskell-habs/haskell-alsa-core/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-alsa-core/PKGBUILD
++++ archhaskell-habs/haskell-alsa-core/PKGBUILD
+@@ -11,7 +11,8 @@ url="http://www.haskell.org/haskellwiki/
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+ makedepends=()
+-depends=("ghc=7.0.3-2" "asound")
++depends=("ghc=7.0.3-2"
 +         "alsa-lib")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

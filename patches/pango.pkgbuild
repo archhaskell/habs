@@ -2,12 +2,14 @@ Index: archhaskell-habs/haskell-pango/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-pango/PKGBUILD
 +++ archhaskell-habs/haskell-pango/PKGBUILD
-@@ -13,6 +13,8 @@ arch=('i686' 'x86_64')
- makedepends=()
+@@ -14,7 +14,9 @@ makedepends=()
  depends=("ghc=7.0.3-2"
-          "sh"
+          "haskell-cairo=0.12.1-1"
+          "haskell-glib=0.12.1-1"
+-         "haskell-mtl=2.0.1.0-3.1")
++         "haskell-mtl=2.0.1.0-3.1"
 +         "pango"
-+         "gtk2hs-buildtools"
-          "haskell-array=0.3.0.2"
-          "haskell-cairo=0.12.0"
-          "haskell-containers=0.4.0.0"
++         "gtk2hs-buildtools")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

@@ -1,11 +1,11 @@
-Index: archhaskell-repo/haskell-hledger/PKGBUILD
+Index: archhaskell-habs/haskell-hledger/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-hledger/PKGBUILD
-+++ archhaskell-repo/haskell-hledger/PKGBUILD
-@@ -30,6 +30,8 @@ depends=("ghc=7.0.3-2"
-          "haskell-split=0.1.4"
-          "haskell-time=1.2.0.3"
-          "haskell-utf8-string=0.3.6")
+--- archhaskell-habs.orig/haskell-hledger/PKGBUILD
++++ archhaskell-habs/haskell-hledger/PKGBUILD
+@@ -22,6 +22,8 @@ depends=("ghc=7.0.3-2"
+          "haskell-safe=0.3-18"
+          "haskell-split=0.1.4.1-1"
+          "haskell-utf8-string=0.3.6-7.2")
 +provides=("hledger")
 +replaces=("hledger")
  options=('strip')

@@ -1,21 +1,25 @@
---- PKGBUILD.orig	2011-08-10 10:53:49.000054651 +0200
-+++ PKGBUILD	2011-08-10 10:53:05.572860306 +0200
-@@ -13,6 +13,7 @@
- makedepends=()
- depends=("ghc=7.0.3-2"
-          "sh"
-+         "alex"
-          "haskell-quickcheck=2.4.0.1"
-          "haskell-array=0.3.0.2"
-          "haskell-binary=0.5.0.2"
-@@ -39,6 +40,10 @@
+Index: archhaskell-habs/haskell-agda/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-agda/PKGBUILD
++++ archhaskell-habs/haskell-agda/PKGBUILD
+@@ -19,7 +19,8 @@ depends=("ghc=7.0.3-2"
+          "haskell-mtl=2.0.1.0-3.1"
+          "haskell-syb=0.3-2.1"
+          "haskell-xhtml=3000.2.0.1-7.1"
+-         "haskell-zlib=0.5.3.1-2.1")
++         "haskell-zlib=0.5.3.1-2.1"
++         "alex")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
+         "cabal.patch")
+@@ -30,6 +31,10 @@ sha256sums=("5cd3b69a744b86b74344b790350
  # PKGBUILD functions
  build() {
      cd ${srcdir}/${_hkgname}-${pkgver}
 +    #NP
 +    sed -i -e 's/\(import Data.Generics\)/\1 hiding (everythingBut)/' \
-+              src/full/Agda/Utils/Generics.hs \
-+              src/full/Agda/Interaction/Highlighting/Generate.hs
++        src/full/Agda/Utils/Generics.hs \
++        src/full/Agda/Interaction/Highlighting/Generate.hs
      patch Agda.cabal ${srcdir}/cabal.patch 
      runhaskell Setup configure -O -p --enable-split-objs --enable-shared \
          --prefix=/usr --docdir=/usr/share/doc/${pkgname} \

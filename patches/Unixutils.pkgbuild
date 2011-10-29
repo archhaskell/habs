@@ -2,13 +2,13 @@ Index: archhaskell-habs/haskell-unixutils/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-unixutils/PKGBUILD
 +++ archhaskell-habs/haskell-unixutils/PKGBUILD
-@@ -27,8 +27,7 @@ depends=("ghc=7.0.3-2"
-          "haskell-regex-tdfa=1.1.8"
-          "haskell-time=1.2.0.3"
-          "haskell-unix=2.4.2.0"
--         "haskell-zlib=0.5.3.1"
+@@ -18,8 +18,7 @@ depends=("ghc=7.0.3-2"
+          "haskell-puremd5=2.1.0.3-23"
+          "haskell-regex-tdfa=1.1.8-18"
+          "haskell-unix=2.4.2.0-2"
+-         "haskell-zlib=0.5.3.1-2.1"
 -         "crypt")
-+         "haskell-zlib=0.5.3.1")
++         "haskell-zlib=0.5.3.1-2.1")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

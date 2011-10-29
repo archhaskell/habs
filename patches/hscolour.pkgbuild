@@ -2,10 +2,10 @@ Index: archhaskell-habs/haskell-hscolour/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-hscolour/PKGBUILD
 +++ archhaskell-habs/haskell-hscolour/PKGBUILD
-@@ -14,6 +14,8 @@ makedepends=()
- depends=("ghc=7.0.3-2"
-          "sh"
-          "haskell-containers=0.4.0.0")
+@@ -12,6 +12,8 @@ license=("GPL")
+ arch=('i686' 'x86_64')
+ makedepends=()
+ depends=("ghc=7.0.3-2")
 +provides=("hscolour")
 +replaces=("hscolour")
  options=('strip')

@@ -1,12 +1,13 @@
-Index: archhaskell-repo/haskell-digest/PKGBUILD
+Index: archhaskell-habs/haskell-digest/PKGBUILD
 ===================================================================
---- archhaskell-repo.orig/haskell-digest/PKGBUILD
-+++ archhaskell-repo/haskell-digest/PKGBUILD
-@@ -14,7 +14,7 @@ makedepends=()
- depends=("ghc=7.0.3-2"
-          "sh"
-          "haskell-bytestring=0.9.1.10"
--         "z")
+--- archhaskell-habs.orig/haskell-digest/PKGBUILD
++++ archhaskell-habs/haskell-digest/PKGBUILD
+@@ -11,7 +11,8 @@ url="http://hackage.haskell.org/package/
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+ makedepends=()
+-depends=("ghc=7.0.3-2" "z")
++depends=("ghc=7.0.3-2"
 +         "zlib")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
