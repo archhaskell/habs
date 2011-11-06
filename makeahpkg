@@ -125,7 +125,8 @@ EOF
 fi
 
 if [[ "${update_pristine_first}" == "1" ]]; then
-    msg "Updating the the pristine chroot..."
+    msg "Updating the the pristine chroot (in 5 sec)..."
+    sleep 5
     sudo setarch ${arch} mkarchroot -u ${CHROOT_ROOTDIR}
     clean_build_first=1
     msg " Done"
