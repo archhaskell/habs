@@ -8,7 +8,7 @@ Index: archhaskell-habs/arbtt/PKGBUILD
               "haskell-utf8-string=0.3.6-7.2")
 -depends=()
 +depends=("gmp"
-+         "libxx")
++         "libxss")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  
