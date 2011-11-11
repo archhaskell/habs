@@ -5,9 +5,9 @@ Index: archhaskell-habs/haskell-glade/PKGBUILD
 @@ -13,7 +13,9 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
-          "haskell-glib=0.12.1-1"
--         "haskell-gtk=0.12.1-1")
-+         "haskell-gtk=0.12.1-1"
+          "haskell-glib=0.12.1-2"
+-         "haskell-gtk=0.12.1-2")
++         "haskell-gtk=0.12.1-2"
 +         "libglade"
 +         "gtk2hs-buildtools")
  options=('strip')

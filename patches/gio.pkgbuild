@@ -1,14 +1,13 @@
-Index: archhaskell-habs/haskell-cairo/PKGBUILD
+Index: archhaskell-habs/haskell-gio/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-cairo/PKGBUILD
-+++ archhaskell-habs/haskell-cairo/PKGBUILD
-@@ -12,7 +12,9 @@ license=("BSD3")
- arch=('i686' 'x86_64')
+--- archhaskell-habs.orig/haskell-gio/PKGBUILD
++++ archhaskell-habs/haskell-gio/PKGBUILD
+@@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
+          "haskell-glib=0.12.1-2"
 -         "haskell-mtl=2.0.1.0-3.1")
 +         "haskell-mtl=2.0.1.0-3.1"
-+         "cairo"
 +         "gtk2hs-buildtools")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
