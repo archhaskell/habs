@@ -116,7 +116,7 @@ EOF
 
     sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
-        base base-devel \
+        base base-devel curl \
         sudo ghc
 
     # no point in updating the newly built pristine
