@@ -27,7 +27,7 @@ First clone the database in this repository:
 
 Then sync the cabal index:
 
-    % cblrepo idxsync
+    % cblrepo sync
 
 Then create all the PKGBUILDs for the packages:
 
