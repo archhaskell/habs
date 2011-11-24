@@ -6,8 +6,8 @@ Index: archhaskell-habs/haskell-gconf/PKGBUILD
  arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
--         "haskell-glib=0.12.1-2")
-+         "haskell-glib=0.12.1-2"
+-         "haskell-glib=0.12.2-1")
++         "haskell-glib=0.12.2-1"
 +         "gconf"
 +         "gtk2hs-buildtools")
  options=('strip')

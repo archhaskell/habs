@@ -5,7 +5,7 @@ Index: archhaskell-habs/haskell-gio/PKGBUILD
 @@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.0.3-2"
-          "haskell-glib=0.12.1-2"
+          "haskell-glib=0.12.2-1"
 -         "haskell-mtl=2.0.1.0-3.1")
 +         "haskell-mtl=2.0.1.0-3.1"
 +         "gtk2hs-buildtools")
