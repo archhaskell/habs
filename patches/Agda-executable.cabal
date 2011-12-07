@@ -1,0 +1,10 @@
+Index: archhaskell-habs/Agda-executable.cabal
+===================================================================
+--- archhaskell-habs.orig/Agda-executable.cabal
++++ archhaskell-habs/Agda-executable.cabal
+@@ -37,4 +37,4 @@ executable agda
+     -- However, we sometimes recommend people to use +RTS to control
+     -- Agda's memory usage, so we want this functionality enabled by
+     -- default.
+-    ghc-options: -rtsopts
++    ghc-options: -rtsopts -dynamic
