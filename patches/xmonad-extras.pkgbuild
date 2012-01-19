@@ -6,9 +6,9 @@ Index: archhaskell-habs/haskell-xmonad-extras/PKGBUILD
           "haskell-regex-posix=0.94.4-2.1"
           "haskell-split=0.1.4.1-1"
           "haskell-unix=2.4.2.0-2"
--         "haskell-xmonad=0.10-1"
+-         "haskell-xmonad=0.10-2"
 -         "haskell-xmonad-contrib=0.10-1")
-+         "xmonad=0.10-1"
++         "xmonad=0.10-2"
 +         "xmonad-contrib=0.10-1")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
