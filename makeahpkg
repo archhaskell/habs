@@ -99,9 +99,10 @@ if [ ! -d ${CHROOT_ROOTDIR} ]; then
 HoldPkg = pacman libc
 SyncFirst = pacman
 Architecture = auto
+SigLevel = Never
 
-[repo]
-Server = file:///repo
+#[repo]
+#Server = file:///repo
 
 [haskell]
 Server = http://www.kiwilight.com/\$repo/\$arch
@@ -123,6 +124,11 @@ EOF
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
         base base-devel curl \
         sudo ghc
+
+    # fix up the local repo
+    sudo mkdir ${CHROOT_ROOTDIR}/repo
+    sudo touch ${CHROOT_ROOTDIR}/repo/repo.db
+    sudo sed -i.org -e 's/^#\(.*\)/\1/' ${CHROOT_ROOTDIR}/etc/pacman.conf
 
     # no point in updating the newly built pristine
     update_pristine_first=0
