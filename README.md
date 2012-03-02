@@ -7,7 +7,7 @@ Haskell packages.  If you want to use the official build of this repository
 then add the following two lines to your `/etc/pacman.conf` file:
 
     [haskell]
-    Server = http://www.kiwilight.com/haskell/$arch
+    Server =  http://xsounds.org/~haskell/$arch
 
 If you'd like to build the repository yourself, then you need to install the
 following packages:
