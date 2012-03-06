@@ -104,8 +104,8 @@ SigLevel = Never
 #[repo]
 #Server = file:///repo
 
-##[haskell]
-##Server = http://www.kiwilight.com/\$repo/\$arch
+[haskell]
+Server = http://xsounds.org/~haskell/\$arch
 
 [core]
 Include = /etc/pacman.d/mirrorlist
