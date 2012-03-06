@@ -1,0 +1,75 @@
+# Maintainer: Magnus Therning <magnus@therning.org>
+# Special note for devs looking to upgrade this package:
+#   ghc places a unique hash for each library when it is built.
+#   Libraries depend on versions specified by those hashes.
+#   This implies that all libraries need to be rebuilt when ghc is rebuilt.
+
+# Todo:
+
+pkgname=(ghc ghc-haddock)
+pkgbase=ghc
+pkgver=7.4.1
+pkgrel=5
+pkgdesc='The Glasgow Haskell Compiler'
+arch=('i686' 'x86_64')
+url='http://www.haskell.org/ghc/'
+license=('custom')
+makedepends=('ghc' 'happy' 'perl' 'libxslt' 'docbook-xsl' 'gmp>=0' 'gcc')
+groups=('haskell')
+source=("http://www.haskell.org/ghc/dist/${pkgver}/ghc-${pkgver}-src.tar.bz2"
+        'fix-gen_contents_index.patch'
+        'build.mk')
+
+build() {
+  cd ${srcdir}/${pkgname}-${pkgver}
+
+  cp ${srcdir}/build.mk mk/build.mk
+  patch -p3 < ${srcdir}/fix-gen_contents_index.patch
+
+  ./configure --prefix=/usr 
+  make
+}
+
+package_ghc() {
+  depends=('perl' 'gmp>=5.0' 'gcc' 'haddock')
+  install='ghc.install'
+
+  cd ${srcdir}/${pkgbase}-${pkgver}
+
+  make DESTDIR=${pkgdir} install
+
+  # remove Haddock
+  rm -fr \
+    ${pkgdir}/usr/bin/haddock \
+    ${pkgdir}/usr/bin/haddock-ghc-7.4.1 \
+    ${pkgdir}/usr/lib/ghc-7.4.1/haddock \
+    ${pkgdir}/usr/lib/ghc-7.4.1/latex/haddock.sty \
+    ${pkgdir}/usr/lib/ghc-7.4.1/html
+
+  install -d ${pkgdir}/usr/share/licenses/ghc
+  install -m644 LICENSE ${pkgdir}/usr/share/licenses/ghc
+}
+
+package_ghc-haddock() {
+  provides=('haddock')
+
+  cd ${srcdir}/${pkgbase}-${pkgver}
+
+  mkdir -p ${pkgdir}_tmp
+  make DESTDIR=${pkgdir}_tmp install
+
+  install -d ${pkgdir}/usr/bin
+  mv ${pkgdir}_tmp/usr/bin/haddock ${pkgdir}/usr/bin
+  mv ${pkgdir}_tmp/usr/bin/haddock-ghc-7.4.1 ${pkgdir}/usr/bin
+  install -d ${pkgdir}/usr/lib/ghc-7.4.1/latex
+  mv ${pkgdir}_tmp/usr/lib/ghc-7.4.1/haddock ${pkgdir}/usr/lib/ghc-7.4.1
+  mv ${pkgdir}_tmp/usr/lib/ghc-7.4.1/latex/haddock.sty ${pkgdir}/usr/lib/ghc-7.4.1/latex
+  mv ${pkgdir}_tmp/usr/lib/ghc-7.4.1/html ${pkgdir}/usr/lib/ghc-7.4.1
+
+  install -d ${pkgdir}/usr/share/licenses/ghc-haddock
+  install -m644 LICENSE ${pkgdir}/usr/share/licenses/ghc-haddock
+}
+
+sha256sums=('721c09a49e519b7459b67b451b5103252ba3833906a7a24c3a3679ff94669a79'
+            'ae10835b3a9f5cd33ed6c50166c7d9c1cccc1eae543264273c55916e8a7f595e'
+            'f4c1632516f14e3bd5c679072098848446ce65fdf44d3636eb99852256fd5f09')

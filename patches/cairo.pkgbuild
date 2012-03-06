@@ -1,0 +1,17 @@
+Index: ah-ghc74/haskell-cairo/PKGBUILD
+===================================================================
+--- ah-ghc74.orig/haskell-cairo/PKGBUILD
++++ ah-ghc74/haskell-cairo/PKGBUILD
+@@ -10,9 +10,10 @@ pkgdesc="Binding to the Cairo library."
+ url="http://projects.haskell.org/gtk2hs/"
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+-makedepends=("haddock")
++makedepends=("haddock" "gtk2hs-buildtools")
+ depends=("ghc=7.4.1-1"
+-         "haskell-mtl=2.0.1.0-5")
++         "haskell-mtl=2.0.1.0-5"
++         "cairo")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

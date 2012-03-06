@@ -1,0 +1,16 @@
+Index: new-ghc/haskell-x11-xft/PKGBUILD
+===================================================================
+--- new-ghc.orig/haskell-x11-xft/PKGBUILD
++++ new-ghc/haskell-x11-xft/PKGBUILD
+@@ -11,9 +11,10 @@ url="http://hackage.haskell.org/package/
+ license=("LGPL")
+ arch=('i686' 'x86_64')
+ makedepends=("haddock")
+ depends=("ghc=7.4.1-1"
+          "haskell-x11=1.5.0.1-5"
+-         "haskell-utf8-string=0.3.7-5")
++         "haskell-utf8-string=0.3.7-5"
++         "libxft")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

@@ -1,14 +1,14 @@
-Index: archhaskell-habs/haskell-unixutils/PKGBUILD
+Index: ah-ghc74/haskell-unixutils/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-unixutils/PKGBUILD
-+++ archhaskell-habs/haskell-unixutils/PKGBUILD
-@@ -18,8 +18,7 @@ depends=("ghc=7.0.3-2"
-          "haskell-puremd5=2.1.0.3-23"
-          "haskell-regex-tdfa=1.1.8-18"
-          "haskell-unix=2.4.2.0-2"
--         "haskell-zlib=0.5.3.1-2.1"
+--- ah-ghc74.orig/haskell-unixutils/PKGBUILD
++++ ah-ghc74/haskell-unixutils/PKGBUILD
+@@ -17,8 +17,7 @@ depends=("ghc=7.4.1-1"
+          "haskell-parallel=3.2.0.2-5"
+          "haskell-puremd5=2.1.0.3-6"
+          "haskell-regex-tdfa=1.1.8-5"
+-         "haskell-zlib=0.5.3.3-4"
 -         "crypt")
-+         "haskell-zlib=0.5.3.1-2.1")
++         "haskell-zlib=0.5.3.3-4")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

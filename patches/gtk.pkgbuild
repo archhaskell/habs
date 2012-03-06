@@ -1,0 +1,20 @@
+Index: new-ghc/haskell-gtk/PKGBUILD
+===================================================================
+--- new-ghc.orig/haskell-gtk/PKGBUILD
++++ new-ghc/haskell-gtk/PKGBUILD
+@@ -10,12 +10,13 @@ pkgdesc="Binding to the Gtk+ graphical u
+ url="http://projects.haskell.org/gtk2hs/"
+ license=("LGPL-2.1")
+ arch=('i686' 'x86_64')
+-makedepends=("haddock")
++makedepends=("haddock" "gtk2hs-buildtools")
+ depends=("ghc=7.4.1-1"
+          "haskell-cairo=0.12.2-4"
+          "haskell-glib=0.12.2-4"
+          "haskell-mtl=2.0.1.0-5"
+-         "haskell-pango=0.12.2-4")
++         "haskell-pango=0.12.2-4"
++         "gtk2")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

@@ -1,14 +1,13 @@
-Index: archhaskell-habs/haskell-haskell-src-exts/PKGBUILD
+Index: ah-ghc74/haskell-haskell-src-exts/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-haskell-src-exts/PKGBUILD
-+++ archhaskell-habs/haskell-haskell-src-exts/PKGBUILD
-@@ -12,7 +12,8 @@ license=("BSD3")
+--- ah-ghc74.orig/haskell-haskell-src-exts/PKGBUILD
++++ ah-ghc74/haskell-haskell-src-exts/PKGBUILD
+@@ -10,7 +10,7 @@ pkgdesc="Manipulating Haskell source: ab
+ url="http://code.haskell.org/haskell-src-exts"
+ license=("BSD3")
  arch=('i686' 'x86_64')
- makedepends=()
- depends=("ghc=7.0.3-2"
--         "haskell-cpphs=1.13.2-1")
-+         "haskell-cpphs=1.13.2-1"
-+         "happy")
+-makedepends=("haddock")
++makedepends=("haddock" "happy")
+ depends=("ghc=7.4.1-1"
+          "haskell-cpphs=1.13.3-1")
  options=('strip')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"

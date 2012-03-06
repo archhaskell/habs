@@ -1,0 +1,13 @@
+Index: new-ghc/haskell-glib/src/glib-0.12.2/System/Glib/hsgclosure.c
+===================================================================
+--- new-ghc.orig/haskell-glib/src/glib-0.12.2/System/Glib/hsgclosure.c
++++ new-ghc/haskell-glib/src/glib-0.12.2/System/Glib/hsgclosure.c
+@@ -107,7 +107,7 @@ gtk2hs_closure_marshal(GClosure *closure
+     WHEN_DEBUG(g_debug("gtk2hs_closure_marshal(%p): about to rts_evalIO", hc->callback));
+     
+     /* perform the call */
+-    cap=rts_evalIO(CAP rts_apply(CAP (HaskellObj)runIO_closure, call),&ret);
++    rts_evalIO(CAP rts_apply(CAP (HaskellObj)runIO_closure, call),&ret);
+     
+     WHEN_DEBUG(g_debug("gtk2hs_closure_marshal(%p): about to rts_checkSchedStatus", hc->callback));
+     

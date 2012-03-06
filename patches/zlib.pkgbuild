@@ -1,0 +1,13 @@
+Index: new-ghc/haskell-zlib/PKGBUILD
+===================================================================
+--- new-ghc.orig/haskell-zlib/PKGBUILD
++++ new-ghc/haskell-zlib/PKGBUILD
+@@ -11,7 +11,7 @@ url="http://hackage.haskell.org/package/
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+ makedepends=("haddock")
+-depends=("ghc=7.4.1-1" "z")
++depends=("ghc=7.4.1-1" "zlib")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

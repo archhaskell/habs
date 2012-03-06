@@ -1,0 +1,9 @@
+Index: new-ghc/haskell-dbus/src/DBus-0.4/DBus.cabal
+===================================================================
+--- new-ghc.orig/haskell-dbus/src/DBus-0.4/DBus.cabal
++++ new-ghc/haskell-dbus/src/DBus-0.4/DBus.cabal
+@@ -19,3 +19,4 @@ exposed-modules: DBus, DBus.Message, DBu
+ other-modules:   DBus.Internal, DBus.Shared
+ extra-source-files: configure configure.ac DBus.buildinfo.in
+ extra-tmp-files: autom4te.cache config.log config.status DBus.buildinfo
++pkgconfig-depends:  dbus-1

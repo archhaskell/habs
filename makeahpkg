@@ -104,8 +104,8 @@ SigLevel = Never
 #[repo]
 #Server = file:///repo
 
-[haskell]
-Server = http://www.kiwilight.com/\$repo/\$arch
+##[haskell]
+##Server = http://www.kiwilight.com/\$repo/\$arch
 
 [core]
 Include = /etc/pacman.d/mirrorlist
@@ -123,7 +123,7 @@ EOF
     sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
         base base-devel curl \
-        sudo ghc
+        sudo
 
     # fix up the local repo
     sudo mkdir ${CHROOT_ROOTDIR}/repo
@@ -138,6 +138,7 @@ fi
 if [[ "${update_pristine_first}" == "1" ]]; then
     msg "Updating the the pristine chroot (in 5 sec)..."
     sleep 5
+    msg "starting..."
     sudo setarch ${arch} mkarchroot -u ${CHROOT_ROOTDIR}
     clean_build_first=1
     msg " Done"
@@ -146,6 +147,7 @@ fi
 if [[ "${clean_build_first}" == "1" ]]; then
     msg "Cleaning up the build chroot (in 5 sec)..."
     sleep 5
+    msg "starting..."
     sudo rsync -a --delete -q -W -x "${CHROOT_ROOTDIR}/" "${CHROOT_BUILDDIR}"
     msg " Done"
 fi

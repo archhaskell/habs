@@ -1,0 +1,17 @@
+Index: ah-ghc74/haskell-glib/PKGBUILD
+===================================================================
+--- ah-ghc74.orig/haskell-glib/PKGBUILD
++++ ah-ghc74/haskell-glib/PKGBUILD
+@@ -10,8 +10,10 @@ pkgdesc="Binding to the GLIB library for
+ url="http://projects.haskell.org/gtk2hs/"
+ license=("LGPL-2.1")
+ arch=('i686' 'x86_64')
+-makedepends=("haddock")
+-depends=("ghc=7.4.1-1")
++makedepends=("haddock"
++             "gtk2hs-buildtools")
++depends=("ghc=7.4.1-1"
++         "glib2")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
