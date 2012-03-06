@@ -123,7 +123,8 @@ EOF
     sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
         base base-devel curl \
-        sudo
+        sudo \
+        ghc-haddock ghc
 
     # fix up the local repo
     sudo mkdir ${CHROOT_ROOTDIR}/repo
