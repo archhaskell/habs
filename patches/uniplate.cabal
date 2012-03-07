@@ -1,0 +1,13 @@
+Index: archhaskell-habs/uniplate.cabal
+===================================================================
+--- archhaskell-habs.orig/uniplate.cabal
++++ archhaskell-habs/uniplate.cabal
+@@ -57,7 +57,7 @@ library
+         build-depends:
+             base >=4.4 && <5, containers, syb,
+             hashable >= 1.1.2.3 && < 1.2,
+-            unordered-containers == 0.1.*
++            unordered-containers == 0.2.*
+     else
+         if flag(separate_syb)
+             build-depends: base >=4 && <4.4, containers, syb
