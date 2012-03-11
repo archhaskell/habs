@@ -9,5 +9,5 @@ Index: ah-ghc74/haskell-haskell-src-exts/PKGBUILD
 -makedepends=("haddock")
 +makedepends=("haddock" "happy")
  depends=("ghc=7.4.1-1"
-          "haskell-cpphs=1.13.3-1")
+          "haskell-cpphs=1.13.3-2")
  options=('strip')

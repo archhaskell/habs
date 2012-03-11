@@ -3,8 +3,8 @@ Index: archhaskell-habs/haskell-xmonad/PKGBUILD
 --- archhaskell-habs.orig/haskell-xmonad/PKGBUILD
 +++ archhaskell-habs/haskell-xmonad/PKGBUILD
 @@ -16,6 +16,7 @@ depends=("ghc=7.4.1-1"
-          "haskell-mtl=2.0.1.0-5"
-          "haskell-utf8-string=0.3.7-5")
+          "haskell-mtl=2.0.1.0-6"
+          "haskell-utf8-string=0.3.7-6")
  options=('strip')
 +replaces=('xmonad')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

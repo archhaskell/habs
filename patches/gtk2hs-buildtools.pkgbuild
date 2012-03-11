@@ -9,6 +9,6 @@ Index: new-ghc/gtk2hs-buildtools/PKGBUILD
               "haddock"
 +             "alex"
 +             "happy"
-              "haskell-random=1.0.1.1-5")
+              "haskell-random=1.0.1.1-6")
  depends=()
  options=('strip')
