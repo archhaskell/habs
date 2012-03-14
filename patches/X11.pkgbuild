@@ -1,13 +1,14 @@
-Index: new-ghc/haskell-x11/PKGBUILD
+Index: archhaskell-habs/haskell-x11/PKGBUILD
 ===================================================================
---- new-ghc.orig/haskell-x11/PKGBUILD
-+++ new-ghc/haskell-x11/PKGBUILD
-@@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
+--- archhaskell-habs.orig/haskell-x11/PKGBUILD
++++ archhaskell-habs/haskell-x11/PKGBUILD
+@@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=("haddock")
  depends=("ghc=7.4.1-1"
           "haskell-syb=0.3.6-6"
 -         "X11")
-+         "libx11")
++         "libx11"
++         "libxinerama")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
