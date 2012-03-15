@@ -1,0 +1,13 @@
+Index: archhaskell-habs/shelltestrunner.cabal
+===================================================================
+--- archhaskell-habs.orig/shelltestrunner.cabal
++++ archhaskell-habs/shelltestrunner.cabal
+@@ -37,7 +37,7 @@ executable shelltest
+                 ,parsec                           < 3.2
+                 ,regex-tdfa           >= 1.1   && < 1.2
+                 ,process                          < 1.2
+-                ,test-framework       >= 0.3.2 && < 0.6
++                ,test-framework       >= 0.3.2 && < 0.7
+                 ,test-framework-hunit >= 0.2   && < 0.3
+                 ,utf8-string          >= 0.3.5 && < 0.4
+                 ,Diff                 >= 0.1   && < 0.2
