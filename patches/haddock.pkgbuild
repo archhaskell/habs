@@ -1,0 +1,16 @@
+Index: archhaskell-habs/haskell-haddock/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-haddock/PKGBUILD
++++ archhaskell-habs/haskell-haddock/PKGBUILD
+@@ -13,7 +13,10 @@ arch=('i686' 'x86_64')
+ makedepends=("haddock")
+ depends=("ghc=7.4.1-1"
+          "haskell-ghc-paths=0.1.0.8-5"
+-         "haskell-xhtml=3000.2.0.5-5")
++         "haskell-xhtml=3000.2.0.5-5"
++         "alex" "happy")
++provides=('haddock')
++conflicts=('ghc-haddock')
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
