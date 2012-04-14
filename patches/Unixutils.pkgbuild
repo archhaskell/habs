@@ -1,11 +1,11 @@
-Index: ah-ghc74/haskell-unixutils/PKGBUILD
+Index: archhaskell-habs/haskell-unixutils/PKGBUILD
 ===================================================================
---- ah-ghc74.orig/haskell-unixutils/PKGBUILD
-+++ ah-ghc74/haskell-unixutils/PKGBUILD
-@@ -17,8 +17,7 @@ depends=("ghc=7.4.1-1"
-          "haskell-parallel=3.2.0.2-6"
-          "haskell-puremd5=2.1.0.3-7"
-          "haskell-regex-tdfa=1.1.8-6"
+--- archhaskell-habs.orig/haskell-unixutils/PKGBUILD
++++ archhaskell-habs/haskell-unixutils/PKGBUILD
+@@ -14,8 +14,7 @@ makedepends=("haddock")
+ depends=("ghc=7.4.1-1"
+          "haskell-puremd5=2.1.0.3-9"
+          "haskell-regex-tdfa=1.1.8-7"
 -         "haskell-zlib=0.5.3.3-5"
 -         "crypt")
 +         "haskell-zlib=0.5.3.3-5")
