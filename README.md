@@ -107,14 +107,14 @@ Adding individual packages
 --------------------------
 
 Suggestions for adding individual packages to the set are always welcome.
-Just send the request to the [mailinglist][5].  Be aware though that each
-added package adds to the burden of the team, so there is a real risk that
-your request is denied.  That risk is reduced if you show an interest in
-contributing to the project.
+Use the [github issue tracker][5] to make sure your request isn't lost.  Be
+aware though that each added package adds to the burden of the team, so there
+is a real risk that your request is denied.  That risk is reduced if you show
+an interest in contributing to the project.
 
 [1]: http://hackage.haskell.org/packages/hackage.html
 [2]: https://github.com/archhaskell/cabal2arch
 [3]: https://github.com/archhaskell/archlinux
 [4]: https://github.com/archhaskell/archlinux-web
-[5]: http://www.haskell.org/mailman/listinfo/arch-haskell
+[5]: https://github.com/archhaskell/habs/issues
 [6]: http://hackage.haskell.org/package/cblrepo
