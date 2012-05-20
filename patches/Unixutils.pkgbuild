@@ -4,8 +4,8 @@ Index: archhaskell-habs/haskell-unixutils/PKGBUILD
 +++ archhaskell-habs/haskell-unixutils/PKGBUILD
 @@ -14,8 +14,7 @@ makedepends=("haddock")
  depends=("ghc=7.4.1-1"
-          "haskell-puremd5=2.1.0.3-9"
-          "haskell-regex-tdfa=1.1.8-7"
+          "haskell-puremd5=2.1.0.3-11"
+          "haskell-regex-tdfa=1.1.8-8"
 -         "haskell-zlib=0.5.3.3-5"
 -         "crypt")
 +         "haskell-zlib=0.5.3.3-5")
