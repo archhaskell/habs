@@ -1,0 +1,20 @@
+Index: habs/ghc-mod/PKGBUILD
+===================================================================
+--- habs.orig/ghc-mod/PKGBUILD
++++ habs/ghc-mod/PKGBUILD
+@@ -37,4 +37,15 @@ build() {
+ package() {
+     cd ${srcdir}/${_hkgname}-${pkgver}
+     runhaskell Setup copy --destdir=${pkgdir}
++
++    # move *.el files to site-lisp/ghc-mod
++    install -d ${pkgdir}/usr/share/emacs/site-lisp/ghc-mod
++    mv ${pkgdir}/usr/share/${_hkgname}-${pkgver}/*.el ${pkgdir}/usr/share/emacs/site-lisp/ghc-mod
++
++    # remove unnecessary files
++    rm -f ${pkgdir}/usr/share/${_hkgname}-${pkgver}/Makefile
++    rmdir ${pkgdir}/usr/share/${_hkgname}-${pkgver}
++
++    # byte-compile *.el files
++    emacs -batch --eval '(setq load-path (cons "." load-path))' -f batch-byte-compile $pkgdir/usr/share/emacs/site-lisp/ghc-mod/*.el
+ }
