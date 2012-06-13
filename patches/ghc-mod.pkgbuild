@@ -3,11 +3,11 @@ Index: habs/ghc-mod/PKGBUILD
 --- habs.orig/ghc-mod/PKGBUILD
 +++ habs/ghc-mod/PKGBUILD
 @@ -18,7 +18,8 @@ makedepends=("ghc=7.4.1-1"
-              "haskell-io-choice=0.0.1-7"
-              "haskell-regex-posix=0.95.2-1"
+              "haskell-io-choice=0.0.1-8"
+              "haskell-regex-posix=0.95.2-2"
               "haskell-syb=0.3.6.1-1"
--             "haskell-transformers=0.2.2.0-6")
-+             "haskell-transformers=0.2.2.0-6"
+-             "haskell-transformers=0.3.0.0-1")
++             "haskell-transformers=0.3.0.0-1"
 +             "emacs")
  depends=()
  options=('strip')
