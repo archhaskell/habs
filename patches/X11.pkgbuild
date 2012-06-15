@@ -5,7 +5,7 @@ Index: archhaskell-habs/haskell-x11/PKGBUILD
 @@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=("haddock")
  depends=("ghc=7.4.1-1"
-          "haskell-syb=0.3.6.1-1"
+          "haskell-syb=0.3.6.1-2"
 -         "X11")
 +         "libx11"
 +         "libxinerama")

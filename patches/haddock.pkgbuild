@@ -5,9 +5,9 @@ Index: archhaskell-habs/haskell-haddock/PKGBUILD
 @@ -13,7 +13,10 @@ arch=('i686' 'x86_64')
  makedepends=("haddock")
  depends=("ghc=7.4.1-1"
-          "haskell-ghc-paths=0.1.0.8-5"
--         "haskell-xhtml=3000.2.1-1")
-+         "haskell-xhtml=3000.2.1-1"
+          "haskell-ghc-paths=0.1.0.8-6"
+-         "haskell-xhtml=3000.2.1-2")
++         "haskell-xhtml=3000.2.1-2"
 +         "alex" "happy")
 +provides=('haddock')
 +conflicts=('ghc-haddock')

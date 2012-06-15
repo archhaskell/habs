@@ -6,8 +6,8 @@ Index: archhaskell-habs/haskell-sdl-ttf/PKGBUILD
  arch=('i686' 'x86_64')
  makedepends=("haddock")
  depends=("ghc=7.4.1-1"
--         "haskell-sdl=0.6.3-1")
-+         "haskell-sdl=0.6.3-1"
+-         "haskell-sdl=0.6.3-2")
++         "haskell-sdl=0.6.3-2"
 +         "sdl_ttf")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
