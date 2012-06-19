@@ -42,7 +42,7 @@ SRC_HC_OPTS     = -O -H64m
 GhcStage1HcOpts = -O -fasm
 GhcStage2HcOpts = -O2 -fasm
 GhcHcOpts       = -Rghc-timing
-GhcLibHcOpts    = -O2 -XDefaultSignatures -XDeriveGeneric
+GhcLibHcOpts    = -O2
 GhcLibWays     += p
 
 ifeq "$(PlatformSupportsSharedLibs)" "YES"
@@ -117,7 +117,7 @@ HADDOCK_DOCS       = NO
 BUILD_DOCBOOK_HTML = NO
 BUILD_DOCBOOK_PS   = NO
 BUILD_DOCBOOK_PDF  = NO
-LAX_DEPENDENCIES   = NO
+LAX_DEPENDENCIES   = YES
 
 endif
 
@@ -134,7 +134,7 @@ HADDOCK_DOCS       = NO
 BUILD_DOCBOOK_HTML = NO
 BUILD_DOCBOOK_PS   = NO
 BUILD_DOCBOOK_PDF  = NO
-LAX_DEPENDENCIES   = NO
+LAX_DEPENDENCIES   = YES
 
 # After stage 1 and the libraries have been built, you can uncomment this line:
 

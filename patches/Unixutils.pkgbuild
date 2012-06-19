@@ -4,11 +4,11 @@ Index: archhaskell-habs/haskell-unixutils/PKGBUILD
 +++ archhaskell-habs/haskell-unixutils/PKGBUILD
 @@ -14,8 +14,7 @@ makedepends=("haddock")
  depends=("ghc=7.4.1-1"
-          "haskell-puremd5=2.1.0.3-12"
-          "haskell-regex-tdfa=1.1.8-9"
--         "haskell-zlib=0.5.3.3-5"
+          "haskell-puremd5=2.1.0.3-13"
+          "haskell-regex-tdfa=1.1.8-11"
+-         "haskell-zlib=0.5.3.3-6"
 -         "crypt")
-+         "haskell-zlib=0.5.3.3-5")
++         "haskell-zlib=0.5.3.3-6")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

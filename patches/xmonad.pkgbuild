@@ -1,12 +1,20 @@
-Index: archhaskell-habs/haskell-xmonad/PKGBUILD
+Index: habs/haskell-xmonad/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-xmonad/PKGBUILD
-+++ archhaskell-habs/haskell-xmonad/PKGBUILD
+--- habs.orig/haskell-xmonad/PKGBUILD
++++ habs/haskell-xmonad/PKGBUILD
 @@ -16,6 +16,7 @@ depends=("ghc=7.4.1-1"
-          "haskell-mtl=2.0.1.0-6"
-          "haskell-utf8-string=0.3.7-6")
+          "haskell-mtl=2.1.1-2"
+          "haskell-utf8-string=0.3.7-7")
  options=('strip')
 +replaces=('xmonad')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
  sha256sums=("4676717615d367abaf2e2bb609cf532427edfd87455268fa48552f7fcdf0e5a7")
+@@ -44,4 +45,7 @@ package() {
+     runhaskell Setup copy --destdir=${pkgdir}
+     install -D -m644 ${_licensefile} ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+     rm -f ${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}
++
++    #install man file
++    install -D -m644 man/xmonad.1 $pkgdir/usr/share/man/man1/xmonad.1
+ }
