@@ -10,10 +10,10 @@ Index: new-ghc/haskell-pango/PKGBUILD
 -depends=("ghc=7.4.1-1"
 +makedepends=("haddock" "gtk2hs-buildtools")
 +depends=("ghc=7.4.1-1"
-          "haskell-cairo=0.12.3.1-1"
+          "haskell-cairo=0.12.3.1-2"
           "haskell-glib=0.12.3.1-1"
--         "haskell-mtl=2.0.1.0-6")
-+         "haskell-mtl=2.0.1.0-6"
+-         "haskell-mtl=2.1.1-1")
++         "haskell-mtl=2.1.1-1"
 +         "pango")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
