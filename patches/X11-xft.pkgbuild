@@ -5,8 +5,8 @@ Index: new-ghc/haskell-x11-xft/PKGBUILD
 @@ -11,9 +11,10 @@ url="http://hackage.haskell.org/package/
  license=("LGPL")
  arch=('i686' 'x86_64')
- makedepends=("haddock")
- depends=("ghc=7.4.1-1"
+ makedepends=()
+ depends=("ghc=7.4.2-1"
           "haskell-x11=1.5.0.1-9"
 -         "haskell-utf8-string=0.3.7-7")
 +         "haskell-utf8-string=0.3.7-7"

@@ -2,7 +2,7 @@ Index: archhaskell-habs/haskell-xmonad-contrib/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-xmonad-contrib/PKGBUILD
 +++ archhaskell-habs/haskell-xmonad-contrib/PKGBUILD
-@@ -19,6 +19,7 @@ depends=("ghc=7.4.1-1"
+@@ -19,6 +19,7 @@ depends=("ghc=7.4.2-1"
           "haskell-utf8-string=0.3.7-7"
           "haskell-xmonad=0.10-8")
  options=('strip')

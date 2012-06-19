@@ -6,10 +6,10 @@ Index: new-ghc/haskell-pango/PKGBUILD
  url="http://projects.haskell.org/gtk2hs/"
  license=("LGPL-2.1")
  arch=('i686' 'x86_64')
--makedepends=("haddock")
--depends=("ghc=7.4.1-1"
-+makedepends=("haddock" "gtk2hs-buildtools")
-+depends=("ghc=7.4.1-1"
+-makedepends=()
+-depends=("ghc=7.4.2-1"
++makedepends=( "gtk2hs-buildtools")
++depends=("ghc=7.4.2-1"
           "haskell-cairo=0.12.3.1-3"
           "haskell-glib=0.12.3.1-2"
 -         "haskell-mtl=2.1.1-2")

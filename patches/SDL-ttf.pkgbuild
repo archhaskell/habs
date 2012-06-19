@@ -4,8 +4,8 @@ Index: archhaskell-habs/haskell-sdl-ttf/PKGBUILD
 +++ archhaskell-habs/haskell-sdl-ttf/PKGBUILD
 @@ -12,7 +12,8 @@ license=("BSD3")
  arch=('i686' 'x86_64')
- makedepends=("haddock")
- depends=("ghc=7.4.1-1"
+ makedepends=()
+ depends=("ghc=7.4.2-1"
 -         "haskell-sdl=0.6.3-2")
 +         "haskell-sdl=0.6.3-2"
 +         "sdl_ttf")

@@ -5,9 +5,9 @@ Index: ah-ghc74/haskell-dbus/PKGBUILD
 @@ -11,7 +11,8 @@ url="http://seize.it/mirror/hdbus"
  license=("BSD3")
  arch=('i686' 'x86_64')
- makedepends=("haddock")
--depends=("ghc=7.4.1-1")
-+depends=("ghc=7.4.1-1"
+ makedepends=()
+-depends=("ghc=7.4.2-1")
++depends=("ghc=7.4.2-1"
 +         "dbus-core")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

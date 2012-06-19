@@ -4,10 +4,10 @@
  url="http://www.sivity.net/projects/language.c/"
  license=("BSD3")
  arch=('i686' 'x86_64')
--makedepends=("haddock")
-+makedepends=("haddock"
+-makedepends=()
++makedepends=(
 +             "alex"
 +             "happy")
- depends=("ghc=7.4.1-1"
+ depends=("ghc=7.4.2-1"
           "haskell-syb=0.3.6.1-2")
  options=('strip')

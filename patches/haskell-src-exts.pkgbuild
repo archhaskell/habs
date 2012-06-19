@@ -6,8 +6,8 @@ Index: ah-ghc74/haskell-haskell-src-exts/PKGBUILD
  url="http://code.haskell.org/haskell-src-exts"
  license=("BSD3")
  arch=('i686' 'x86_64')
--makedepends=("haddock")
-+makedepends=("haddock" "happy")
- depends=("ghc=7.4.1-1"
+-makedepends=()
++makedepends=( "happy")
+ depends=("ghc=7.4.2-1"
           "haskell-cpphs=1.13.3-3")
  options=('strip')
