@@ -1,13 +1,11 @@
-Index: new-ghc/haskell-x11-xft/PKGBUILD
+Index: archhaskell-habs/haskell-x11-xft/PKGBUILD
 ===================================================================
---- new-ghc.orig/haskell-x11-xft/PKGBUILD
-+++ new-ghc/haskell-x11-xft/PKGBUILD
-@@ -11,9 +11,10 @@ url="http://hackage.haskell.org/package/
- license=("LGPL")
- arch=('i686' 'x86_64')
+--- archhaskell-habs.orig/haskell-x11-xft/PKGBUILD
++++ archhaskell-habs/haskell-x11-xft/PKGBUILD
+@@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.4.2-1"
-          "haskell-x11=1.5.0.1-9"
+          "haskell-x11=1.5.0.1-10"
 -         "haskell-utf8-string=0.3.7-7")
 +         "haskell-utf8-string=0.3.7-7"
 +         "libxft")

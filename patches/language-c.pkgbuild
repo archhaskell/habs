@@ -1,13 +1,13 @@
---- PKGBUILD.orig	2012-05-18 10:20:18.961981313 -0400
-+++ PKGBUILD	2012-05-18 10:24:20.795318568 -0400
-@@ -10,7 +10,9 @@
+Index: archhaskell-habs/haskell-language-c/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-language-c/PKGBUILD
++++ archhaskell-habs/haskell-language-c/PKGBUILD
+@@ -10,7 +10,7 @@ pkgdesc="Analysis and generation of C co
  url="http://www.sivity.net/projects/language.c/"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=(
-+             "alex"
-+             "happy")
++makedepends=("alex" "happy")
  depends=("ghc=7.4.2-1"
-          "haskell-syb=0.3.6.1-2")
+          "haskell-syb=0.3.6.2-1")
  options=('strip')

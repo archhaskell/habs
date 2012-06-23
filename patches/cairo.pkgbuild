@@ -1,16 +1,16 @@
-Index: ah-ghc74/haskell-cairo/PKGBUILD
+Index: archhaskell-habs/haskell-cairo/PKGBUILD
 ===================================================================
---- ah-ghc74.orig/haskell-cairo/PKGBUILD
-+++ ah-ghc74/haskell-cairo/PKGBUILD
+--- archhaskell-habs.orig/haskell-cairo/PKGBUILD
++++ archhaskell-habs/haskell-cairo/PKGBUILD
 @@ -10,9 +10,10 @@ pkgdesc="Binding to the Cairo library."
  url="http://projects.haskell.org/gtk2hs/"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=( "gtk2hs-buildtools")
++makedepends=("gtk2hs-buildtools")
  depends=("ghc=7.4.2-1"
--         "haskell-mtl=2.1.1-2")
-+         "haskell-mtl=2.1.1-2"
+-         "haskell-mtl=2.1.2-1")
++         "haskell-mtl=2.1.2-1"
 +         "cairo")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
