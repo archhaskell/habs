@@ -23,7 +23,7 @@ error() {
 }
 
 die() {
-    [ -n "${1}" ] && error ${1}
+    [ -n "${1}" ] && error "${1}"
     exit 1
 }
 ##################################################
@@ -124,7 +124,7 @@ EOF
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
         base base-devel curl \
         sudo \
-        ghc-haddock ghc
+        haskell-haddock ghc
 
     # fix up the local repo
     sudo mkdir ${CHROOT_ROOTDIR}/repo
@@ -154,6 +154,7 @@ if [[ "${clean_build_first}" == "1" ]]; then
 fi
 
 for pkg0 in $@; do
+    pkg=
     pkg1=${pkg0,,}
     [ -d ${habs_dir}/${pkg1} ] && pkg=${pkg1}
     [ -d ${habs_dir}/haskell-${pkg1} ] && pkg=haskell-${pkg1}
