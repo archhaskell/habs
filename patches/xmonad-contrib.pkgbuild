@@ -4,9 +4,9 @@ Index: archhaskell-habs/haskell-xmonad-contrib/PKGBUILD
 +++ archhaskell-habs/haskell-xmonad-contrib/PKGBUILD
 @@ -19,6 +19,7 @@ depends=("ghc=7.4.2-1"
           "haskell-utf8-string=0.3.7-7"
-          "haskell-xmonad=0.10-8")
+          "haskell-xmonad=0.10-14")
  options=('strip')
 +replaces=('xmonad-contrib')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
+         "cabal.patch")
  install="${pkgname}.install"
- sha256sums=("d8c1a37d88270a45b68e347c056e0f487f739780af413b87265ede9c4cc6e752")

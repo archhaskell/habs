@@ -2,12 +2,17 @@ Index: archhaskell-habs/haskell-x11/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-x11/PKGBUILD
 +++ archhaskell-habs/haskell-x11/PKGBUILD
-@@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
+@@ -13,9 +13,10 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.4.2-1"
           "haskell-syb=0.3.6.2-1"
--         "X11")
-+         "libx11" "libxinerama")
+-         "X11"
+-         "Xrandr"
+-         "Xext")
++         "libx11"
++         "libxrandr"
++         "libxext"
++         "libxinerama")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
