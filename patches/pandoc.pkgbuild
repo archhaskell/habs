@@ -1,0 +1,10 @@
+--- PKGBUILD.orig	2012-07-21 17:37:12.721848568 +0200
++++ PKGBUILD	2012-07-21 18:46:18.691329857 +0200
+@@ -44,6 +44,7 @@
+     
+     runhaskell Setup configure -O -p --enable-split-objs --enable-shared \
+         --prefix=/usr --docdir=/usr/share/doc/${pkgname} \
++	-fblaze_html_0_5 \
+         --libsubdir=\$compiler/site-local/\$pkgid
+     runhaskell Setup build
+     runhaskell Setup haddock
