@@ -1,0 +1,29 @@
+--- persistent.cabal.orig	2012-07-22 00:06:59.671969203 +0200
++++ persistent.cabal	2012-07-22 00:08:40.162088480 +0200
+@@ -18,10 +18,6 @@
+     default: False
+     description: test out our assumption that OverlappingInstances is just for String
+ 
+-flag blaze_html_0_5
+-    description: use blaze-html 0.5 and blaze-markup 0.5
+-    default: True
+-
+ library
+     if flag(nooverlap)
+         cpp-options: -DNO_OVERLAP
+@@ -44,14 +40,8 @@
+                    , unordered-containers
+                    , vector
+                    , attoparsec
+-
+-    if flag(blaze_html_0_5)
+-        build-depends:
+-                     blaze-html               >= 0.5     && < 0.6
++                   , blaze-html               >= 0.5     && < 0.6
+                    , blaze-markup             >= 0.5.1   && < 0.6
+-    else
+-        build-depends:
+-                     blaze-html               >= 0.4     && < 0.5
+ 
+     exposed-modules: Database.Persist
+                      Database.Persist.EntityDef
