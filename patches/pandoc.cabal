@@ -1,0 +1,28 @@
+--- pandoc.cabal.orig	2012-07-22 00:10:19.732176132 +0200
++++ pandoc.cabal	2012-07-22 00:11:10.520587723 +0200
+@@ -191,9 +191,6 @@
+ Flag tests
+   Description:   Build test-pandoc.
+   Default:       False
+-Flag blaze_html_0_5
+-  Description:   Use blaze-html 0.5 and blaze-markup 0.5
+-  Default:       False
+ 
+ Library
+   -- Note: the following is duplicated in all stanzas.
+@@ -223,14 +220,9 @@
+                  base64-bytestring >= 0.1 && < 0.2,
+                  zlib >= 0.5 && < 0.6,
+                  highlighting-kate >= 0.5.1 && < 0.6,
+-                 temporary >= 1.1 && < 1.2
+-  if flag(blaze_html_0_5)
+-    build-depends:
++                 temporary >= 1.1 && < 1.2,
+                  blaze-html >= 0.5 && < 0.6,
+                  blaze-markup >= 0.5.1 && < 0.6
+-  else
+-    build-depends:
+-                 blaze-html >= 0.4.3.0 && < 0.5
+   if impl(ghc >= 6.10)
+     Build-depends: base >= 4 && < 5, syb >= 0.1 && < 0.4
+   else
