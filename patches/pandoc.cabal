@@ -1,0 +1,11 @@
+--- pandoc.cabal.orig	2012-07-22 00:10:19.732176132 +0200
++++ pandoc.cabal	2012-07-23 11:29:52.053932138 +0200
+@@ -193,7 +193,7 @@
+   Default:       False
+ Flag blaze_html_0_5
+   Description:   Use blaze-html 0.5 and blaze-markup 0.5
+-  Default:       False
++  Default:       True
+ 
+ Library
+   -- Note: the following is duplicated in all stanzas.
