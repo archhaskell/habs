@@ -1,7 +1,7 @@
-Index: new-ghc/haskell-dbus/src/DBus-0.4/DBus.hsc
+Index: archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus.hsc
 ===================================================================
---- new-ghc.orig/haskell-dbus/src/DBus-0.4/DBus.hsc
-+++ new-ghc/haskell-dbus/src/DBus-0.4/DBus.hsc
+--- archhaskell-habs.orig/haskell-dbus/src/DBus-0.4/DBus.hsc
++++ archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus.hsc
 @@ -2,7 +2,7 @@
  -- Copyright (C) 2006 Evan Martin <martine@danga.com>
  
@@ -26,10 +26,10 @@ Index: new-ghc/haskell-dbus/src/DBus-0.4/DBus.hsc
 +instance Exception Error
  
  -- vim: set ts=2 sw=2 tw=72 et ft=haskell :
-Index: new-ghc/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
+Index: archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
 ===================================================================
---- new-ghc.orig/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
-+++ new-ghc/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
+--- archhaskell-habs.orig/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
++++ archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
 @@ -9,7 +9,7 @@
  
  module DBus.Internal where
@@ -47,16 +47,32 @@ Index: new-ghc/haskell-dbus/src/DBus-0.4/DBus/Internal.hsc
 +              throwIO $ Error name msg
  
  -- vim: set ts=2 sw=2 tw=72 et ft=haskell :
-Index: new-ghc/haskell-dbus/src/DBus-0.4/DBus/Message.hsc
+Index: archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus/Message.hsc
 ===================================================================
---- new-ghc.orig/haskell-dbus/src/DBus-0.4/DBus/Message.hsc
-+++ new-ghc/haskell-dbus/src/DBus-0.4/DBus/Message.hsc
-@@ -38,7 +38,7 @@ import Data.Int
+--- archhaskell-habs.orig/haskell-dbus/src/DBus-0.4/DBus/Message.hsc
++++ archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus/Message.hsc
+@@ -38,9 +38,9 @@ import Data.Int
  import Data.Word
  import Data.Char
  import Data.Dynamic
 -import Foreign
 +import Foreign hiding (unsafePerformIO)
  import Foreign.C.String
- import Foreign.C.Types (CInt)
+-import Foreign.C.Types (CInt)
++import Foreign.C.Types (CInt(..))
  import System.IO.Unsafe
+ 
+ import DBus.Internal
+Index: archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus/Connection.hsc
+===================================================================
+--- archhaskell-habs.orig/haskell-dbus/src/DBus-0.4/DBus/Connection.hsc
++++ archhaskell-habs/haskell-dbus/src/DBus-0.4/DBus/Connection.hsc
+@@ -24,7 +24,7 @@ import Control.Exception (bracket)
+ import Control.Monad (when)
+ import Foreign
+ import Foreign.C.String
+-import Foreign.C.Types (CInt)
++import Foreign.C.Types (CInt(..))
+ 
+ import DBus.Internal
+ import DBus.Message

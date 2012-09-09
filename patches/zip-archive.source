@@ -1,0 +1,34 @@
+Index: archhaskell-habs/haskell-zip-archive/src/zip-archive-0.1.1.8/Codec/Archive/Zip.hs
+===================================================================
+--- archhaskell-habs.orig/haskell-zip-archive/src/zip-archive-0.1.1.8/Codec/Archive/Zip.hs
++++ archhaskell-habs/haskell-zip-archive/src/zip-archive-0.1.1.8/Codec/Archive/Zip.hs
+@@ -68,6 +68,7 @@ import System.Directory ( getModificatio
+ import System.IO ( stderr, hPutStrLn )
+ import qualified Data.Digest.CRC32 as CRC32
+ import qualified Data.Map as M
++import Data.Time.Clock.POSIX ( utcTimeToPOSIXSeconds )
+ 
+ #ifndef _WINDOWS
+ import System.Posix.Files ( setFileTimes )
+@@ -199,7 +200,7 @@ readEntry opts path = do
+   contents <- if isDir
+                  then return B.empty
+                  else B.readFile path
+-  (TOD modEpochTime _) <- getModificationTime path
++  modEpochTime <- liftM (floor . utcTimeToPOSIXSeconds) $ getModificationTime path
+   let entry = toEntry path' modEpochTime contents
+   when (OptVerbose `elem` opts) $ do
+     let compmethod = case eCompressionMethod entry of
+Index: archhaskell-habs/haskell-zip-archive/src/zip-archive-0.1.1.8/zip-archive.cabal
+===================================================================
+--- archhaskell-habs.orig/haskell-zip-archive/src/zip-archive-0.1.1.8/zip-archive.cabal
++++ archhaskell-habs/haskell-zip-archive/src/zip-archive-0.1.1.8/zip-archive.cabal
+@@ -26,7 +26,7 @@ Library
+     Build-depends:   base >= 3 && < 5, pretty, containers
+   else
+     Build-depends:   base < 3
+-  Build-depends:     binary, zlib, filepath, directory, bytestring >= 0.9.0, array, mtl, utf8-string >= 0.3.1, old-time, digest >= 0.0.0.1
++  Build-depends:     binary, zlib, filepath, directory, bytestring >= 0.9.0, array, mtl, utf8-string >= 0.3.1, old-time, digest >= 0.0.0.1, time
+   Exposed-modules:   Codec.Archive.Zip
+   Hs-Source-Dirs:    .
+   Ghc-Options:       -Wall

@@ -1,13 +1,13 @@
-Index: new-ghc/gtk2hs-buildtools/PKGBUILD
+Index: archhaskell-habs/gtk2hs-buildtools/PKGBUILD
 ===================================================================
---- new-ghc.orig/gtk2hs-buildtools/PKGBUILD
-+++ new-ghc/gtk2hs-buildtools/PKGBUILD
+--- archhaskell-habs.orig/gtk2hs-buildtools/PKGBUILD
++++ archhaskell-habs/gtk2hs-buildtools/PKGBUILD
 @@ -11,6 +11,8 @@ url="http://projects.haskell.org/gtk2hs/
  license=("GPL-2")
  arch=('i686' 'x86_64')
  makedepends=("ghc=7.4.2-1"
 +             "alex"
 +             "happy"
-              "haskell-random=1.0.1.1-7")
+              "haskell-random=1.0.1.1-25")
  depends=()
  options=('strip')

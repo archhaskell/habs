@@ -1,0 +1,52 @@
+Index: archhaskell-habs/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/base/general/FileOps.hs
+===================================================================
+--- archhaskell-habs.orig/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/base/general/FileOps.hs
++++ archhaskell-habs/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/base/general/FileOps.hs
+@@ -1,3 +1,5 @@
++{-# LANGUAGE ScopedTypeVariables #-}
++
+ --  Compiler Toolkit: operations on file
+ --
+ --  Author : Manuel M T Chakravarty
+@@ -32,6 +34,7 @@ module FileOps (fileFindIn, mktemp)
+ where
+ 
+ -- standard libs
++import Control.Exception (catch, SomeException)
+ import Data.Char      (chr, ord)
+ import System.Directory (doesFileExist)
+ import System.IO	 (Handle, IOMode(..), openFile)
+@@ -89,7 +92,7 @@ mktemp pre post =
+ 			     in do
+ 			       h <- openFile fname ReadWriteMode
+ 			       return (h, fname)
+-			     `catch` \_ -> createLoop (attempts - 1) rs'
++			     `catch` \(_ :: SomeException) -> createLoop (attempts - 1) rs'
+     --
+     sixChars :: [Int] -> ([Int], String)
+     sixChars is = 
+Index: archhaskell-habs/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/base/state/StateTrans.hs
+===================================================================
+--- archhaskell-habs.orig/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/base/state/StateTrans.hs
++++ archhaskell-habs/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/base/state/StateTrans.hs
+@@ -80,6 +80,7 @@ module StateTrans (-- the monad and the
+ where
+ 
+ import Control.Monad      (liftM)
++import Control.Exception (catch)
+ import System.IO  (fixIO)
+ import Data.IORef (IORef, newIORef, readIORef, writeIORef)
+ 
+Index: archhaskell-habs/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/toplevel/C2HSConfig.hs
+===================================================================
+--- archhaskell-habs.orig/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/toplevel/C2HSConfig.hs
++++ archhaskell-habs/gtk2hs-buildtools/src/gtk2hs-buildtools-0.12.3.1/c2hs/toplevel/C2HSConfig.hs
+@@ -46,7 +46,7 @@ import Data.Array (Array, array)
+ 
+ import Foreign (Ptr, FunPtr)
+ import Foreign  (Storable(sizeOf, alignment), toBool)
+-import Foreign.C (CInt)
++import Foreign.C (CInt(..))
+ import System.Info (os)
+ 
+ -- program settings

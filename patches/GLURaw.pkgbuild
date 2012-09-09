@@ -1,11 +1,11 @@
-Index: habs/haskell-gluraw/PKGBUILD
+Index: archhaskell-habs/haskell-gluraw/PKGBUILD
 ===================================================================
---- habs.orig/haskell-gluraw/PKGBUILD
-+++ habs/haskell-gluraw/PKGBUILD
+--- archhaskell-habs.orig/haskell-gluraw/PKGBUILD
++++ archhaskell-habs/haskell-gluraw/PKGBUILD
 @@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.4.2-1"
-          "haskell-openglraw=1.2.0.0-1"
+          "haskell-openglraw=1.2.0.0-25"
 -         "GLU")
 +         "mesa")
  options=('strip')

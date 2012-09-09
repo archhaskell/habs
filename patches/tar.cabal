@@ -1,0 +1,13 @@
+Index: archhaskell-habs/tar.cabal
+===================================================================
+--- archhaskell-habs.orig/tar.cabal
++++ archhaskell-habs/tar.cabal
+@@ -25,7 +25,7 @@ source-repository head
+ 
+ library
+   build-depends: base >= 3 && < 5, filepath,
+-                 directory, old-time, bytestring
++                 directory, old-time, bytestring, time
+ 
+   exposed-modules:
+     Codec.Archive.Tar

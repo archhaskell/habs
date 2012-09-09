@@ -1,0 +1,17 @@
+warp
+wai
+temporary
+scion-browser
+parallel-io
+pandoc
+cblrepo
+bytestring-show
+anansi
+GLUT
+glib
+gtk
+pango
+ghc-mod
+buildwrapper
+persistent-template
+haddock

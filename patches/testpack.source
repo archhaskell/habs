@@ -1,0 +1,22 @@
+Index: archhaskell-habs/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools.hs
+===================================================================
+--- archhaskell-habs.orig/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools.hs
++++ archhaskell-habs/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools.hs
+@@ -128,7 +128,7 @@ Often used like this:
+ >        q "Integer -> Int (safe bounds)" prop_integer_to_int_pass]
+ -}
+ qc2hu :: QC.Testable a => Int -> String -> a -> HU.Test
+-qc2hu maxTest = qccheck (stdArgs {maxSuccess = maxTest, maxDiscard = 20000})
++qc2hu maxTest = qccheck (stdArgs {maxSuccess = maxTest, maxDiscardRatio = 20000})
+ 
+ {- | Run verbose tests.  Example:
+ 
+@@ -174,7 +174,7 @@ localquickCheckWithResult args p =
+               Just (rnd,_) -> return rnd
+      test MkState{ terminal          = tm
+                  , maxSuccessTests   = maxSuccess args
+-                 , maxDiscardedTests = maxDiscard args
++                 , maxDiscardedTests = maxDiscardRatio args
+                  , computeSize       = case replay args of
+                                          Nothing    -> \n d -> (n * maxSize args)
+                                                          `div` maxSuccess args
