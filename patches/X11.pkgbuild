@@ -2,10 +2,10 @@ Index: archhaskell-habs/haskell-x11/PKGBUILD
 ===================================================================
 --- archhaskell-habs.orig/haskell-x11/PKGBUILD
 +++ archhaskell-habs/haskell-x11/PKGBUILD
-@@ -13,9 +13,10 @@ arch=('i686' 'x86_64')
+@@ -12,9 +12,10 @@ license=("BSD3")
+ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.4.2-1"
-          "haskell-syb=0.3.7-1"
 -         "X11"
 -         "Xrandr"
 -         "Xext")

@@ -1,0 +1,13 @@
+Index: archhaskell-habs/scion-browser.cabal
+===================================================================
+--- archhaskell-habs.orig/scion-browser.cabal
++++ archhaskell-habs/scion-browser.cabal
+@@ -96,7 +96,7 @@ executable scion-browser
+   hs-source-dirs:  src
+   main-is:         Main.hs
+   build-depends:
+-    haskeline >= 0.6 && < 0.7,
++    haskeline >= 0.6 && < 0.8,
+     attoparsec >= 0.10,
+     base == 4.*,
+     mtl >= 2,
