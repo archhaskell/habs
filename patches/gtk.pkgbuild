@@ -1,0 +1,28 @@
+Index: archhaskell-habs/haskell-gtk/PKGBUILD
+===================================================================
+--- archhaskell-habs.orig/haskell-gtk/PKGBUILD
++++ archhaskell-habs/haskell-gtk/PKGBUILD
+@@ -10,12 +10,13 @@ pkgdesc="Binding to the Gtk+ graphical u
+ url="http://projects.haskell.org/gtk2hs/"
+ license=("LGPL-2.1")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=("gtk2hs-buildtools")
+ depends=("ghc=7.4.2-1"
+          "haskell-cairo=0.12.3.1-25"
+          "haskell-glib=0.12.3.1-25"
+          "haskell-mtl=2.1.2-25"
+-         "haskell-pango=0.12.3-25")
++         "haskell-pango=0.12.3-25"
++         "gtk2")
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
+@@ -29,6 +30,7 @@ build() {
+     runhaskell Setup configure -O -p --enable-split-objs --enable-shared \
+         --prefix=/usr --docdir=/usr/share/doc/${pkgname} \
+         --libsubdir=\$compiler/site-local/\$pkgid
++    sed -i 's|import Foreign.C.Types.*(CULong, CUInt)|import Foreign.C.Types (CULong(..), CUInt(..))|' Graphics/UI/Gtk/Types.chs
+     runhaskell Setup build
+     runhaskell Setup haddock
+     runhaskell Setup register --gen-script

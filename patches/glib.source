@@ -1,0 +1,42 @@
+Index: archhaskell-habs/haskell-glib/src/glib-0.12.3.1/System/Glib/GObject.chs
+===================================================================
+--- archhaskell-habs.orig/haskell-glib/src/glib-0.12.3.1/System/Glib/GObject.chs
++++ archhaskell-habs/haskell-glib/src/glib-0.12.3.1/System/Glib/GObject.chs
+@@ -127,8 +127,6 @@ makeNewGObject (constr, objectUnref) gen
+ 
+ {#pointer GDestroyNotify as DestroyNotify#}
+ 
+-foreign import ccall "wrapper" mkDestroyNotifyPtr :: IO () -> IO DestroyNotify
+-
+ -- | This function wraps any newly created objects that derives from
+ -- GInitiallyUnowned also known as objects with
+ -- \"floating-references\". The object will be refSink (for glib
+@@ -225,4 +223,4 @@ isA obj gType =
+ -- at this point we would normally implement the notify signal handler;
+ -- I've moved this definition into the Object class of the gtk package
+ -- since there's a quite a bit of machinery missing here (generated signal
+--- register functions and the problem of recursive modules)
+\ No newline at end of file
++-- register functions and the problem of recursive modules)
+Index: archhaskell-habs/haskell-glib/src/glib-0.12.3.1/System/Glib/MainLoop.chs
+===================================================================
+--- archhaskell-habs.orig/haskell-glib/src/glib-0.12.3.1/System/Glib/MainLoop.chs
++++ archhaskell-habs/haskell-glib/src/glib-0.12.3.1/System/Glib/MainLoop.chs
+@@ -71,7 +71,7 @@ import System.Glib.GObject	(DestroyNotif
+ 
+ {#pointer SourceFunc#}
+ 
+-foreign import ccall "wrapper" mkSourceFunc :: IO {#type gint#} -> IO SourceFunc
++foreign import ccall "wrapper" mkSourceFunc :: (Ptr () -> IO {#type gint#}) -> IO SourceFunc
+ 
+ type HandlerId = {#type guint#}
+ 
+@@ -79,7 +79,7 @@ type HandlerId = {#type guint#}
+ --
+ makeCallback :: IO {#type gint#} -> IO (SourceFunc, DestroyNotify)
+ makeCallback fun = do
+-  funPtr <- mkSourceFunc fun
++  funPtr <- mkSourceFunc (const fun)
+   return (funPtr, destroyFunPtr)
+ 
+ -- | Sets a function to be called at regular intervals, with the default

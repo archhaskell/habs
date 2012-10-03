@@ -8,10 +8,6 @@ cblrepo
 bytestring-show
 anansi
 GLUT
-glib
-gtk
-pango
 ghc-mod
 buildwrapper
 persistent-template
-haddock
