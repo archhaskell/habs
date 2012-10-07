@@ -59,6 +59,7 @@
 ["blaze-markup",{"RepoPkg":[{"Version":"0.5.1.1"},[{"Dependency":"base >=4 && <5"},{"Dependency":"blaze-builder >=0.2 && <0.4"},{"Dependency":"bytestring >=0.9 && <0.11"},{"Dependency":"text >=0.10 && <0.12"}],"25"]}]
 ["bloomfilter",{"RepoPkg":[{"Version":"1.2.6.10"},[{"Dependency":"array -any"},{"Dependency":"base >=4 && <5"},{"Dependency":"bytestring >=0.9"},{"Dependency":"deepseq -any"}],"25"]}]
 ["bytestring-lexing",{"RepoPkg":[{"Version":"0.4.0"},[{"Dependency":"array -any"},{"Dependency":"base >=4 && <5 && (<2.0 || >=3) && >=3 && <5"},{"Dependency":"bytestring -any && -any"}],"25"]}]
+["bytestring-show",{"RepoPkg":[{"Version":"0.3.5.3"},[{"Dependency":"array <0.5"},{"Dependency":"base <5"},{"Dependency":"binary <0.6"},{"Dependency":"bytestring >=0.9 && <=1"},{"Dependency":"containers <0.6"},{"Dependency":"integer-gmp >=0.2 && <0.6"}],"25"]}]
 ["cabal-file-th",{"RepoPkg":[{"Version":"0.2.3"},[{"Dependency":"Cabal >=1.10 && <1.17"},{"Dependency":"base >=4 && <5"},{"Dependency":"directory -any"},{"Dependency":"template-haskell -any"}],"25"]}]
 ["cairo",{"RepoPkg":[{"Version":"0.12.3.1"},[{"Dependency":"array -any"},{"Dependency":"base >=4 && <5"},{"Dependency":"bytestring -any"},{"Dependency":"mtl -any"}],"25"]}]
 ["case-insensitive",{"RepoPkg":[{"Version":"0.4.0.3"},[{"Dependency":"base >=3 && <4.7"},{"Dependency":"bytestring >=0.9 && <0.11"},{"Dependency":"hashable >=1.0 && <1.2"},{"Dependency":"text >=0.3 && <0.12"}],"25"]}]

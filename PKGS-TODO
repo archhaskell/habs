@@ -1,7 +1,6 @@
 GLUT,2.3.0.0
 anansi,0.4.4
 buildwrapper,0.6.1
-bytestring-show,0.3.5.3
 cblrepo,0.6.3
 ghc-mod,1.11.0
 pandoc,1.9.2.4
