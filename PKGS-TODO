@@ -1,3 +1,6 @@
+List of packages currently not buildable with GHC 7.6.  Remove lines as they
+are re-added to the repo.
+
 GLUT,2.3.0.0
 anansi,0.4.4
 buildwrapper,0.6.1
