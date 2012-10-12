@@ -4,7 +4,6 @@ are re-added to the repo.
 GLUT,2.3.0.0
 anansi,0.4.4
 buildwrapper,0.6.1
-cblrepo,0.6.3
 ghc-mod,1.11.0
 pandoc,1.9.2.4
 scion-browser,0.2.10
