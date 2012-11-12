@@ -1,16 +1,16 @@
-Index: archhaskell-habs/haskell-pango/PKGBUILD
+Index: archhaskell/haskell-pango/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-pango/PKGBUILD
-+++ archhaskell-habs/haskell-pango/PKGBUILD
+--- archhaskell.orig/haskell-pango/PKGBUILD
++++ archhaskell/haskell-pango/PKGBUILD
 @@ -10,11 +10,12 @@ pkgdesc="Binding to the Pango text rende
  url="http://projects.haskell.org/gtk2hs/"
  license=("LGPL-2.1")
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
- depends=("ghc=7.4.2-1"
-          "haskell-cairo=0.12.3.1-25"
-          "haskell-glib=0.12.3.1-25"
+ depends=("ghc=7.6.1-1"
+          "haskell-cairo=0.12.4-1"
+          "haskell-glib=0.12.4-1"
 -         "haskell-mtl=2.1.2-25")
 +         "haskell-mtl=2.1.2-25"
 +         "pango")
