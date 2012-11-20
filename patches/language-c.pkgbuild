@@ -8,6 +8,6 @@ Index: archhaskell-habs/haskell-language-c/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("alex" "happy")
- depends=("ghc=7.4.2-1"
+ depends=("ghc=7.6.1-1"
           "haskell-syb=0.3.6.2-1")
  options=('strip')

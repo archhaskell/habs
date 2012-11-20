@@ -8,6 +8,6 @@ Index: ah-ghc74/haskell-bytestring-lexing/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=( "alex")
- depends=("ghc=7.4.2-1")
+ depends=("ghc=7.6.1-1")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

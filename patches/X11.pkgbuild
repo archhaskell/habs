@@ -5,7 +5,7 @@ Index: archhaskell-habs/haskell-x11/PKGBUILD
 @@ -12,9 +12,10 @@ license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.4.2-1"
+ depends=("ghc=7.6.1-1"
 -         "X11"
 -         "Xrandr"
 -         "Xext")
