@@ -6,16 +6,24 @@ PKGBUILDs.  These PKGBUILDs can then be used to compile a binary repository of
 Haskell packages.  If you want to use the official build of this repository
 then add the following two lines to your `/etc/pacman.conf` file:
 
-    [haskell]
-    Server =  http://xsounds.org/~haskell/$arch
+    [haskell-core]
+    Server =  http://xsounds.org/~haskell/core/$arch
 
 If you'd like to build the repository yourself, then you need to install the
 following packages:
 
 * `devtools`
-* `cblrepo` (available in \[haskell\], and from [hackageDB][1])
+* `cblrepo` (available in \[haskell-core\], and from [hackageDB][1])
 * `zsh`
 * `git`
+
+The packages and database are signed with the following key:
+
+    pub   2048D/4209170B 2012-12-26
+          Key fingerprint = F310 4992 EBF2 4EB8 72B9  7B9C 32B0 B453 4209 170B
+    uid                  ArchHaskell (Magnus Therning) <magnus@therning.org>
+    sub   2048D/A418C0FE 2012-12-26
+
 
 Build steps
 -----------
@@ -110,7 +118,8 @@ Suggestions for adding individual packages to the set are always welcome.
 Use the [github issue tracker][5] to make sure your request isn't lost.  Be
 aware though that each added package adds to the burden of the team, so there
 is a real risk that your request is denied.  That risk is reduced if you show
-an interest in contributing to the project.
+an interest in contributing to the project, e.g. by providing already built
+packages together with your request..
 
 [1]: http://hackage.haskell.org/packages/hackage.html
 [2]: https://github.com/archhaskell/cabal2arch
