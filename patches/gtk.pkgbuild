@@ -9,11 +9,11 @@ Index: archhaskell/haskell-gtk/PKGBUILD
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
  depends=("ghc=7.6.1-1"
-          "haskell-cairo=0.12.4-1"
-          "haskell-glib=0.12.4-1"
-          "haskell-mtl=2.1.2-25"
--         "haskell-pango=0.12.4-1")
-+         "haskell-pango=0.12.4-1"
+          "haskell-cairo=0.12.4-2"
+          "haskell-glib=0.12.4-2"
+          "haskell-mtl=2.1.2-26"
+-         "haskell-pango=0.12.4-2")
++         "haskell-pango=0.12.4-2"
 +         "gtk2")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
