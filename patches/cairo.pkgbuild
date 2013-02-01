@@ -9,8 +9,8 @@ Index: archhaskell/haskell-cairo/PKGBUILD
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
  depends=("ghc=7.6.1-1"
--         "haskell-mtl=2.1.2-25")
-+         "haskell-mtl=2.1.2-25"
+-         "haskell-mtl=2.1.2-26")
++         "haskell-mtl=2.1.2-26"
 +         "cairo")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

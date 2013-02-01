@@ -8,6 +8,6 @@ Index: archhaskell/gtk2hs-buildtools/PKGBUILD
  makedepends=("ghc=7.6.1-1"
 +             "alex"
 +             "happy"
-              "haskell-random=1.0.1.1-25")
+              "haskell-random=1.0.1.1-26")
  depends=()
  options=('strip')
