@@ -1,6 +1,6 @@
 #! /bin/bash
 
-HADDOCK=haddock-ghc
+HADDOCK=haddock
 HADDOCK_LIBS=/usr/share/doc/ghc/html/libraries
 HADDOCK_DEST=/usr/share/doc/ghc/html/libraries
 HADDOCK_FILES=
