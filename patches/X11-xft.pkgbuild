@@ -4,7 +4,7 @@ Index: archhaskell-habs/haskell-x11-xft/PKGBUILD
 +++ archhaskell-habs/haskell-x11-xft/PKGBUILD
 @@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.1-1"
+ depends=("ghc=7.6.2-1"
           "haskell-x11=1.6.0.2-26"
 -         "haskell-utf8-string=0.3.7-26")
 +         "haskell-utf8-string=0.3.7-26"

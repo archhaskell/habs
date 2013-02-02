@@ -5,7 +5,7 @@ Index: archhaskell/gtk2hs-buildtools/PKGBUILD
 @@ -11,6 +11,8 @@ url="http://projects.haskell.org/gtk2hs/
  license=("GPL-2")
  arch=('i686' 'x86_64')
- makedepends=("ghc=7.6.1-1"
+ makedepends=("ghc=7.6.2-1"
 +             "alex"
 +             "happy"
               "haskell-random=1.0.1.1-26")

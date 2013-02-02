@@ -7,9 +7,9 @@ Index: archhaskell/haskell-glib/PKGBUILD
  license=("LGPL-2.1")
  arch=('i686' 'x86_64')
 -makedepends=()
--depends=("ghc=7.6.1-1")
+-depends=("ghc=7.6.2-1")
 +makedepends=("gtk2hs-buildtools")
-+depends=("ghc=7.6.1-1" "glib2")
++depends=("ghc=7.6.2-1" "glib2")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

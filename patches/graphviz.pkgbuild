@@ -2,7 +2,7 @@ Index: habs/haskell-graphviz/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-graphviz/PKGBUILD
 +++ habs/haskell-graphviz/PKGBUILD
-@@ -18,7 +18,8 @@ depends=("ghc=7.6.1-1"
+@@ -18,7 +18,8 @@ depends=("ghc=7.6.2-1"
           "haskell-polyparse=1.8-2"
           "haskell-text=0.11.2.3-26"
           "haskell-transformers=0.3.0.0-26"

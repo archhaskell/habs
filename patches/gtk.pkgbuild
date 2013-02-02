@@ -8,7 +8,7 @@ Index: archhaskell/haskell-gtk/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
- depends=("ghc=7.6.1-1"
+ depends=("ghc=7.6.2-1"
           "haskell-cairo=0.12.4-2"
           "haskell-glib=0.12.4-2"
           "haskell-mtl=2.1.2-26"
