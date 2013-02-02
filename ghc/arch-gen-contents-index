@@ -1,0 +1,13 @@
+#! /bin/bash
+
+HADDOCK=haddock-ghc
+HADDOCK_LIBS=/usr/share/doc/ghc/html/libraries
+HADDOCK_DEST=/usr/share/doc/ghc/html/libraries
+HADDOCK_FILES=
+for f in $(find -L $HADDOCK_LIBS -name \*.haddock ! -name ghc.haddock); do
+    HADDOCK_FILES="$HADDOCK_FILES -i $(dirname $f),$f"
+done
+
+$HADDOCK --gen-index --gen-contents -o ${HADDOCK_DEST} \
+    -t 'Local Haskell Libraries' -p ${HADDOCK_LIBS}/prologue.txt \
+    $HADDOCK_FILES

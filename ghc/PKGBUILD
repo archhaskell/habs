@@ -71,7 +71,7 @@ replaces=('haskell-array<0.4.0.1'
          )
 source=("http://www.haskell.org/ghc/dist/${pkgver}/ghc-${pkgver}-src.tar.bz2"
         "http://www.haskell.org/ghc/dist/${pkgver}/ghc-${pkgver}-testsuite.tar.bz2"
-        'build.mk')
+        'build.mk' 'arch-gen-contents-index')
 
 build() {
   cd ghc-${pkgver}
@@ -122,6 +122,13 @@ package() {
 
   make DESTDIR=${pkgdir} install
 
+  # clean up the doc index, it's re-generated in ghc.install
+  rm ${pkgdir}/usr/share/doc/ghc/html/libraries/doc-index*.html \
+      frames.html haddock-util.js hslogo-16.png index-frames.html index.html \
+      minus.gif ocean.css plus.gif synopsis.png
+  # install our own contents generator
+  install -m755 arch-gen-contents-index ${pkgdir}/usr/share/doc/ghc/html/libraries
+
   install -d ${pkgdir}/usr/share/licenses/ghc
   install -m644 LICENSE \
     ${pkgdir}/usr/share/licenses/ghc
@@ -130,3 +137,4 @@ package() {
 sha256sums=('d5f45184abeacf7e9c6b4f63c7101a5c1d7b4fe9007901159e2287ecf38de533'
             'e49f13f99d6106d6505562e02ee85fee3bbfd218116a4105304a41af83b83116'
             'cd7d83457a8790b523ef7ada3a6449e856dac7a4ae019939e2614f1e03f5c11f')
+
