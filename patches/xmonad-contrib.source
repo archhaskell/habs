@@ -1,0 +1,12 @@
+Index: archhaskell-habs/haskell-xmonad-contrib/src/xmonad-contrib-0.11/XMonad/Hooks/DebugEvents.hs
+===================================================================
+--- archhaskell-habs.orig/haskell-xmonad-contrib/src/xmonad-contrib-0.11/XMonad/Hooks/DebugEvents.hs
++++ archhaskell-habs/haskell-xmonad-contrib/src/xmonad-contrib-0.11/XMonad/Hooks/DebugEvents.hs
+@@ -23,6 +23,7 @@ import           Prelude
+ 
+ import           XMonad                               hiding (windowEvent
+                                                              ,(-->)
++                                                             ,getAtomName
+                                                              )
+ 
+ import           XMonad.Hooks.DebugKeyEvents                 (debugKeyEvents)
