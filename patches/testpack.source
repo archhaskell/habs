@@ -1,7 +1,7 @@
-Index: archhaskell-habs/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools.hs
+Index: archhaskell-habs/haskell-testpack/src/testpack-2.1.2.1/src/Test/HUnit/Tools.hs
 ===================================================================
---- archhaskell-habs.orig/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools.hs
-+++ archhaskell-habs/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools.hs
+--- archhaskell-habs.orig/haskell-testpack/src/testpack-2.1.2.1/src/Test/HUnit/Tools.hs
++++ archhaskell-habs/haskell-testpack/src/testpack-2.1.2.1/src/Test/HUnit/Tools.hs
 @@ -128,7 +128,7 @@ Often used like this:
  >        q "Integer -> Int (safe bounds)" prop_integer_to_int_pass]
  -}
@@ -11,12 +11,71 @@ Index: archhaskell-habs/haskell-testpack/src/testpack-2.1.2/src/Test/HUnit/Tools
  
  {- | Run verbose tests.  Example:
  
-@@ -174,7 +174,7 @@ localquickCheckWithResult args p =
-               Just (rnd,_) -> return rnd
-      test MkState{ terminal          = tm
-                  , maxSuccessTests   = maxSuccess args
+@@ -164,33 +164,27 @@ tl msg t = HU.TestLabel msg $ HU.TestLis
+ localquickCheckWithResult :: Testable prop => Args -> prop -> IO Result
+ localquickCheckWithResult args p =
+   do 
+-#if MIN_VERSION_QuickCheck(2,3,0)
+-     tm  <- if chatty args then newStdioTerminal else newNullTerminal
+-#else
+-     tm  <- newTerminal
+-#endif
+-     rnd <- case replay args of
+-              Nothing      -> newStdGen
+-              Just (rnd,_) -> return rnd
+-     test MkState{ terminal          = tm
+-                 , maxSuccessTests   = maxSuccess args
 -                 , maxDiscardedTests = maxDiscard args
-+                 , maxDiscardedTests = maxDiscardRatio args
-                  , computeSize       = case replay args of
-                                          Nothing    -> \n d -> (n * maxSize args)
-                                                          `div` maxSuccess args
+-                 , computeSize       = case replay args of
+-                                         Nothing    -> \n d -> (n * maxSize args)
+-                                                         `div` maxSuccess args
+-                                                             + (d `div` 10)
+-                                         Just (_,s) -> \_ _ -> s
+-                 , numSuccessTests   = 0
+-                 , numDiscardedTests = 0
+-                 , collected         = []
+-                 , expectedFailure   = False
+-                 , randomSeed        = rnd
+-#if !(MIN_VERSION_QuickCheck(2,3,0))
+-                 , isShrinking       = False
+-#endif
+-                 , numSuccessShrinks = 0
+-                 , numTryShrinks     = 0
+-                 } (unGen (property p))
++     let withTm  = if chatty args then withStdioTerminal else withNullTerminal
++     withTm $ \ tm -> do
++         rnd <- case replay args of
++                  Nothing      -> newStdGen
++                  Just (rnd,_) -> return rnd
++         test MkState{ terminal          = tm
++                     , maxSuccessTests   = maxSuccess args
++                     , maxDiscardedTests = maxDiscardRatio args
++                     , computeSize       = case replay args of
++                                             Nothing    -> \n d -> (n * maxSize args)
++                                                             `div` maxSuccess args
++                                                                 + (d `div` 10)
++                                             Just (_,s) -> \_ _ -> s
++                     , numSuccessTests   = 0
++                     , numDiscardedTests = 0
++                     , collected         = []
++                     , expectedFailure   = False
++                     , randomSeed        = rnd
++                     , numSuccessShrinks = 0
++                     , numTryShrinks     = 0
++                     } (unGen (property p))
+   where 
+ --------------------------------------------------------------------------
+ -- main test loop
+Index: archhaskell-habs/haskell-testpack/src/testpack-2.1.2.1/src/Test/QuickCheck/Tools.hs
+===================================================================
+--- archhaskell-habs.orig/haskell-testpack/src/testpack-2.1.2.1/src/Test/QuickCheck/Tools.hs
++++ archhaskell-habs/haskell-testpack/src/testpack-2.1.2.1/src/Test/QuickCheck/Tools.hs
+@@ -23,7 +23,7 @@ module Test.QuickCheck.Tools (-- * Compa
+                               
+                              )
+ where
+-import Test.QuickCheck hiding (Result, reason)
++import Test.QuickCheck hiding (Result, reason, interrupted)
+ import Test.QuickCheck.Property
+ 
+ {- | Compare two values.  If same, the test passes.  If different, the result indicates
