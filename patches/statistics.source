@@ -1,0 +1,19 @@
+Index: archhaskell/haskell-statistics/src/statistics-0.10.3.0/Statistics/Distribution/Transform.hs
+===================================================================
+--- archhaskell.orig/haskell-statistics/src/statistics-0.10.3.0/Statistics/Distribution/Transform.hs
++++ archhaskell/haskell-statistics/src/statistics-0.10.3.0/Statistics/Distribution/Transform.hs
+@@ -25,11 +25,11 @@ import qualified Statistics.Distribution
+ -- > x' = μ + σ·x
+ data LinearTransform d = LinearTransform
+   { linTransLocation :: {-# UNPACK #-} !Double
+-    -- | Location parameter.
++    -- ^ Location parameter.
+   , linTransScale    :: {-# UNPACK #-} !Double
+-    -- | Scale parameter.
++    -- ^ Scale parameter.
+   , linTransDistr    :: d
+-    -- | Distribution being transformed.
++    -- ^ Distribution being transformed.
+   } deriving (Eq,Show,Read,Typeable)
+ 
+ -- | Apply linear transformation to distribution.
