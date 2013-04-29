@@ -8,12 +8,12 @@ Index: archhaskell/haskell-gtk/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
- depends=("ghc=7.6.2-1"
-          "haskell-cairo=0.12.4-2"
-          "haskell-glib=0.12.4-2"
-          "haskell-mtl=2.1.2-26"
--         "haskell-pango=0.12.4-2")
-+         "haskell-pango=0.12.4-2"
+ depends=("ghc=7.6.3-1"
+          "haskell-cairo=0.12.4-3"
+          "haskell-glib=0.12.4-3"
+          "haskell-mtl=2.1.2-27"
+-         "haskell-pango=0.12.4-3")
++         "haskell-pango=0.12.4-3"
 +         "gtk2")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

@@ -1,13 +1,14 @@
-Index: archhaskell-habs/haskell-sdl-image/PKGBUILD
+Index: archhaskell/haskell-sdl-image/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-sdl-image/PKGBUILD
-+++ archhaskell-habs/haskell-sdl-image/PKGBUILD
-@@ -12,7 +12,8 @@ license=("BSD3")
+--- archhaskell.orig/haskell-sdl-image/PKGBUILD
++++ archhaskell/haskell-sdl-image/PKGBUILD
+@@ -11,8 +11,9 @@ url="http://hackage.haskell.org/package/
+ license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.2-1"
--         "haskell-sdl=0.6.4-26")
-+         "haskell-sdl=0.6.4-26"
+ depends=("ghc=7.6.3-1"
+-         "haskell-sdl=0.6.4-27")
++         "haskell-sdl=0.6.4-27"
 +         "sdl_image")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

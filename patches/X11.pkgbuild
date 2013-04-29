@@ -1,12 +1,13 @@
-Index: archhaskell-habs/haskell-x11/PKGBUILD
+Index: archhaskell/haskell-x11/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-x11/PKGBUILD
-+++ archhaskell-habs/haskell-x11/PKGBUILD
-@@ -12,9 +12,10 @@ license=("BSD3")
+--- archhaskell.orig/haskell-x11/PKGBUILD
++++ archhaskell/haskell-x11/PKGBUILD
+@@ -11,11 +11,12 @@ url="https://github.com/haskell-pkg-jani
+ license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.2-1"
-          "haskell-data-default=0.5.3-1"
+ depends=("ghc=7.6.3-1"
+          "haskell-data-default=0.5.3-2"
 -         "X11"
 -         "Xrandr"
 -         "Xext")

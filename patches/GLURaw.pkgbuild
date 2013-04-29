@@ -1,13 +1,13 @@
-Index: archhaskell-habs/haskell-gluraw/PKGBUILD
+Index: archhaskell/haskell-gluraw/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-gluraw/PKGBUILD
-+++ archhaskell-habs/haskell-gluraw/PKGBUILD
+--- archhaskell.orig/haskell-gluraw/PKGBUILD
++++ archhaskell/haskell-gluraw/PKGBUILD
 @@ -12,7 +12,8 @@ license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.2-1"
--         "haskell-openglraw=1.3.0.0-2")
-+         "haskell-openglraw=1.3.0.0-2"
+ depends=("ghc=7.6.3-1"
+-         "haskell-openglraw=1.3.0.0-3")
++         "haskell-openglraw=1.3.0.0-3"
 +         "glu")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"

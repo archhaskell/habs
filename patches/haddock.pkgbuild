@@ -4,10 +4,10 @@ Index: archhaskell-habs/haskell-haddock/PKGBUILD
 +++ archhaskell-habs/haskell-haddock/PKGBUILD
 @@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.2-1"
-          "haskell-ghc-paths=0.1.0.9-2"
--         "haskell-xhtml=3000.2.1-26")
-+         "haskell-xhtml=3000.2.1-26"
+ depends=("ghc=7.6.3-1"
+          "haskell-ghc-paths=0.1.0.9-3"
+-         "haskell-xhtml=3000.2.1-27")
++         "haskell-xhtml=3000.2.1-27"
 +         "alex" "happy")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

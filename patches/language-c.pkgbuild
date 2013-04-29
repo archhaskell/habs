@@ -1,13 +1,14 @@
-Index: archhaskell-habs/haskell-language-c/PKGBUILD
+Index: archhaskell/haskell-language-c/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-language-c/PKGBUILD
-+++ archhaskell-habs/haskell-language-c/PKGBUILD
-@@ -10,7 +10,7 @@ pkgdesc="Analysis and generation of C co
+--- archhaskell.orig/haskell-language-c/PKGBUILD
++++ archhaskell/haskell-language-c/PKGBUILD
+@@ -10,8 +10,8 @@ pkgdesc="Analysis and generation of C co
  url="http://www.sivity.net/projects/language.c/"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("alex" "happy")
- depends=("ghc=7.6.2-1"
-          "haskell-syb=0.3.6.2-1")
+ depends=("ghc=7.6.3-1"
+          "haskell-syb=0.4.0-2")
  options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

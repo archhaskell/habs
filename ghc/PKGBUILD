@@ -7,7 +7,7 @@
 #   This implies that all libraries need to be rebuilt when ghc is rebuilt.
 
 pkgname=ghc
-pkgver=7.6.2
+pkgver=7.6.3
 pkgrel=1
 pkgdesc='The Glasgow Haskell Compiler'
 arch=('i686' 'x86_64')
@@ -137,7 +137,7 @@ package() {
     ${pkgdir}/usr/share/licenses/ghc
 }
 
-sha256sums=('d5f45184abeacf7e9c6b4f63c7101a5c1d7b4fe9007901159e2287ecf38de533'
-            'e49f13f99d6106d6505562e02ee85fee3bbfd218116a4105304a41af83b83116'
+sha256sums=('bd43823d31f6b5d0b2ca7b74151a8f98336ab0800be85f45bb591c9c26aac998'
+            '870d8f50a1b569b0f93d0c7c6b80225280841988f1d779aafe847bcf02d76256'
             'cd7d83457a8790b523ef7ada3a6449e856dac7a4ae019939e2614f1e03f5c11f'
             'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')

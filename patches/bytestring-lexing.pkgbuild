@@ -1,13 +1,14 @@
-Index: ah-ghc74/haskell-bytestring-lexing/PKGBUILD
+Index: archhaskell/haskell-bytestring-lexing/PKGBUILD
 ===================================================================
---- ah-ghc74.orig/haskell-bytestring-lexing/PKGBUILD
-+++ ah-ghc74/haskell-bytestring-lexing/PKGBUILD
-@@ -10,7 +10,7 @@ pkgdesc="Parse and produce literals effi
+--- archhaskell.orig/haskell-bytestring-lexing/PKGBUILD
++++ archhaskell/haskell-bytestring-lexing/PKGBUILD
+@@ -10,8 +10,8 @@ pkgdesc="Parse and produce literals effi
  url="http://code.haskell.org/~wren/"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=( "alex")
- depends=("ghc=7.6.2-1")
+ depends=("ghc=7.6.3-1")
++makedepends=("alex")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

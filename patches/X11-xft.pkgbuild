@@ -4,10 +4,10 @@ Index: archhaskell-habs/haskell-x11-xft/PKGBUILD
 +++ archhaskell-habs/haskell-x11-xft/PKGBUILD
 @@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.2-1"
-          "haskell-x11=1.6.1.1-3"
--         "haskell-utf8-string=0.3.7-26")
-+         "haskell-utf8-string=0.3.7-26"
+ depends=("ghc=7.6.3-1"
+          "haskell-x11=1.6.1.1-4"
+-         "haskell-utf8-string=0.3.7-27")
++         "haskell-utf8-string=0.3.7-27"
 +         "libxft")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
