@@ -97,7 +97,6 @@ if [ ! -d ${CHROOT_ROOTDIR} ]; then
     cat > "${pacman_conf}" << EOF
 [options]
 HoldPkg = pacman libc
-SyncFirst = pacman
 Architecture = auto
 SigLevel = Never
 
@@ -120,7 +119,7 @@ Include = /etc/pacman.d/mirrorlist
 Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 EOF
 
-    sudo setarch ${arch} mkarchroot -f -C ${pacman_conf} \
+    sudo setarch ${arch} mkarchroot -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
         base base-devel curl \
         sudo \
