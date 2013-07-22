@@ -1,0 +1,13 @@
+Index: archhaskell/git-annex/PKGBUILD
+===================================================================
+--- archhaskell.orig/git-annex/PKGBUILD
++++ archhaskell/git-annex/PKGBUILD
+@@ -37,7 +37,7 @@ makedepends=("ghc=7.6.3-1"
+              "haskell-unix-compat=0.4.1.1-2"
+              "haskell-utf8-string=0.3.7-27"
+              "haskell-uuid=1.2.13-1")
+-depends=()
++depends=('git' 'lsof' 'rsync')
+ options=('strip')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
+         "cabal.patch")
