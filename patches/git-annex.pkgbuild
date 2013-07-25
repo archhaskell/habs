@@ -2,7 +2,7 @@ Index: archhaskell/git-annex/PKGBUILD
 ===================================================================
 --- archhaskell.orig/git-annex/PKGBUILD
 +++ archhaskell/git-annex/PKGBUILD
-@@ -37,7 +37,7 @@ makedepends=("ghc=7.6.3-1"
+@@ -36,7 +36,7 @@ makedepends=("ghc=7.6.3-1"
               "haskell-unix-compat=0.4.1.1-2"
               "haskell-utf8-string=0.3.7-27"
               "haskell-uuid=1.2.13-1")
@@ -11,3 +11,14 @@ Index: archhaskell/git-annex/PKGBUILD
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
          "cabal.patch")
+@@ -56,4 +56,10 @@ build() {
+ package() {
+     cd ${srcdir}/${_hkgname}-${pkgver}
+     runhaskell Setup copy --destdir=${pkgdir}
++
++    # stuff that ought to be handled in Setup.hs
++    install -d ${pkgdir}/usr/share/man/man1
++    install -m 0644 git-annex.1 git-annex-shell.1 ${pkgdir}/usr/share/man/man1
++    cd ${pkgdir}
++    (cd usr/bin; ln -sf git-annex git-annex-shell)
+ }
