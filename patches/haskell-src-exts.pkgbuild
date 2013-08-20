@@ -9,6 +9,6 @@ Index: archhaskell/haskell-haskell-src-exts/PKGBUILD
 -makedepends=()
 +makedepends=("happy")
  depends=("ghc=7.6.3-1"
-          "haskell-cpphs=1.16-3")
+          "haskell-cpphs=1.17.1-2")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
