@@ -5,7 +5,7 @@ Index: archhaskell/git-annex/PKGBUILD
 @@ -36,7 +36,7 @@ makedepends=("ghc=7.6.3-1"
               "haskell-unix-compat=0.4.1.1-2"
               "haskell-utf8-string=0.3.7-27"
-              "haskell-uuid=1.2.13-4")
+              "haskell-uuid=1.2.14-1")
 -depends=()
 +depends=('git' 'lsof' 'rsync')
  options=('strip')
