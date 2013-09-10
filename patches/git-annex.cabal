@@ -47,7 +47,7 @@ Index: archhaskell/git-annex.cabal
  
  Flag Android
    Description: Building for Android
-@@ -61,9 +72,11 @@ Flag Android
+@@ -61,15 +72,19 @@ Flag Android
  
  Flag TestSuite
    Description: Embed the test suite into git-annex
@@ -56,6 +56,14 @@ Index: archhaskell/git-annex.cabal
  Flag TDFA
    Description: Use regex-tdfa for wildcards
 +  Manual: True
+ 
+ Flag Feed
+   Description: Enable podcast feed support
++  Default: False
+ 
+ Flag Quvi
+   Description: Enable use of quvi to download videos
++  Default: False
  
  Executable git-annex
    Main-Is: git-annex.hs
