@@ -1,13 +1,13 @@
-Index: archhaskell/haskell-openglraw/src/OpenGLRaw-1.3.0.0/OpenGLRaw.cabal
+Index: archhaskell/OpenGLRaw.cabal
 ===================================================================
---- archhaskell.orig/haskell-openglraw/src/OpenGLRaw-1.3.0.0/OpenGLRaw.cabal
-+++ archhaskell/haskell-openglraw/src/OpenGLRaw-1.3.0.0/OpenGLRaw.cabal
-@@ -249,7 +249,7 @@ library
-       if os(darwin)
-          frameworks: OpenGL
-       else
--         extra-libraries: GL
-+         pkgconfig-depends: gl
+--- archhaskell.orig/OpenGLRaw.cabal
++++ archhaskell/OpenGLRaw.cabal
+@@ -272,7 +272,7 @@ library
+          if os(ios)
+             frameworks: OpenGLES
+          else
+-            extra-libraries: GL
++            pkgconfig-depends: gl
  
  source-repository head
    type:     git
