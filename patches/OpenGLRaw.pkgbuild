@@ -7,7 +7,7 @@ Index: archhaskell/haskell-openglraw/PKGBUILD
  arch=('i686' 'x86_64')
  makedepends=()
 -depends=("ghc=7.6.3-1")
-+depends=("ghc=7.6.3-1" "mesa-libgl")
++depends=("ghc=7.6.3-1" "libgl")
  options=('strip')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
          "cabal.patch")
