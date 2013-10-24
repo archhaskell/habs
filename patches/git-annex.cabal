@@ -2,7 +2,7 @@ Index: archhaskell/git-annex.cabal
 ===================================================================
 --- archhaskell.orig/git-annex.cabal
 +++ archhaskell/git-annex.cabal
-@@ -27,33 +27,44 @@ Description:
+@@ -27,52 +27,77 @@ Description:
  
  Flag S3
    Description: Enable S3 support
@@ -24,22 +24,27 @@ Index: archhaskell/git-annex.cabal
  Flag Assistant
    Description: Enable git-annex assistant and watch command
 +  Default: False
++  Manual: True
  
  Flag Webapp
    Description: Enable git-annex webapp
 +  Default: False
++  Manual: True
  
  Flag Pairing
    Description: Enable pairing
 +  Default: False
++  Manual: True
  
  Flag XMPP
    Description: Enable notifications using XMPP
 +  Default: False
++  Manual: True
  
  Flag DNS
    Description: Enable the haskell DNS library for DNS lookup
 +  Default: False
++  Manual: True
  
  Flag Production
    Description: Enable production build (slower build; faster binary)
@@ -47,11 +52,13 @@ Index: archhaskell/git-annex.cabal
  
  Flag Android
    Description: Building for Android
-@@ -61,15 +72,19 @@ Flag Android
+   Default: False
++  Manual: True
  
  Flag TestSuite
    Description: Embed the test suite into git-annex
 +  Default: False
++  Manual: True
  
  Flag TDFA
    Description: Use regex-tdfa for wildcards
@@ -60,10 +67,26 @@ Index: archhaskell/git-annex.cabal
  Flag Feed
    Description: Enable podcast feed support
 +  Default: False
++  Manual: True
  
  Flag Quvi
    Description: Enable use of quvi to download videos
 +  Default: False
++  Manual: True
+ 
+ Flag CryptoHash
+   Description: Enable use of cryptohash for checksumming
++  Manual: True
  
  Executable git-annex
    Main-Is: git-annex.hs
+@@ -145,6 +170,9 @@ Executable git-annex
+             CPP-Options: -DWITH_KQUEUE
+             C-Sources: Utility/libkqueue.c
+ 
++  if os(linux)
++    Build-Depends: async
++
+   if os(linux) && flag(Dbus)
+     Build-Depends: dbus (>= 0.10.3)
+     CPP-Options: -DWITH_DBUS
