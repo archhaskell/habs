@@ -68,7 +68,7 @@ buildpkg() {
         msg "Skipping build in $PWD"
     else
         msg "Building in $PWD"
-        sudo setarch ${arch} makechrootpkg -u -d -l ${build_chrootdir} -r ${CHROOT_DIR} -- -i
+        sudo setarch ${arch} makechrootpkg -u -l ${build_chrootdir} -r ${CHROOT_DIR} -- -i
     fi
 }
 
