@@ -36,6 +36,7 @@ build_chrootdir=build
 habs_dir=.
 clean_build_first=0
 update_pristine_first=0
+with_mirrorlist=1
 
 usage() {
     cat << EOF
@@ -54,6 +55,7 @@ Options:
 -l <dir>    Location of chroot (default .)
 -a <arch>   Architecture to build for i686 or x86_64 (default is local arch)
 -b <dir>    Location of your HABS dir (default .)
+-m          Don't include a mirrorlist in the generated chroot's pacman.conf
 EOF
 }
 
@@ -72,11 +74,12 @@ buildpkg() {
     fi
 }
 
-while getopts hcxa:l:b: opt; do
+while getopts hcxma:l:b: opt; do
     case "${opt}" in
         h) usage; exit 0;;
         c) clean_build_first=1;;
         x) update_pristine_first=1;;
+        m) with_mirrorlist=0;;
         a) arch=${OPTARG};;
         l) chrootdir="${OPTARG}";;
         b) habs_dir="${OPTARG}";;
@@ -106,6 +109,10 @@ SigLevel = Never
 [haskell]
 Server = http://xsounds.org/~haskell/\$arch
 
+EOF
+
+    if [[ "${with_mirrorlist}" == "1" ]]; then
+        cat >> "${pacman_conf}" << EOF
 [core]
 Include = /etc/pacman.d/mirrorlist
 Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
@@ -118,6 +125,18 @@ Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 Include = /etc/pacman.d/mirrorlist
 Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 EOF
+    else
+        cat >> "${pacman_conf}" << EOF
+[core]
+Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
+
+[extra]
+Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
+
+[community]
+Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
+EOF
+    fi
 
     sudo setarch ${arch} mkarchroot -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
@@ -133,6 +152,7 @@ EOF
     # no point in updating the newly built pristine
     update_pristine_first=0
     msg "Done"
+    exit 0
 fi
 
 if [[ "${update_pristine_first}" == "1" ]]; then
