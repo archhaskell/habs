@@ -9,19 +9,11 @@ Index: archhaskell/haskell-pango/PKGBUILD
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
  depends=("ghc=7.6.3-1"
-          "haskell-cairo=0.12.4-3"
-          "haskell-glib=0.12.4-3"
+          "haskell-cairo=0.12.5.0-1"
+          "haskell-glib=0.12.5.0-1"
 -         "haskell-mtl=2.1.2-27")
 +         "haskell-mtl=2.1.2-27"
 +         "pango")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
-@@ -28,6 +29,7 @@ build() {
-     runhaskell Setup configure -O -p --enable-split-objs --enable-shared \
-         --prefix=/usr --docdir=/usr/share/doc/${pkgname} \
-         --libsubdir=\$compiler/site-local/\$pkgid
-+    sed -i 's|import Foreign.C.Types.*(CULong, CUInt)|import Foreign.C.Types (CULong(..), CUInt(..))|' Graphics/Rendering/Pango/Types.chs
-     runhaskell Setup build
-     runhaskell Setup haddock
-     runhaskell Setup register --gen-script

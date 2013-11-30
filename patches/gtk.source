@@ -1,0 +1,20 @@
+Index: archhaskell/haskell-gtk/src/gtk-0.12.4/Graphics/UI/Gtk/Cairo.chs
+===================================================================
+--- archhaskell.orig/haskell-gtk/src/gtk-0.12.4/Graphics/UI/Gtk/Cairo.chs
++++ archhaskell/haskell-gtk/src/gtk-0.12.4/Graphics/UI/Gtk/Cairo.chs
+@@ -74,7 +74,7 @@ import System.Glib.FFI
+ {#import Graphics.Rendering.Pango.Cairo#}
+ 
+ #if GTK_CHECK_VERSION(2,8,0)
+-{#import Graphics.Rendering.Cairo.Types#} as Cairo
++{#import Graphics.Rendering.Cairo.Types#} as Cairo hiding (Region)
+ import qualified Graphics.Rendering.Cairo.Internal as Cairo.Internal
+ import qualified Graphics.Rendering.Cairo as Cairo
+ import Graphics.Rendering.Cairo.Internal (Render(Render))
+@@ -126,4 +126,4 @@ region region = Render $ do
+   liftIO $ {# call unsafe gdk_cairo_region #}
+     cr
+     region
+-#endif
+\ No newline at end of file
++#endif

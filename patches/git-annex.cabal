@@ -2,7 +2,7 @@ Index: archhaskell/git-annex.cabal
 ===================================================================
 --- archhaskell.orig/git-annex.cabal
 +++ archhaskell/git-annex.cabal
-@@ -27,52 +27,77 @@ Description:
+@@ -27,60 +27,87 @@ Description:
  
  Flag S3
    Description: Enable S3 support
@@ -51,7 +51,12 @@ Index: archhaskell/git-annex.cabal
 +  Manual: True
  
  Flag Android
-   Description: Building for Android
+   Description: Cross building for Android
+   Default: False
++  Manual: True
+ 
+ Flag AndroidSplice
+   Description: Building to get TH splices for Android
    Default: False
 +  Manual: True
  
@@ -78,15 +83,10 @@ Index: archhaskell/git-annex.cabal
    Description: Enable use of cryptohash for checksumming
 +  Manual: True
  
+ Flag EKG
+   Description: Enable use of EKG to monitor git-annex as it runs (at http://localhost:4242/)
+   Default: False
++  Manual: True
+ 
  Executable git-annex
    Main-Is: git-annex.hs
-@@ -145,6 +170,9 @@ Executable git-annex
-             CPP-Options: -DWITH_KQUEUE
-             C-Sources: Utility/libkqueue.c
- 
-+  if os(linux)
-+    Build-Depends: async
-+
-   if os(linux) && flag(Dbus)
-     Build-Depends: dbus (>= 0.10.3)
-     CPP-Options: -DWITH_DBUS
