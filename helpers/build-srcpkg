@@ -38,6 +38,13 @@ usage() {
 EOF
 }
 
+copy_results() {
+    msg "Collecting all built packages"
+    cp */*-x86_64.pkg.tar.xz ${output_x86_64}
+    cp */*-i686.pkg.tar.xz ${output_i686}
+}
+trap copy_results ERR
+
 # parse command line options
 while getopts hs:l:o: opt; do
     case "${opt}" in
@@ -93,8 +100,6 @@ msg "Start i686 build.."
 msg "Done"
 
 # copy build results
-msg "Collecting all built packages"
-cp */*-x86_64.pkg.tar.xz ${output_x86_64}
-cp */*-i686.pkg.tar.xz ${output_i686}
+copy_results
 
 msg "Build done"
