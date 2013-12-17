@@ -8,6 +8,6 @@ Index: archhaskell/haskell-sdl/PKGBUILD
  makedepends=()
 -depends=("ghc=7.6.3-1" "SDL")
 +depends=("ghc=7.6.3-1" "sdl")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

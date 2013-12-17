@@ -11,4 +11,4 @@ Index: archhaskell/gtk2hs-buildtools/PKGBUILD
 +             "happy"
               "haskell-random=1.0.1.1-27")
  depends=()
- options=('strip')
+ options=('strip' 'staticlibs')

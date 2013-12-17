@@ -9,7 +9,7 @@ Index: archhaskell-habs/haskell-haddock/PKGBUILD
 -         "haskell-xhtml=3000.2.1-27")
 +         "haskell-xhtml=3000.2.1-27"
 +         "alex" "happy")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
 @@ -42,5 +43,6 @@ package() {
