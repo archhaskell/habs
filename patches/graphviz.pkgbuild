@@ -9,6 +9,6 @@ Index: habs/haskell-graphviz/PKGBUILD
 -         "haskell-wl-pprint-text=1.1.0.0-5")
 +         "haskell-wl-pprint-text=1.1.0.0-5"
 +         "graphviz")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

@@ -1,0 +1,14 @@
+Index: archhaskell/haskell-pandoc/PKGBUILD
+===================================================================
+--- archhaskell.orig/haskell-pandoc/PKGBUILD
++++ archhaskell/haskell-pandoc/PKGBUILD
+@@ -37,7 +37,8 @@ depends=("ghc=7.6.3-1"
+          "haskell-xml=1.3.13-4"
+          "haskell-yaml=0.8.5.2-2"
+          "haskell-zip-archive=0.1.4-1"
+-         "haskell-zlib=0.5.4.1-2")
++         "haskell-zlib=0.5.4.1-2"
++         "alex" "happy")
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

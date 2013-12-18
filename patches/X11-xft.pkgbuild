@@ -9,6 +9,6 @@ Index: archhaskell-habs/haskell-x11-xft/PKGBUILD
 -         "haskell-utf8-string=0.3.7-27")
 +         "haskell-utf8-string=0.3.7-27"
 +         "libxft")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

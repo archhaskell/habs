@@ -9,6 +9,6 @@ Index: archhaskell/haskell-bytestring-lexing/PKGBUILD
 -makedepends=()
  depends=("ghc=7.6.3-1")
 +makedepends=("alex")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

@@ -1,7 +1,7 @@
-Index: archhaskell-habs/haskell-haddock/PKGBUILD
+Index: archhaskell/haskell-haddock/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-haddock/PKGBUILD
-+++ archhaskell-habs/haskell-haddock/PKGBUILD
+--- archhaskell.orig/haskell-haddock/PKGBUILD
++++ archhaskell/haskell-haddock/PKGBUILD
 @@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.6.3-1"
@@ -9,13 +9,13 @@ Index: archhaskell-habs/haskell-haddock/PKGBUILD
 -         "haskell-xhtml=3000.2.1-27")
 +         "haskell-xhtml=3000.2.1-27"
 +         "alex" "happy")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
-@@ -42,5 +43,6 @@ package() {
-     ln -s /usr/share/doc/${pkgname}/html ${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}
-     runhaskell Setup copy --destdir=${pkgdir}
-     install -D -m644 ${_licensefile} ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
-+    mv ${pkgdir}/usr/bin/haddock ${pkgdir}/usr/bin/haddock-haddock
-     rm -f ${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}
+@@ -43,5 +44,6 @@ package() {
+     ln -s "/usr/share/doc/${pkgname}/html" "${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}"
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++    mv "${pkgdir}/usr/bin/haddock" "${pkgdir}/usr/bin/haddock-haddock"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
  }
