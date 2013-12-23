@@ -9,6 +9,6 @@ Index: archhaskell/haskell-gluraw/PKGBUILD
 -         "haskell-openglraw=1.4.0.0-2")
 +         "haskell-openglraw=1.4.0.0-2"
 +         "glu")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
          "cabal.patch")

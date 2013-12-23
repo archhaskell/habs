@@ -2,7 +2,7 @@ Index: archhaskell/graphviz.cabal
 ===================================================================
 --- archhaskell.orig/graphviz.cabal
 +++ archhaskell/graphviz.cabal
-@@ -61,7 +61,7 @@ Library {
+@@ -61,13 +61,13 @@ Library {
                             temporary >=1.1 && <1.2,
                             fgl == 5.4.*,
                             filepath,
@@ -11,3 +11,10 @@ Index: archhaskell/graphviz.cabal
                             bytestring >= 0.9 && < 0.11,
                             colour == 2.3.*,
                             transformers >= 0.2 && < 0.4,
+                            text,
+                            wl-pprint-text >= 1.1.0.0 && < 1.2.0.0,
+-                           dlist == 0.5.*
++                           dlist == 0.6.*
+ 
+         Exposed-Modules:   Data.GraphViz
+                            Data.GraphViz.Types

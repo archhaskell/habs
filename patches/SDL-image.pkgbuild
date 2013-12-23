@@ -10,6 +10,6 @@ Index: archhaskell/haskell-sdl-image/PKGBUILD
 -         "haskell-sdl=0.6.5-1")
 +         "haskell-sdl=0.6.5-1"
 +         "sdl_image")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
