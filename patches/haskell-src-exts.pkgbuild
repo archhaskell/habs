@@ -10,5 +10,5 @@ Index: archhaskell/haskell-haskell-src-exts/PKGBUILD
 +makedepends=("happy")
  depends=("ghc=7.6.3-1"
           "haskell-cpphs=1.17.1-2")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
