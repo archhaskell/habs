@@ -90,3 +90,12 @@ Index: archhaskell/git-annex.cabal
  
  Executable git-annex
    Main-Is: git-annex.hs
+@@ -90,7 +117,7 @@ Executable git-annex
+    extensible-exceptions, dataenc, SHA, process, json,
+    base (>= 4.5 && < 4.9), monad-control, MonadCatchIO-transformers,
+    IfElse, text, QuickCheck >= 2.1, bloomfilter, edit-distance, process,
+-   SafeSemaphore, uuid, random, dlist, unix-compat, async
++   SafeSemaphore, uuid, random, dlist, unix-compat, async, stm
+   CC-Options: -Wall
+   GHC-Options: -Wall
+   Extensions: PackageImports
