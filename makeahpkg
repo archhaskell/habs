@@ -179,7 +179,7 @@ for pkg0 in $@; do
     if [[ "x${pkg}" != "x" ]]; then
         (cd ${habs_dir}/$pkg; buildpkg )
     else
-        die "No such package: $pkg0" 
+        die "No such package: $pkg0"
     fi
     pkg=
 done
