@@ -6,8 +6,8 @@ Index: habs/haskell-graphviz/PKGBUILD
           "haskell-polyparse=1.9-1"
           "haskell-text=0.11.3.1-1"
           "haskell-transformers=0.3.0.0-27"
--         "haskell-wl-pprint-text=1.1.0.1-1")
-+         "haskell-wl-pprint-text=1.1.0.1-1"
+-         "haskell-wl-pprint-text=1.1.0.2-1")
++         "haskell-wl-pprint-text=1.1.0.2-1"
 +         "graphviz")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
