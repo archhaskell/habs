@@ -28,8 +28,8 @@ shift $((OPTIND - 1))
 
 . ${top_pkg_dir}/PKGBUILD
 
-if [[ ! -d ${top_pkg_dir}/src/ghc-${pkgver}/libraries ]]; then
-    echo "error: no directory ${top_pkg_dir}/src/ghc-${pkgver}/libraries:" \
+if [[ ! -d ${top_pkg_dir}/src/ghc/libraries ]]; then
+    echo "error: no directory ${top_pkg_dir}/src/ghc/libraries:" \
         "You must extract the source tarball under src/"
     exit 1
 fi
@@ -39,13 +39,19 @@ declare -A exclude
 exclude['Win32']=1
 # no integer-simple because we use integer-gmp
 exclude['integer-simple']=1
+exclude['haskeline']=1
+exclude['primitive']=1
+exclude['random']=1
+exclude['terminfo']=1
+exclude['vector']=1
+exclude['xhtml']=1
 # extract excluded libraries from ghc.mk
 for exclude_pkg in $(sed 's/PKGS_THAT_ARE_INTREE_ONLY := //p' \
-        -n ${top_pkg_dir}/src/ghc-${pkgver}/ghc.mk); do
+        -n ${top_pkg_dir}/src/ghc/ghc.mk); do
     exclude[${exclude_pkg}]=1
 done
 
-cd ${top_pkg_dir}/src/ghc-${pkgver}/libraries
+cd ${top_pkg_dir}/src/ghc/libraries
 
 # $1 is the name of the variable
 # $2 is the string for the test, either '=' or '<'
