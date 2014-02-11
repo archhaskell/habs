@@ -107,7 +107,7 @@ SigLevel = Never
 #Server = file:///repo
 
 [haskell]
-Server = http://xsounds.org/~haskell/\$arch
+Server = http://xsounds.org/~haskell/core/\$arch
 
 EOF
 
