@@ -9,6 +9,6 @@ Index: archhaskell/haskell-language-c/PKGBUILD
 -makedepends=()
 +makedepends=("alex" "happy")
  depends=("ghc=7.6.3-1"
-          "haskell-syb=0.4.1-2")
+          "haskell-syb=0.4.1-50")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
