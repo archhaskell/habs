@@ -1,0 +1,13 @@
+Index: habs/aeson.cabal
+===================================================================
+--- habs.orig/aeson.cabal
++++ habs/aeson.cabal
+@@ -79,7 +79,7 @@ flag blaze-builder
+ 
+ flag new-bytestring-builder
+   description: Use the new bytestring builder available in bytestring >= 0.10.4.0
+-  default: False
++  default: True
+ 
+ library
+   exposed-modules:
