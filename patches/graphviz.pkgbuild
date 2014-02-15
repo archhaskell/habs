@@ -3,11 +3,11 @@ Index: habs/haskell-graphviz/PKGBUILD
 --- habs.orig/haskell-graphviz/PKGBUILD
 +++ habs/haskell-graphviz/PKGBUILD
 @@ -18,7 +18,8 @@ depends=("ghc=7.6.3-1"
-          "haskell-polyparse=1.9-51"
-          "haskell-temporary=1.2.0.1-50"
-          "haskell-text=1.1.0.0-1"
--         "haskell-wl-pprint-text=1.1.0.2-51")
-+         "haskell-wl-pprint-text=1.1.0.2-51"
+          "haskell-polyparse=1.9-53"
+          "haskell-temporary=1.2.0.1-51"
+          "haskell-text=1.1.0.0-51"
+-         "haskell-wl-pprint-text=1.1.0.2-53")
++         "haskell-wl-pprint-text=1.1.0.2-53"
 +         "graphviz")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
