@@ -1,14 +1,22 @@
-Index: archhaskell/haskell-language-c/PKGBUILD
+Index: habs/haskell-language-c/PKGBUILD
 ===================================================================
---- archhaskell.orig/haskell-language-c/PKGBUILD
-+++ archhaskell/haskell-language-c/PKGBUILD
-@@ -10,8 +10,8 @@ pkgdesc="Analysis and generation of C co
+--- habs.orig/haskell-language-c/PKGBUILD
++++ habs/haskell-language-c/PKGBUILD
+@@ -10,7 +10,7 @@ pkgdesc="Analysis and generation of C co
  url="http://www.sivity.net/projects/language.c/"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=("alex" "happy")
++makedepends=('happy' 'alex')
  depends=("ghc=7.6.3-1"
-          "haskell-syb=0.4.1-50")
+          "haskell-syb=0.4.1-51")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+@@ -30,6 +30,8 @@ prepare() {
+ build() {
+     cd "${srcdir}/${_hkgname}-${pkgver}"
+     
++    rm -fr dist
++
+     runhaskell Setup configure -O --enable-library-profiling --enable-shared \
+         --prefix=/usr --docdir="/usr/share/doc/${pkgname}" \
+         --libsubdir=\$compiler/site-local/\$pkgid \
