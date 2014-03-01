@@ -6,8 +6,8 @@ Index: archhaskell/haskell-gluraw/PKGBUILD
  arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.6.3-1"
--         "haskell-openglraw=1.4.0.0-51")
-+         "haskell-openglraw=1.4.0.0-51"
+-         "haskell-openglraw=1.4.0.0-52")
++         "haskell-openglraw=1.4.0.0-52"
 +         "glu")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"

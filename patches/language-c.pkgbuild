@@ -9,7 +9,7 @@ Index: habs/haskell-language-c/PKGBUILD
 -makedepends=()
 +makedepends=('happy' 'alex')
  depends=("ghc=7.6.3-1"
-          "haskell-syb=0.4.1-51")
+          "haskell-syb=0.4.1-52")
  options=('strip' 'staticlibs')
 @@ -30,6 +30,8 @@ prepare() {
  build() {
