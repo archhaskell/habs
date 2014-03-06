@@ -4,15 +4,14 @@
 #   This implies that all libraries need to be rebuilt when ghc is rebuilt.
 
 pkgname=ghc
-pkgver=7.8.0
-pkgrel=0.3
+pkgver=7.8.0.20140228
+pkgrel=1
 pkgdesc='The Glasgow Haskell Compiler'
 arch=('i686' 'x86_64')
 url='http://www.haskell.org/ghc/'
 license=('custom')
 depends=('perl' 'gmp>=5.0' 'gcc')
-makedepends=('git'
-             'ghc' 'perl' 'libxslt' 'docbook-xsl' 'happy' 'alex')
+makedepends=('ghc' 'perl' 'libxslt' 'docbook-xsl' 'happy' 'alex')
 checkdepends=('python2')
 install='ghc.install'
 options=('strip' 'staticlibs')
@@ -40,7 +39,7 @@ provides=('haskell-array=0.5.0.0'
           'haskell-template-haskell=2.9.0.0'
           'haskell-time=1.4.1'
           'haskell-transformers=0.3.0.0'
-          'haskell-unix=2.7.0.0'
+          'haskell-unix=2.7.0.1'
           'haskell-cabal=1.18.1.3')
 replaces=('haskell-array<0.5.0.0'
           'haskell-base<4.7.0.0'
@@ -65,30 +64,28 @@ replaces=('haskell-array<0.5.0.0'
           'haskell-template-haskell<2.9.0.0'
           'haskell-time<1.4.1'
           'haskell-transformers<0.3.0.0'
-          'haskell-unix<2.7.0.0'
+          'haskell-unix<2.7.0.1'
           'haskell-cabal<1.18.1.3')
 
-source=('git://git.haskell.org/ghc.git#branch=ghc-7.8'
+source=("http://www.haskell.org/ghc/dist/7.8.1-rc2/ghc-${pkgver}-src.tar.xz"
+        "http://www.haskell.org/ghc/dist/7.8.1-rc2/ghc-${pkgver}-testsuite.tar.xz"
         'build.mk' 'arch-gen-contents-index')
 
 prepare() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/${pkgname}-${pkgver}"
 
     cp "${srcdir}/build.mk" mk/build.mk
-
-    ./sync-all -r git://git.haskell.org get -b ghc-7.8
-    ./boot
 }
 
 build() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/${pkgname}-${pkgver}"
 
     ./configure --prefix=/usr
     make -j 5
 }
 
 check() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/${pkgname}-${pkgver}"
 
     # python2 rename
     sed -e 's_#!/usr/bin/env python_&2_' -i testsuite/timeout/calibrate testsuite/timeout/timeout.py
@@ -102,7 +99,7 @@ check() {
 }
 
 package() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/${pkgname}-${pkgver}"
 
     make DESTDIR=${pkgdir} install
 
@@ -121,6 +118,7 @@ package() {
         ${pkgdir}/usr/share/licenses/ghc
 }
 
-sha256sums=('SKIP'
+sha256sums=('75718d20b82c60d591aed2938eb95a66088a190e1b5a5f279eb9795b9df05ad8'
+            'b2a0948add38db0c590e41d7243ce3a2c3b2543ba17547ee1e6d3a1d346d442b'
             'f6f08c0fd1098396beba515db06d6c5f3aac633b56e2d35cbcefaf76272ee9af'
             'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')
