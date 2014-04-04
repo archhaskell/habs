@@ -18,7 +18,7 @@ Index: archhaskell/graphviz.cabal
                             text,
                             wl-pprint-text >= 1.1.0.0 && < 1.2.0.0,
 -                           dlist == 0.5.*
-+                           dlist == 0.6.*
++                           dlist == 0.7.*
  
          Exposed-Modules:   Data.GraphViz
                             Data.GraphViz.Types
