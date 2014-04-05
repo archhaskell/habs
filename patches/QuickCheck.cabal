@@ -1,0 +1,13 @@
+Index: habs/QuickCheck.cabal
+===================================================================
+--- habs.orig/QuickCheck.cabal
++++ habs/QuickCheck.cabal
+@@ -38,6 +38,8 @@ source-repository this
+ 
+ flag base3
+   Description: Choose the new smaller, split-up base package.
++  default: false
++  manual: true
+ 
+ flag base4
+   Description: Choose the even newer base package with extensible exceptions.
