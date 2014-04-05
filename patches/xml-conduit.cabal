@@ -1,0 +1,13 @@
+Index: habs/xml-conduit.cabal
+===================================================================
+--- habs.orig/xml-conduit.cabal
++++ habs/xml-conduit.cabal
+@@ -31,8 +31,6 @@ library
+                    , conduit                   >= 1.0      && < 1.2
+                    , conduit-extra
+                    , resourcet                 >= 0.3      && < 1.2
+-                   , attoparsec-conduit        >= 1.0
+-                   , blaze-builder-conduit     >= 1.0
+                    , bytestring                >= 0.9
+                    , text                      >= 0.7
+                    , containers                >= 0.2
