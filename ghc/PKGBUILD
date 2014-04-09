@@ -4,7 +4,7 @@
 #   This implies that all libraries need to be rebuilt when ghc is rebuilt.
 
 pkgname=ghc
-pkgver=7.8.0.20140228
+pkgver=7.8.1
 pkgrel=1
 pkgdesc='The Glasgow Haskell Compiler'
 arch=('i686' 'x86_64')
@@ -21,14 +21,14 @@ provides=('haskell-array=0.5.0.0'
           'haskell-binary=0.7.1.0'
           'haskell-bin-package-db=0.0.0.0'
           'haskell-bytestring=0.10.4.0'
-          'haskell-containers=0.5.4.0'
+          'haskell-containers=0.5.5.1'
           'haskell-deepseq=1.3.0.2'
-          'haskell-directory=1.2.0.2'
+          'haskell-directory=1.2.1.0'
           'haskell-filepath=1.3.0.2'
           'haskell-ghc-prim=0.3.1.0'
-          'haskell-haskell2010=1.1.1.1'
+          'haskell-haskell2010=1.1.2.0'
           'haskell-haskell98=2.0.0.3'
-          'haskell-hoopl=3.10.0.0'
+          'haskell-hoopl=3.10.0.1'
           'haskell-hpc=0.6.0.1'
           'haskell-integer-gmp=0.5.1.0'
           'haskell-old-locale=1.0.0.6'
@@ -37,7 +37,7 @@ provides=('haskell-array=0.5.0.0'
           'haskell-process=1.2.0.0'
           'haskell-rts=1.0'
           'haskell-template-haskell=2.9.0.0'
-          'haskell-time=1.4.1'
+          'haskell-time=1.4.2'
           'haskell-transformers=0.3.0.0'
           'haskell-unix=2.7.0.1'
           'haskell-cabal=1.18.1.3')
@@ -46,14 +46,14 @@ replaces=('haskell-array<0.5.0.0'
           'haskell-binary<0.7.1.0'
           'haskell-bin-package-db<0.0.0.0'
           'haskell-bytestring<0.10.4.0'
-          'haskell-containers<0.5.4.0'
+          'haskell-containers<0.5.5.1'
           'haskell-deepseq<1.3.0.2'
-          'haskell-directory<1.2.0.2'
+          'haskell-directory<1.2.1.0'
           'haskell-filepath<1.3.0.2'
           'haskell-ghc-prim<0.3.1.0'
-          'haskell-haskell2010<1.1.1.1'
+          'haskell-haskell2010<1.1.2.0'
           'haskell-haskell98<2.0.0.3'
-          'haskell-hoopl<3.10.0.0'
+          'haskell-hoopl<3.10.0.1'
           'haskell-hpc<0.6.0.1'
           'haskell-integer-gmp<0.5.1.0'
           'haskell-old-locale<1.0.0.6'
@@ -62,13 +62,13 @@ replaces=('haskell-array<0.5.0.0'
           'haskell-process<1.2.0.0'
           'haskell-rts<1.0'
           'haskell-template-haskell<2.9.0.0'
-          'haskell-time<1.4.1'
+          'haskell-time<1.4.2'
           'haskell-transformers<0.3.0.0'
           'haskell-unix<2.7.0.1'
           'haskell-cabal<1.18.1.3')
 
-source=("http://www.haskell.org/ghc/dist/7.8.1-rc2/ghc-${pkgver}-src.tar.xz"
-        "http://www.haskell.org/ghc/dist/7.8.1-rc2/ghc-${pkgver}-testsuite.tar.xz"
+source=("http://www.haskell.org/ghc/dist/7.8.1/ghc-${pkgver}-src.tar.xz"
+        "http://www.haskell.org/ghc/dist/7.8.1/ghc-${pkgver}-testsuite.tar.xz"
         'build.mk' 'arch-gen-contents-index')
 
 prepare() {
@@ -118,7 +118,7 @@ package() {
         ${pkgdir}/usr/share/licenses/ghc
 }
 
-sha256sums=('75718d20b82c60d591aed2938eb95a66088a190e1b5a5f279eb9795b9df05ad8'
-            'b2a0948add38db0c590e41d7243ce3a2c3b2543ba17547ee1e6d3a1d346d442b'
+sha256sums=('e07663febed2543a897e4070509c11860bde68d6334c86dcc67ced83ae3a8bc8'
+            '18779baabedfdeb58a33339a37150f4bd1f160aa85ef69ce59908e0b9283aad5'
             'f6f08c0fd1098396beba515db06d6c5f3aac633b56e2d35cbcefaf76272ee9af'
             'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')
