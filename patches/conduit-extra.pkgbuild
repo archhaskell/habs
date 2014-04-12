@@ -1,0 +1,12 @@
+Index: habs/haskell-conduit-extra/PKGBUILD
+===================================================================
+--- habs.orig/haskell-conduit-extra/PKGBUILD
++++ habs/haskell-conduit-extra/PKGBUILD
+@@ -22,6 +22,7 @@ depends=("ghc=7.8.0-1"
+          "haskell-streaming-commons=0.1.1-1"
+          "haskell-text=1.1.0.1-2"
+          "haskell-transformers-base=0.4.1-54")
++replaces=('haskell-blaze-builder-conduit' 'haskell-network-conduit')
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
