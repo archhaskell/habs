@@ -4,7 +4,7 @@
 #   This implies that all libraries need to be rebuilt when ghc is rebuilt.
 
 pkgname=ghc
-pkgver=7.8.1
+pkgver=7.8.2
 pkgrel=1
 pkgdesc='The Glasgow Haskell Compiler'
 arch=('i686' 'x86_64')
@@ -67,8 +67,8 @@ replaces=('haskell-array<0.5.0.0'
           'haskell-unix<2.7.0.1'
           'haskell-cabal<1.18.1.3')
 
-source=("http://www.haskell.org/ghc/dist/7.8.1/ghc-${pkgver}-src.tar.xz"
-        "http://www.haskell.org/ghc/dist/7.8.1/ghc-${pkgver}-testsuite.tar.xz"
+source=("http://www.haskell.org/ghc/dist/${pkgver}/ghc-${pkgver}-src.tar.xz"
+        "http://www.haskell.org/ghc/dist/${pkgver}/ghc-${pkgver}-testsuite.tar.xz"
         'build.mk' 'arch-gen-contents-index')
 
 prepare() {
@@ -118,7 +118,7 @@ package() {
         ${pkgdir}/usr/share/licenses/ghc
 }
 
-sha256sums=('e07663febed2543a897e4070509c11860bde68d6334c86dcc67ced83ae3a8bc8'
-            '18779baabedfdeb58a33339a37150f4bd1f160aa85ef69ce59908e0b9283aad5'
+sha256sums=('45d1e1a6edee34a7760ae9bfd8decf13a3f43de87309ff277f5a08fc51fa7e96'
+            '12e6ce94f2233523c9c575be63bdef29b456c4e612e10bc5ceddbe4bb1f9a2cb'
             'f6f08c0fd1098396beba515db06d6c5f3aac633b56e2d35cbcefaf76272ee9af'
             'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')
