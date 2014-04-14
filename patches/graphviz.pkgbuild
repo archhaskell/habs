@@ -2,13 +2,13 @@ Index: habs/haskell-graphviz/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-graphviz/PKGBUILD
 +++ habs/haskell-graphviz/PKGBUILD
-@@ -18,7 +18,8 @@ depends=("ghc=7.6.2-1"
-          "haskell-polyparse=1.8-5"
-          "haskell-text=0.11.3.1-1"
-          "haskell-transformers=0.3.0.0-27"
--         "haskell-wl-pprint-text=1.1.0.0-5")
-+         "haskell-wl-pprint-text=1.1.0.0-5"
+@@ -18,7 +18,8 @@ depends=("ghc=7.8.2-1"
+          "haskell-polyparse=1.9-58"
+          "haskell-temporary=1.2.0.1-55"
+          "haskell-text=1.1.0.1-3"
+-         "haskell-wl-pprint-text=1.1.0.2-58")
++         "haskell-wl-pprint-text=1.1.0.2-58"
 +         "graphviz")
- options=('strip')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
+         "cabal.patch")

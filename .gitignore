@@ -13,4 +13,12 @@ patches/series
 /*/cabal.patch
 /*/source.patch
 /*/*.orig
-/*/src
+/*/pkg/
+/*/src/
+/*/*-build.log
+/*/*-package.log
+/ghc/ghc/
+
+# ignore chroot environments
+i686-chroot/
+x86_64-chroot/

@@ -6,8 +6,8 @@ Index: archhaskell/haskell-x11/PKGBUILD
  license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.6.3-1"
-          "haskell-data-default=0.5.3-2"
+ depends=("ghc=7.8.2-1"
+          "haskell-data-default=0.5.3-56"
 -         "X11"
 -         "Xrandr"
 -         "Xext")
@@ -15,6 +15,6 @@ Index: archhaskell/haskell-x11/PKGBUILD
 +         "libxrandr"
 +         "libxext"
 +         "libxinerama")
- options=('strip')
+ options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

@@ -1,14 +1,21 @@
-Index: archhaskell/haskell-haskell-src-exts/PKGBUILD
+Index: habs/haskell-haskell-src-exts/PKGBUILD
 ===================================================================
---- archhaskell.orig/haskell-haskell-src-exts/PKGBUILD
-+++ archhaskell/haskell-haskell-src-exts/PKGBUILD
-@@ -10,8 +10,8 @@ pkgdesc="Manipulating Haskell source: ab
- url="http://code.haskell.org/haskell-src-exts"
+--- habs.orig/haskell-haskell-src-exts/PKGBUILD
++++ habs/haskell-haskell-src-exts/PKGBUILD
+@@ -10,7 +10,7 @@ pkgdesc="Manipulating Haskell source: ab
+ url="https://github.com/haskell-suite/haskell-src-exts"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=("happy")
- depends=("ghc=7.6.3-1"
-          "haskell-cpphs=1.17.1-2")
- options=('strip')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
++makedepends=('llvm' 'happy')
+ depends=("ghc=7.8.2-1"
+          "haskell-cpphs=1.18.4-2")
+ options=('strip' 'staticlibs')
+@@ -33,6 +33,7 @@ build() {
+     runhaskell Setup configure -O --enable-library-profiling --enable-shared \
+         --prefix=/usr --docdir="/usr/share/doc/${pkgname}" \
+         --libsubdir=\$compiler/site-local/\$pkgid \
++        --ghc-option=-fllvm \
+             -fbase4
+     runhaskell Setup build
+     runhaskell Setup haddock --hoogle --html

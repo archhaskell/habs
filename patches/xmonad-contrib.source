@@ -1,0 +1,13 @@
+Index: habs/haskell-xmonad-contrib/src/xmonad-contrib-0.11.2/XMonad/Layout/MultiToggle.hs
+===================================================================
+--- habs.orig/haskell-xmonad-contrib/src/xmonad-contrib-0.11.2/XMonad/Layout/MultiToggle.hs
++++ habs/haskell-xmonad-contrib/src/xmonad-contrib-0.11.2/XMonad/Layout/MultiToggle.hs
+@@ -159,7 +159,7 @@ data HCons a b = HCons a b deriving (Rea
+ infixr 0 ??
+ -- | Prepend an element to a heterogeneous list. Used to build transformer
+ -- tables for 'mkToggle'.
+-(??) :: (HList b w) => a -> b -> HCons a b
++-- (??) :: (HList b w) => a -> b -> HCons a b
+ (??) = HCons
+ 
+ -- | Construct a singleton transformer table.
