@@ -1,0 +1,14 @@
+Index: habs/haskell-alsa-mixer/PKGBUILD
+===================================================================
+--- habs.orig/haskell-alsa-mixer/PKGBUILD
++++ habs/haskell-alsa-mixer/PKGBUILD
+@@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
+ makedepends=()
+ depends=("ghc=7.8.2-1"
+          "haskell-alsa-core=0.5.0.1-1"
+-         "asound")
++         "alsa-lib"
++         "c2hs")
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
