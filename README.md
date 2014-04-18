@@ -121,6 +121,17 @@ is a real risk that your request is denied.  That risk is reduced if you show
 an interest in contributing to the project, e.g. by providing already built
 packages together with your request..
 
+Contributing
+------------
+
+1. Fork it.
+2. (Maybe) Create a new branch.
+3. Make the required changes. (Adding packages, patches etc.)
+4. Build packages for **both** `i686` and `x86_64`.
+5. Upload the built packages to someplace where the maintainers can get them. (e.g. Dropbox)
+6. Push the changes to your fork.
+7. Create a pull request mentioning the url from which the package can be downloaded.
+
 [1]: http://hackage.haskell.org/packages/hackage.html
 [2]: https://github.com/archhaskell/cabal2arch
 [3]: https://github.com/archhaskell/archlinux

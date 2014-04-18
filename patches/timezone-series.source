@@ -1,0 +1,44 @@
+Index: habs/haskell-timezone-series/src/timezone-series-0.1.2/Data/Time/LocalTime/TimeZone/Series.hs
+===================================================================
+--- habs.orig/haskell-timezone-series/src/timezone-series-0.1.2/Data/Time/LocalTime/TimeZone/Series.hs
++++ habs/haskell-timezone-series/src/timezone-series-0.1.2/Data/Time/LocalTime/TimeZone/Series.hs
+@@ -1,3 +1,4 @@
++{-# LANGUAGE DeriveDataTypeable #-}
+ -----------------------------------------------------------------------------
+ -- |
+ -- Module      :  Data.Time.LocalTime.TimeZone.Series
+@@ -45,7 +46,7 @@ import Data.Time (UTCTime, LocalTime, Ti
+                   utcToLocalTime, localTimeToUTC)
+ import Data.List (partition)
+ import Data.Maybe (listToMaybe, fromMaybe)
+-import Data.Typeable (mkTyCon, mkTyConApp, Typeable(typeOf))
++import Data.Typeable (Typeable)
+ import Control.Arrow (first)
+ 
+ -- $abouttzs
+@@ -81,11 +82,7 @@ data TimeZoneSeries =
+                              -- change of clocks and the new timezone
+                              -- state after the change
+     }
+-  deriving (Eq, Ord)
+-
+-instance Typeable TimeZoneSeries where
+-  typeOf _ = mkTyConApp
+-    (mkTyCon "Data.Time.LocalTime.TimeZone.Series") []
++  deriving (Eq, Ord, Typeable)
+ 
+ instance Show TimeZoneSeries where
+   show = show . latestNonSummer
+@@ -174,11 +171,7 @@ data ZoneSeriesTime = ZoneSeriesTime {
+        zoneSeriesTimeToUTC :: UTCTime,
+        zoneSeriesTimeSeries :: TimeZoneSeries
+     }
+-  deriving (Eq, Ord)
+-
+-instance Typeable ZoneSeriesTime where
+-  typeOf _ = mkTyConApp
+-    (mkTyCon "Data.Time.LocalTime.TimeZone.ZoneSeriesTime") []
++  deriving (Eq, Ord, Typeable)
+ 
+ instance Show ZoneSeriesTime where
+   show tzs = show $ ZonedTime (zoneSeriesTimeToLocalTime tzs)
