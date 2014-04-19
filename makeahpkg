@@ -26,6 +26,12 @@ die() {
     [ -n "${1}" ] && error "${1}"
     exit 1
 }
+
+on_err() {
+    error 'Trapped ERR, something went very wrong.'
+}
+trap on_err ERR
+
 ##################################################
 
 # default values
@@ -106,8 +112,8 @@ SigLevel = Never
 #[repo]
 #Server = file:///repo
 
-#[haskell-testing]
-Server = http://xsounds.org/~haskell/testing/\$arch
+##[haskell-testing]
+##Server = http://xsounds.org/~haskell/testing/\$arch
 
 [haskell-core]
 Server = http://xsounds.org/~haskell/core/\$arch
@@ -143,17 +149,19 @@ EOF
 
     sudo setarch ${arch} mkarchroot -C ${pacman_conf} \
         -M /usr/share/devtools/makepkg-${arch}.conf ${CHROOT_ROOTDIR} \
-        base base-devel curl \
-        sudo \
-        haskell-haddock ghc
+        base base-devel curl sudo \
+        ghc
 
     # fix up the local repo
     sudo mkdir ${CHROOT_ROOTDIR}/repo
     sudo touch ${CHROOT_ROOTDIR}/repo/repo.db
     sudo sed -i.org -e 's/^#\(.*\)/\1/' ${CHROOT_ROOTDIR}/etc/pacman.conf
+    sudo sh -c "echo 'LANG=en_US.UTF-8' > ${CHROOT_ROOTDIR}/etc/locale.conf"
 
     # no point in updating the newly built pristine
     update_pristine_first=0
+    # do sync to the build root though
+    clean_build_first=1
     msg "Done"
 fi
 
