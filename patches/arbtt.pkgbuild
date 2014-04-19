@@ -1,0 +1,13 @@
+Index: habs/arbtt/PKGBUILD
+===================================================================
+--- habs.orig/arbtt/PKGBUILD
++++ habs/arbtt/PKGBUILD
+@@ -19,7 +19,7 @@ makedepends=("ghc=7.8.2-1"
+              "haskell-strict=0.3.2-55"
+              "haskell-terminal-progress-bar=0.0.1.4-1"
+              "haskell-utf8-string=0.3.7-55")
+-depends=()
++depends=("libxss")
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ 
