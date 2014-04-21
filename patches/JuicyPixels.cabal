@@ -1,0 +1,14 @@
+Index: habs/JuicyPixels.cabal
+===================================================================
+--- habs.orig/JuicyPixels.cabal
++++ habs/JuicyPixels.cabal
+@@ -31,7 +31,8 @@ Source-Repository this
+ 
+ Flag Mmap
+     Description: Enable the file loading via mmap (memory map)
+-    Default: False
++    Default: True
++    Manual: True
+ 
+ Library
+   hs-source-dirs: src
