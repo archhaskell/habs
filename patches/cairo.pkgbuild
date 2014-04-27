@@ -1,0 +1,18 @@
+Index: habs/haskell-cairo/PKGBUILD
+===================================================================
+--- habs.orig/haskell-cairo/PKGBUILD
++++ habs/haskell-cairo/PKGBUILD
+@@ -10,10 +10,11 @@ pkgdesc="Binding to the Cairo library."
+ url="http://projects.haskell.org/gtk2hs/"
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=("gtk2hs-buildtools")
+ depends=("ghc=7.8.2-1"
+          "haskell-mtl=2.1.3.1-3"
+-         "haskell-utf8-string=0.3.7-55")
++         "haskell-utf8-string=0.3.7-55"
++         "cairo")
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"
