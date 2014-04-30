@@ -17,6 +17,7 @@ patches/series
 /*/src/
 /*/*-build.log
 /*/*-package.log
+/*/*-prepare.log
 /ghc/ghc/
 
 # ignore chroot environments
