@@ -11,23 +11,13 @@ Index: habs/haskell-haskell-src-exts/PKGBUILD
  depends=("ghc=7.8.2-1"
           "haskell-cpphs=1.18.4-4")
  options=('strip' 'staticlibs')
-@@ -29,10 +29,17 @@ prepare() {
- 
- build() {
-     cd "${srcdir}/${_hkgname}-${pkgver}"
--    
-+
-+    if [ "${CARCH}" = "i686" ]; then
-+      CPUFLAG="-mcpu=i686"
-+    elif [ "${CARCH}" = "x86_64" ]; then
-+      CPUFLAG="-mcpu=x86-64"
-+    fi
-+
+@@ -32,7 +32,8 @@ build() {
+     
      runhaskell Setup configure -O --enable-library-profiling --enable-shared \
          --prefix=/usr --docdir="/usr/share/doc/${pkgname}" \
 -        --libsubdir=\$compiler/site-local/\$pkgid
 +        --libsubdir=\$compiler/site-local/\$pkgid \
-+        --ghc-options="-fllvm -optlc=${CPUFLAG}"
++        --ghc-options="-fllvm -optlc=-mcpu=$(uname -m | sed s/_/-/)"
      runhaskell Setup build
      runhaskell Setup haddock --hoogle --html
      runhaskell Setup register --gen-script
