@@ -1,14 +1,13 @@
-Index: archhaskell/haskell-gluraw/PKGBUILD
+Index: habs/haskell-gluraw/PKGBUILD
 ===================================================================
---- archhaskell.orig/haskell-gluraw/PKGBUILD
-+++ archhaskell/haskell-gluraw/PKGBUILD
-@@ -12,7 +12,8 @@ license=("BSD3")
- arch=('i686' 'x86_64')
+--- habs.orig/haskell-gluraw/PKGBUILD
++++ habs/haskell-gluraw/PKGBUILD
+@@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.8.2-1"
--         "haskell-openglraw=1.4.0.0-55")
-+         "haskell-openglraw=1.4.0.0-55"
+          "haskell-openglraw=1.5.0.0-1"
+-         "GLU")
 +         "glu")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
-         "cabal.patch")
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
+ install="${pkgname}.install"

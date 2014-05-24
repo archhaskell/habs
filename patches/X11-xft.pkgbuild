@@ -6,8 +6,8 @@ Index: archhaskell-habs/haskell-x11-xft/PKGBUILD
  makedepends=()
  depends=("ghc=7.8.2-1"
           "haskell-x11=1.6.1.2-1"
--         "haskell-utf8-string=0.3.7-55")
-+         "haskell-utf8-string=0.3.7-55"
+-         "haskell-utf8-string=0.3.8-1")
++         "haskell-utf8-string=0.3.8-1"
 +         "libxft")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
