@@ -1,0 +1,9 @@
+--- cabal-install/PKGBUILD.old	2014-06-09 08:40:00.004323593 +0100
++++ cabal-install/PKGBUILD	2014-06-09 08:40:02.387635459 +0100
+@@ -43,4 +43,6 @@
+ package() {
+     cd "${srcdir}/${_hkgname}-${pkgver}"
+     runhaskell Setup copy --destdir="${pkgdir}"
++	mkdir -p ${pkgdir}/usr/share/bash-completion/completions
++    install -m644 bash-completion/cabal ${pkgdir}/usr/share/bash-completion/completions
+ }
