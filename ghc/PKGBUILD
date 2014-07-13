@@ -4,7 +4,7 @@
 #   This implies that all libraries need to be rebuilt when ghc is rebuilt.
 
 pkgname=ghc
-pkgver=7.8.2
+pkgver=7.8.3
 pkgrel=1
 pkgdesc='The Glasgow Haskell Compiler'
 arch=('i686' 'x86_64')
@@ -17,7 +17,7 @@ install='ghc.install'
 options=('strip' 'staticlibs')
 
 provides=('haskell-array=0.5.0.0'
-          'haskell-base=4.7.0.0'
+          'haskell-base=4.7.0.1'
           'haskell-binary=0.7.1.0'
           'haskell-bin-package-db=0.0.0.0'
           'haskell-bytestring=0.10.4.0'
@@ -26,6 +26,7 @@ provides=('haskell-array=0.5.0.0'
           'haskell-directory=1.2.1.0'
           'haskell-filepath=1.3.0.2'
           'haskell-ghc-prim=0.3.1.0'
+          'haskell-haskeline=0.7.1.2'
           'haskell-haskell2010=1.1.2.0'
           'haskell-haskell98=2.0.0.3'
           'haskell-hoopl=3.10.0.1'
@@ -37,12 +38,14 @@ provides=('haskell-array=0.5.0.0'
           'haskell-process=1.2.0.0'
           'haskell-rts=1.0'
           'haskell-template-haskell=2.9.0.0'
+          'haskell-terminfo=0.4.0.0'
           'haskell-time=1.4.2'
           'haskell-transformers=0.3.0.0'
           'haskell-unix=2.7.0.1'
+          'haskell-xhtml=3000.2.1'
           'haskell-cabal=1.18.1.3')
 replaces=('haskell-array<0.5.0.0'
-          'haskell-base<4.7.0.0'
+          'haskell-base<4.7.0.1'
           'haskell-binary<0.7.1.0'
           'haskell-bin-package-db<0.0.0.0'
           'haskell-bytestring<0.10.4.0'
@@ -51,6 +54,7 @@ replaces=('haskell-array<0.5.0.0'
           'haskell-directory<1.2.1.0'
           'haskell-filepath<1.3.0.2'
           'haskell-ghc-prim<0.3.1.0'
+          'haskell-haskeline<0.7.1.2'
           'haskell-haskell2010<1.1.2.0'
           'haskell-haskell98<2.0.0.3'
           'haskell-hoopl<3.10.0.1'
@@ -62,9 +66,11 @@ replaces=('haskell-array<0.5.0.0'
           'haskell-process<1.2.0.0'
           'haskell-rts<1.0'
           'haskell-template-haskell<2.9.0.0'
+          'haskell-terminfo<0.4.0.0'
           'haskell-time<1.4.2'
           'haskell-transformers<0.3.0.0'
           'haskell-unix<2.7.0.1'
+          'haskell-xhtml<3000.2.1'
           'haskell-cabal<1.18.1.3')
 
 source=("http://www.haskell.org/ghc/dist/${pkgver}/ghc-${pkgver}-src.tar.xz"
@@ -118,7 +124,7 @@ package() {
         ${pkgdir}/usr/share/licenses/ghc
 }
 
-sha256sums=('45d1e1a6edee34a7760ae9bfd8decf13a3f43de87309ff277f5a08fc51fa7e96'
-            '12e6ce94f2233523c9c575be63bdef29b456c4e612e10bc5ceddbe4bb1f9a2cb'
+sha256sums=('b0cd96a549ba3b5e512847a4a8cd1a3174e4b2b75dadfc41c568fb812887b958'
+            '91ef5bd19d0bc1cd496de08218f7ac8a73c69de64d903e314c6beac51ad06254'
             'f6f08c0fd1098396beba515db06d6c5f3aac633b56e2d35cbcefaf76272ee9af'
             'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')
