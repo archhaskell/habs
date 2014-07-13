@@ -6,8 +6,8 @@ Index: habs/haskell-alsa-core/PKGBUILD
  arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.8.2-1"
--         "haskell-extensible-exceptions=0.1.1.4-55")
-+  "haskell-extensible-exceptions=0.1.1.4-55"
+-         "haskell-extensible-exceptions=0.1.1.4-56")
++  "haskell-extensible-exceptions=0.1.1.4-56"
 +  "alsa-lib")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
