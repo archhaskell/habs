@@ -8,6 +8,6 @@ Index: habs/haskell-pandoc/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('alex' 'happy')
- depends=("ghc=7.8.2-1"
+ depends=("ghc=7.8.3-1"
           "haskell-http=4000.2.12-2"
           "haskell-aeson=0.7.0.3-1"
