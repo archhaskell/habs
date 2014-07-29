@@ -9,5 +9,5 @@ Index: habs/haskell-pandoc/PKGBUILD
 -makedepends=()
 +makedepends=('alex' 'happy')
  depends=("ghc=7.8.3-1"
-          "haskell-http=4000.2.12-2"
-          "haskell-aeson=0.7.0.3-1"
+          "haskell-http=4000.2.17-2"
+          "haskell-aeson=0.7.0.6-8"
