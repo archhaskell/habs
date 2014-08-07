@@ -3,9 +3,9 @@ Index: habs/haskell-persistent-sqlite/PKGBUILD
 --- habs.orig/haskell-persistent-sqlite/PKGBUILD
 +++ habs/haskell-persistent-sqlite/PKGBUILD
 @@ -18,8 +18,7 @@ depends=("ghc=7.8.2-1"
-          "haskell-monad-logger=0.3.6.1-10"
-          "haskell-persistent=1.3.1.1-8"
-          "haskell-resourcet=1.1.2.2-5"
+          "haskell-monad-logger=0.3.7.1-1"
+          "haskell-persistent=1.3.3.-1"
+          "haskell-resourcet=1.1.2.3-1"
 -         "haskell-text=1.1.1.3-2"
 -         "pthread")
 +         "haskell-text=1.1.1.3-2")
