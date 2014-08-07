@@ -1,0 +1,13 @@
+Index: habs/haskell-pandoc/src/pandoc-1.12.4.2/src/Text/Pandoc/Readers/TeXMath.hs
+===================================================================
+--- habs.orig/haskell-pandoc/src/pandoc-1.12.4.2/src/Text/Pandoc/Readers/TeXMath.hs
++++ habs/haskell-pandoc/src/pandoc-1.12.4.2/src/Text/Pandoc/Readers/TeXMath.hs
+@@ -30,7 +30,7 @@ Conversion of TeX math to a list of 'Pan
+ module Text.Pandoc.Readers.TeXMath ( readTeXMath, readTeXMath' ) where
+ 
+ import Text.Pandoc.Definition
+-import Text.TeXMath
++import Text.TeXMath hiding (readTeXMath)
+ 
+ -- | Converts a raw TeX math formula to a list of 'Pandoc' inlines.
+ -- Defaults to raw formula between @$@ or @$$@ characters if entire formula
