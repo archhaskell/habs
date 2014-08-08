@@ -25,8 +25,10 @@ The packages and database are signed with the following key:
     sub   2048D/A418C0FE 2012-12-26
 
 
-Build steps
------------
+Building it all
+---------------
+
+Please note that this will build *all* the packages in the repo, which probably is a waste of time for most people.  It's much easier to add the [ArchHaskell repo](https://wiki.archlinux.org/index.php/Haskell#ArchHaskell_repository) of pre-built packages.  There is also no need to build all packages in order to build a single one, please see the [documenation of cblrepo](https://github.com/magthe/cblrepo) for more details on how to add and update packages.
 
 First clone the database in this repository:
 
