@@ -13,7 +13,7 @@ If you'd like to build the repository yourself, then you need to install the
 following packages:
 
 * `devtools`
-* `cblrepo` (available in \[haskell-core\], and from [hackageDB][1])
+* `cblrepo` (available in `[haskell-core]`, and from [hackageDB][6])
 * `zsh`
 * `git`
 
