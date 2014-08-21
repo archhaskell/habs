@@ -8,8 +8,9 @@ Index: habs/haskell-cairo/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
- depends=("ghc=7.8.2-1"
+ depends=("ghc=7.8.3-1"
           "haskell-mtl=2.1.3.1-4"
+          "haskell-text=1.1.1.3-2"
 -         "haskell-utf8-string=0.3.8-2")
 +         "haskell-utf8-string=0.3.8-2"
 +         "cairo")
