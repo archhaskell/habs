@@ -14,7 +14,6 @@ following packages:
 
 * `devtools`
 * `cblrepo` (available in `[haskell-core]`, and from [hackageDB][6])
-* `zsh`
 * `git`
 
 The packages and database are signed with the following key:

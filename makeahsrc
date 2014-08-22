@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 
 set -eu
 
@@ -13,16 +13,16 @@ YELLOW="${BOLD}$(tput setaf 3)"
 
 msg() {
     local msg=$1; shift
-    printf "${GREEN}***${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+    printf "${GREEN}***${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" "$@" >&2
 }
 
 error() {
     local msg=$1; shift
-    printf "${RED}*** ERROR:${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" $@ >&2
+    printf "${RED}*** ERROR:${ALL_OFF}${BOLD} ${msg}${ALL_OFF}\n" "$@" >&2
 }
 
 die() {
-    [ -n "${1}" ] && error ${1}
+    [ -n "${1}" ] && error "${1}"
     exit 1
 }
 ##################################################
@@ -45,7 +45,7 @@ EOF
 
 buildsrc() {
     msg "Building source in $PWD"
-    makepkg ${source_arg}
+    makepkg "${source_arg}"
 }
 
 while getopts hab: opt; do
@@ -55,14 +55,14 @@ while getopts hab: opt; do
         b) habs_dir="${OPTARG}";;
     esac
 done
-shift $((OPTIND - 1))
+shift "$((OPTIND - 1))"
 
-for pkg0 in $@; do
-    pkg1=${(L)pkg0}
-    [ -d ${habs_dir}/${pkg1} ] && pkg=${pkg1}
-    [ -d ${habs_dir}/haskell-${pkg1} ] && pkg=haskell-${pkg1}
+for pkg0 in "$@"; do
+    pkg1=${pkg0,,}
+    [ -d "${habs_dir}/${pkg1}" ] && pkg=${pkg1}
+    [ -d "${habs_dir}/haskell-${pkg1}" ] && pkg=haskell-${pkg1}
     if [[ "x${pkg}" != "x" ]]; then
-        (cd ${habs_dir}/$pkg; buildsrc )
+        (cd "${habs_dir}/$pkg"; buildsrc )
     else
         die "No such package: $pkg0"
     fi

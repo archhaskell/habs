@@ -1,5 +1,5 @@
-#! /bin/zsh
+#! /bin/bash
 
-./makeahsrc -- $(cat build-order)
+./makeahsrc -- "$(cat build-order)"
 tar -c -a -f sources.tar.xz --xform='s,[^/]\+/,,' \
     */*.src.tar.gz build-order
