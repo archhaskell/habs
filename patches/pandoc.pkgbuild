@@ -9,5 +9,14 @@ Index: habs/haskell-pandoc/PKGBUILD
 -makedepends=()
 +makedepends=('alex' 'happy')
  depends=("ghc=7.8.3-1"
-          "haskell-http=4000.2.17-2"
-          "haskell-aeson=0.7.0.6-8"
+          "haskell-http=4000.2.18-1"
+          "haskell-juicypixels=3.1.6.1-1"
+@@ -87,4 +87,8 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    # man pages must be installed manually
++    install -D -m744 man/man1/pandoc.1          "${pkgdir}/usr/share/man/man1/pandoc.1"
++    install -D -m744 man/man5/pandoc_markdown.5 "${pkgdir}/usr/share/man/man5/pandoc_markdown.5"
+ }
