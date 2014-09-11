@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+set -eu
+
+rundir="$(dirname $(readlink -f $0))"
+. ${rundir}/helpers/useful.sh
+
+arch=$(uname -m)
+habs_dir=${PWD}
+image_pfx="arch/habs"
+shell=no
+
+usage() {
+    cat << EOF
+Usage: makeahpkg [options] -- [packages]
+
+Run this script in your HABS dir to build the named packages.
+
+Options:
+-h          This help
+-a <arch>   Architecture to build for (default: local arch)
+-b <dir>    Location of your HABS folder (default: .)
+-s          Enter a shell instead of building
+EOF
+exit 0
+}
+
+while getopts ha:s opt; do
+    case "${opt}" in
+        h) usage; exit 0;;
+        a) arch="${OPTARG}";;
+        s) shell=yes;;
+    esac
+done
+shift $((OPTIND - 1))
+
+image_name=${image_pfx}-${arch}
+
+if [[ "x${shell}" == "xno" ]]; then
+    docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash /habs/helpers/buildpkgs -b /habs -- $*"
+else
+    docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash -l"
+fi
+
+docker run -i -t -v=${habs_dir}:/habs ${image_name}:latest \
+    ${docker_cmd}

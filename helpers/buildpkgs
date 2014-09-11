@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+set -eu
+
+rundir="$(dirname $(readlink -f $0))"
+. ${rundir}/useful.sh
+
+export LANG=en_US.UTF8
+
+arch=$(uname -m)
+
+# default values
+habs_dir=.
+clean_build_first=0
+update_pristine_first=0
+
+usage() {
+    cat << EOF
+Usage: makeahpkg [options] -- [packages]
+
+Run this script in your HABS dir to build the named packages.
+
+Options:
+-h          This help
+-b <dir>    Location of your HABS dir (default .)
+EOF
+exit 0
+}
+
+buildpkg() {
+    eval "$(grep '^pkg\(rel\|ver\)=' PKGBUILD)"
+    if [[ -f ${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz ]]; then
+        mkdir -p /repo
+        cp ${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz /repo
+        (cd /repo; sudo repo-add repo.db.tar.gz \
+            ${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz)
+        msg "Skipping build in $PWD"
+    else
+        pacman -Sy
+        msg "Building in $PWD"
+        PACKAGER="ArchHaskell <arch-haskell@haskell.org>" BUILDDIR=/tmp/build-${arch} \
+            makepkg --asroot --noconfirm -i -s
+        chown -R 1000:100 .
+    fi
+}
+
+while getopts hb: opt; do
+    case "${opt}" in
+        h) usage; exit 0;;
+        b) habs_dir="${OPTARG}";;
+    esac
+done
+shift $((OPTIND - 1))
+
+pacman -Syu --noconfirm
+
+for pkg0 in $@; do
+    pkg=
+    pkg1=${pkg0,,}
+    [ -d ${habs_dir}/${pkg1} ] && pkg=${pkg1}
+    [ -d ${habs_dir}/haskell-${pkg1} ] && pkg=haskell-${pkg1}
+    if [[ "x${pkg}" != "x" ]]; then
+        (cd ${habs_dir}/$pkg; buildpkg )
+    else
+        die "No such package: $pkg0"
+    fi
+    pkg=
+done
