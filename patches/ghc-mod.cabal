@@ -1,0 +1,13 @@
+Index: habs/ghc-mod.cabal
+===================================================================
+--- habs.orig/ghc-mod.cabal
++++ habs/ghc-mod.cabal
+@@ -104,7 +104,7 @@ Library
+                       , ghc-syb-utils
+                       , hlint >= 1.8.61
+                       , io-choice
+-                      , monad-journal >= 0.2.2.0 && < 0.2.3.2
++                      , monad-journal >= 0.2.2.0 && < 0.5
+                       , old-time
+                       , process
+                       , syb
