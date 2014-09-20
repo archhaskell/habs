@@ -4,6 +4,6 @@
  package() {
      cd "${srcdir}/${_hkgname}-${pkgver}"
      runhaskell Setup copy --destdir="${pkgdir}"
-+	mkdir -p ${pkgdir}/usr/share/bash-completion/completions
++    mkdir -p ${pkgdir}/usr/share/bash-completion/completions
 +    install -m644 bash-completion/cabal ${pkgdir}/usr/share/bash-completion/completions
  }
