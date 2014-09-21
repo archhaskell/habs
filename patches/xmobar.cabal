@@ -1,0 +1,57 @@
+Index: habs/xmobar.cabal
+===================================================================
+--- habs.orig/xmobar.cabal
++++ habs/xmobar.cabal
+@@ -28,23 +28,23 @@ source-repository head
+ 
+ flag with_xft
+   description: Use Xft to render text. UTF-8 support included.
+-  default: False
++  default: True
+ 
+ flag with_utf8
+   description: With UTF-8 support.
+-  default: True
++  default: False
+ 
+ flag with_inotify
+   description: inotify support (modern Linux only). Required for the Mail and MBox plugins.
+-  default: False
++  default: True
+ 
+ flag with_iwlib
+   description: Wireless info support. Required for the Wireless plugin, needs iwlib installed.
+-  default: False
++  default: True
+ 
+ flag with_mpd
+   description: MPD support. Needs libmpd installed.
+-  default: False
++  default: True
+ 
+ flag all_extensions
+   description: Includes all optional extensions.
+@@ -52,19 +52,19 @@ flag all_extensions
+ 
+ flag with_alsa
+   description: Use alsa-mixer to get the volume from soundcards.
+-  default: False
++  default: True
+ 
+ flag with_datezone
+   description: Enables localized date support.
+-  default: False
++  default: True
+ 
+ flag with_mpris
+   description: MPRIS v1, v2 support.
+-  default: False
++  default: True
+ 
+ flag with_dbus
+   description: Publish a service on the session bus for controlling xmobar.
+-  default: False
++  default: True
+ 
+ flag with_threaded
+   description: Use threaded runtime.
