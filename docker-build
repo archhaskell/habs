@@ -9,6 +9,8 @@ arch=$(uname -m)
 habs_dir=${PWD}
 image_pfx="arch/habs"
 shell=no
+owner_uid=$(id -u)
+owner_gid=$(id -g)
 
 usage() {
     cat << EOF
@@ -18,6 +20,8 @@ Run this script in your HABS dir to build the named packages.
 
 Options:
 -h          This help
+-u          User to own the built files
+-g          Group to own the built files
 -a <arch>   Architecture to build for (default: local arch)
 -b <dir>    Location of your HABS folder (default: .)
 -s          Enter a shell instead of building
@@ -25,9 +29,11 @@ EOF
 exit 0
 }
 
-while getopts ha:s opt; do
+while getopts hu:g:a:s opt; do
     case "${opt}" in
         h) usage; exit 0;;
+        u) owner_uid=${OPTARG};;
+        g) owner_gid=${OPTARG};;
         a) arch="${OPTARG}";;
         s) shell=yes;;
     esac
@@ -37,7 +43,7 @@ shift $((OPTIND - 1))
 image_name=${image_pfx}-${arch}
 
 if [[ "x${shell}" == "xno" ]]; then
-    docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash /habs/helpers/buildpkgs -b /habs -- $*"
+    docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash /habs/helpers/buildpkgs -u ${owner_uid} -g ${owner_gid} -b /habs -- $*"
 else
     docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash -l"
 fi

@@ -13,6 +13,8 @@ arch=$(uname -m)
 habs_dir=.
 clean_build_first=0
 update_pristine_first=0
+owner_uid=1000
+owner_gid=100
 
 usage() {
     cat << EOF
@@ -23,6 +25,8 @@ Run this script in your HABS dir to build the named packages.
 Options:
 -h          This help
 -b <dir>    Location of your HABS dir (default .)
+-u <uid>    User ID to own the built files
+-g <gid>    Group ID to own the built files
 EOF
 exit 0
 }
@@ -40,14 +44,16 @@ buildpkg() {
         msg "Building in $PWD"
         PACKAGER="ArchHaskell <arch-haskell@haskell.org>" BUILDDIR=/tmp/build-${arch} \
             makepkg --asroot --noconfirm -i -s
-        chown -R 1000:100 .
+        chown -R ${owner_uid}:${owner_gid} .
     fi
 }
 
-while getopts hb: opt; do
+while getopts hb:u:g: opt; do
     case "${opt}" in
         h) usage; exit 0;;
         b) habs_dir="${OPTARG}";;
+        u) owner_uid=${OPTARG};;
+        g) owner_gid=${OPTARG};;
     esac
 done
 shift $((OPTIND - 1))
