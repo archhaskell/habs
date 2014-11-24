@@ -1,0 +1,13 @@
+Index: habs/haskell-taffybar/src/taffybar-0.4.3/src/System/Taffybar/Widgets/Graph.hs
+===================================================================
+--- habs.orig/haskell-taffybar/src/taffybar-0.4.3/src/System/Taffybar/Widgets/Graph.hs
++++ habs/haskell-taffybar/src/taffybar-0.4.3/src/System/Taffybar/Widgets/Graph.hs
+@@ -30,7 +30,7 @@ import Control.Monad ( when )
+ import qualified Data.Sequence as S
+ import Graphics.Rendering.Cairo
+ import Graphics.Rendering.Cairo.Matrix hiding (scale, translate)
+-import Graphics.UI.Gtk
++import Graphics.UI.Gtk hiding (rectangle)
+ 
+ newtype GraphHandle = GH (MVar GraphState)
+ data GraphState =
