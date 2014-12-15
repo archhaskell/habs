@@ -1,0 +1,13 @@
+Index: habs/http-attoparsec.cabal
+===================================================================
+--- habs.orig/http-attoparsec.cabal
++++ habs/http-attoparsec.cabal
+@@ -64,7 +64,7 @@ Library
+   -- Packages needed in order to build this package.
+   Build-depends:       base >= 4 && < 5,
+                        bytestring >=0.9.1.5 && <0.11,
+-                       attoparsec >= 0.10.4.0 && < 0.12,
++                       attoparsec >= 0.10.4.0 && < 0.13,
+                        http-types >= 0.8.0 && < 0.9
+   
+   -- Modules not exported by this package.
