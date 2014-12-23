@@ -1,0 +1,13 @@
+Index: habs/random.cabal
+===================================================================
+--- habs.orig/random.cabal
++++ habs/random.cabal
+@@ -30,7 +30,7 @@ Library
+         System.Random
+     extensions:	CPP
+     GHC-Options: -O2 
+-    build-depends: base >= 5 && < 5, time
++    build-depends: base >= 3 && < 5, time
+ 
+ source-repository head
+     type:     git

@@ -1,13 +1,13 @@
-Index: habs/cabal-file-th.cabal
+Index: habs/haskell-cabal-file-th/src/cabal-file-th-0.2.3/cabal-file-th.cabal
 ===================================================================
---- habs.orig/cabal-file-th.cabal
-+++ habs/cabal-file-th.cabal
+--- habs.orig/haskell-cabal-file-th/src/cabal-file-th-0.2.3/cabal-file-th.cabal
++++ habs/haskell-cabal-file-th/src/cabal-file-th-0.2.3/cabal-file-th.cabal
 @@ -20,7 +20,7 @@ source-repository head
  Library
    Exposed-modules:   Distribution.PackageDescription.TH
    Build-depends:     base >= 4 && < 5,
 -                     Cabal >= 1.10 && < 1.17,
-+                     Cabal >= 1.10 && < 1.19,
++                     Cabal >= 1.10,
                       directory,
                       template-haskell
    Ghc-options: -Wall
