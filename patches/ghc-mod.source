@@ -1,0 +1,24 @@
+Index: habs/haskell-ghc-mod/src/ghc-mod-5.2.1.1/Language/Haskell/GhcMod/Monad.hs
+===================================================================
+--- habs.orig/haskell-ghc-mod/src/ghc-mod-5.2.1.1/Language/Haskell/GhcMod/Monad.hs
++++ habs/haskell-ghc-mod/src/ghc-mod-5.2.1.1/Language/Haskell/GhcMod/Monad.hs
+@@ -367,15 +367,14 @@ instance (MonadBaseControl IO m) => Mona
+     liftBase = GhcModT . liftBase
+ 
+ instance (MonadBaseControl IO m) => MonadBaseControl IO (GhcModT m) where
+-    newtype StM (GhcModT m) a = StGhcMod {
+-          unStGhcMod :: StM (StateT GhcModState
++    type StM (GhcModT m) a = StM (StateT GhcModState
+                               (ErrorT GhcModError
+                                 (JournalT GhcModLog
+-                                  (ReaderT GhcModEnv m) ) ) ) a }
++                                  (ReaderT GhcModEnv m) ) ) ) a 
+     liftBaseWith f = GhcModT . liftBaseWith $ \runInBase ->
+-        f $ liftM StGhcMod . runInBase . unGhcModT
++        f $ runInBase . unGhcModT
+ 
+-    restoreM = GhcModT . restoreM . unStGhcMod
++    restoreM = GhcModT . restoreM 
+     {-# INLINE liftBaseWith #-}
+     {-# INLINE restoreM #-}
+ 
