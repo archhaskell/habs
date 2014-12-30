@@ -48,5 +48,5 @@ else
     docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash -l"
 fi
 
-docker run -i -t -v=${habs_dir}:/habs ${image_name}:latest \
+docker run -i -t -v=${habs_dir}:/habs -u habs ${image_name}:latest \
     ${docker_cmd}
