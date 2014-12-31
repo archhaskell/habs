@@ -11,5 +11,5 @@ Index: habs/gtk2hs-buildtools/PKGBUILD
 +             "happy"
 +             "ghc=7.8.4-1"
               "haskell-hashtables=1.2.0.1-4"
-              "haskell-random=1.0.1.3-2")
+              "haskell-random=1.1-1")
  depends=()
