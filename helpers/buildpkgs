@@ -33,18 +33,20 @@ exit 0
 
 buildpkg() {
     eval "$(grep '^pkg\(rel\|ver\)=' PKGBUILD)"
-    if [[ -f ${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz ]]; then
+    local pkgname=${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz
+    if [[ -f ${pkgname} ]]; then
         sudo mkdir -p /repo
-        sudo cp ${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz /repo
-        (cd /repo; sudo repo-add repo.db.tar.gz \
-            ${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz)
+        sudo cp ${pkgname} /repo
+        (cd /repo; sudo repo-add repo.db.tar.gz ${pkgname})
         msg "Skipping build in $PWD"
     else
         sudo pacman -Sy
         msg "Building in $PWD"
         PACKAGER="ArchHaskell <arch-haskell@haskell.org>" BUILDDIR=/tmp/build-${arch} \
             makepkg --noconfirm -s
-        sudo chown -R ${owner_uid}:${owner_gid} .
+        sudo chown ${owner_uid}:${owner_gid} ${pkgname}
+        sudo cp ${pkgname} /repo
+        (cd /repo; sudo repo-add repo.db.tar.gz ${pkgname})
     fi
 }
 
