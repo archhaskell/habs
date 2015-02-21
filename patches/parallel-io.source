@@ -1,7 +1,7 @@
-Index: habs/parallel-io.cabal
+Index: habs/haskell-parallel-io/src/parallel-io-0.3.3/parallel-io.cabal
 ===================================================================
---- habs.orig/parallel-io.cabal
-+++ habs/parallel-io.cabal
+--- habs.orig/haskell-parallel-io/src/parallel-io-0.3.3/parallel-io.cabal
++++ habs/haskell-parallel-io/src/parallel-io-0.3.3/parallel-io.cabal
 @@ -42,7 +42,7 @@ Library
      Other-Modules:    
          Control.Concurrent.ParallelIO.Compat
