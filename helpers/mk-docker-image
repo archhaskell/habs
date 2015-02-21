@@ -64,15 +64,12 @@ Server = http://xsounds.org/~haskell/core/\$arch
 
 [core]
 Include = /etc/pacman.d/mirrorlist
-Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 
 [extra]
 Include = /etc/pacman.d/mirrorlist
-Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 
 [community]
 Include = /etc/pacman.d/mirrorlist
-Server = http://mirrors.kernel.org/archlinux/\$repo/os/\$arch
 EOF
 
 # packages to remove for space savings
@@ -94,6 +91,8 @@ setarch ${arch} arch-chroot ${rootfs} \
     locale-gen
 setarch ${arch} arch-chroot ${rootfs} \
     /bin/sh -c 'echo "Server = https://mirrors.kernel.org/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist'
+setarch ${arch} arch-chroot ${rootfs} \
+    /bin/sh -c 'echo "Server = https://ftp.lysator.liu.se/pub/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist'
 mkdir ${rootfs}/repo
 touch ${rootfs}/repo/repo.db
 setarch ${arch} arch-chroot ${rootfs} \
