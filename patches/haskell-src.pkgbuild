@@ -1,0 +1,13 @@
+Index: habs/haskell-haskell-src/PKGBUILD
+===================================================================
+--- habs.orig/haskell-haskell-src/PKGBUILD
++++ habs/haskell-haskell-src/PKGBUILD
+@@ -10,7 +10,7 @@
+ url="http://hackage.haskell.org/package/${_hkgname}"
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=('happy')
+ depends=("ghc=7.8.4-1"
+          "haskell-syb=0.4.4-1")
+ options=('strip' 'staticlibs')
