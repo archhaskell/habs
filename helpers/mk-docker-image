@@ -12,6 +12,10 @@ hash pacstrap &>/dev/null || {
     die "Could not find pacstrap. Run pacman -S arch-install-scripts"
 }
 
+hash reflector &>/dev/null || {
+    die "Could not find reflector. Run pacman -S reflector"
+}
+
 arch=$(uname -m)
 image_pfx=arch/habs
 
@@ -89,10 +93,6 @@ setarch ${arch} arch-chroot ${rootfs} \
 echo 'en_US.UTF-8 UTF-8' > ${rootfs}/etc/locale.gen
 setarch ${arch} arch-chroot ${rootfs} \
     locale-gen
-setarch ${arch} arch-chroot ${rootfs} \
-    /bin/sh -c 'echo "Server = https://mirrors.kernel.org/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist'
-setarch ${arch} arch-chroot ${rootfs} \
-    /bin/sh -c 'echo "Server = https://ftp.lysator.liu.se/pub/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist'
 mkdir ${rootfs}/repo
 touch ${rootfs}/repo/repo.db
 setarch ${arch} arch-chroot ${rootfs} \
@@ -100,6 +100,7 @@ setarch ${arch} arch-chroot ${rootfs} \
 cat << EOF > ${rootfs}/etc/sudoers
 %wheel ALL=(ALL) NOPASSWD: ALL
 EOF
+reflector -l 15 -f 5 > ${rootfs}/etc/pacman.d/mirrorlist
 
 tar --numeric-owner -C ${rootfs} -c . | docker import - ${image_name}
 docker run --rm ${image_name} echo Success.
