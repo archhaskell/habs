@@ -6,10 +6,10 @@ Index: habs/gtk2hs-buildtools/PKGBUILD
  url="http://projects.haskell.org/gtk2hs/"
  license=("GPL-2")
  arch=('i686' 'x86_64')
--makedepends=("ghc=7.8.4-1"
+-makedepends=("ghc=7.10.1-1"
 +makedepends=("alex"
 +             "happy"
-+             "ghc=7.8.4-1"
-              "haskell-hashtables=1.2.0.2-1"
-              "haskell-random=1.1-1")
++             "ghc=7.10.1-1"
+              "haskell-hashtables=1.2.0.2-76"
+              "haskell-random=1.1-76")
  depends=()

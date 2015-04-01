@@ -7,17 +7,7 @@ Index: habs/haskell-haskell-src-exts/PKGBUILD
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=('happy' 'llvm')
- depends=("ghc=7.8.4-1"
-          "haskell-cpphs=1.18.5-2")
++makedepends=('happy')
+ depends=("ghc=7.10.1-1"
+          "haskell-cpphs=1.19-76")
  options=('strip' 'staticlibs')
-@@ -32,7 +32,8 @@ build() {
-     
-     runhaskell Setup configure -O --enable-library-profiling --enable-shared \
-         --prefix=/usr --docdir="/usr/share/doc/${pkgname}" \
--        --libsubdir=\$compiler/site-local/\$pkgid
-+        --libsubdir=\$compiler/site-local/\$pkgid \
-+        --ghc-options="-fllvm -optlc=-mcpu=$(uname -m | sed s/_/-/)"
-     runhaskell Setup build
-     runhaskell Setup haddock --hoogle --html
-     runhaskell Setup register --gen-script

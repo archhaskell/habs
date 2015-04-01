@@ -1,0 +1,24 @@
+Index: habs/haskell-wl-pprint-text/src/wl-pprint-text-1.1.0.3/Text/PrettyPrint/Leijen/Text.hs
+===================================================================
+--- habs.orig/haskell-wl-pprint-text/src/wl-pprint-text-1.1.0.3/Text/PrettyPrint/Leijen/Text.hs
++++ habs/haskell-wl-pprint-text/src/wl-pprint-text-1.1.0.3/Text/PrettyPrint/Leijen/Text.hs
+@@ -117,6 +117,7 @@ module Text.PrettyPrint.Leijen.Text (
+ 
+    ) where
+ 
++import Prelude hiding ( (<$>) )
+ import Data.String (IsString(fromString))
+ import System.IO (Handle,hPutStr,hPutChar,stdout)
+ 
+Index: habs/haskell-wl-pprint-text/src/wl-pprint-text-1.1.0.3/Text/PrettyPrint/Leijen/Text/Monadic.hs
+===================================================================
+--- habs.orig/haskell-wl-pprint-text/src/wl-pprint-text-1.1.0.3/Text/PrettyPrint/Leijen/Text/Monadic.hs
++++ habs/haskell-wl-pprint-text/src/wl-pprint-text-1.1.0.3/Text/PrettyPrint/Leijen/Text/Monadic.hs
+@@ -69,6 +69,7 @@ module Text.PrettyPrint.Leijen.Text.Mona
+ 
+    ) where
+ 
++import Prelude hiding ( (<$>) )
+ import qualified Text.PrettyPrint.Leijen.Text as PP
+ import Text.PrettyPrint.Leijen.Text( Doc, SimpleDoc(..)
+                                    , renderPretty, renderCompact, renderOneLine

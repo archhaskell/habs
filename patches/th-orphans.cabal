@@ -1,0 +1,12 @@
+Index: habs/th-orphans.cabal
+===================================================================
+--- habs.orig/th-orphans.cabal
++++ habs/th-orphans.cabal
+@@ -19,7 +19,6 @@ description:        Orphan instances for
+ 
+ library
+   build-depends:    base >= 4.2 && < 5,
+-                    nats >= 0.1 && < 2,
+                     template-haskell,
+                     -- https://github.com/mboes/th-lift/issues/14
+                     th-lift >= 0.7.1,
