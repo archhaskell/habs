@@ -1,0 +1,20 @@
+Index: habs/haskell-xmonad/PKGBUILD
+===================================================================
+--- habs.orig/haskell-xmonad/PKGBUILD
++++ habs/haskell-xmonad/PKGBUILD
+@@ -17,6 +17,7 @@ depends=("ghc=7.10.1-1"
+          "haskell-mtl=2.2.1-76"
+          "haskell-utf8-string=1-76")
+ options=('strip' 'staticlibs')
++replaces=('xmonad')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
+         "cabal.patch")
+ install="${pkgname}.install"
+@@ -56,4 +57,7 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    # install man file
++    install -D -m644 man/xmonad.1 "${pkgdir}/usr/share/man/man1/xmonad.1"
+ }
