@@ -89,7 +89,6 @@ setarch ${arch} mkarchroot -C ${pacman_conf} \
 
 setarch ${arch} arch-chroot ${rootfs} \
     pacman -Rncs --noconfirm ${PKGREMOVE}
-sed -e 's/##//g' ${pacman_conf} > ${rootfs}/etc/pacman.conf
 setarch ${arch} arch-chroot ${rootfs} \
     /bin/sh -c "haveged -w 1024; pacman-key --init; pkill haveged; pacman -Rs --noconfirm haveged; pacman-key --populate archlinux"
 setarch ${arch} arch-chroot ${rootfs} \
@@ -99,9 +98,12 @@ setarch ${arch} arch-chroot ${rootfs} \
     locale-gen
 mkdir ${rootfs}/repo
 touch ${rootfs}/repo/repo.db
+sed -e 's/##//g' ${pacman_conf} > ${rootfs}/etc/pacman.conf
 setarch ${arch} arch-chroot ${rootfs} \
     useradd --no-create-home --home-dir / -g users -G wheel -s /bin/bash habs
 cat << EOF > ${rootfs}/etc/sudoers
+Defaults env_keep += "http_proxy https_proxy HTTP_PROXY HTTPS_PROXY no_proxy"
+
 %wheel ALL=(ALL) NOPASSWD: ALL
 EOF
 reflector -l 15 -f 5 > ${rootfs}/etc/pacman.d/mirrorlist
