@@ -16,6 +16,10 @@ hash reflector &>/dev/null || {
     die "Could not find reflector. Run pacman -S reflector"
 }
 
+hash mkarchroot &>/dev/null || {
+    die "Could not find mkarchroot. Run pacman -S devtools"
+}
+
 arch=$(uname -m)
 image_pfx=arch/habs
 
