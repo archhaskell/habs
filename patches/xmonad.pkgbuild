@@ -34,7 +34,7 @@ Index: habs/haskell-xmonad/PKGBUILD
  
  build() {
 +    cd $srcdir
-+    gendesk --pkgname "$pkgname" --pkgdesc "$pkgdesc"
++    gendesk --pkgname "xmonad" --pkgdesc "xmonad"
 +
      cd "${srcdir}/${_hkgname}-${pkgver}"
      
@@ -44,5 +44,5 @@ Index: habs/haskell-xmonad/PKGBUILD
      # install man file
      install -D -m644 man/xmonad.1 "${pkgdir}/usr/share/man/man1/xmonad.1"
 +
-+    install -D -m644 $srcdir/haskell-xmonad.desktop $pkgdir/usr/share/xsessions/xmonad.desktop
++    install -D -m644 $srcdir/xmonad.desktop $pkgdir/usr/share/xsessions/xmonad.desktop
  }
