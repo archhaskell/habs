@@ -32,3 +32,31 @@ Index: habs/haskell-xmonad/PKGBUILD
 +    install -D -m644 $srcdir/xmonad.desktop $pkgdir/usr/share/xsessions/xmonad.desktop
 +    )
  }
+--- haskell-xmonad/PKGBUILD	2015-04-26 09:51:46.186666645 -0400
++++ haskell-xmonad_good/PKGBUILD	2015-04-25 18:13:09.263333332 -0400
+@@ -10,7 +10,7 @@
+ url="http://xmonad.org"
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=('gendesk')
+ depends=("ghc=7.10.1-1"
+          "haskell-x11=1.6.1.2-76"
+          "haskell-extensible-exceptions=0.1.1.4-76"
+@@ -34,6 +34,9 @@
+ }
+ 
+ build() {
++    cd $srcdir
++    gendesk --pkgname "xmonad" --pkgdesc "xmonad"
++
+     cd "${srcdir}/${_hkgname}-${pkgver}"
+     
+     runhaskell Setup configure -O --enable-library-profiling --enable-shared \
+@@ -60,4 +63,6 @@
+ 
+     # install man file
+     install -D -m644 man/xmonad.1 "${pkgdir}/usr/share/man/man1/xmonad.1"
++
++    install -D -m644 $srcdir/xmonad.desktop $pkgdir/usr/share/xsessions/xmonad.desktop
+ }
