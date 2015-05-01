@@ -32,7 +32,7 @@ exit 0
 }
 
 buildpkg() {
-    eval "$(grep '^pkg\(rel\|ver\)=' PKGBUILD)"
+    eval "$(awk ' /^_[[:alpha:]]+=/ { print } /^pkg[[:alpha:]]+=/ { print }' PKGBUILD)"
     local pkgname=${pkg}-${pkgver}-${pkgrel}-${arch}.pkg.tar.xz
     if [[ -f ${pkgname} ]]; then
         sudo mkdir -p /repo
