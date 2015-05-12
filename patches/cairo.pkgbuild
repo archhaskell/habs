@@ -9,10 +9,10 @@ Index: habs/haskell-cairo/PKGBUILD
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
  depends=("ghc=7.10.1-1"
-          "haskell-mtl=2.2.1-76"
-          "haskell-text=1.2.0.4-76"
--         "haskell-utf8-string=1-76")
-+         "haskell-utf8-string=1-76"
+          "haskell-mtl=2.2.1_0-76"
+          "haskell-text=1.2.0.5_0-1"
+-         "haskell-utf8-string=1_0-76")
++         "haskell-utf8-string=1_0-76"
 +         "cairo")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
