@@ -1,0 +1,13 @@
+Index: habs/haskell-pandoc/PKGBUILD
+===================================================================
+--- habs.orig/haskell-pandoc/PKGBUILD
++++ habs/haskell-pandoc/PKGBUILD
+@@ -92,4 +92,8 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    # install man page
++    install -D -m744 man/man1/pandoc.1 "${pkgdir}/usr/share/man/man1/pandoc.1"
++    install -D -m744 man/man5/pandoc_markdown.5 "${pkgdir}/usr/share/man/man5/pandoc_markdown.5"
+ }
