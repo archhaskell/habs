@@ -1,0 +1,13 @@
+Index: habs/haskell-stack/PKGBUILD
+===================================================================
+--- habs.orig/haskell-stack/PKGBUILD
++++ habs/haskell-stack/PKGBUILD
+@@ -12,7 +12,7 @@ pkgdesc="The Haskell Tool Stack"
+ url="https://github.com/commercialhaskell/stack test/package-dump/ghc-7.8.txt test/package-dump/ghc-7.10.txt"
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=("haskell-cpphs")
+ depends=("ghc=7.10.1-1"
+          "haskell-aeson=0.8.1.1_0-3"
+          "haskell-async=2.0.2_0-76"
