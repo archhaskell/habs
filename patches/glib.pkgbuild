@@ -1,0 +1,13 @@
+Index: habs/haskell-glib/PKGBUILD
+===================================================================
+--- habs.orig/haskell-glib/PKGBUILD
++++ habs/haskell-glib/PKGBUILD
+@@ -12,7 +12,7 @@ pkgdesc="Binding to the GLIB library for
+ url="http://projects.haskell.org/gtk2hs/"
+ license=("LGPL-2.1")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=("gtk2hs-buildtools")
+ depends=("ghc=7.10.1-1"
+          "haskell-text=1.2.1.1_0-1"
+          "haskell-utf8-string=1_0-76")
