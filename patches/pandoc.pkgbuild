@@ -2,12 +2,12 @@ Index: habs/haskell-pandoc/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-pandoc/PKGBUILD
 +++ habs/haskell-pandoc/PKGBUILD
-@@ -92,4 +92,8 @@ package() {
+@@ -86,6 +86,8 @@ package() {
+     
+     install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
+     install    -m744 unregister.sh "${pkgdir}/usr/share/haskell/${pkgname}/unregister.sh"
++    install -d -m755 "${pkgdir}/usr/share/man/man1"
++    install -d -m755 "${pkgdir}/usr/share/man/man5"
+     install -d -m755 "${pkgdir}/usr/share/doc/ghc/html/libraries"
+     ln -s "/usr/share/doc/${pkgname}/html" "${pkgdir}/usr/share/doc/ghc/html/libraries/${_hkgname}"
      runhaskell Setup copy --destdir="${pkgdir}"
-     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
-+
-+    # install man page
-+    install -D -m744 man/man1/pandoc.1 "${pkgdir}/usr/share/man/man1/pandoc.1"
-+    install -D -m744 man/man5/pandoc_markdown.5 "${pkgdir}/usr/share/man/man5/pandoc_markdown.5"
- }
