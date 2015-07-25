@@ -1,13 +1,11 @@
-Index: archhaskell/haskell-x11/PKGBUILD
+Index: habs/haskell-x11/PKGBUILD
 ===================================================================
---- archhaskell.orig/haskell-x11/PKGBUILD
-+++ archhaskell/haskell-x11/PKGBUILD
-@@ -11,11 +11,12 @@ url="https://github.com/haskell-pkg-jani
- license=("BSD3")
- arch=('i686' 'x86_64')
+--- habs.orig/haskell-x11/PKGBUILD
++++ habs/haskell-x11/PKGBUILD
+@@ -15,9 +15,10 @@ arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.10.1-1"
-          "haskell-data-default=0.5.3-76"
+ depends=("ghc=7.10.2-1"
+          "haskell-data-default=0.5.3_0-77"
 -         "X11"
 -         "Xrandr"
 -         "Xext")
@@ -16,5 +14,5 @@ Index: archhaskell/haskell-x11/PKGBUILD
 +         "libxext"
 +         "libxinerama")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")

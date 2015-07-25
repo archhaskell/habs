@@ -2,13 +2,13 @@ Index: habs/haskell-alsa-core/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-alsa-core/PKGBUILD
 +++ habs/haskell-alsa-core/PKGBUILD
-@@ -12,7 +12,8 @@ license=("BSD3")
+@@ -14,7 +14,8 @@ license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.10.1-1"
--         "haskell-extensible-exceptions=0.1.1.4-76")
-+         "haskell-extensible-exceptions=0.1.1.4-76"
+ depends=("ghc=7.10.2-1"
+-         "haskell-extensible-exceptions=0.1.1.4_0-77")
++         "haskell-extensible-exceptions=0.1.1.4_0-77"
 +         "alsa-lib")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")
