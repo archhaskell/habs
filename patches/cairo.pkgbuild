@@ -10,7 +10,7 @@ Index: habs/haskell-cairo/PKGBUILD
 +makedepends=('gtk2hs-buildtools')
  depends=("ghc=7.10.2-1"
           "haskell-mtl=2.2.1_0-77"
-          "haskell-text=1.2.1.1_0-2"
+          "haskell-text=1.2.1.3_0-1"
 -         "haskell-utf8-string=1_0-77")
 +         "haskell-utf8-string=1_0-77"
 +         "cairo")

@@ -4,8 +4,8 @@ Index: habs/haskell-unixutils/PKGBUILD
 +++ habs/haskell-unixutils/PKGBUILD
 @@ -14,8 +14,7 @@ makedepends=()
  depends=("ghc=7.10.2-1"
-          "haskell-puremd5=2.1.2.1_0-79"
-          "haskell-regex-tdfa=1.2.0_1-2"
+          "haskell-puremd5=2.1.2.1_0-80"
+          "haskell-regex-tdfa=1.2.0_1-3"
 -         "haskell-zlib=0.5.4.2_0-77"
 -         "crypt")
 +         "haskell-zlib=0.5.4.2_0-77")
