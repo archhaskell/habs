@@ -3,10 +3,10 @@ Index: habs/fast-logger.cabal
 --- habs.orig/fast-logger.cabal
 +++ habs/fast-logger.cabal
 @@ -22,8 +22,7 @@ Library
-   Build-Depends:        base >= 4 && < 5
+   Build-Depends:        base >= 4.4 && < 5
                        , array
                        , auto-update >= 0.1.2
-                       , bytestring >= 0.10
+                       , bytestring
 -                      , bytestring-builder
                        , directory
                        , filepath
