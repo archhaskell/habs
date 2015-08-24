@@ -6,7 +6,7 @@ Index: habs/fast-logger.cabal
    Build-Depends:        base >= 4.4 && < 5
                        , array
                        , auto-update >= 0.1.2
-                       , bytestring
+                       , bytestring >= 0.10
 -                      , bytestring-builder
                        , directory
                        , filepath

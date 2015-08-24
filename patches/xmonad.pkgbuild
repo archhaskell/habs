@@ -9,7 +9,7 @@ Index: habs/haskell-xmonad/PKGBUILD
 -makedepends=()
 +makedepends=('gendesk')
  depends=("ghc=7.10.2-1"
-          "haskell-x11=1.6.1.2_0-77"
+          "haskell-x11=1.6.1.2_0-78"
           "haskell-extensible-exceptions=0.1.1.4_0-77"
           "haskell-mtl=2.2.1_0-77"
           "haskell-utf8-string=1_0-77")
