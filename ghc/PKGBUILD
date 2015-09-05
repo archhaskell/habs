@@ -65,8 +65,8 @@ replaces=('haskell-array<0.5.1.0'
           'haskell-xhtml<3000.2.1'
           'haskell-cabal<1.22.4.0')
 
-source=("https://downloads.haskell.org/~ghc/${pkgver}/ghc-${pkgver}-src.tar.bz2"
-        "https://downloads.haskell.org/~ghc/${pkgver}/ghc-${pkgver}-testsuite.tar.bz2"
+source=("https://downloads.haskell.org/~ghc/${pkgver}/ghc-${pkgver}-src.tar.xz"
+        "https://downloads.haskell.org/~ghc/${pkgver}/ghc-${pkgver}-testsuite.tar.xz"
         'build.mk' 'arch-gen-contents-index')
 
 prepare() {
@@ -119,7 +119,7 @@ package() {
         ${pkgdir}/usr/share/licenses/ghc
 }
 
-sha256sums=('fe8257ad38984d542cb60c0aabf4e88767c6c1cb4eeaf69eb5acfaab5d6d97a9'
-            'd0b3e6ac64027e70c9ad62ad9ffd19b4dce01f3fba0b5524e5327f92f90dda37'
+sha256sums=('54cd73755b784d78e2f13d5eb161bfa38d3efee9e8a56f7eb6cd9f2d6e2615f5'
+            '8b4885d376ca635935b49d4e36e2fa6f07164563ea496eac5fffa0ac926ae962'
             'f6f08c0fd1098396beba515db06d6c5f3aac633b56e2d35cbcefaf76272ee9af'
             'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')
