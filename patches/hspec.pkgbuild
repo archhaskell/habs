@@ -2,12 +2,12 @@ Index: habs/haskell-hspec/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-hspec/PKGBUILD
 +++ habs/haskell-hspec/PKGBUILD
-@@ -17,7 +17,8 @@ depends=("ghc=7.10.2-1"
-          "haskell-hunit=1.2.5.2_0-77"
-          "haskell-quickcheck=2.8.1_0-2"
-          "haskell-hspec-core=2.2.0_0-2"
--         "haskell-hspec-expectations=0.7.2_0-1")
-+         "haskell-hspec-expectations=0.7.2_0-1"
+@@ -17,7 +17,8 @@ depends=("ghc=7.10.2-2"
+          "haskell-hunit=1.2.5.2_0-78"
+          "haskell-quickcheck=2.8.1_0-3"
+          "haskell-hspec-core=2.2.0_0-3"
+-         "haskell-hspec-expectations=0.7.2_0-2")
++         "haskell-hspec-expectations=0.7.2_0-2"
 +         "hspec-discover")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"

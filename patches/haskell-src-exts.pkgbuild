@@ -8,6 +8,6 @@ Index: habs/haskell-haskell-src-exts/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('happy')
- depends=("ghc=7.10.2-1"
-          "haskell-cpphs=1.19-76")
+ depends=("ghc=7.10.2-2"
+          "haskell-cpphs=1.19.3_0-2")
  options=('strip' 'staticlibs')

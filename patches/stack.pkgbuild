@@ -8,6 +8,6 @@ Index: habs/haskell-stack/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("haskell-cpphs")
- depends=("ghc=7.10.2-1"
-          "haskell-aeson=0.8.1.1_0-3"
-          "haskell-async=2.0.2_0-76"
+ depends=("ghc=7.10.2-2"
+          "haskell-aeson=0.9.0.1_0-6"
+          "haskell-async=2.0.2_0-78"

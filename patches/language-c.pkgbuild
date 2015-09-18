@@ -8,8 +8,8 @@ Index: habs/haskell-language-c/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('happy' 'alex')
- depends=("ghc=7.10.2-1"
-          "haskell-syb=0.4.4-75")
+ depends=("ghc=7.10.2-2"
+          "haskell-syb=0.5.1_0-3")
  options=('strip' 'staticlibs')
 @@ -30,6 +30,8 @@ prepare() {
  build() {

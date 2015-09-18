@@ -6,8 +6,8 @@ Index: archhaskell/haskell-digest/PKGBUILD
  license=("BSD3")
  arch=('i686' 'x86_64')
  makedepends=()
--depends=("ghc=7.10.2-1" "z")
-+depends=("ghc=7.10.2-1" "zlib")
+-depends=("ghc=7.10.2-2" "z")
++depends=("ghc=7.10.2-2" "zlib")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"
