@@ -2,12 +2,41 @@ Index: habs/haskell-stack/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-stack/PKGBUILD
 +++ habs/haskell-stack/PKGBUILD
-@@ -12,7 +12,7 @@ pkgdesc="The Haskell Tool Stack"
- url="https://github.com/commercialhaskell/stack test/package-dump/ghc-7.8.txt test/package-dump/ghc-7.10.txt"
- license=("BSD3")
- arch=('i686' 'x86_64')
--makedepends=()
-+makedepends=("haskell-cpphs")
- depends=("ghc=7.10.2-2"
-          "haskell-aeson=0.9.0.1_0-6"
-          "haskell-async=2.0.2_0-78"
+@@ -5,7 +5,7 @@ _ver=0.1.5.0
+ _xrev=0
+ 
+ # PKGBUILD options/directives
+-pkgname=haskell-stack
++pkgname=(haskell-stack haskell-stack-bin)
+ pkgver=${_ver}_${_xrev}
+ pkgrel=1
+ pkgdesc="The Haskell Tool Stack"
+@@ -105,7 +105,9 @@ build() {
+     sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
+ }
+ 
+-package() {
++package_haskell-stack() {
++    depends+=('haskell-stack-bin')
++
+     cd "${srcdir}/${_hkgname}-${_ver}"
+     
+     install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
+@@ -115,4 +117,17 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++    rm -rf "${pkgdir}/usr/bin"
++}
++
++package_haskell-stack-bin() {
++    pkgdesc="The Haskell Tool Stack - the binary"
++    depends=()
++    optdepends=('haskell-stack: the stack library')
++    install=''
++
++    cd "${srcdir}/${_hkgname}-${_ver}"
++
++    install -D -m755 "dist/build/stack/stack" "${pkgdir}/usr/bin/stack"
++    install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+ }
