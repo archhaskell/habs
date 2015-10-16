@@ -2,19 +2,15 @@ Index: habs/stack.cabal
 ===================================================================
 --- habs.orig/stack.cabal
 +++ habs/stack.cabal
-@@ -121,10 +121,10 @@ library
+@@ -121,7 +121,7 @@ library
                       Distribution.Version.Extra
    build-depends:             
          Cabal >=1.18.1.5 && <1.23,
--        aeson >=0.8.0.2 && <0.9,
-+        aeson >=0.8.0.2 && <0.10,
+-        aeson >=0.8.0.2 && <0.10,
++        aeson >=0.8.0.2 && <0.11,
          ansi-terminal >=0.6.2.3 && <0.7,
          async >=2.0.2 && <2.1,
--        attoparsec >=0.12.1.5 && <0.13,
-+        attoparsec >=0.12.1.5 && <0.14,
-         base ==4.*,
-         base16-bytestring >=0.1.1.6 && <0.2,
-         base64-bytestring >=1.0.0.1 && <1.1,
+         attoparsec >=0.12.1.5 && <0.14,
 @@ -185,11 +185,11 @@ library
          transformers-base >=0.4.4 && <0.5,
          unix-compat >=0.4.1.4 && <0.5,
