@@ -2,16 +2,16 @@ Index: habs/haskell-stack/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-stack/PKGBUILD
 +++ habs/haskell-stack/PKGBUILD
-@@ -5,7 +5,7 @@ _ver=0.1.5.0
- _xrev=0
+@@ -5,7 +5,7 @@ _ver=0.1.6.0
+ _xrev=2
  
  # PKGBUILD options/directives
 -pkgname=haskell-stack
 +pkgname=(haskell-stack haskell-stack-bin)
  pkgver=${_ver}_${_xrev}
- pkgrel=1
+ pkgrel=2
  pkgdesc="The Haskell Tool Stack"
-@@ -105,7 +105,9 @@ build() {
+@@ -106,7 +106,9 @@ build() {
      sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
  }
  
@@ -22,7 +22,7 @@ Index: habs/haskell-stack/PKGBUILD
      cd "${srcdir}/${_hkgname}-${_ver}"
      
      install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
-@@ -115,4 +117,17 @@ package() {
+@@ -116,4 +118,25 @@ package() {
      runhaskell Setup copy --destdir="${pkgdir}"
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
@@ -32,11 +32,19 @@ Index: habs/haskell-stack/PKGBUILD
 +package_haskell-stack-bin() {
 +    pkgdesc="The Haskell Tool Stack - the binary"
 +    depends=()
-+    optdepends=('haskell-stack: the stack library')
++    optdepends=('haskell-stack: the stack library'
++                'libtinfo: required for installing ghc in sandboxes')
 +    install=''
 +
 +    cd "${srcdir}/${_hkgname}-${_ver}"
 +
 +    install -D -m755 "dist/build/stack/stack" "${pkgdir}/usr/bin/stack"
 +    install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++
++    install -d -m755 "${pkgdir}/usr/share/doc/haskell-stack/doc"
++    install -m644 -t "${pkgdir}/usr/share/doc/haskell-stack/doc" doc/*
++
++    install -d -m755 "${pkgdir}/etc/bash_completion.d"
++    ./dist/build/stack/stack --bash-completion-script /usr/bin/stack > stack_completion_script
++    install -m644 stack_completion_script "${pkgdir}/etc/bash_completion.d/stack"
  }
