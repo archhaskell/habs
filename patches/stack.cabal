@@ -11,12 +11,7 @@ Index: habs/stack.cabal
          ansi-terminal >=0.6.2.3 && <0.7,
          async >=2.0.2 && <2.1,
          attoparsec >=0.12.1.5 && <0.14,
-@@ -185,11 +185,11 @@ library
-         transformers-base >=0.4.4 && <0.5,
-         unix-compat >=0.4.1.4 && <0.5,
-         unordered-containers >=0.2.5.1 && <0.3,
--        vector >=0.10.12.3 && <0.11,
-+        vector >=0.10.12.3 && <0.12,
+@@ -189,7 +189,7 @@ library
          vector-binary-instances >=0.2.1.0 && <0.3,
          void ==0.7.*,
          yaml >=0.8.10.1 && <0.9,
