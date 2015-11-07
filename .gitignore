@@ -19,6 +19,7 @@ patches/series
 /*/*-check.log*
 /*/*-package.log*
 /*/*-prepare.log*
+/*/original.cabal
 /ghc/ghc/
 
 # ignore chroot environments

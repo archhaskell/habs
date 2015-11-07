@@ -1,0 +1,22 @@
+Index: habs/stack.cabal
+===================================================================
+--- habs.orig/stack.cabal
++++ habs/stack.cabal
+@@ -121,7 +121,7 @@ library
+                      Distribution.Version.Extra
+   build-depends:             
+         Cabal >=1.18.1.5 && <1.23,
+-        aeson >=0.8.0.2 && <0.10,
++        aeson >=0.8.0.2 && <0.11,
+         ansi-terminal >=0.6.2.3 && <0.7,
+         async >=2.0.2 && <2.1,
+         attoparsec >=0.12.1.5 && <0.14,
+@@ -189,7 +189,7 @@ library
+         vector-binary-instances >=0.2.1.0 && <0.3,
+         void ==0.7.*,
+         yaml >=0.8.10.1 && <0.9,
+-        zlib >=0.5.4.2 && <0.6,
++        zlib >=0.5.4.2 && <0.7,
+         deepseq >=1.3 && <1.5,
+         file-embed >=0.0.9 && <0.1,
+         word8 >=0.1.2 && <0.2,

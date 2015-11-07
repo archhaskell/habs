@@ -1,0 +1,163 @@
+Index: habs/cabal-install/src/cabal-install-1.22.6.0/Distribution/Client/GZipUtils.hs
+===================================================================
+--- habs.orig/cabal-install/src/cabal-install-1.22.6.0/Distribution/Client/GZipUtils.hs
++++ habs/cabal-install/src/cabal-install-1.22.6.0/Distribution/Client/GZipUtils.hs
+@@ -1,3 +1,6 @@
++{-# LANGUAGE ScopedTypeVariables #-}
++{-# LANGUAGE CPP #-}
++
+ -----------------------------------------------------------------------------
+ -- |
+ -- Module      :  Distribution.Client.GZipUtils
+@@ -15,10 +18,15 @@ module Distribution.Client.GZipUtils (
+     maybeDecompress,
+   ) where
+ 
+-import qualified Data.ByteString.Lazy.Internal as BS (ByteString(..))
+-import Data.ByteString.Lazy (ByteString)
+-import Codec.Compression.GZip
+ import Codec.Compression.Zlib.Internal
++import Data.ByteString.Lazy.Internal as BS (ByteString(Empty, Chunk))
++
++#if MIN_VERSION_zlib(0,6,0)
++import Control.Exception (throw)
++import Control.Monad (liftM)
++import Control.Monad.ST.Lazy (ST, runST)
++import qualified Data.ByteString as Strict
++#endif
+ 
+ -- | Attempts to decompress the `bytes' under the assumption that
+ -- "data format" error at the very beginning of the stream means
+@@ -30,6 +38,39 @@ import Codec.Compression.Zlib.Internal
+ -- <https://github.com/haskell/cabal/issues/678>
+ --
+ maybeDecompress :: ByteString -> ByteString
++#if MIN_VERSION_zlib(0,6,0)
++maybeDecompress bytes = runST (go bytes decompressor)
++  where
++    decompressor :: DecompressStream (ST s)
++    decompressor = decompressST gzipOrZlibFormat defaultDecompressParams
++
++    -- DataError at the beginning of the stream probably means that stream is
++    -- not compressed, so we return it as-is.
++    -- TODO: alternatively, we might consider looking for the two magic bytes
++    -- at the beginning of the gzip header.  (not an option for zlib, though.)
++    go :: Monad m => ByteString -> DecompressStream m -> m ByteString
++    go cs (DecompressOutputAvailable bs k) = liftM (Chunk bs) $ go' cs =<< k
++    go _  (DecompressStreamEnd       _bs ) = return Empty
++    go _  (DecompressStreamError _err    ) = return bytes
++    go cs (DecompressInputRequired      k) = go cs' =<< k c
++      where
++        (c, cs') = uncons cs
++
++    -- Once we have received any output though we regard errors as actual errors
++    -- and we throw them (as pure exceptions).
++    -- TODO: We could (and should) avoid these pure exceptions.
++    go' :: Monad m => ByteString -> DecompressStream m -> m ByteString
++    go' cs (DecompressOutputAvailable bs k) = liftM (Chunk bs) $ go' cs =<< k
++    go' _  (DecompressStreamEnd       _bs ) = return Empty
++    go' _  (DecompressStreamError err     ) = throw err
++    go' cs (DecompressInputRequired      k) = go' cs' =<< k c
++      where
++        (c, cs') = uncons cs
++
++    uncons :: ByteString -> (Strict.ByteString, ByteString)
++    uncons Empty        = (Strict.empty, Empty)
++    uncons (Chunk c cs) = (c, cs)
++#else
+ maybeDecompress bytes = foldStream $ decompressWithErrors gzipOrZlibFormat defaultDecompressParams bytes
+   where
+     -- DataError at the beginning of the stream probably means that stream is not compressed.
+@@ -42,3 +83,4 @@ maybeDecompress bytes = foldStream $ dec
+     doFold StreamEnd               = BS.Empty
+     doFold (StreamChunk bs stream) = BS.Chunk bs (doFold stream)
+     doFold (StreamError _ msg)  = error $ "Codec.Compression.Zlib: " ++ msg
++#endif
+Index: habs/cabal-install/src/cabal-install-1.22.6.0/tests/UnitTests.hs
+===================================================================
+--- habs.orig/cabal-install/src/cabal-install-1.22.6.0/tests/UnitTests.hs
++++ habs/cabal-install/src/cabal-install-1.22.6.0/tests/UnitTests.hs
+@@ -6,6 +6,7 @@ import Test.Framework
+ import qualified UnitTests.Distribution.Client.Sandbox
+ import qualified UnitTests.Distribution.Client.UserConfig
+ import qualified UnitTests.Distribution.Client.Targets
++import qualified UnitTests.Distribution.Client.GZipUtils
+ import qualified UnitTests.Distribution.Client.Dependency.Modular.PSQ
+ 
+ tests :: [Test]
+@@ -16,6 +17,8 @@ tests = [
+        UnitTests.Distribution.Client.Sandbox.tests
+   ,testGroup "Distribution.Client.Targets"
+        UnitTests.Distribution.Client.Targets.tests
++  ,testGroup "Distribution.Client.GZipUtils"
++       UnitTests.Distribution.Client.GZipUtils.tests
+   ,testGroup "UnitTests.Distribution.Client.Dependency.Modular.PSQ"
+         UnitTests.Distribution.Client.Dependency.Modular.PSQ.tests
+   ]
+Index: habs/cabal-install/src/cabal-install-1.22.6.0/tests/UnitTests/Distribution/Client/GZipUtils.hs
+===================================================================
+--- /dev/null
++++ habs/cabal-install/src/cabal-install-1.22.6.0/tests/UnitTests/Distribution/Client/GZipUtils.hs
+@@ -0,0 +1,62 @@
++module UnitTests.Distribution.Client.GZipUtils (
++  tests
++  ) where
++
++import Codec.Compression.GZip          as GZip
++import Codec.Compression.Zlib          as Zlib
++import Control.Exception.Base                  (evaluate)
++import Control.Exception                       (try, SomeException)
++import Control.Monad                           (void)
++import Data.ByteString                as BS    (null)
++import Data.ByteString.Lazy           as BSL   (pack, toChunks)
++import Data.ByteString.Lazy.Char8     as BSLL  (pack, init, length)
++import Data.Monoid                             ((<>))
++import Distribution.Client.GZipUtils           (maybeDecompress)
++import Data.Word                               (Word8)
++
++import Test.Tasty
++import Test.Tasty.HUnit
++import Test.Tasty.QuickCheck
++
++tests :: [TestTree]
++tests = [ testCase "maybeDecompress" maybeDecompressUnitTest
++        , testProperty "decompress plain" prop_maybeDecompress_plain
++        , testProperty "decompress zlib"  prop_maybeDecompress_zlib
++        , testProperty "decompress gzip"  prop_maybeDecompress_gzip
++        ]
++
++maybeDecompressUnitTest :: Assertion
++maybeDecompressUnitTest =
++        assertBool "decompress plain"            (maybeDecompress original              == original)
++     >> assertBool "decompress zlib (with show)" (show (maybeDecompress compressedZlib) == show original)
++     >> assertBool "decompress gzip (with show)" (show (maybeDecompress compressedGZip) == show original)
++     >> assertBool "decompress zlib"             (maybeDecompress compressedZlib        == original)
++     >> assertBool "decompress gzip"             (maybeDecompress compressedGZip        == original)
++     >> assertBool "have no empty chunks"        (Prelude.all (not . BS.null) . BSL.toChunks . maybeDecompress $ compressedZlib)
++     >> (runBrokenStream >>= assertBool "decompress broken stream" . isLeft)
++  where
++    original = BSLL.pack "original uncompressed input"
++    compressedZlib = Zlib.compress original
++    compressedGZip = GZip.compress original
++
++    runBrokenStream :: IO (Either SomeException ())
++    runBrokenStream = try . void . evaluate . BSLL.length $ maybeDecompress (BSLL.init compressedZlib <> BSLL.pack "*")
++
++prop_maybeDecompress_plain :: [Word8] -> Property
++prop_maybeDecompress_plain ws = property $ maybeDecompress original == original
++  where original = BSL.pack ws
++
++prop_maybeDecompress_zlib :: [Word8] -> Property
++prop_maybeDecompress_zlib ws = property $ maybeDecompress compressedZlib == original
++  where original = BSL.pack ws
++        compressedZlib = Zlib.compress original
++
++prop_maybeDecompress_gzip :: [Word8] -> Property
++prop_maybeDecompress_gzip ws = property $ maybeDecompress compressedGZip == original
++  where original = BSL.pack ws
++        compressedGZip = GZip.compress original
++
++-- (Only available from "Data.Either" since 7.8.)
++isLeft :: Either a b -> Bool
++isLeft (Right _) = False
++isLeft (Left _) = True

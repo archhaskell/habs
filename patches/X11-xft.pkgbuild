@@ -1,14 +1,14 @@
-Index: archhaskell-habs/haskell-x11-xft/PKGBUILD
+Index: habs/haskell-x11-xft/PKGBUILD
 ===================================================================
---- archhaskell-habs.orig/haskell-x11-xft/PKGBUILD
-+++ archhaskell-habs/haskell-x11-xft/PKGBUILD
-@@ -13,7 +13,8 @@ arch=('i686' 'x86_64')
+--- habs.orig/haskell-x11-xft/PKGBUILD
++++ habs/haskell-x11-xft/PKGBUILD
+@@ -15,7 +15,8 @@ arch=('i686' 'x86_64')
  makedepends=()
- depends=("ghc=7.8.4-1"
-          "haskell-x11=1.6.1.2-4"
--         "haskell-utf8-string=0.3.8-3")
-+         "haskell-utf8-string=0.3.8-3"
+ depends=("ghc=7.10.2-2"
+          "haskell-x11=1.6.1.2_0-79"
+-         "haskell-utf8-string=1.0.1.1_0-2")
++         "haskell-utf8-string=1.0.1.1_0-2"
 +         "libxft")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")

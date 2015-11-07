@@ -1,13 +1,13 @@
-Index: archhaskell/haskell-openglraw/PKGBUILD
+Index: habs/haskell-openglraw/PKGBUILD
 ===================================================================
---- archhaskell.orig/haskell-openglraw/PKGBUILD
-+++ archhaskell/haskell-openglraw/PKGBUILD
-@@ -11,7 +11,7 @@ url="http://www.haskell.org/haskellwiki/
- license=("BSD3")
- arch=('i686' 'x86_64')
- makedepends=()
--depends=("ghc=7.8.4-1" "GL")
-+depends=("ghc=7.8.4-1" "libgl")
+--- habs.orig/haskell-openglraw/PKGBUILD
++++ habs/haskell-openglraw/PKGBUILD
+@@ -16,7 +16,7 @@ makedepends=()
+ depends=("ghc=7.10.2-2"
+          "haskell-half=0.2.2.1_0-1"
+          "haskell-text=1.2.1.3_0-2"
+-         "GL")
++         "libgl")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz"
-         "cabal.patch")
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")
