@@ -1,0 +1,5 @@
+--- haskell-haskell-src/PKGBUILD	2015-11-07 19:58:47.549262119 +0300
++++ P	2015-11-07 20:02:07.462057216 +0300
+@@ -15 +15 @@
+-makedepends=()
++makedepends=("happy")
