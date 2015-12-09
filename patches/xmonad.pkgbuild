@@ -8,11 +8,11 @@ Index: habs/haskell-xmonad/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('gendesk')
- depends=("ghc=7.10.2-2"
-          "haskell-x11=1.6.1.2_0-79"
-          "haskell-extensible-exceptions=0.1.1.4_0-78"
-          "haskell-mtl=2.2.1_0-78"
-          "haskell-utf8-string=1.0.1.1_0-2")
+ depends=("ghc=7.10.3-1"
+          "haskell-x11=1.6.1.2_0-80"
+          "haskell-extensible-exceptions=0.1.1.4_0-79"
+          "haskell-mtl=2.2.1_0-79"
+          "haskell-utf8-string=1.0.1.1_0-3")
  options=('strip' 'staticlibs')
 +replaces=('xmonad')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"

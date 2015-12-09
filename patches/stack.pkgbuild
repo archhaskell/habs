@@ -2,7 +2,7 @@ Index: habs/haskell-stack/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-stack/PKGBUILD
 +++ habs/haskell-stack/PKGBUILD
-@@ -5,7 +5,7 @@ _ver=0.1.6.0
+@@ -5,7 +5,7 @@ _ver=0.1.10.0
  _xrev=2
  
  # PKGBUILD options/directives
@@ -11,7 +11,7 @@ Index: habs/haskell-stack/PKGBUILD
  pkgver=${_ver}_${_xrev}
  pkgrel=2
  pkgdesc="The Haskell Tool Stack"
-@@ -106,7 +106,9 @@ build() {
+@@ -109,7 +109,9 @@ build() {
      sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
  }
  
@@ -22,7 +22,7 @@ Index: habs/haskell-stack/PKGBUILD
      cd "${srcdir}/${_hkgname}-${_ver}"
      
      install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
-@@ -116,4 +118,25 @@ package() {
+@@ -119,4 +121,22 @@ package() {
      runhaskell Setup copy --destdir="${pkgdir}"
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
@@ -40,9 +40,6 @@ Index: habs/haskell-stack/PKGBUILD
 +
 +    install -D -m755 "dist/build/stack/stack" "${pkgdir}/usr/bin/stack"
 +    install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-+
-+    install -d -m755 "${pkgdir}/usr/share/doc/haskell-stack/doc"
-+    install -m644 -t "${pkgdir}/usr/share/doc/haskell-stack/doc" doc/*
 +
 +    install -d -m755 "${pkgdir}/etc/bash_completion.d"
 +    ./dist/build/stack/stack --bash-completion-script /usr/bin/stack > stack_completion_script
