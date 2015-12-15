@@ -2,16 +2,7 @@ Index: habs/stack.cabal
 ===================================================================
 --- habs.orig/stack.cabal
 +++ habs/stack.cabal
-@@ -124,7 +124,7 @@ library
-         Path.Extra
-     build-depends:
-         Cabal >=1.18.1.5 && <1.23,
--        aeson >=0.8.0.2 && <0.10,
-+        aeson >=0.8.0.2 && <0.11,
-         ansi-terminal >=0.6.2.3 && <0.7,
-         async >=2.0.2 && <2.1,
-         attoparsec >=0.12.1.5 && <0.14,
-@@ -175,7 +175,7 @@ library
+@@ -176,7 +176,7 @@ library
          resourcet >=1.1.4.1 && <1.2,
          retry >=0.6 && <0.8,
          safe ==0.3.*,
@@ -20,7 +11,7 @@ Index: habs/stack.cabal
          split >=0.2.2 && <0.3,
          stm >=2.4.4 && <2.5,
          streaming-commons >=0.1.10.0 && <0.2,
-@@ -192,7 +192,7 @@ library
+@@ -193,7 +193,7 @@ library
          vector-binary-instances >=0.2.1.0 && <0.3,
          void ==0.7.*,
          yaml >=0.8.10.1 && <0.9,
