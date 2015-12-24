@@ -5,7 +5,7 @@ Index: habs/haskell-x11/PKGBUILD
 @@ -15,9 +15,10 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.10.3-1"
-          "haskell-data-default=0.5.3_0-80"
+          "haskell-data-default=0.5.3_0-81"
 -         "X11"
 -         "Xrandr"
 -         "Xext")

@@ -2,23 +2,16 @@ Index: habs/haskell-xmonad/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-xmonad/PKGBUILD
 +++ habs/haskell-xmonad/PKGBUILD
-@@ -12,13 +12,14 @@ pkgdesc="A tiling window manager"
+@@ -12,7 +12,7 @@ pkgdesc="A tiling window manager"
  url="http://xmonad.org"
  license=("BSD3")
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('gendesk')
  depends=("ghc=7.10.3-1"
-          "haskell-x11=1.6.1.2_0-80"
-          "haskell-extensible-exceptions=0.1.1.4_0-79"
-          "haskell-mtl=2.2.1_0-79"
-          "haskell-utf8-string=1.0.1.1_0-3")
- options=('strip' 'staticlibs')
-+replaces=('xmonad')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
-         "original.cabal")
- install="${pkgname}.install"
-@@ -58,4 +59,13 @@ package() {
+          "haskell-x11=1.6.1.2_0-81"
+          "haskell-data-default=0.5.3_0-81"
+@@ -60,4 +60,13 @@ package() {
      runhaskell Setup copy --destdir="${pkgdir}"
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
