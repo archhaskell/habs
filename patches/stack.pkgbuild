@@ -2,39 +2,40 @@ Index: habs/haskell-stack/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-stack/PKGBUILD
 +++ habs/haskell-stack/PKGBUILD
-@@ -5,7 +5,7 @@ _ver=0.1.10.0
- _xrev=2
+@@ -5,7 +5,7 @@ _ver=1.0.0
+ _xrev=0
  
  # PKGBUILD options/directives
 -pkgname=haskell-stack
-+pkgname=(haskell-stack haskell-stack-bin)
++pkgname=(haskell-stack haskell-stack-tool)
  pkgver=${_ver}_${_xrev}
- pkgrel=2
+ pkgrel=1
  pkgdesc="The Haskell Tool Stack"
-@@ -109,7 +109,9 @@ build() {
+@@ -111,7 +111,9 @@ build() {
      sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
  }
  
 -package() {
 +package_haskell-stack() {
-+    depends+=('haskell-stack-bin')
++    depends+=('haskell-stack-tool')
 +
      cd "${srcdir}/${_hkgname}-${_ver}"
      
      install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
-@@ -119,4 +121,22 @@ package() {
+@@ -121,4 +123,23 @@ package() {
      runhaskell Setup copy --destdir="${pkgdir}"
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
 +    rm -rf "${pkgdir}/usr/bin"
 +}
 +
-+package_haskell-stack-bin() {
++package_haskell-stack-tool() {
 +    pkgdesc="The Haskell Tool Stack - the binary"
 +    depends=()
 +    optdepends=('haskell-stack: the stack library'
 +                'libtinfo: required for installing ghc in sandboxes')
 +    install=''
++    replaces=('haskell-stack-bin')
 +
 +    cd "${srcdir}/${_hkgname}-${_ver}"
 +
