@@ -1,37 +1,37 @@
-Index: habs/haskell-pandoc/PKGBUILD
+Index: habs/haskell-pandoc-citeproc/PKGBUILD
 ===================================================================
---- habs.orig/haskell-pandoc/PKGBUILD
-+++ habs/haskell-pandoc/PKGBUILD
-@@ -5,7 +5,7 @@ _ver=1.15.2.1
+--- habs.orig/haskell-pandoc-citeproc/PKGBUILD
++++ habs/haskell-pandoc-citeproc/PKGBUILD
+@@ -5,7 +5,7 @@ _ver=0.8.1.3
  _xrev=0
  
  # PKGBUILD options/directives
--pkgname=haskell-pandoc
-+pkgname=(haskell-pandoc haskell-pandoc-tool)
+-pkgname=haskell-pandoc-citeproc
++pkgname=(haskell-pandoc-citeproc haskell-pandoc-citeproc-tool)
  pkgver=${_ver}_${_xrev}
  pkgrel=6
- pkgdesc="Conversion between markup formats"
-@@ -81,7 +81,10 @@ build() {
+ pkgdesc="Supports using pandoc with citeproc"
+@@ -65,7 +65,10 @@ build() {
      sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
  }
  
 -package() {
-+package_haskell-pandoc() {
-+    conflicts=('haskell-pandoc-tool')
-+    provides=('haskell-pandoc-tool')
++package_haskell-pandoc-citeproc() {
++    conflicts=('haskell-pandoc-citeproc-tool')
++    provides=('haskell-pandoc-citeproc-tool')
 +
      cd "${srcdir}/${_hkgname}-${_ver}"
      
      install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
-@@ -92,3 +95,21 @@ package() {
+@@ -76,3 +79,22 @@ package() {
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
  }
 +
-+package_haskell-pandoc-tool() {
-+    pkgdesc="Conversion between markup formats - the binary"
-+    depends=()
-+    conflicts=('haskell-pandoc')
++package_haskell-pandoc-citeproc-tool() {
++    pkgdesc="Supports using pandoc with citeproc - the binary"
++    depends=('haskell-pandoc-tool')
++    conflicts=('haskell-pandoc-citeproc')
 +    install=
 +
 +    cd "${srcdir}/${_hkgname}-${_ver}"
@@ -44,4 +44,5 @@ Index: habs/haskell-pandoc/PKGBUILD
 +
 +    rm -fr "${pkgdir}/usr/lib"
 +    rm -fr "${pkgdir}/usr/share/doc"
++    rm -fr "${pkgdir}"/usr/share/*-linux-ghc-7.10.3/${_hkgname}-${_ver}/man
 +}

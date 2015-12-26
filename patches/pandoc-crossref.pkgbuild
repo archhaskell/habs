@@ -1,37 +1,37 @@
-Index: habs/haskell-pandoc/PKGBUILD
+Index: habs/haskell-pandoc-crossref/PKGBUILD
 ===================================================================
---- habs.orig/haskell-pandoc/PKGBUILD
-+++ habs/haskell-pandoc/PKGBUILD
-@@ -5,7 +5,7 @@ _ver=1.15.2.1
+--- habs.orig/haskell-pandoc-crossref/PKGBUILD
++++ habs/haskell-pandoc-crossref/PKGBUILD
+@@ -5,7 +5,7 @@ _ver=0.1.6.0
  _xrev=0
  
  # PKGBUILD options/directives
--pkgname=haskell-pandoc
-+pkgname=(haskell-pandoc haskell-pandoc-tool)
+-pkgname=haskell-pandoc-crossref
++pkgname=(haskell-pandoc-crossref haskell-pandoc-crossref-tool)
  pkgver=${_ver}_${_xrev}
- pkgrel=6
- pkgdesc="Conversion between markup formats"
-@@ -81,7 +81,10 @@ build() {
+ pkgrel=3
+ pkgdesc="Pandoc filter for cross-references"
+@@ -48,7 +48,10 @@ build() {
      sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
  }
  
 -package() {
-+package_haskell-pandoc() {
-+    conflicts=('haskell-pandoc-tool')
-+    provides=('haskell-pandoc-tool')
++package_haskell-pandoc-crossref() {
++    conflicts=('haskell-pandoc-crossref-tool')
++    provides=('haskell-pandoc-crossref-tool')
 +
      cd "${srcdir}/${_hkgname}-${_ver}"
      
      install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
-@@ -92,3 +95,21 @@ package() {
+@@ -59,3 +62,21 @@ package() {
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
  }
 +
-+package_haskell-pandoc-tool() {
-+    pkgdesc="Conversion between markup formats - the binary"
-+    depends=()
-+    conflicts=('haskell-pandoc')
++package_haskell-pandoc-crossref-tool() {
++    pkgdesc="Pandoc filter for cross-references - the binary"
++    depends=('haskell-pandoc-tool')
++    conflicts=('haskell-pandoc-crossref')
 +    install=
 +
 +    cd "${srcdir}/${_hkgname}-${_ver}"
