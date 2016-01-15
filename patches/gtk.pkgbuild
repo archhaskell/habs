@@ -9,11 +9,11 @@ Index: habs/haskell-gtk/PKGBUILD
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
  depends=("ghc=7.10.3-1"
-          "haskell-cairo=0.13.1.1_0-3"
-          "haskell-gio=0.13.1.1_0-3"
-          "haskell-glib=0.13.2.2_0-2"
+          "haskell-cairo=0.13.1.1_0-4"
+          "haskell-gio=0.13.1.1_0-4"
+          "haskell-glib=0.13.2.2_0-3"
           "haskell-mtl=2.2.1_1-1"
-          "haskell-pango=0.13.1.1_0-3"
+          "haskell-pango=0.13.1.1_0-4"
 -         "haskell-text=1.2.2.0_0-1")
 +         "haskell-text=1.2.2.0_0-1"
 +         "gtk2")
