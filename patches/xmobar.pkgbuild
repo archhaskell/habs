@@ -2,12 +2,19 @@ Index: habs/xmobar/PKGBUILD
 ===================================================================
 --- habs.orig/xmobar/PKGBUILD
 +++ habs/xmobar/PKGBUILD
-@@ -29,7 +29,7 @@ makedepends=("ghc=7.10.3-1"
+@@ -29,7 +29,14 @@ makedepends=("ghc=7.10.3-1"
               "haskell-timezone-olson=0.1.7_1-1"
               "haskell-timezone-series=0.1.5.1_0-1"
               "haskell-utf8-string=1.0.1.1_0-3")
 -depends=()
-+depends=('wireless_tools' 'libxpm')
++depends=('alsa-lib'
++         'libxft'
++         'libxinerama'
++         'libxml2'
++         'libxpm'
++         'libxrandr'
++         'libxrender'
++         'wireless_tools')
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
          "original.cabal")
