@@ -1,0 +1,13 @@
+Index: habs/recursion-schemes.cabal
+===================================================================
+--- habs.orig/recursion-schemes.cabal
++++ habs/recursion-schemes.cabal
+@@ -33,7 +33,7 @@ library
+ 
+   build-depends:
+     base                 >= 4   && < 5,
+-    comonad              >= 4   && < 5,
++    comonad              >= 4   && <= 5,
+     free                 >= 4   && < 5,
+     transformers         >= 0.2 && < 1
+ 
