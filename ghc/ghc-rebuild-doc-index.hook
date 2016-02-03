@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = usr/share/doc/ghc/html/libraries/*
+Target = !usr/share/doc/ghc/html/libraries/index.html
+
+[Action]
+When = PostTransaction
+Exec = /usr/share/doc/ghc/html/libraries/arch-gen-contents-index
