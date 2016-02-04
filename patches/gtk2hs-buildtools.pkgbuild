@@ -1,15 +1,15 @@
 Index: habs/gtk2hs-buildtools/PKGBUILD
-===================================================================
+================================================================
 --- habs.orig/gtk2hs-buildtools/PKGBUILD
 +++ habs/gtk2hs-buildtools/PKGBUILD
 @@ -10,7 +10,9 @@ pkgdesc="Tools to build the Gtk2Hs suite
  url="http://projects.haskell.org/gtk2hs/"
  license=("GPL-2")
  arch=('i686' 'x86_64')
--makedepends=("ghc=7.10.3-1"
+-makedepends=("ghc=7.10.3-2"
 +makedepends=("alex"
 +             "happy"
-+             "ghc=7.10.3-1"
-              "haskell-hashtables=1.2.1.0_0-4"
-              "haskell-random=1.1_0-79")
++             "ghc=7.10.3-2"
+              "haskell-hashtables=1.2.1.0_0-5"
+              "haskell-random=1.1_0-89")
  depends=()

@@ -3,9 +3,9 @@ Index: habs/haskell-openglraw/PKGBUILD
 --- habs.orig/haskell-openglraw/PKGBUILD
 +++ habs/haskell-openglraw/PKGBUILD
 @@ -16,7 +16,7 @@ makedepends=()
- depends=("ghc=7.10.3-1"
-          "haskell-half=0.2.2.2_0-1"
-          "haskell-text=1.2.2.0_0-1"
+ depends=("ghc=7.10.3-2"
+          "haskell-half=0.2.2.2_0-2"
+          "haskell-text=1.2.2.0_0-2"
 -         "GL")
 +         "libgl")
  options=('strip' 'staticlibs')

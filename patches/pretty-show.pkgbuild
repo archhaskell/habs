@@ -8,6 +8,6 @@ Index: habs/haskell-pretty-show/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("happy")
- depends=("ghc=7.10.3-1"
+ depends=("ghc=7.10.3-2"
           "haskell-haskell-lexer=1.0-79")
  options=('strip' 'staticlibs')

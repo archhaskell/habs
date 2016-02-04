@@ -2,10 +2,10 @@ Index: habs/xmobar/PKGBUILD
 ===================================================================
 --- habs.orig/xmobar/PKGBUILD
 +++ habs/xmobar/PKGBUILD
-@@ -29,7 +29,14 @@ makedepends=("ghc=7.10.3-1"
-              "haskell-timezone-olson=0.1.7_1-1"
-              "haskell-timezone-series=0.1.5.1_0-1"
-              "haskell-utf8-string=1.0.1.1_1-1")
+@@ -29,7 +29,14 @@ makedepends=("ghc=7.10.3-2"
+              "haskell-timezone-olson=0.1.7_1-2"
+              "haskell-timezone-series=0.1.5.1_0-2"
+              "haskell-utf8-string=1.0.1.1_1-2")
 -depends=()
 +depends=('alsa-lib'
 +         'libxft'
