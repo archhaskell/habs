@@ -3,12 +3,12 @@ Index: habs/haskell-unixutils/PKGBUILD
 --- habs.orig/haskell-unixutils/PKGBUILD
 +++ habs/haskell-unixutils/PKGBUILD
 @@ -14,8 +14,7 @@ makedepends=()
- depends=("ghc=7.10.3-2"
-          "haskell-puremd5=2.1.2.1_0-86"
-          "haskell-regex-tdfa=1.2.1_0-7"
--         "haskell-zlib=0.6.1.1_3-3"
+ depends=("ghc=7.10.3-3"
+          "haskell-puremd5=2.1.2.1_0-87"
+          "haskell-regex-tdfa=1.2.1_0-8"
+-         "haskell-zlib=0.6.1.1_3-4"
 -         "crypt")
-+         "haskell-zlib=0.6.1.1_3-3")
++         "haskell-zlib=0.6.1.1_3-4")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
  install="${pkgname}.install"

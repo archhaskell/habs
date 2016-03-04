@@ -8,8 +8,8 @@ Index: habs/haskell-gnuidn/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('c2hs')
- depends=("ghc=7.10.3-2"
-          "haskell-text=1.2.2.0_0-2"
+ depends=("ghc=7.10.3-3"
+          "haskell-text=1.2.2.0_0-3"
 -         "idn")
 +         "libidn")
  options=('strip' 'staticlibs')

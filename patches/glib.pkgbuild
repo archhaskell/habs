@@ -8,6 +8,6 @@ Index: habs/haskell-glib/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=("gtk2hs-buildtools")
- depends=("ghc=7.10.3-2"
-          "haskell-text=1.2.1.3_0-3"
-          "haskell-utf8-string=1.0.1.1_0-3")
+ depends=("ghc=7.10.3-3"
+          "haskell-text=1.2.1.3_0-4"
+          "haskell-utf8-string=1.0.1.1_0-4")
