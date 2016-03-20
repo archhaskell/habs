@@ -5,7 +5,7 @@ Index: habs/haskell-gluraw/PKGBUILD
 @@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
  makedepends=()
  depends=("ghc=7.10.3-3"
-          "haskell-openglraw=3.1.0.0_0-4"
+          "haskell-openglraw=3.1.0.0_0-5"
 -         "GLU")
 +         "glu")
  options=('strip' 'staticlibs')

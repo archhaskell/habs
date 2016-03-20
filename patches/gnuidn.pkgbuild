@@ -9,7 +9,7 @@ Index: habs/haskell-gnuidn/PKGBUILD
 -makedepends=()
 +makedepends=('c2hs')
  depends=("ghc=7.10.3-3"
-          "haskell-text=1.2.2.0_0-3"
+          "haskell-text=1.2.2.1_0-1"
 -         "idn")
 +         "libidn")
  options=('strip' 'staticlibs')
