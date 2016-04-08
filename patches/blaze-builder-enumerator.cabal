@@ -1,0 +1,14 @@
+Index: habs/blaze-builder-enumerator.cabal
+===================================================================
+--- habs.orig/blaze-builder-enumerator.cabal
++++ habs/blaze-builder-enumerator.cabal
+@@ -50,8 +50,7 @@ Library
+ 
+   if flag(newbuilder)
+       Build-depends:
+-          bytestring-builder >= 0.10.4 && <0.11
+-        , blaze-builder >= 0.4 && <0.5
++        blaze-builder >= 0.4 && <0.5
+   else
+       Build-depends:
+           blaze-builder >= 0.2.1.4 && <0.4
