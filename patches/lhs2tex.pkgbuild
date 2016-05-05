@@ -1,0 +1,13 @@
+Index: habs/lhs2tex/PKGBUILD
+===================================================================
+--- habs.orig/lhs2tex/PKGBUILD
++++ habs/lhs2tex/PKGBUILD
+@@ -15,7 +15,7 @@ arch=('i686' 'x86_64')
+ makedepends=("ghc=7.10.3-3"
+              "haskell-mtl=2.2.1_1-4"
+              "haskell-regex-compat=0.95.1_0-83")
+-depends=()
++depends=('texlive-latexextra')
+ options=('strip' 'staticlibs')
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")
