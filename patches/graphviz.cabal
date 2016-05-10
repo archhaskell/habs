@@ -1,0 +1,13 @@
+Index: habs/graphviz.cabal
+===================================================================
+--- habs.orig/graphviz.cabal
++++ habs/graphviz.cabal
+@@ -65,7 +65,7 @@ Library {
+                            temporary >=1.1 && <1.3,
+                            fgl >= 5.4 && < 5.6,
+                            filepath,
+-                           polyparse >=1.9 && <1.12,
++                           polyparse >=1.9 && <1.13,
+                            bytestring >= 0.9 && < 0.11,
+                            colour == 2.3.*,
+                            transformers >= 0.2 && < 0.5,
