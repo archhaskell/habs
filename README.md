@@ -2,7 +2,7 @@ The Haskell ABS tree for ArchLinux
 ====================================
 
 This project contains the database used to generate an ABS tree of ArchLinux
-`PKGBUILD`s.  These `PKGBUILD`s can then be used to compile a binary repository of
+PKGBUILDs.  These PKGBUILDs can then be used to compile a binary repository of
 Haskell packages.  If you want to use the official build of this repository
 then add the following two lines to your `/etc/pacman.conf` file:
 
@@ -43,11 +43,11 @@ Then update the cabal index:
 
     % cblrepo update
 
-Then create all the `PKGBUILD`s for the packages:
+Then create all the PKGBUILDs for the packages:
 
     % cblrepo pkgbuild $(cblrepo build base|tail -n +2)
 
-that should fill up the directory with directories containing `PKGBUILD`s, one for each package.  To build packages one first needs to create a docker image by using `helpers/mk-docker-image` (must be run as root):
+that should fill up the directory with directories containing PKGBUILDs, one for each package.  To build packages one first needs to create a docker image by using `helpers/mk-docker-image` (must be run as root):
 
     % sudo systemctl start docker
     % sudo ./helpers/mk-docker-image
@@ -58,15 +58,15 @@ then use the script `docker-build` to build all the packages:
 
 Both scripts has some built-in help, to see it run the script with `-h`.
 
-All `PKGBUILD`s in the project must be generated with the latest release of [cblrepo][6].
+All PKGBUILDs in the project must be generated with the latest release of [cblrepo][6].
 
 The ArchHaskell project
 =======================
 
 The main goal is to maintain a binary repository of up-to-date packages taken from [hackage][1].  To achieve this we also maintain several repositories of tools, libraries, and scripts:
 
-* [cblrepo][6] is the main tool used to maintain a consistent database of package versions and generate `PKGBUILD`s.
-* [cabal2arch][2] is a tool which converts a CABAL file into a `PKGBUILD`, and optionally a `.install`. (Currently only used for packages not included in the database, e.g. for generating source packages to upload to AUR.)
+* [cblrepo][6] is the main tool used to maintain a consistent database of package versions and generate PKGBUILDs.
+* [cabal2arch][2] is a tool which converts a CABAL file into a PKGBUILD, and optionally a `.install`. (Currently only used for packages not included in the database, e.g. for generating source packages to upload to AUR.)
 * [archlinux][3] is the main dependency of `cabal2arch`.
 * [archlinux-web][4] contains a library and a set of scripts that help with various web-related tasks such as updating the information on [hackage][1] on what versions of packages that are available for ArchLinux.
 
