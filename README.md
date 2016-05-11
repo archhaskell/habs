@@ -32,7 +32,7 @@ Please note that this will build *all* the packages in the repo, which probably 
 
 First note that you will need the following packages installed to proceed:
 
-    # pacman -S docker devtools arch-install-scripts reflector git
+    % sudo pacman -S docker devtools arch-install-scripts reflector git
 
 Then clone the database in this repository:
 
@@ -49,6 +49,7 @@ Then create all the `PKGBUILD`s for the packages:
 
 that should fill up the directory with directories containing `PKGBUILD`s, one for each package.  To build packages one first needs to create a docker image by using `helpers/mk-docker-image` (must be run as root):
 
+    % sudo systemctl start docker
     % sudo ./helpers/mk-docker-image
 
 then use the script `docker-build` to build all the packages:
