@@ -30,7 +30,11 @@ Building it all
 
 Please note that this will build *all* the packages in the repo, which probably is a waste of time for most people.  It's much easier to add the [ArchHaskell repo](https://wiki.archlinux.org/index.php/Haskell#ArchHaskell_repository) of pre-built packages.  There is also no need to build all packages in order to build a single one, please see the [documenation of cblrepo](https://github.com/magthe/cblrepo) for more details on how to add and update packages.
 
-First clone the database in this repository:
+First note that you will need the following packages installed to proceed:
+
+    % sudo pacman -S docker devtools arch-install-scripts reflector git
+
+Then clone the database in this repository:
 
     % git clone git://github.com/archhaskell/habs.git
     % cd habs
@@ -45,6 +49,7 @@ Then create all the PKGBUILDs for the packages:
 
 that should fill up the directory with directories containing PKGBUILDs, one for each package.  To build packages one first needs to create a docker image by using `helpers/mk-docker-image` (must be run as root):
 
+    % sudo systemctl start docker
     % sudo ./helpers/mk-docker-image
 
 then use the script `docker-build` to build all the packages:
