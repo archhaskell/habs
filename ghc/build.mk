@@ -44,7 +44,7 @@ BuildFlavour = perf
 
 # Set to V = 0 to get prettier build output.
 # Please use V = 1 when reporting GHC bugs.
-V = 1
+V = 0
 
 # After stage 1 and the libraries have been built, you can uncomment this line:
 
