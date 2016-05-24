@@ -1,0 +1,25 @@
+Index: habs/cblrepo.cabal
+===================================================================
+--- habs.orig/cblrepo.cabal
++++ habs/cblrepo.cabal
+@@ -47,16 +47,16 @@ executable cblrepo
+         Util.Translation
+         Versions
+     build-depends:
+-        base ==4.8.*,
++        base ==4.9.*,
+         filepath ==1.4.*,
+         directory ==1.2.*,
+-        Cabal ==1.22.*,
+-        transformers ==0.4.*,
++        Cabal ==1.24.*,
++        transformers ==0.5.*,
+         bytestring ==0.10.*,
+         tar ==0.5.*,
+         zlib ==0.6.*,
+         mtl ==2.2.*,
+-        process ==1.2.*,
++        process ==1.4.*,
+         Unixutils ==1.54.*,
+         unix ==2.7.*,
+         ansi-wl-pprint ==0.6.*,
