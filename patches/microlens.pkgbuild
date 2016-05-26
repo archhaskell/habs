@@ -1,0 +1,13 @@
+Index: habs/haskell-microlens/PKGBUILD
+===================================================================
+--- habs.orig/haskell-microlens/PKGBUILD
++++ habs/haskell-microlens/PKGBUILD
+@@ -37,7 +37,7 @@ build() {
+         --prefix=/usr --docdir="/usr/share/doc/${pkgname}" \
+         --libsubdir=\$compiler/site-local/\$pkgid
+     runhaskell Setup build
+-    runhaskell Setup haddock --hoogle --html
++    # runhaskell Setup haddock --hoogle --html
+     runhaskell Setup register --gen-script
+     runhaskell Setup unregister --gen-script
+     sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
