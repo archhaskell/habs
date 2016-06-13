@@ -1,0 +1,15 @@
+Index: habs/haskell-data-accessor-template/src/data-accessor-template-0.2.1.12/src-5/Data/Accessor/Template.hs
+===================================================================
+--- habs.orig/haskell-data-accessor-template/src/data-accessor-template-0.2.1.12/src-5/Data/Accessor/Template.hs
++++ habs/haskell-data-accessor-template/src/data-accessor-template-0.2.1.12/src-5/Data/Accessor/Template.hs
+@@ -76,8 +76,8 @@ nameDeriveAccessors t namer = do
+                     TyConI dec -> return dec
+                     _ -> fail errmsg
+     (params, cons) <- case reified of
+-                 DataD _ _ params cons' _ -> return (params, cons')
+-                 NewtypeD _ _ params con' _ -> return (params, [con'])
++                 DataD _ _ params Nothing cons' _ -> return (params, cons')
++                 NewtypeD _ _ params Nothing con' _ -> return (params, [con'])
+                  _ -> fail errmsg
+     decs <- makeAccs params . nub $ concatMap namedFields cons
+     when (null decs) $ qReport False nodefmsg
