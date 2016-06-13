@@ -1,0 +1,13 @@
+Index: habs/shelltestrunner.cabal
+===================================================================
+--- habs.orig/shelltestrunner.cabal
++++ habs/shelltestrunner.cabal
+@@ -31,7 +31,7 @@ executable shelltest
+   ghc-options:    -threaded -W -fwarn-tabs
+   build-depends:
+     base                 >= 4     && < 5,
+-    Diff                 >= 0.2.0 && < 0.3.3,
++    Diff                 >= 0.2.0 && < 0.3.5,
+     filemanip            >= 0.3   && < 0.4,
+     HUnit                            < 1.4,
+     cmdargs              >= 0.7   && < 0.11,
