@@ -33,7 +33,7 @@ Index: habs/haskell-stack/PKGBUILD
 +    pkgdesc="The Haskell Tool Stack - the binary"
 +    depends=()
 +    optdepends=('haskell-stack: the stack library'
-+                'libtinfo: required for installing ghc in sandboxes')
++                'ncurses5-compat-libs: required for installing ghc in sandboxes')
 +    install=''
 +    replaces=('haskell-stack-bin')
 +
