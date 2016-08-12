@@ -8,9 +8,9 @@ Index: habs/haskell-xmonad/PKGBUILD
  arch=('i686' 'x86_64')
 -makedepends=()
 +makedepends=('gendesk')
- depends=("ghc=7.10.3-3"
-          "haskell-x11=1.6.1.2_0-82"
-          "haskell-data-default=0.5.3_0-82"
+ depends=("ghc=8.0.1-1"
+          "haskell-x11=1.6.1.2_0-1"
+          "haskell-data-default=0.7.1.1_0-1"
 @@ -60,4 +60,13 @@ package() {
      runhaskell Setup copy --destdir="${pkgdir}"
      install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
