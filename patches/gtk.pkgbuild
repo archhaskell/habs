@@ -7,16 +7,15 @@ Index: habs/haskell-gtk/PKGBUILD
  license=("LGPL-2.1")
  arch=('i686' 'x86_64')
 -makedepends=()
-+makedepends=("gtk2hs-buildtools")
- depends=("ghc=7.10.3-3"
-          "haskell-cairo=0.13.1.1_0-8"
-          "haskell-gio=0.13.1.1_0-8"
-          "haskell-glib=0.13.2.2_0-7"
-          "haskell-mtl=2.2.1_1-4"
-          "haskell-pango=0.13.1.1_0-8"
--         "haskell-text=1.2.2.1_0-1")
-+         "haskell-text=1.2.2.1_0-1"
++makedepends=("haskell-gtk2hs-buildtools")
+ depends=("ghc=8.0.1-1"
+          "haskell-cairo=0.13.3.0_0-1"
+          "haskell-glib=0.13.4.0_0-1"
+          "haskell-mtl=2.2.1_1-150"
+          "haskell-pango=0.13.3.0_0-1"
+-         "haskell-text=1.2.2.1_0-150")
++         "haskell-text=1.2.2.1_0-150"
 +         "gtk2")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")
