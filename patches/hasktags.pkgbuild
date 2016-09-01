@@ -1,0 +1,14 @@
+Index: habs/haskell-hasktags/PKGBUILD
+===================================================================
+--- habs.orig/haskell-hasktags/PKGBUILD
++++ habs/haskell-hasktags/PKGBUILD
+ # PKGBUILD functions
+ 
+@@ -57,4 +57,7 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    # test is always built and installed, not good!
++    rm -f "${pkgdir}/usr/bin/test"
+ }
