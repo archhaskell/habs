@@ -26,3 +26,38 @@ Index: habs/cblrepo/src/cblrepo-0.21.0/src/Util/Misc.hs
  ghcVersionDep :: Version -> Int -> String
  ghcVersionDep ghcVer ghcRel = "ghc=" ++ display ghcVer ++ "-" ++ show ghcRel
  
+Index: habs/cblrepo/src/cblrepo-0.21.0/src/ListPkgs.hs
+===================================================================
+--- habs.orig/cblrepo/src/cblrepo-0.21.0/src/ListPkgs.hs
++++ habs/cblrepo/src/cblrepo-0.21.0/src/ListPkgs.hs
+@@ -52,7 +52,7 @@ printCblPkgNormal :: CblPkg -> IO ()
+ printCblPkgNormal p =
+     putStrLn $ pkgName p ++ "  " ++ v ++ "-" ++ r ++ showFlagsIfPresent p
+         where
+-            v = display (pkgVersion p) ++ if (not $ isGhcPkg p) then ("_" ++ show (pkgXRev p)) else ""
++            v = display (pkgVersion p) ++ if (not $ isGhcPkg p) then (".x" ++ show (pkgXRev p)) else ""
+             r = if isGhcPkg p then "xx" else show (pkgRelease p)
+             showFlagsIfPresent _p
+                 | [] <- pkgFlags _p = ""
+Index: habs/cblrepo/src/cblrepo-0.21.0/src/Util/Translation.hs
+===================================================================
+--- habs.orig/cblrepo/src/cblrepo-0.21.0/src/Util/Translation.hs
++++ habs/cblrepo/src/cblrepo-0.21.0/src/Util/Translation.hs
+@@ -161,7 +161,7 @@ instance Pretty ArchPkg where
+             , pretty xrev
+             , empty, text "# PKGBUILD options/directives"
+             , pretty pkgName
+-            , text "pkgver=${_ver}_${_xrev}"
++            , text "pkgver=${_ver}.x${_xrev}"
+             , pretty pkgRel
+             , pretty pkgDesc
+             , pretty url
+@@ -341,7 +341,7 @@ calcExactDeps db pd = map depString deps
+         remPkgs = map DB.pkgName (filter isGhcPkg db) ++ [pkgNameStr pd]
+         deps = filter (not . (`elem` remPkgs)) (map depName (buildDepends pd))
+ 
+-        depString n = "haskell-" ++ name ++ "=" ++ ver ++ "_" ++ xrev ++ "-" ++ rel
++        depString n = "haskell-" ++ name ++ "=" ++ ver ++ ".x" ++ xrev ++ "-" ++ rel
+             where
+                 pkg = fromJust $ lookupPkg db n
+                 name = map toLower $ DB.pkgName pkg
