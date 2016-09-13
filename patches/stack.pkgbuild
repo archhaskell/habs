@@ -8,7 +8,7 @@ Index: habs/haskell-stack/PKGBUILD
  # PKGBUILD options/directives
 -pkgname=haskell-stack
 +pkgname=(haskell-stack haskell-stack-tool)
- pkgver=${_ver}_${_xrev}
+ pkgver=${_ver}.x${_xrev}
  pkgrel=1
  pkgdesc="The Haskell Tool Stack"
 @@ -111,7 +111,9 @@ build() {

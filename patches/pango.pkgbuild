@@ -9,11 +9,11 @@ Index: habs/haskell-pango/PKGBUILD
 -makedepends=()
 +makedepends=("haskell-gtk2hs-buildtools")
  depends=("ghc=8.0.1-1"
-          "haskell-cairo=0.13.3.0_0-250"
-          "haskell-glib=0.13.4.0_0-250"
-          "haskell-mtl=2.2.1_1-250"
--         "haskell-text=1.2.2.1_0-250")
-+         "haskell-text=1.2.2.1_0-250"
+          "haskell-cairo=0.13.3.0.x0-251"
+          "haskell-glib=0.13.4.0.x0-251"
+          "haskell-mtl=2.2.1.x1-251"
+-         "haskell-text=1.2.2.1.x0-251")
++         "haskell-text=1.2.2.1.x0-251"
 +         "pango")
  options=('strip' 'staticlibs')
  source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")

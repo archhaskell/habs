@@ -8,7 +8,7 @@ Index: habs/haskell-pandoc/PKGBUILD
  # PKGBUILD options/directives
 -pkgname=haskell-pandoc
 +pkgname=(haskell-pandoc haskell-pandoc-tool)
- pkgver=${_ver}_${_xrev}
+ pkgver=${_ver}.x${_xrev}
  pkgrel=6
  pkgdesc="Conversion between markup formats"
 @@ -81,7 +81,10 @@ build() {

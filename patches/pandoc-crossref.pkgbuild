@@ -8,7 +8,7 @@ Index: habs/haskell-pandoc-crossref/PKGBUILD
  # PKGBUILD options/directives
 -pkgname=haskell-pandoc-crossref
 +pkgname=(haskell-pandoc-crossref haskell-pandoc-crossref-tool)
- pkgver=${_ver}_${_xrev}
+ pkgver=${_ver}.x${_xrev}
  pkgrel=3
  pkgdesc="Pandoc filter for cross-references"
 @@ -48,7 +48,10 @@ build() {

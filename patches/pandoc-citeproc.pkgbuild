@@ -8,7 +8,7 @@ Index: habs/haskell-pandoc-citeproc/PKGBUILD
  # PKGBUILD options/directives
 -pkgname=haskell-pandoc-citeproc
 +pkgname=(haskell-pandoc-citeproc haskell-pandoc-citeproc-tool)
- pkgver=${_ver}_${_xrev}
+ pkgver=${_ver}.x${_xrev}
  pkgrel=6
  pkgdesc="Supports using pandoc with citeproc"
 @@ -65,7 +65,10 @@ build() {

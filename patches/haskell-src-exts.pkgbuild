@@ -9,5 +9,5 @@ Index: habs/haskell-haskell-src-exts/PKGBUILD
 -makedepends=()
 +makedepends=('happy')
  depends=("ghc=8.0.1-1"
-          "haskell-cpphs=1.19.3_0-4")
+          "haskell-cpphs=1.20.1.x0-251")
  options=('strip' 'staticlibs')

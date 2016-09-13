@@ -9,5 +9,5 @@ Index: habs/haskell-pretty-show/PKGBUILD
 -makedepends=()
 +makedepends=("happy")
  depends=("ghc=8.0.1-1"
-          "haskell-haskell-lexer=1.0-80")
+          "haskell-haskell-lexer=1.0.1.x0-2")
  options=('strip' 'staticlibs')
