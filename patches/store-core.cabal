@@ -1,0 +1,12 @@
+Index: habs/store-core.cabal
+===================================================================
+--- habs.orig/store-core.cabal
++++ habs/store-core.cabal
+@@ -30,7 +30,6 @@ library
+       base >=4.7 && <5
+     , primitive >=0.6 && < 1.0
+     , bytestring >=0.10.4.0 && < 1.0
+-    , fail
+     , transformers >=0.3.0.0 && < 1.0
+     , ghc-prim >=0.3.1.0 && < 1.0
+     , text >=1.2.0.4 && < 2.0
