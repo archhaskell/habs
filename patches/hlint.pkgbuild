@@ -1,0 +1,48 @@
+Index: habs/haskell-hlint/PKGBUILD
+===================================================================
+--- habs.orig/haskell-hlint/PKGBUILD
++++ habs/haskell-hlint/PKGBUILD
+@@ -5,7 +5,7 @@ _ver=1.9.39
+ _xrev=0
+ 
+ # PKGBUILD options/directives
+-pkgname=haskell-hlint
++pkgname=(haskell-hlint haskell-hlint-tool)
+ pkgver=${_ver}.x${_xrev}
+ pkgrel=1
+ pkgdesc="Source code suggestions"
+@@ -51,7 +51,9 @@ build() {
+     sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
+ }
+ 
+-package() {
++package_haskell-hlint() {
++    depends+=('haskell-hlint-tool')
++
+     cd "${srcdir}/${_hkgname}-${_ver}"
+     
+     install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
+@@ -61,4 +63,23 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    rm -fr "${pkgdir}/usr/bin"
++    rm -fr "${pkgdir}/usr/share/i386-linux-ghc-8.0.1"
++    rm -fr "${pkgdir}/usr/share/x86_64-linux-ghc-8.0.1"
++}
++
++package_haskell-hlint-tool() {
++    pkgdesc="The hlint tool"
++    depends=()
++    optdepends=('haskell-hlint: the hlint library')
++    install=''
++
++    cd "${srcdir}/${_hkgname}-${_ver}"
++
++    runhaskell Setup copy --destdir="${pkgdir}"
++    install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++
++    rm -fr "${pkgdir}/usr/lib"
++    rm -fr "${pkgdir}/usr/share/doc"
+ }
