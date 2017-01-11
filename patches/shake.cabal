@@ -1,0 +1,13 @@
+Index: habs/shake.cabal
+===================================================================
+--- habs.orig/shake.cabal
++++ habs/shake.cabal
+@@ -87,7 +87,7 @@ library
+         hashable >= 1.1.2.3,
+         binary,
+         filepath,
+-        process >= 1.1 && < 1.4.3,
++        process >= 1.1 && < 1.4.4,
+         unordered-containers >= 0.2.1,
+         bytestring,
+         utf8-string >= 0.3,

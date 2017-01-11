@@ -9,6 +9,6 @@ Index: habs/haskell-gtk2hs-buildtools/PKGBUILD
 -makedepends=()
 +makedepends=('alex'
 +             'happy')
- depends=("ghc=8.0.1-1"
+ depends=("ghc=8.0.2-1"
           "haskell-hashtables=1.2.1.0.x0-251"
           "haskell-random=1.1.x0-251")

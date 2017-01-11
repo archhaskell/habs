@@ -1,0 +1,13 @@
+Index: habs/cblrepo.cabal
+===================================================================
+--- habs.orig/cblrepo.cabal
++++ habs/cblrepo.cabal
+@@ -51,7 +51,7 @@ executable cblrepo
+                    Versions
+     build-depends: base ==4.9.*,
+                    filepath ==1.4.*,
+-                   directory ==1.2.*,
++                   directory ==1.3.*,
+                    Cabal ==1.24.*,
+                    transformers ==0.5.*,
+                    bytestring ==0.10.*,
