@@ -1,5 +1,5 @@
 OLDDOCDIR=/usr/share/doc/ghc/html/libraries
-DOCDIR=/usr/share/doc/ghc-8.0.1/html/libraries
+DOCDIR=/usr/share/doc/ghc-8.0.2/html/libraries
 
 clean_docs() {
     ( cd ${1} ;

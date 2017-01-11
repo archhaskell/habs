@@ -4,7 +4,7 @@
 #   This implies that all libraries need to be rebuilt when ghc is rebuilt.
 
 pkgname=ghc
-pkgver=8.0.1
+pkgver=8.0.2
 pkgrel=1
 pkgdesc='The Glasgow Haskell Compiler'
 arch=('i686' 'x86_64')
@@ -17,68 +17,68 @@ install='ghc.install'
 options=('strip' 'staticlibs')
 
 provides=('haskell-array=0.5.1.1'
-          'haskell-base=4.9.0.0'
+          'haskell-base=4.9.1.0'
           'haskell-binary=0.8.3.0'
           'haskell-bytestring=0.10.8.1'
-          'haskell-cabal=1.24.0.0'
+          'haskell-cabal=1.24.2.0'
           'haskell-containers=0.5.7.1'
           'haskell-deepseq=1.4.2.0'
-          'haskell-directory=1.2.6.2'
-          'haskell-filepath=1.4.1.0'
-          'haskell-ghc-boot-th=8.0.1'
-          'haskell-ghc-boot=8.0.1'
+          'haskell-directory=1.3.0.0'
+          'haskell-filepath=1.4.1.1'
+          'haskell-ghc-boot-th=8.0.2'
+          'haskell-ghc-boot=8.0.2'
           'haskell-ghc-prim=0.5.0.0'
-          'haskell-ghc=8.0.1'
-          'haskell-ghci=8.0.1'
-          'haskell-haskeline=0.7.2.3'
+          'haskell-ghc=8.0.2'
+          'haskell-ghci=8.0.2'
+          'haskell-haskeline=0.7.3.0'
           'haskell-hoopl=3.10.2.1'
           'haskell-hpc=0.6.0.3'
           'haskell-integer-gmp=1.0.0.1'
           'haskell-pretty=1.1.3.3'
-          'haskell-process=1.4.2.0'
+          'haskell-process=1.4.3.0'
           'haskell-rts=1.0'
-          'haskell-template-haskell=2.11.0.0'
+          'haskell-template-haskell=2.11.1.0'
           'haskell-terminfo=0.4.0.2'
           'haskell-time=1.6.0.1'
           'haskell-transformers=0.5.2.0'
-          'haskell-unix=2.7.2.0'
+          'haskell-unix=2.7.2.1'
           'haskell-xhtml=3000.2.1')
 replaces=('haskell-array<0.5.1.1'
-          'haskell-base<4.9.0.0'
+          'haskell-base<4.9.1.0'
           'haskell-binary<0.8.3.0'
           'haskell-bytestring<0.10.8.1'
-          'haskell-cabal<1.24.0.0'
+          'haskell-cabal<1.24.2.0'
           'haskell-containers<0.5.7.1'
           'haskell-deepseq<1.4.2.0'
-          'haskell-directory<1.2.6.2'
-          'haskell-filepath<1.4.1.0'
-          'haskell-ghc-boot-th<8.0.1'
-          'haskell-ghc-boot<8.0.1'
+          'haskell-directory<1.3.0.0'
+          'haskell-filepath<1.4.1.1'
+          'haskell-ghc-boot-th<8.0.2'
+          'haskell-ghc-boot<8.0.2'
           'haskell-ghc-prim<0.5.0.0'
-          'haskell-ghc<8.0.1'
-          'haskell-ghci<8.0.1'
-          'haskell-haskeline<0.7.2.3'
+          'haskell-ghc<8.0.2'
+          'haskell-ghci<8.0.2'
+          'haskell-haskeline<0.7.3.0'
           'haskell-hoopl<3.10.2.1'
           'haskell-hpc<0.6.0.3'
           'haskell-integer-gmp<1.0.0.1'
           'haskell-pretty<1.1.3.3'
-          'haskell-process<1.4.2.0'
+          'haskell-process<1.4.3.0'
           'haskell-rts<1.0'
-          'haskell-template-haskell<2.11.0.0'
+          'haskell-template-haskell<2.11.1.0'
           'haskell-terminfo<0.4.0.2'
           'haskell-time<1.6.0.1'
           'haskell-transformers<0.5.2.0'
-          'haskell-unix<2.7.2.0'
+          'haskell-unix<2.7.2.1'
           'haskell-xhtml<3000.2.1')
 
 source=("https://downloads.haskell.org/~ghc/${pkgver}/ghc-${pkgver}-src.tar.xz"
         "https://downloads.haskell.org/~ghc/${pkgver}/ghc-${pkgver}-testsuite.tar.xz"
         'build.mk' 'ghc-rebuild-doc-index.hook' 'arch-gen-contents-index')
-sha256sums=('90fb20cd8712e3c0fbeb2eac8dab6894404c21569746655b9b12ca9684c7d1d2'
-            'bc57163656ece462ef61072559d491b72c5cdd694f3c39b80ac0f6b9a3dc8151'
+sha256sums=('11625453e1d0686b3fa6739988f70ecac836cadc30b9f0c8b49ef9091d6118b1'
+            '52235d299eb56292f2c273dc490792788b8ba11f4dc600035d050c8a4c1f4cf2'
             'b528fca737d38fae87eadfbef94b3a29c9f62e9936dc8c28af03fd36d281d267'
-            'd0e8019ea270ae176e4ddb10327a58c0c8d145a1f0913df2f7da84300646fa61'
-            'cb1a9c66c241fd702f595c08d79b1afc37797434ad4f9544c8fe0503e3a27a38')
+            '64b62e737460b4c53ae1248317cc73f82aad67ca4f96e095100d7182cab5b065'
+            '4d8f9f255052f9a413adfed0d1e4951d8d9eefe712684edd513b3c002798fd9e')
 
 prepare() {
     cd "${srcdir}/${pkgname}-${pkgver}"
@@ -114,8 +114,7 @@ package() {
 
     # clean up the doc index, it's re-generated in ghc.install
     ( cd ${pkgdir}/usr/share/doc/${pkgname}-${pkgver}/html/libraries ;
-    rm doc-index*.html frames.html index-frames.html index.html \
-        ocean.css haddock-util.js \
+    rm doc-index*.html index.html ocean.css haddock-util.js \
         hslogo-16.png  minus.gif plus.gif synopsis.png
     )
     # install our own contents generator
