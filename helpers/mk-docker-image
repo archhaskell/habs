@@ -71,8 +71,8 @@ EOF
 
 if [[ "${with_testing}" == "yes" ]]; then
     cat >> "${pacman_conf}" << EOF
-[haskell-testing] >> "${pacman_conf}"
-Server = http://xsounds.org/~haskell/testing/\$arch >> "${pacman_conf}"
+[haskell-testing]
+Server = http://xsounds.org/~haskell/testing/\$arch
 
 EOF
 fi
