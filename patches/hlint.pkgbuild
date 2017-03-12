@@ -28,8 +28,8 @@ Index: habs/haskell-hlint/PKGBUILD
      rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
 +
 +    rm -fr "${pkgdir}/usr/bin"
-+    rm -fr "${pkgdir}/usr/share/i386-linux-ghc-8.0.1"
-+    rm -fr "${pkgdir}/usr/share/x86_64-linux-ghc-8.0.1"
++    rm -fr "${pkgdir}/usr/share/i386-linux-ghc-8.0.2"
++    rm -fr "${pkgdir}/usr/share/x86_64-linux-ghc-8.0.2"
 +}
 +
 +package_haskell-hlint-tool() {

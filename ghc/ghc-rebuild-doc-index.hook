@@ -3,10 +3,10 @@ Type = File
 Operation = Install
 Operation = Upgrade
 Operation = Remove
-Target = usr/share/doc/ghc-8.0.1/html/libraries/*
-Target = !usr/share/doc/ghc-8.0.1/html/libraries/index.html
+Target = usr/share/doc/ghc-8.0.2/html/libraries/*
+Target = !usr/share/doc/ghc-8.0.2/html/libraries/index.html
 
 [Action]
 Description = Rebuild Haskell doc index
 When = PostTransaction
-Exec = /usr/share/doc/ghc-8.0.1/html/libraries/arch-gen-contents-index
+Exec = /usr/share/doc/ghc-8.0.2/html/libraries/arch-gen-contents-index

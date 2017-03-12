@@ -2,13 +2,13 @@ Index: habs/haskell-persistent-sqlite/PKGBUILD
 ===================================================================
 --- habs.orig/haskell-persistent-sqlite/PKGBUILD
 +++ habs/haskell-persistent-sqlite/PKGBUILD
-@@ -18,8 +18,7 @@ depends=("ghc=8.0.1-1"
-          "haskell-monad-logger=0.3.20.1.x0-6"
-          "haskell-persistent=2.6.x2-9"
-          "haskell-resourcet=1.1.9.x0-1"
--         "haskell-text=1.2.2.1.x0-251"
+@@ -24,8 +24,7 @@ depends=("ghc=8.0.2-1"
+          "haskell-resource-pool=0.2.3.2.x0-254"
+          "haskell-resourcet=1.1.9.x0-3"
+          "haskell-text=1.2.2.1.x0-252"
+-         "haskell-unordered-containers=0.2.7.2.x0-3"
 -         "pthread")
-+         "haskell-text=1.2.2.1.x0-251")
++         "haskell-unordered-containers=0.2.7.2.x0-3")
  options=('strip' 'staticlibs')
- source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${pkgver}/${_hkgname}-${pkgver}.tar.gz")
- install="${pkgname}.install"
+ source=("http://hackage.haskell.org/packages/archive/${_hkgname}/${_ver}/${_hkgname}-${_ver}.tar.gz"
+         "original.cabal")

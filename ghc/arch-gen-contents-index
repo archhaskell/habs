@@ -1,8 +1,8 @@
 #! /bin/bash
 
 HADDOCK=haddock
-HADDOCK_LIBS=/usr/share/doc/ghc-8.0.1/html/libraries
-HADDOCK_DEST=/usr/share/doc/ghc-8.0.1/html/libraries
+HADDOCK_LIBS=/usr/share/doc/ghc-8.0.2/html/libraries
+HADDOCK_DEST=/usr/share/doc/ghc-8.0.2/html/libraries
 
 HADDOCK_FILES=
 for f in $(find -L $HADDOCK_LIBS -name \*.haddock ! -name ghc.haddock); do

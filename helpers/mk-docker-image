@@ -22,6 +22,7 @@ hash mkarchroot &>/dev/null || {
 
 arch=$(uname -m)
 image_pfx=arch/habs
+with_testing=no
 
 usage() {
     cat << EOF
@@ -33,12 +34,13 @@ Options:
 -h          This help
 -a <arch>   Architecture to build for, i686 or x86_64 (default: local arch)
 -n <pfx>    Prefix for name of docker image (default: arch/habs)
+-t          Include the testing repo
 
 The image's complete name will be "<pfx>-<arch>".
 EOF
 }
 
-while getopts ha:n: opt; do
+while getopts ha:n:t opt; do
     case "${opt}" in
         h) usage; exit 0 ;;
         a) if [[ "x${OPTARG}" == "xi686" ]]; then
@@ -48,6 +50,7 @@ while getopts ha:n: opt; do
             fi
             ;;
         n) image_pfx="${OPTARG}" ;;
+        t) with_testing=yes
     esac
 done
 
@@ -64,9 +67,17 @@ SigLevel = Never
 ##[repo]
 ##Server = file:///repo
 
-#[haskell-testing]
-#Server = http://xsounds.org/~haskell/testing/\$arch
+EOF
 
+if [[ "${with_testing}" == "yes" ]]; then
+    cat >> "${pacman_conf}" << EOF
+[haskell-testing] >> "${pacman_conf}"
+Server = http://xsounds.org/~haskell/testing/\$arch >> "${pacman_conf}"
+
+EOF
+fi
+
+cat >> "${pacman_conf}" << EOF
 [haskell-core]
 Server = http://xsounds.org/~haskell/core/\$arch
 
