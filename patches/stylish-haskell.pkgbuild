@@ -1,0 +1,46 @@
+Index: habs/haskell-stylish-haskell/PKGBUILD
+===================================================================
+--- habs.orig/haskell-stylish-haskell/PKGBUILD
++++ habs/haskell-stylish-haskell/PKGBUILD
+@@ -5,7 +5,7 @@ _ver=0.7.1.0
+ _xrev=0
+ 
+ # PKGBUILD options/directives
+-pkgname=haskell-stylish-haskell
++pkgname=(haskell-stylish-haskell haskell-stylish-haskell-tool)
+ pkgver=${_ver}.x${_xrev}
+ pkgrel=2
+ pkgdesc="Haskell code prettifier"
+@@ -50,7 +50,9 @@ build() {
+     sed -i -r -e "s|ghc-pkg.*unregister[^ ]* |&'--force' |" unregister.sh
+ }
+ 
+-package() {
++package_haskell-stylish-haskell() {
++    depends+=('haskell-stylish-haskell-tool')
++
+     cd "${srcdir}/${_hkgname}-${_ver}"
+     
+     install -D -m744 register.sh   "${pkgdir}/usr/share/haskell/${pkgname}/register.sh"
+@@ -60,4 +62,21 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    rm -fr "${pkgdir}/usr/bin"
++    rm -fr "${pkgdir}/usr/share/x86_64-linux-ghc-8.0.2"
++}
++
++package_haskell-stylish-haskell-tool() {
++    pkgdesc="Haskell code prettifier - the binary"
++    depends=()
++    install=''
++
++    cd "${srcdir}/${_hkgname}-${_ver}"
++    runhaskell Setup copy --destdir="${pkgdir}"
++    install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
++    rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    rm -fr "${pkgdir}/usr/lib"
++    rm -fr "${pkgdir}/usr/share/doc"
+ }
