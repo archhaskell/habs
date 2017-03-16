@@ -1,0 +1,24 @@
+Index: habs/stack.cabal
+===================================================================
+--- habs.orig/stack.cabal
++++ habs/stack.cabal
+@@ -202,8 +202,8 @@ library
+         conduit >=1.2.8 && <1.3,
+         conduit-extra >=1.1.14 && <1.2,
+         containers >=0.5.5.1 && <0.6,
+-        cryptonite ==0.19.*,
+-        cryptonite-conduit ==0.1.*,
++        cryptonite >=0.19,
++        cryptonite-conduit >=0.1,
+         directory >=1.2.1.0 && <1.4,
+         either >=4.4.1.1 && <4.5,
+         errors >=2.1.2 && <2.2,
+@@ -224,7 +224,7 @@ library
+         http-types >=0.8.6 && <0.10,
+         lifted-async >=0.9.0 && <0.10,
+         lifted-base >=0.2.3.8 && <0.3,
+-        memory ==0.13.*,
++        memory >=0.13,
+         microlens >=0.3.0.0 && <0.5,
+         microlens-mtl >=0.1.10.0 && <0.2,
+         monad-control >=1.0.1.0 && <1.1,
