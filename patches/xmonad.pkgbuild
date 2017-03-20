@@ -1,0 +1,27 @@
+Index: habs/haskell-xmonad/PKGBUILD
+===================================================================
+--- habs.orig/haskell-xmonad/PKGBUILD
++++ habs/haskell-xmonad/PKGBUILD
+@@ -12,7 +12,7 @@ pkgdesc="A tiling window manager"
+ url="http://xmonad.org"
+ license=("BSD3")
+ arch=('i686' 'x86_64')
+-makedepends=()
++makedepends=('gendesk')
+ depends=("ghc=8.0.2-1"
+          "haskell-x11=1.8.x0-1"
+          "haskell-data-default=0.7.1.1.x0-253"
+@@ -60,4 +60,13 @@ package() {
+     runhaskell Setup copy --destdir="${pkgdir}"
+     install -D -m644 "${_licensefile}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+     rm -f "${pkgdir}/usr/share/doc/${pkgname}/${_licensefile}"
++
++    # install the man file
++    install -D -m644 man/xmonad.1 "${pkgdir}/usr/share/man/man1/xmonad.1"
++
++    # generate and install .desktop file
++    (  cd "${srcdir}";
++       gendesk --pkgname "xmonad" --pkgdesc "xmonad";
++       install -D -m644 "${srcdir}/xmonad.desktop" "${pkgdir}/usr/share/xsessions/xmonad.desktop";
++    )
+ }
