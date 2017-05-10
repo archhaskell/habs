@@ -1,0 +1,26 @@
+Index: habs/cblrepo/src/cblrepo-0.24.0/src/Main.hs
+===================================================================
+--- habs.orig/cblrepo/src/cblrepo-0.24.0/src/Main.hs
++++ habs/cblrepo/src/cblrepo-0.24.0/src/Main.hs
+@@ -97,7 +97,7 @@ cmdListPkgsCmd = command "list" (info (h
+ cmdPkgBuildCmd = command "pkgbuild" (info (helper <*> cmdPkgBuildOpts) (fullDesc <> progDesc "Create PKGBUILD other files necessary for an Arch package"))
+   where
+     cmdPkgBuildOpts = CmdPkgBuild
+-                      <$> option ghcVersionArgReader (long "ghc-version" <> value ghcDefVersion <> help "GHC version to use in PKGBUILD (default: 8.0.1)")
++                      <$> option ghcVersionArgReader (long "ghc-version" <> value ghcDefVersion <> help "GHC version to use in PKGBUILD (default: 8.0.2)")
+                       <*> option auto (long "ghc-release" <> value ghcDefRelease <> showDefault <> help "GHC release to use in PKGBUILD")
+                       <*> strOption (long "patchdir" <> value "patches" <> showDefault  <> help "Location of patches")
+                       <*> some (strArgument (metavar "PKGNAME ..."))
+Index: habs/cblrepo/src/cblrepo-0.24.0/src/Util/Misc.hs
+===================================================================
+--- habs.orig/cblrepo/src/cblrepo-0.24.0/src/Util/Misc.hs
++++ habs/cblrepo/src/cblrepo-0.24.0/src/Util/Misc.hs
+@@ -56,7 +56,7 @@ printBrksOth  ((n, v), brks) = do
+ progName = "cblrepo"
+ dbName = progName ++ ".db"
+ 
+-ghcDefVersion = Version [8, 0, 1] []
++ghcDefVersion = Version [8, 0, 2] []
+ ghcDefRelease = 1 :: Int
+ ghcVersionDep :: Version -> Int -> String
+ ghcVersionDep ghcVer ghcRel = "ghc=" ++ display ghcVer ++ "-" ++ show ghcRel
