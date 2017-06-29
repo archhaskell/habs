@@ -5,7 +5,6 @@ set -eu
 rundir="$(dirname $(readlink -f $0))"
 . ${rundir}/helpers/useful.sh
 
-arch=$(uname -m)
 habs_dir=${PWD}
 image_pfx="arch/habs"
 shell=no
@@ -22,7 +21,6 @@ Options:
 -h          This help
 -u          User to own the built files
 -g          Group to own the built files
--a <arch>   Architecture to build for (default: local arch)
 -b <dir>    Location of your HABS folder (default: .)
 -s          Enter a shell instead of building
 EOF
@@ -34,18 +32,17 @@ while getopts hu:g:a:s opt; do
         h) usage; exit 0;;
         u) owner_uid=${OPTARG};;
         g) owner_gid=${OPTARG};;
-        a) arch="${OPTARG}";;
         s) shell=yes;;
     esac
 done
 shift $((OPTIND - 1))
 
-image_name=${image_pfx}-${arch}
+image_name=${image_pfx}-build
 
 if [[ "x${shell}" == "xno" ]]; then
-    docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash /habs/helpers/buildpkgs -u ${owner_uid} -g ${owner_gid} -b /habs -- $*"
+    docker_cmd="/usr/bin/bash /habs/helpers/buildpkgs -u ${owner_uid} -g ${owner_gid} -b /habs -- $*"
 else
-    docker_cmd="/usr/bin/setarch ${arch} /usr/bin/bash -l"
+    docker_cmd="/usr/bin/bash -l"
 fi
 
 docker run -i -t -v=${habs_dir}:/habs -u habs --env-file /etc/environment \
