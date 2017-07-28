@@ -45,13 +45,13 @@ Then create all the PKGBUILDs for the packages:
 
 that should fill up the directory with directories containing PKGBUILDs, one for each package.  To build packages one first needs to create a docker image by using `helpers/mk-docker-image` (must be run as root):
 
-    % sudo ./helpers/mk-docker-image
+    % ./helpers/mk-docker-image
 
 then use the script `docker-build` to build all the packages:
 
-    % ./docker-build -- $(cblrepo build base | tail -n +2)
+    % ./build-pkgs -- $(cblrepo build base | tail -n +2)
 
-Both scripts has some built-in help, to see it run the script with `-h`.
+Both scripts have some built-in help, to see it run the script with `-h`.
 
 All PKGBUILDs in the project must be generated with the latest release of [cblrepo][6].
 
