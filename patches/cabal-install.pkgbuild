@@ -1,0 +1,11 @@
+Index: habs/cabal-install/PKGBUILD
+===================================================================
+--- habs.orig/cabal-install/PKGBUILD
++++ habs/cabal-install/PKGBUILD
+@@ -54,4 +54,6 @@ build() {
+ package() {
+     cd "${srcdir}/${_hkgname}-${_ver}"
+     runhaskell Setup copy --destdir="${pkgdir}"
++
++    chmod go=r "${pkgdir}/usr/share/man/man1/cabal.1"
+ }
